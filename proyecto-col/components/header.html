@@ -17,8 +17,21 @@
     
     <!-- Cabecera principal -->
     <div class="main-header">
-        <button class="menu-toggle">☰</button>
-        <h1 class="mx-md-auto text-md-center"><img src="../assets/icons/colombia-com-footer.png" alt="Logo Colombia.com"></h1>
+        <div class="left-container d-flex align-items-center">
+            <button class="menu-toggle">☰</button>
+            <div class="desktop-news-btn d-none d-md-flex align-items-center">
+                <span class="red-dot">●</span>
+                <span>NOTICIAS</span>
+            </div>
+        </div>
+        
+        <h1 class="mx-md-auto text-md-center">
+            <img src="../assets/icons/colombia-com-footer.png" alt="Logo Colombia.com">
+        </h1>
+        
+        <!-- Botón NAVIDAD para desktop -->
+        <button class="campain-btn d-none d-md-block">NAVIDAD</button>
+        
         <!-- Iconos para móvil -->
         <div class="top-links d-flex d-md-none">
             <a href="#"><i class="fa fa-futbol"></i></a>
@@ -36,21 +49,21 @@
     <!-- Menú de navegación -->
     <nav>
         <div class="menu-links">
-            <a href="#">ACTUALIDAD</a>
-            <a href="#">FÚTBOL</a>
-            <a href="#">ENTRETENIMIENTO</a>
-            <a href="#">CINE</a>
-            <a href="#">VIDA</a>
-            <a href="#">GASTRONOMÍA</a>
-            <a href="#">TURISMO</a>
-            <a href="#">RADIO</a>
-            <a href="#">COLOMBIANOS</a>
+            <a itemprop="actualidad" href="/actualidad/">ACTUALIDAD</a>
+            <a itemprop="fútbol" href="#">FÚTBOL</a>
+            <a itemprop="entrenimiento" href="#">ENTRETENIMIENTO</a>
+            <a itemprop="cine" href="#">CINE</a>
+            <a itemprop="vida" href="#">VIDA</a>
+            <a itemprop="gastronomia" href="#">GASTRONOMÍA</a>
+            <a itemprop="turismo" href="#">TURISMO</a>
+            <a itemprop="radio" href="#">RADIO</a>
+            <a itemprop="colombianos" href="#">COLOMBIANOS</a>
         </div>
         
         <!-- Barra de búsqueda -->
         <div class="search-bar">
             <input type="text" placeholder="Buscar...">
-            <i class="fa fa-search"></i>
+            <button type="button" class="fa fa-search" aria-label="Buscar"></button>
         </div>
     </nav>
 
@@ -72,166 +85,7 @@
         <a href="#">COLOMBIANOS</a>
     </nav>
 
-    <!-- Menú desplegable overlay -->
-<div class="menu-overlay">
-    <!-- Botón de cierre -->
-    <button class="close-menu">×</button>
     
-    <!-- Contenedor del menú -->
-    <div class="menu-container">
-        <!-- Versión Desktop -->
-        <div class="menu-desktop">
-            <!-- Logo y navegación superior -->
-            <div class="menu-header">
-                <div class="menu-logo">
-                    <img src="../assets/icons/colombia-com-footer.png" alt="Colombia.com">
-                </div>
-                <div class="menu-quick-icons">
-                    <a href="#"><i class="fas fa-user"></i></a>
-                    <a href="#"><i class="fas fa-bell"></i></a>
-                    <a href="#"><i class="fas fa-cog"></i></a>
-                </div>
-                <div class="menu-search">
-                    <input type="text" placeholder="Buscar...">
-                    <button class="search-btn">Buscar</button>
-                </div>
-            </div>
-            
-            <!-- Botones destacados -->
-            <div class="menu-featured-buttons">
-                <button class="featured-btn news-featured">
-                    <i class="fas fa-circle"></i> NOTICIAS
-                </button>
-                <button class="featured-btn radio-featured">
-                    <i class="fas fa-circle"></i> RADIO
-                </button>
-                <button class="featured-btn tv-featured">
-                    <i class="fas fa-circle"></i> TV
-                </button>
-                <button class="featured-btn campaign-featured">
-                    NAVIDAD
-                </button>
-            </div>
-            
-            <!-- Menú principal en columnas -->
-            <div class="menu-columns">
-                <!-- Columna 1 -->
-                <div class="menu-column">
-                    <a href="#" class="menu-highlight">ACTUALIDAD</a>
-                    <a href="#">Política</a>
-                    <a href="#">Economía</a>
-                    <a href="#">Judicial</a>
-                    <a href="#">Educación</a>
-                    <a href="#">Salud</a>
-                    <a href="#">Tecnología</a>
-                    <a href="#">Medio Ambiente</a>
-                </div>
-                
-                <!-- Columna 2 -->
-                <div class="menu-column">
-                    <a href="#" class="menu-highlight">DEPORTES</a>
-                    <a href="#">Fútbol Colombiano</a>
-                    <a href="#">Fútbol Internacional</a>
-                    <a href="#">Selección Colombia</a>
-                    <a href="#">Ciclismo</a>
-                    <a href="#">Tenis</a>
-                    <a href="#">Automovilismo</a>
-                    <a href="#">Otros Deportes</a>
-                </div>
-                
-                <!-- Columna 3 -->
-                <div class="menu-column">
-                    <a href="#" class="menu-highlight">ENTRETENIMIENTO</a>
-                    <a href="#">Farándula</a>
-                    <a href="#">Cine</a>
-                    <a href="#">Música</a>
-                    <a href="#">Televisión</a>
-                    <a href="#">Cultura</a>
-                    <a href="#">Gastronomía</a>
-                    <a href="#">Horóscopo</a>
-                </div>
-                
-                <!-- Columna 4 -->
-                <div class="menu-column">
-                    <a href="#" class="menu-highlight">REGIONES</a>
-                    <a href="#">Bogotá</a>
-                    <a href="#">Medellín</a>
-                    <a href="#">Cali</a>
-                    <a href="#">Barranquilla</a>
-                    <a href="#">Bucaramanga</a>
-                    <a href="#">Caribe</a>
-                    <a href="#">Pacífico</a>
-                </div>
-                
-                <!-- Columna de contacto -->
-                <div class="menu-contact">
-                    <div class="contact-title">
-                        ¿Tienes una noticia o sugerencia para <span class="highlight">Colombia.com</span>?
-                    </div>
-                    <button class="contact-btn">CONTÁCTANOS</button>
-                </div>
-            </div>
-            
-            <!-- Redes sociales -->
-            <div class="menu-social">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-                <a href="#"><i class="fab fa-tiktok"></i></a>
-            </div>
-        </div>
-        
-        <!-- Versión Móvil -->
-        <div class="menu-mobile">
-            <!-- Iconos superiores -->
-            <div class="mobile-top-icons">
-                <a href="#"><i class="fas fa-user"></i></a>
-                <a href="#"><i class="fas fa-bell"></i></a>
-                <a href="#"><i class="fas fa-cog"></i></a>
-            </div>
-            
-            <!-- Logo -->
-            <div class="mobile-logo">
-                <img src="../assets/icons/colombia-com-footer.png" alt="Colombia.com">
-            </div>
-            
-            <!-- Búsqueda -->
-            <div class="mobile-search">
-                <input type="text" placeholder="Buscar...">
-            </div>
-            
-            <!-- Botón destacado -->
-            <button class="mobile-featured-btn">NAVIDAD</button>
-            
-            <!-- Lista de enlaces -->
-            <div class="mobile-links">
-                <a href="#" class="featured-link"><i class="fas fa-circle"></i> NOTICIAS</a>
-                <a href="#" class="featured-link"><i class="fas fa-circle"></i> RADIO</a>
-                <a href="#" class="featured-link"><i class="fas fa-circle"></i> TV</a>
-                <a href="#">Actualidad</a>
-                <a href="#">Deportes</a>
-                <a href="#">Entretenimiento</a>
-                <a href="#">Economía</a>
-                <a href="#">Tecnología</a>
-                <a href="#">Cultura</a>
-                <a href="#">Salud</a>
-                <a href="#">Educación</a>
-                <a href="#" class="with-flag">Colombianos en el exterior <img src="../assets/icons/flag.png" alt="Bandera" class="flag-icon"></a>
-                <a href="#">Regiones</a>
-            </div>
-            
-            <!-- Redes sociales -->
-            <div class="mobile-social">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-                <a href="#"><i class="fab fa-tiktok"></i></a>
-            </div>
-        </div>
-    </div>
-</div>
 </header>
 
 

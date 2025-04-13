@@ -1,5 +1,5 @@
-
 /* Estilos generales */
+
 body {
     margin: 0;
     padding: 0;
@@ -9,22 +9,68 @@ body {
     line-height: 1.5;
 }
 
-/* Sección de noticias */
-.news-section {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 15px;
-    background-color: #f0f4ff;
+h2 {
+    color: #104596;
+    font-family: Verdana;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    text-transform: uppercase;
 }
+
+h3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 30px;
+    letter-spacing: 0%;
+    color: #191c36;
+}
+
+p {
+    font-family: Verdana;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0%;
+}
+
+/* Clase para el contenedor principal que afecta a todas las secciones dentro */
+.sections-container-white {
+    padding-left: 130px;
+    padding-right: 130px;
+    background-color: #ffffff;
+}
+
+.sections-container-bluesky {
+    padding-left: 130px;
+    padding-right: 130px;
+    background-color: #F3F8FF;
+}
+
+/* Versión responsive (opcional) */
+@media (max-width: 768px) {
+    .sections-container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
 
 /* Información de actualización */
 .update-info {
     display: flex;
     align-items: center;
-    color: #ee2924;
-    font-size: 12px;
-    font-weight: 500;
+    color: #191c36;
+    font-size: 9px;
+    font-weight: 400;
     margin-bottom: 15px;
+    font-family: Verdana;
+
+    line-height: 20px;
+    letter-spacing: 0%;
+    text-transform: uppercase;
 }
 
 .update-dot {
@@ -36,10 +82,90 @@ body {
     margin-right: 5px;
 }
 
+
+/* Sección de noticias */
+.news-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+    background-size: 100px;
+    background-color: #F3F8FF;
+}
+
+/* Íconos de redes sociales */
+/* Estilos para la barra social */
+.social-bar {
+    position: fixed;
+    left: 0;
+    top: 30%;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+}
+
+.share-count {
+    background-color: white;
+    color: #104596;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    padding: 4px 0;
+    width: 40px;
+    line-height: 11px;
+    margin-left: 5px;
+}
+
+.share-count span {
+    display:grid;
+    font-size: 5px;
+    text-transform: uppercase;
+    margin-left: 1px;
+}
+
+.social-icon {
+    width: 53px;
+    height: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.social-icon:hover {
+    opacity: 0.9;
+}
+
+.social-icon.facebook {
+    background-color: #3b5998;
+}
+
+.social-icon.whatsapp {
+    background-color: #25D366;
+}
+
+.social-icon.twitter {
+    background-color: #000000;
+}
+
+.social-icon.email {
+    background-color: #FFCE00;
+    color: black;
+}
+
+    /* Asegurarse de que el contenido tenga suficiente espacio para la barra social */
+    @media (min-width: 768px) {
+        body {
+            padding-left: 40px;
+        }
+    }
+
 /* Contenedor de noticias */
 .news-container {
     display: flex;
     gap: 20px;
+    background-color: #F3F8FF;
 }
 
 /* Columnas de noticias */
@@ -88,32 +214,30 @@ body {
     margin-bottom: 10px;
 }
 
-/* Título de noticia */
-.news-title {
-    font-size: 18px;
-    font-weight: bold;
-    margin: 0 0 10px 0;
-    line-height: 1.3;
-}
-
-.news-header .news-title {
-    margin: 0;
-}
-
 /* Punto amarillo */
 .yellow-dot {
-    color: #ffd700;
+    color: #FBC800;
     font-size: 24px;
     margin-right: 8px;
     line-height: 1;
-    margin-top: -5px;
+    width: 20;
+    height: 20;
 }
 
 /* Autor de la noticia */
 .news-author {
-    font-size: 12px;
-    color: #666;
-    margin: 5px 0;
+    font-weight: 700;
+    font-size: 9px;
+    letter-spacing: 0%;
+    color: #000000;
+}
+
+.news-author-por {
+    font-family: Verdana;
+    font-weight: 400;
+    font-size: 9px;
+    letter-spacing: 0%;
+    vertical-align: bottom;
 }
 
 /* Texto de la noticia */
@@ -125,13 +249,16 @@ body {
 /* Enlace "Leer más" */
 .read-more {
     color: #104596;
-    text-decoration: none;
-    font-weight: 500;
+    font-family: Verdana;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0%;
 }
 
-.read-more:hover {
+    .read-more:hover {
     text-decoration: underline;
-}
+    }
 
 /* Imagen de noticia */
 .news-image {
@@ -367,12 +494,6 @@ body {
     font-size: 0.85rem;
 }
 
-.news-author {
-    font-size: 0.85rem;
-    color: #555;
-    margin-top: 5px;
-}
-
 /* Divider */
 .news-divider {
     border: none;
@@ -409,8 +530,12 @@ body {
 
 .section-tv h2 {
     color: #104596;
-    font-size: 1.5rem;
-    font-weight: bold;
+    font-family: Verdana;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    text-transform: uppercase;
 }
 
 .section-tv .live-tag {
@@ -1533,11 +1658,6 @@ font-size: 0.8rem;
 margin-bottom: 5px;
 }
 
-.news-author {
-font-size: 0.8rem;
-color: #666;
-margin-bottom: 10px;
-}
 
 /* Estilos para la versión de escritorio */
     @media (min-width: 768px) {

@@ -1,0 +1,10 @@
+.env
+.env.prod
+.git
+.gitlab-ci.yml
+node_modules
+build
+build-server
+server.sh
+README.md
+exclude-list.txt

@@ -12,7 +12,17 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
+    padding-left: 130px;
+    padding-right: 130px;
 }
+
+@media (max-width: 768px) {
+    header {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
 
 .top-bar {
     display: flex;
@@ -29,11 +39,16 @@ header {
     color: #080808;
     display: inline-flex;
     align-items: center;
-    margin-top: 35px;
+    margin-top: 55px;
+    font-family: Verdana;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0%;
 }
 
 .top-links a:hover {
-    color: #D62828;
+    color: #0f3c81;
 }
 
 .social-icons {
@@ -53,16 +68,110 @@ header {
     color: #0f3c81;
 }
 
+/* Estilos para el menú de navegación */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px 60px; /* Aumentar el padding lateral para alinearlo con el header */
+    border-top: 1px solid #DDD;
+    border-bottom: 1px solid #DDD;
+}
+
+/* Contenedor de enlaces */
+.menu-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px; /* Espacio uniforme entre enlaces */
+}
+
+/* Estilo de los enlaces */
+.menu-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    font-weight: normal; /* No negrita */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: color 0.3s;
+    padding: 0; /* Quitar padding que pueda afectar la alineación */
+}
+
+.menu-links a:hover {
+    color: #0f3c81;
+    font-weight: bold;
+}
+
+/* Barra de búsqueda */
+.search-bar {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 220px;
+}
+
+.search-bar input {
+    width: 220px;
+    padding: 8px 40px 8px 15px; /* Espacio para el ícono a la derecha */
+    border: 1px solid #DDD;
+    border-radius: 20px;
+    font-size: 14px;
+    outline: none;
+    transition: border 0.3s;
+}
+
+.search-bar input:focus {
+    border-color: #0f3c81;
+}
+
+.search-bar .fa-search {
+    position: absolute;
+    right: 15px;
+    color: #0f3c81;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .menu-links {
+        gap: 15px; /* Menos espacio en tablets */
+    }
+    
+    .menu-links a {
+        font-size: 13px;
+    }
+    
+    .search-bar input {
+        width: 180px;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        display: none; /* Ocultar en móvil según el código original */
+    }
+}
+
 .main-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 60px;
+    padding: 15px 40px;
 }
 
 .menu-logo {
     display: flex;
     align-items: center;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start; /* Alinear a la izquierda */
+    padding: 10px 15px;
+    background-color: #ffffff;
+    margin: 0;
+    order: 2; /* Colocar después del header principal */
 }
         
 .news-btn {
@@ -124,35 +233,11 @@ nav a:hover {
     color: #0f3c81;
 }
 
-.search-bar {
-    display: flex;
-    align-items: center;
-    position: relative;
-}
-
-.search-bar input {
-    width: 220px;
-    padding: 8px 12px;
-    border: 1px solid #DDD;
-    border-radius: 20px;
-    font-size: 14px;
-    outline: none;
-    transition: border 0.3s;
-}
-
-.search-bar input:focus {
-    border-color: #0f3c81;
-}
-
-.search-bar .fa-search {
-    position: absolute;
-    right: 10px;
-    color: #0f3c81;
-}
 
 .flyer {
     text-align: center;
 }
+
 
 /* SOLO modifico los estilos para móvil */
 @media (max-width: 768px) {
@@ -233,7 +318,7 @@ nav a:hover {
         display: flex;
         justify-content: flex-start; /* Alinear a la izquierda */
         padding: 10px 15px;
-        background-color: #f1f5f9;
+        background-color: #ffffff;
         margin: 0;
         order: 2; /* Colocar después del header principal */
     }
@@ -242,10 +327,11 @@ nav a:hover {
     .news-btn {
         margin: 0;
         font-size: 14px;
-        background-color: transparent;
+        background-color: #f1f5f9;
         display: flex;
         align-items: center;
         padding-left: 0;
+        padding: 8px 14px;
     }
     
     /* Quitar el punto del HTML y ponerlo con CSS */
@@ -260,7 +346,7 @@ nav a:hover {
     .campain-btn {
         margin-left: auto; /* Empujar a la derecha */
         font-size: 14px;
-        padding: 8px 15px;
+        padding: 8px 14px;
         order: 2; /* Colocar a la derecha en el contenedor */
     }
     
@@ -625,4 +711,45 @@ nav a:hover {
     }
 }
 
+.left-container {
+    display: flex;
+    align-items: center;
+}
 
+.desktop-news-btn {
+    margin-left: 15px;
+    font-weight: bold;
+    font-size: 14px;
+    background-color: #f1f5f9;
+    color: #000000;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.red-dot {
+    color: #FF3641;
+    font-size: 15px;
+    margin-right: 5px;
+}
+
+@media (min-width: 769px) {
+    .main-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .campain-btn {
+        background-color: #FF3641;
+        color: white;
+        border: none;
+        padding: 8px 20px;
+        border-radius: 20px;
+        font-size: 14px;
+        font-weight: bold;
+        margin-top: 2px;
+    }
+}
