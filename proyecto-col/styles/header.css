@@ -61,11 +61,10 @@ header {
 .social-icons {
     display: flex;
     align-items: center;
-    margin-top: 35px;           
+    gap: 35px;        
 }
 
 .social-icons i {
-    margin-left: 25px; /* Mayor separación entre íconos */
     cursor: pointer;
     color: #000000;
     font-size: 20px;
