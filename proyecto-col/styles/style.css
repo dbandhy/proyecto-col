@@ -327,6 +327,10 @@ p {
 /* Media queries para responsive */
 @media (max-width: 768px) {
     .news-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .news-container {
         flex-direction: column;
     }
     
