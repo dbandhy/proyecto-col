@@ -102,7 +102,6 @@ p {
 }
 
 .share-count {
-    background-color: white;
     color: #104596;
     font-weight: bold;
     font-size: 15px;
@@ -118,6 +117,13 @@ p {
     font-size: 5px;
     text-transform: uppercase;
     margin-left: 1px;
+}
+
+.container-social-icons{
+    display: flex;
+    flex-direction: column;
+    border-radius: 0px 10px 10px 0px;
+    overflow: hidden;
 }
 
 .social-icon {
