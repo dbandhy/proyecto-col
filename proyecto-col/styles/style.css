@@ -38,8 +38,6 @@ p {
 
 /* Clase para el contenedor principal que afecta a todas las secciones dentro */
 .sections-container-white {
-    padding-left: 130px;
-    padding-right: 130px;
     background-color: #ffffff;
 }
 
@@ -2279,10 +2277,8 @@ padding: 0.3rem 0.8rem;
 
 .pelicula-card-mobile {
 position: relative;
-background-color: white;
 border-radius: 10px;
 overflow: hidden;
-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .estreno-badge {
