@@ -20,22 +20,25 @@
     <div id="main-header"></div>
 
     <!-- Grid Principal -->
-    <div class="row col-12">
+    <div class="row col-12 position-relative m-0 p-0">
         <!-- Columna para los Social-Bar -->
-        <div class="col-1 d-none d-md-flex align-items-start">
+        <div class="position-absolute">
             <!-- Barra Lateral de Redes Sociales -->
-            <div class="social-bar mt-4">
-                <div class="social-icon"><i class="fab fa-facebook-f"></i></div>
-                <div class="social-icon"><i class="fab fa-whatsapp"></i></div>
-                <div class="social-icon"><i class="fas fa-envelope"></i></div>
-                <div class="social-icon"><i class="fab fa-twitter"></i></div>
+            <div class="mt-5 mb-5 social-bar">
+                <div class="share-count">3.1K<span class="share-count">compartidos</span></div>
+                <div class="container-social-icons">
+                    <div class="social-icon facebook"><i class="fab fa-facebook-f"></i></div>
+                    <div class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></div>
+                    <div class="social-icon twitter"><i class="fab fa-twitter"></i></div>
+                    <div class="social-icon email"><i class="fas fa-envelope"></i></div>
+                </div>
             </div>
         </div>
 
-        <div class="col">
+        <div class="col m-0 p-0 contenido-actualidad">
 
             <!-- Sección Frontera con Venezuela -->
-            <section class="venezuela-news-section py-4">
+            <section class="venezuela-news-section">
                 <div class="container">
                     <!-- Actualización - Solo visible en desktop -->
                     <div class="update-info d-none d-md-flex">
@@ -101,14 +104,12 @@
                         
                         <!-- Columna derecha - Video y más artículos (solo en desktop) -->
                         <div class="col-md-4 d-none d-md-block">
-                            <div class="category-header">
-                                <h2 class="section-title">GUSTAVO PETRO</h2>
-                            </div>
+                        
                             
                             <!-- Artículo con video -->
                             <div class="news-item mb-3">
-                                <div class="article-image-container video-container">                                    
-                                    <iframe width="460" height="215" src="https://www.youtube.com/embed/cB7L9okS2aE?si=xv0R7O8uoSmWfASl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <div class="category-header">
+                                    <h2 class="section-title">GUSTAVO PETRO</h2>
                                 </div>
                                 <h3 class="article-title">
                                     <i class="fas fa-circle text-warning me-1"></i> Petro se desmarca: no irá a posesión de Nicolás Maduro el viernes
@@ -117,6 +118,10 @@
                                     <a href="#" class="read-more">Leer más</a>
                                     <span class="article-author">Por: Juan Carlos García Sierra</span>
                                 </div>
+                                <div class="article-image-container video-container">                                    
+                                    <iframe width="460" height="215" src="https://www.youtube.com/embed/cB7L9okS2aE?si=xv0R7O8uoSmWfASl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
+                                
                             </div>
                         </div>
                         
@@ -202,7 +207,7 @@
             </section>
 
             <!-- Barra de Botones Solo para Desktop -->
-            <section class="button-bar mt-4">
+            <section class="button-bar">
                 <div class="container">
                     <div class="d-flex justify-content-center gap-3 py-3">
                         <button class="btn btn-primary rounded-pill px-4 py-2">Noche de velitas</button>
@@ -211,12 +216,11 @@
                         <button class="btn btn-primary rounded-pill px-4 py-2">Millonarios VS Santa Fe</button>
                         <button class="btn btn-primary rounded-pill px-4 py-2">Ricardo Bonilla</button>
                     </div>
-                    <hr> <!-- Línea debajo de los botones -->
                 </div>
             </section>
             
             <!-- Sección Economía y Colombianos -->
-            <section class="economia-colombianos-section py-4">
+            <section class="economia-colombianos-section">
                 <div class="container-fluid">
                     <div class="row">
                         <!-- Columna izquierda - Economía (visible en desktop) -->
@@ -456,7 +460,7 @@
             </section>
 
             <!-- Sección Más Noticias, Lo Último en Colombia e Indicadores Económicos -->
-            <section class="news-indicators-section py-4">
+            <section class="news-indicators-section">
                 <div class="container">
                     <div class="row">
                         <!-- Versión móvil - Indicadores Económicos (arriba) -->

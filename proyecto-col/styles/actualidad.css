@@ -1,6 +1,6 @@
 /* Estilos para la sección de noticias de Venezuela */
 .venezuela-news-section {
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
 }
 
 /* Estilos para la información de actualización */
@@ -163,7 +163,7 @@
 
 /* Estilos para la sección de Economía y Colombianos */
 .economia-colombianos-section {
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
     background-color: #ffffff;
 }
 
@@ -199,7 +199,16 @@
 }
 
 .category-tag.colombianos {
-    color: #FF3641;
+    font-family: Verdana;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+    font-variant-numeric-figure: lining-nums;
+    font-variant-numeric-spacing: proportional-nums;
+    color: #104596;
+    color: #104596;
 }
 
 .article-title {
@@ -390,7 +399,7 @@
 
 /* Estilos para la sección de Multimedia y Tramitología */
 .multimedia-tramitologia-section {
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
     background-color: #ffffff;
 }
 
@@ -623,7 +632,7 @@
 
 /* Estilos para la sección de Más Noticias, Lo Último en Colombia e Indicadores Económicos */
 .news-indicators-section {
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
     background-color: #ffffff;
     padding: 0 15px;
 }
@@ -907,4 +916,27 @@
         max-width: 1140px;
         margin: 0 auto;
     }
+}
+
+.contenido-actualidad {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-auto-rows: auto;
+    justify-items: center;
+
+}
+.contenido-actualidad > section{
+    width: 100%;
+    padding: 10px 0;
+}
+
+.contenido-actualidad > section > *{
+    max-width: 1320px;
+    width: 100%;
+    margin: auto;
+}
+
+.button-bar{
+    background-color: #ffffff;
 }
