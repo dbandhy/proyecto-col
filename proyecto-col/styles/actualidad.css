@@ -80,7 +80,7 @@
 /* Grilla de division de contenido en 2 columnas 60% y 40% */
 .grid-two-section-60-40 {
 	display: grid;
-	grid-template-columns: 6fr 4fr;
+	grid-template-columns: 6fr 3.5fr;
 	gap: 1.5rem;
 	align-items: start;
 }
@@ -354,4 +354,25 @@
 
 .card-indicador-economico-value {
 	font-size: 16px;
+}
+
+.grid-noticias-principales {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	gap: 1.5rem;
+}
+
+@media screen and (max-width: 800px) {
+	.grid-noticias-principales {
+		grid-template-columns: 1fr;
+	}
+}
+
+.img-yoga {
+	width: 100%;
+	height: 100%;
+	max-height: 580px;
+	object-fit: cover;
+	border-radius: 4px;
+	margin-bottom: 1rem;
 }
