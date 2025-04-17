@@ -85,7 +85,7 @@
 	align-items: start;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 800px) {
 	.grid-two-section-60-40 {
 		grid-template-columns: 1fr;
 	}
