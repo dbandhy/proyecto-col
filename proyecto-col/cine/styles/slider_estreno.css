@@ -1,0 +1,65 @@
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    background: transparent;
+}
+
+.carousel-viewport {
+    overflow: hidden;
+    width: 100%;
+    padding: 0 3%;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.4s ease;
+}
+
+.carousel-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    transform: translateY(-50%);
+    background: #104596;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.movie-card {
+    flex: 0 0 25%;
+    padding: 10px;
+    box-sizing: border-box;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+}
+
+@media (max-width: 900px) {
+    .movie-card {
+        flex: 0 0 33.33%;
+    }
+}
+
+@media (max-width: 700px) {
+    .movie-card {
+        flex: 0 0 38%;
+    }
+}
