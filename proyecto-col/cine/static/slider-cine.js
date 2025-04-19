@@ -1,30 +1,23 @@
-// script.js
 
-// Variables para el slideshow
 let slideIndex = 1;
 
-// Inicializar el slideshow
 document.addEventListener('DOMContentLoaded', function() {
     showSlides(slideIndex);
 });
 
-// Función para avanzar o retroceder slides
 function plusSlides(n) {
     showSlides(slideIndex += n);
 }
 
-// Función para seleccionar un slide específico
 function currentSlide(n) {
     showSlides(slideIndex = n);
 }
 
-// Función principal para mostrar slides
 function showSlides(n) {
     let i;
     let slides = document.getElementsByClassName("mySlides");
     let dots = document.getElementsByClassName("dot");
     
-    // Verificar límites del índice
     if (n > slides.length) {
         slideIndex = 1;
     }
@@ -33,22 +26,70 @@ function showSlides(n) {
         slideIndex = slides.length;
     }
     
-    // Ocultar todos los slides
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
     
-    // Quitar la clase active de todos los dots
     for (i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active", "");
     }
     
-    // Mostrar el slide actual y marcar el dot correspondiente
     slides[slideIndex-1].style.display = "block";
     dots[slideIndex-1].className += " active";
 }
 
-// Opcional: Slideshow automático
-// let autoSlide = setInterval(function() {
-//     plusSlides(1);
-// }, 5000);
+
+window.mostrarCiudades = function() {
+    document.getElementById('ciudades-listado').style.display = 'block';
+};
+
+document.addEventListener('click', function(e) {
+    const modal = document.getElementById('ciudades-listado');
+    const btnCiudad = document.getElementById('btnCiudad');
+    if (
+        modal.style.display === 'block' &&
+        !modal.contains(e.target) &&
+        e.target !== btnCiudad &&
+        !btnCiudad.contains(e.target)
+    ) {
+        modal.style.display = 'none';
+    }
+});
+
+document.querySelectorAll('.ciudades-grid span').forEach(span => {
+    span.addEventListener('click', function() {
+        document.getElementById('btnCiudadText').textContent = this.innerText;
+        document.getElementById('ciudades-listado').style.display = 'none';
+    });
+});
+
+window.mostrarSalas = function() {
+    document.getElementById('salas-listado').style.display = 'block';
+};
+
+window.cerrarSalas = function() {
+    document.getElementById('salas-listado').style.display = 'none';
+};
+
+document.addEventListener('click', function(e) {
+    const modal = document.getElementById('salas-listado');
+    const btnSala = document.getElementById('btnSala');
+    if (
+        modal.style.display === 'block' &&
+        !modal.contains(e.target) &&
+        e.target !== btnSala &&
+        !btnSala.contains(e.target)
+    ) {
+        modal.style.display = 'none';
+    }
+});
+
+
+document.querySelectorAll('.sala-grid span').forEach(span => {
+    span.addEventListener('click', function() {
+        document.getElementById('btnSalaText').textContent = this.innerText;
+        document.getElementById('salas-listado').style.display = 'none';
+        document.querySelectorAll('.sala-grid span').forEach(s => s.classList.remove('selected'));
+        this.classList.add('selected');
+    });
+});
