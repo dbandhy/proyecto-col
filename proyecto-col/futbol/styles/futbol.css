@@ -1,0 +1,134 @@
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.matches-section {
+  display: grid;
+  background-color: #F3F8FF;
+  grid-template-columns: repeat(12, 1fr);
+}
+.matches-section > .content {
+  grid-column: 2/12;
+  display: flex;
+  flex-direction: column;
+  padding: 17px 0;
+  gap: 30px;
+}
+.matches-section > .content .updates {
+  display: flex;
+  gap: 13px;
+  flex-direction: column;
+}
+.matches-section > .content .updates > .title {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.matches-section > .content .updates > .title span {
+  font-size: 9px;
+  font-weight: 400;
+}
+.matches-section > .content .updates .list-cards {
+  display: flex;
+  width: 100%;
+  gap: 14px;
+}
+.matches-section > .content .matches-television {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  row-gap: 34px;
+}
+.matches-section > .content .matches-television > .title {
+  grid-column: span 12;
+  font-size: 25px;
+  font-weight: 700;
+  text-align: center;
+}
+.matches-section > .content .matches-television .date {
+  grid-column: span 8;
+  padding: 30px;
+  background-color: white;
+  border-radius: 10px;
+  margin-right: 20px;
+  display: grid;
+  grid-template-columns: 35px auto 35px;
+  column-gap: 20px;
+}
+.matches-section > .content .matches-television .date .btn-icon {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #104596;
+  border-radius: 50%;
+}
+.matches-section > .content .matches-television .date .btn-icon i {
+  color: white;
+}
+.matches-section > .content .matches-television .date .dates-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 30px;
+}
+.matches-section > .content .matches-television .date .dates-content .date-item {
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  color: rgba(25, 28, 54, 0.5);
+}
+.matches-section > .content .matches-television .date .dates-content .date-item:hover {
+  color: #104596;
+}
+.matches-section > .content .matches-television .date .dates-content .separator {
+  width: 1px;
+  height: 100%;
+  background-color: #104596;
+}
+.matches-section > .content .matches-television .options {
+  grid-column: span 4;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.matches-section > .content .matches-television .partidos {
+  grid-column: span 12;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: 45px;
+}
+
+@media (max-width: 768px) {
+  .matches-section .updates {
+    display: flex;
+    gap: 13px;
+    flex-direction: column;
+  }
+  .matches-section .updates .list-cards {
+    flex-direction: column;
+  }
+  .matches-television {
+    display: grid;
+    grid-template-columns: 100%;
+    row-gap: 15px;
+  }
+  .matches-television .date {
+    grid-column: span 12 !important;
+  }
+  .matches-television .options {
+    grid-column: span 12 !important;
+    display: flex;
+    flex-direction: column;
+  }
+  .matches-television .options > div {
+    width: 100%;
+  }
+}
+/***** GENERICS *****/
+.small-circle-red {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #FF3842;
+}

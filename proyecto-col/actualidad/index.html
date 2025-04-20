@@ -14,21 +14,18 @@
     <!-- Estilos componentes -->
     <link rel="stylesheet" href="../styles/header.css">
     <link rel="stylesheet" href="../styles/footer.css">
-</head>
+    <!-- Componentes -->
+		<script src="../static/components/footer.js"></script>
+		<script src="../static/components/header.js"></script>
+    <script src="../static/components/socialBar.js"></script>
+  </head>
 <body>
-
-    <div id="main-header"></div>
-
+    <header-component></header-component>
     <!-- Grid Principal -->
     <div class="row col-12">
       <!-- Columna para los Social-Bar -->
       <div class="col-1 d-none d-md-flex align-items-start">
-        <div class="social-bar mt-4">
-          <div class="social-icon facebook"><i class="fab fa-facebook-f"></i></div>
-          <div class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></div>
-          <div class="social-icon twitter"><i class="fa-brands fa-x-twitter"></i></div>
-          <div class="social-icon email"><i class="fa-regular fa-envelope"></i></div>
-        </div>
+        <social-bar-component></social-bar-component>
       </div>
 
       <div class="col">
@@ -732,10 +729,8 @@
         </div>
       </div>
     </div>
-
-		<div id="main-footer"></div>
+    <footer-component></footer-component>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-		<script src="../static/loadComponents.js"></script>
 	</body>
 </html>

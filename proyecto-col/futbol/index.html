@@ -28,75 +28,71 @@
 			referrerpolicy="no-referrer"
 		/>
 		<link rel="stylesheet" href="../styles/style.css" />
-    <link rel="stylesheet" href="../styles/futbol.css">
+    <link rel="stylesheet" href="./styles/futbol.css">
 		<!-- Estilos componentes -->
 		<link rel="stylesheet" href="../styles/header.css" />
 		<link rel="stylesheet" href="../styles/footer.css" />
+		<link rel="stylesheet" href="../static/components/newsCard/newsCard.css" />
+		<link rel="stylesheet" href="../static/components/matchPreview/matchPreview.css">
+		<!-- Componentes -->
+		<script src="../static/components/footer.js"></script>
+		<script src="../static/components/header.js"></script>
+		<script src="../static/components/newsCard/newsCard.js"></script>
+		<script src="../static/components/matchPreview/matchPreview.js"></script>
+		<script src="../static/components/socialBar.js"></script>
 </head>
 <body>
-  <div class="content">
+	<header-component></header-component>
+
+  <div class="container">
 		<div class="col-1 d-none d-md-flex align-items-start">
-			<div class="social-bar mt-4">
-				<div class="social-icon facebook"><i class="fab fa-facebook-f"></i></div>
-				<div class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></div>
-				<div class="social-icon twitter"><i class="fa-brands fa-x-twitter"></i></div>
-				<div class="social-icon email"><i class="fa-regular fa-envelope"></i></div>
-			</div>
+			<social-bar-component></social-bar-component>
 		</div>
-    <div class="matches-section">
+	</div>
+
+	<section class="matches-section">
+		<div class="content">
 			<div class="updates">
-				<div>
+				<div class="title">
 					<div class="small-circle-red"></div>
 					<span>ACTUALIZACIÓN - JUEVES, 7 SEPTIEMBRE 2025. 7:33PM</span>
 				</div>
 				<div class="list-cards">
-					<div class="card">
-						<img src="https://crests.football-data.org/65.svg" alt="">
-						<div class="title">
-						  <span>JHON DURÁN</span>
-						</div>
-						<div class="body">
-							<div>
-								<div class="play-icon"><div></div></div>
-								<span class="title">Aston Villa Confirmó dóndo jugará Jhon Durán</span>
-							</div>
-							<div class="author">Por: Juan Carlos Garcia Sierra</div>
-						</div>
-					</div>
-					<div class="card">
-						<img src="https://crests.football-data.org/65.svg" alt="">
-						<div class="title">
-						  <span>JHON DURÁN</span>
-						</div>
-						<div class="body">
-							<div>
-								<div class="content-triangle">
-									<div class="triangle-right"></div>
-								</div>
-								<span class="title">Aston Villa Confirmó dóndo jugará Jhon Durán</span>
-							</div>
-							<div class="author">Por: Juan Carlos Garcia Sierra</div>
-						</div>
-					</div>
-					<div class="card">
-						<img src="https://crests.football-data.org/65.svg" alt="">
-						<div class="title">
-						  <span>JHON DURÁN</span>
-						</div>
-						<div class="body">
-							<div>
-								<div class="content-triangle">
-									<div class="triangle-right"></div>
-								</div>
-								<span class="title">Aston Villa Confirmó dóndo jugará Jhon Durán</span>
-							</div>
-							<div class="author">Por: Juan Carlos Garcia Sierra</div>
-						</div>
-					</div>
+					<news-card-component title="JHON DURÁN" image="https://crests.football-data.org/65.svg"></news-card-component>
+					<news-card-component title="FICHAJES" image="https://crests.football-data.org/65.svg"></news-card-component>
+					<news-card-component title="SUPERLIGA" image="https://crests.football-data.org/65.svg"></news-card-component>
 				</div>
 			</div>
-    </div>
-  </div>
+			<div class="matches-television">
+				<div class="title">PARTIDOS POR TELEVISIÓN</div>
+				<div class="date">
+					<div class="btn-icon"><i class="fa-solid fa-angle-left"></i></div>
+					<div class="dates-content">
+						<div class="date-item">JUEVES 16 ENERO</div>
+						<div class="separator"></div>
+						<div class="date-item">JUEVES 17 ENERO</div>
+						<div class="separator"></div>
+						<div class="date-item">JUEVES 18 ENERO</div>
+					</div>
+					<div class="btn-icon"><i class="fa-solid fa-angle-right"></i></div>
+				</div>
+				<div class="options">
+					<a href="#" class="btn btn-primary">Ver por torneo</a>
+					<a href="#" class="btn btn-warning">Ver todos los partidos</a>
+				</div>
+				<div class="partidos">
+					<match-preview-component></match-preview-component>
+					<match-preview-component></match-preview-component>
+					<match-preview-component></match-preview-component>
+					<match-preview-component></match-preview-component>
+					<match-preview-component></match-preview-component>
+				</div>
+			</div>
+		</div>
+		
+	</section>
+	
+	<footer-component></footer-component>
 </div>
 </body>
 </html>
