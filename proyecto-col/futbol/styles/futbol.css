@@ -71,6 +71,8 @@
   justify-content: center;
   align-items: center;
   column-gap: 30px;
+  background-color: white;
+  border-radius: 10px;
 }
 .matches-section > .content .matches-television .date .dates-content .date-item {
   font-size: 12px;
@@ -99,30 +101,382 @@
   column-gap: 45px;
 }
 
+.body {
+  display: grid;
+  background-color: #F3F8FF;
+  grid-template-columns: repeat(12, 1fr);
+}
+.body .content {
+  grid-column: 2/12;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 50px;
+  row-gap: 50px;
+}
+.body .content > .news-content {
+  grid-column: span 8;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: max-content 150px 150px repeat(3, 140px);
+  column-gap: 22px;
+  row-gap: 22px;
+  grid-template-areas: "title title" "newsOne newsOne" "newsTwo newsTwo" "newsThree newsFourth" "newsThree newsFive" "newsThree newsSix";
+}
+.body .content > .news-content > .title {
+  grid-area: title;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+.body .content > .news-content .newsOne {
+  grid-area: newsOne;
+}
+.body .content > .news-content .newsTwo {
+  grid-area: newsTwo;
+}
+.body .content > .news-content .newsThree {
+  grid-area: newsThree;
+}
+.body .content > .news-content .newsFourth {
+  grid-area: newsFourth;
+}
+.body .content > .news-content .newsFive {
+  grid-area: newsFive;
+}
+.body .content > .news-content .newsSix {
+  grid-area: newsSix;
+}
+.body .content .teams-list {
+  grid-column: span 4;
+  display: grid;
+  grid-template-columns: repeat(6, 70px);
+  row-gap: 10px;
+  column-gap: 10px;
+  align-self: flex-start;
+  justify-self: flex-start;
+}
+.body .content .teams-list img {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.body .content .partidos-colombianos {
+  grid-column: span 12;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  padding: 9px 22px 16px 26px;
+  background-color: #F3F8FF;
+  gap: 10px;
+}
+.body .content .partidos-colombianos .title {
+  font-size: 20px;
+}
+.body .content .partidos-colombianos > .tornaments {
+  display: flex;
+  gap: 25px;
+  flex-direction: column;
+}
+.body .content .partidos-colombianos > .tornaments .sections {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.body .content .partidos-colombianos > .tornaments .sections .groups {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: white;
+}
+.body .content .partidos-colombianos > .tornaments .sections .groups .group {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.body .content .partidos-colombianos > .tornaments .sections .groups .group .time {
+  font-size: 14px;
+}
+.body .content .partidos-colombianos > .tornaments .sections .groups .group .results {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+.body .content .partidos-colombianos > .tornaments .sections .groups .group .results .score {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.body .content .partidos-colombianos > .tornaments .sections .groups .group .results .score > span {
+  font-size: 15px;
+}
+.body .content .partidos-colombianos > .tornaments .sections .groups .group .results .score .team {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.body .content .partidos-colombianos > .tornaments .sections .groups .group .results .score .team span {
+  font-size: 14px;
+}
+.body .content .partidos-colombianos > .tornaments .sections .groups .group .results .score .team img {
+  width: 40px;
+  height: 40px;
+}
+.body .content .partidos-colombianos > .tornaments .sections .groups .group .results .players {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.body .content .partidos-colombianos > .tornaments .sections .groups .group .results .players .player {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.body .content .partidos-colombianos > .tornaments .sections .groups .group .results .players .player span {
+  font-size: 12px;
+}
+.body .content .partidos-colombianos > .tornaments .sections .groups .group .results .players .player img {
+  width: 40px;
+  height: 40px;
+}
+.body .content .partidos-colombianos > .tornaments .sections .groups .group .options {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  justify-items: center;
+}
+.body .content .partidos-colombianos > .tornaments .sections .groups .group:last-child {
+  padding-bottom: 0;
+  border: none;
+}
+.body .content .partidos-colombianos .footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.body .content .liga-colombiana {
+  grid-column: span 12;
+  display: flex;
+  flex-direction: column;
+  background-color: #F3F8FF;
+  padding: 20px 50px;
+  border-radius: 20px;
+  gap: 10px;
+}
+.body .content .liga-colombiana .title {
+  font-weight: 700;
+  font-size: 20px;
+  color: #104596;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.body .content .liga-colombiana .tabs {
+  display: flex;
+  border-radius: 20px;
+  background-color: white;
+  width: 100%;
+}
+.body .content .liga-colombiana .tabs .tab {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  color: #191C36;
+  font-weight: 400;
+  border-radius: 20px;
+  padding: 6px 14px;
+  cursor: pointer;
+}
+.body .content .liga-colombiana .tabs .tab.active {
+  font-weight: 700;
+  color: white;
+  background-color: #104596;
+}
+.body .content .liga-colombiana .tornament {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.body .content .liga-colombiana .tornament .title {
+  font-weight: 700;
+  font-size: 14px;
+  color: #191C36;
+}
+.body .content .liga-colombiana .tornament .sections {
+  display: flex;
+  flex-direction: column;
+}
+.body .content .liga-colombiana .tornament .sections .section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.body .content .liga-colombiana .tornament .sections .section .content {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+.body .content .liga-colombiana .tornament .sections .section .content .rounds {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.body .content .liga-colombiana .tornament .sections .section .content .rounds .round {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.body .content .liga-colombiana .tornament .sections .section .content .rounds .round .header {
+  padding: 8px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #104596;
+}
+.body .content .liga-colombiana .tornament .sections .section .content .rounds .round .header span {
+  font-size: 14px;
+}
+.body .content .liga-colombiana .tornament .sections .section .content .rounds .round .groups {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.body .content .liga-colombiana .tornament .sections .section .content .rounds .round .groups .group {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #104596;
+}
+.body .content .liga-colombiana .tornament .sections .section .content .rounds .round .groups .group .results {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+.body .content .liga-colombiana .tornament .sections .section .content .rounds .round .groups .group .results .result {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.body .content .liga-colombiana .tornament .sections .section .content .rounds .round .groups .group .results .result .team {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.body .content .liga-colombiana .tornament .sections .section .content .rounds .round .groups .group .results .result .team img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+.body .content .liga-colombiana .tornament .sections .section .content .rounds .round .groups .group .results .result .team span {
+  font-size: 12px;
+}
+.body .content .liga-colombiana .tornament .sections .section .content .rounds .round .groups .group .results .result .score {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.body .content .liga-colombiana .tornament .sections .section .content .rounds .round .groups .group .results .result .score span {
+  font-size: 15px;
+}
+.body .content .liga-colombiana .tornament .sections .section .content .rounds .round .groups .group .times {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+.body .content .liga-colombiana .tornament .sections .section .content .rounds .round .groups .group .times > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.body .content .liga-colombiana .tornament .sections .section .content .rounds .round .groups .group .times > div:first-child span {
+  font-size: 14px;
+}
+.body .content .liga-colombiana .tornament .sections .section .content .rounds .round .groups .group .times > .button {
+  width: 100%;
+}
+.body .content .liga-colombiana .tornament .sections .section .content .rounds .round .groups .group:last-child {
+  padding-bottom: 0;
+  border: none;
+}
+.body .content .liga-colombiana .footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.body .content .articulos-relacionados {
+  grid-column: span 12;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.body .content .articulos-relacionados .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.body .content .articulos-relacionados .header span {
+  font-size: 25px;
+}
+.body .content .articulos-relacionados .articles {
+  display: flex;
+  gap: 32px;
+  width: 100%;
+}
+.body .content .latest-news-section {
+  grid-column: span 12;
+}
+.body .content .multimedia-section {
+  grid-column: span 12;
+}
+.body .content .publicity {
+  grid-column: span 4;
+}
+
 @media (max-width: 768px) {
-  .matches-section .updates {
+  .matches-section .content .updates {
     display: flex;
     gap: 13px;
     flex-direction: column;
   }
-  .matches-section .updates .list-cards {
+  .matches-section .content .updates .list-cards {
     flex-direction: column;
   }
-  .matches-television {
+  .matches-section .content .matches-television {
     display: grid;
     grid-template-columns: 100%;
     row-gap: 15px;
   }
-  .matches-television .date {
-    grid-column: span 12 !important;
+  .matches-section .content .matches-television > .title {
+    font-size: 18px;
   }
-  .matches-television .options {
+  .matches-section .content .matches-television .date {
+    grid-column: span 12 !important;
+    margin-right: 0 !important;
+  }
+  .matches-section .content .matches-television .date .dates-content .date-item {
+    font-size: 10px !important;
+  }
+  .matches-section .content .matches-television .options {
     grid-column: span 12 !important;
     display: flex;
     flex-direction: column;
   }
-  .matches-television .options > div {
+  .matches-section .content .matches-television .options > div {
     width: 100%;
+  }
+  .matches-section .content .matches-television .partidos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .matches-section .content .matches-television .partidos match-preview-component:nth-child(n+3) {
+    display: none;
   }
 }
 /***** GENERICS *****/
@@ -131,4 +485,38 @@
   height: 6px;
   border-radius: 50%;
   background-color: #FF3842;
+}
+
+/* FUTURE COMPONENTS */
+.date-content {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+  align-items: center;
+}
+.date-content div:first-child {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #FF3842;
+}
+.date-content span {
+  font-size: 9px;
+  font-weight: 400;
+}
+
+.select {
+  padding: 10px 20px 6px 20px;
+  background-color: #104596;
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 20px;
+  align-items: center;
+  width: 100%;
+  cursor: pointer;
+}
+.select span, .select i {
+  color: white;
 }
