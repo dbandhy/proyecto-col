@@ -1,20 +1,24 @@
-let currentIndex = 0;
+(function() {
+  var currentIndex = 0;
 
-function slideCarousel(direction) {
-  const track = document.querySelector('.carousel-track');
-  const card = document.querySelector('.movie-card');
-  const cardWidth = card.offsetWidth;
-  const totalCards = document.querySelectorAll('.movie-card').length;
-  const visibleCards = 4;
+  window.slideCarousel = function(direction) {
+    const track = document.querySelector('.carousel-track');
+    const cards = document.querySelectorAll('.movie-card');
+    if (!track || cards.length === 0) return;
 
-  currentIndex += direction;
+    const cardWidth = cards[0].offsetWidth;
+    const totalCards = cards.length;
+    const visibleCards = 4;
 
-  if (currentIndex < 0) {
-    currentIndex = 0;
-  } else if (currentIndex > totalCards - visibleCards) {
-    currentIndex = totalCards - visibleCards;
-  }
+    currentIndex += direction;
 
-  const newTransform = -(currentIndex * cardWidth);
-  track.style.transform = `translateX(${newTransform}px)`;
-}
+    if (currentIndex < 0) {
+      currentIndex = 0;
+    } else if (currentIndex > totalCards - visibleCards) {
+      currentIndex = totalCards - visibleCards;
+    }
+
+    const newTransform = -(currentIndex * cardWidth);
+    track.style.transform = `translateX(${newTransform}px)`;
+  };
+})();

@@ -1,9 +1,12 @@
-
-function loadComponent(id, file) {
-    fetch(file)
-        .then(response => response.text())
-        .then(data => document.getElementById(id).innerHTML = data)
-        .catch(error => console.error('Error al cargar el archivo:', error));
+async function loadComponent(id, file) {
+  try {
+    const response = await fetch(file)
+    const data = await response.text()
+    const container = document.getElementById(id)
+    container.innerHTML = data
+  } catch (error) {
+    console.error('Error al cargar el archivo:', error)
+  }
 }
 
 

@@ -116,7 +116,6 @@ nav {
 }
 
 .search-bar input {
-	width: 220px;
 	padding: 8px 40px 8px 15px; /* Espacio para el ícono a la derecha */
 	border: 1px solid #ddd;
 	border-radius: 20px;
