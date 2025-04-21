@@ -4,6 +4,7 @@ class FooterComponent extends HTMLElement {
   }
   render () {
     this.innerHTML = `
+    <div id="main-footer">
       <footer class="footer">
         <div class="container">
           <div class="layout">
@@ -59,6 +60,7 @@ class FooterComponent extends HTMLElement {
           </div>    
         </div>
       </footer>
+    </div>
     `;
   }
 }

@@ -1,0 +1,73 @@
+/* Estilos para el título de sección */
+.section-title {
+    color: #1a3876;
+    font-size: 2.5rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.section-title .subtitle {
+    font-size: 1.5rem;
+    color: #2d62c7;
+    font-weight: 500;
+    margin-left: 8px;
+}
+
+.personajes-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 32px;
+    margin-bottom: 40px;
+}
+
+.personaje-card {
+    display: flex;
+    flex-direction: row;
+    background: transparent;
+    overflow: hidden;
+    position: relative;
+    box-shadow: none;
+    border-radius: 0;
+    gap: 18px;
+    padding-right: 15px;
+}
+
+.personaje-img {
+    width: 150px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+.personaje-info {
+    padding: 0;
+    flex: 1;
+}
+
+.personaje-nombre {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 18px;
+}
+
+.personaje-detalle {
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+}
+
+.personaje-detalle-label {
+    display: block;
+    font-size: 0.9rem;
+    color: #888;
+    font-weight: normal;
+    margin-bottom: 2px;
+}
+
+.personaje-detalle-valor {
+    font-weight: 700;
+    color: #0047ab;
+    font-size: 1rem;
+}
+
