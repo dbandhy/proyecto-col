@@ -1,6 +1,6 @@
 class CardNoticeComponent extends HTMLElement {
   static get observedAttributes() {
-    return ['orientation','distribution', 'category','news','author','subtitle'];
+    return ['orientation','distribution', 'category','news','author','subtitle','image','classnames'];
   }
   
   attributeChangedCallback(name, oldValue, newValue) {
@@ -28,6 +28,14 @@ class CardNoticeComponent extends HTMLElement {
       this.subtitle = newValue;
       this.render();
     }
+    if (name === 'image') {
+      this.image = newValue;
+      this.render();
+    }
+    if (name === 'classnames') {
+      this.classnames = newValue;
+      this.render();
+    }
   }
 
   set orientation (val) {
@@ -36,6 +44,22 @@ class CardNoticeComponent extends HTMLElement {
   }
   get orientation () {
     return this._orientation
+  }
+
+  set distribution (val) {
+    this._distribution = val
+    this.render()
+  }
+  get distribution () {
+    return this._distribution
+  }
+
+  set classnames (val) {
+    this._classnames = val
+    this.render()
+  }
+  get classnames () {
+    return this._classnames
   }
 
   set news(val) {
@@ -52,8 +76,8 @@ class CardNoticeComponent extends HTMLElement {
 
   render () {
     this.innerHTML = `
-      <div class="card-news orientation-${this.orientation}">
-        <img src="https://a.storyblok.com/f/112937/568x464/7dd062feb7/truth_english_football_hero.jpg/m/620x0/filters:quality(70)/" alt="news">
+      <div class="card-news orientation-${this.orientation} distribution-${this.distribution} ${this.classnames}">
+        <img src="${this.image}" alt="news">
         <div class="news-content">
           <span class="category">${this.category}</span>
           <span class="title">${this.news}</span>
