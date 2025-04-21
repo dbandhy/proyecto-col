@@ -324,7 +324,7 @@
 											category="FÚTBOL"
 											author="Por Juan Carlos Garcia Sierra"
 											distribution="large-content"
-											classnames="secondary-card"
+											class="secondary-card"
 										></card-notice-component>
 										<card-notice-component
 											image="../assets/img/breaking-news-10.png"
@@ -333,7 +333,7 @@
 											category="FÚTBOL"
 											author="Por Juan Carlos Garcia Sierra"
 											distribution="large-content"
-											classnames="secondary-card"
+											class="secondary-card"
 										></card-notice-component>
 										<card-notice-component
 											image="../assets/img/breaking-news-10.png"
@@ -342,7 +342,7 @@
 											category="FÚTBOL"
 											author="Por Juan Carlos Garcia Sierra"
 											distribution="large-content"
-											classnames="secondary-card"
+											class="secondary-card"
 										></card-notice-component>
 									</div>
 									
@@ -1089,10 +1089,9 @@
           cardOne.setAttribute('orientation', 'vertical');
           cardTwo.setAttribute('orientation', 'vertical');
           for (const card of cardsSecondary) {
-            card.parentElement.setAttribute('distribution', 'equals');
+            card.setAttribute('distribution', 'equals');
           }
 					for (const card2 of cardSecondaryRelevant) {
-						console.log(card2.parentElement)
 						card2.setAttribute('distribution', 'equals')
 						card2.setAttribute('orientation','vertical')
 					}
@@ -1102,6 +1101,10 @@
           for (const card of cardsSecondary) {
             card.setAttribute('distribution', 'large-content');
           }
+					for (const card2 of cardSecondaryRelevant) {
+						card2.setAttribute('distribution', 'large-content')
+						card2.setAttribute('orientation','horizontal')
+					}
         }
       };
 
