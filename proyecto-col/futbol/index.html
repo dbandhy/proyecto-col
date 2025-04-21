@@ -28,75 +28,645 @@
 			referrerpolicy="no-referrer"
 		/>
 		<link rel="stylesheet" href="../styles/style.css" />
-    <link rel="stylesheet" href="../styles/futbol.css">
+    <link rel="stylesheet" href="./styles/futbol.css">
 		<!-- Estilos componentes -->
 		<link rel="stylesheet" href="../styles/header.css" />
 		<link rel="stylesheet" href="../styles/footer.css" />
+		<link rel="stylesheet" href="../styles/text.css">
+		<link rel="stylesheet" href="../static/components/newsCard/newsCard.css" />
+		<link rel="stylesheet" href="../static/components/matchPreview/matchPreview.css">
+		<link rel="stylesheet" href="../static/components/cardNotice/cardNotice.css">
+		<!-- Componentes -->
+		<script src="../static/components/footer.js"></script>
+		<script src="../static/components/header.js"></script>
+		<script src="../static/components/newsCard/newsCard.js"></script>
+		<script src="../static/components/matchPreview/matchPreview.js"></script>
+		<script src="../static/components/cardNotice/cardNotice.js"></script>
+		<script src="../static/components/socialBar.js"></script>
 </head>
 <body>
-  <div class="content">
+	<header-component></header-component>
+
+  <div class="container">
 		<div class="col-1 d-none d-md-flex align-items-start">
-			<div class="social-bar mt-4">
-				<div class="social-icon facebook"><i class="fab fa-facebook-f"></i></div>
-				<div class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></div>
-				<div class="social-icon twitter"><i class="fa-brands fa-x-twitter"></i></div>
-				<div class="social-icon email"><i class="fa-regular fa-envelope"></i></div>
-			</div>
+			<social-bar-component></social-bar-component>
 		</div>
-    <div class="matches-section">
+	</div>
+
+	<section class="matches-section">
+		<div class="content">
 			<div class="updates">
-				<div>
+				<div class="title">
 					<div class="small-circle-red"></div>
 					<span>ACTUALIZACIÓN - JUEVES, 7 SEPTIEMBRE 2025. 7:33PM</span>
 				</div>
 				<div class="list-cards">
-					<div class="card">
-						<img src="https://crests.football-data.org/65.svg" alt="">
-						<div class="title">
-						  <span>JHON DURÁN</span>
+					<news-card-component title="JHON DURÁN" image="https://crests.football-data.org/65.svg"></news-card-component>
+					<news-card-component title="FICHAJES" image="https://crests.football-data.org/65.svg"></news-card-component>
+					<news-card-component title="SUPERLIGA" image="https://crests.football-data.org/65.svg"></news-card-component>
+				</div>
+			</div>
+			<div class="matches-television">
+				<div class="title">PARTIDOS POR TELEVISIÓN</div>
+				<div class="date">
+					<div class="btn-icon"><i class="fa-solid fa-angle-left"></i></div>
+					<div class="dates-content">
+						<div class="date-item">JUEVES 16 ENERO</div>
+						<div class="separator"></div>
+						<div class="date-item">JUEVES 17 ENERO</div>
+						<div class="separator"></div>
+						<div class="date-item">JUEVES 18 ENERO</div>
+					</div>
+					<div class="btn-icon"><i class="fa-solid fa-angle-right"></i></div>
+				</div>
+				<div class="options">
+					<a href="#" class="btn btn-primary">Ver por torneo</a>
+					<a href="#" class="btn btn-warning">Ver todos los partidos</a>
+				</div>
+				<div class="partidos">
+					<match-preview-component></match-preview-component>
+					<match-preview-component></match-preview-component>
+					<match-preview-component></match-preview-component>
+					<match-preview-component></match-preview-component>
+					<match-preview-component></match-preview-component>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="body">
+		<div class="content">
+			<div class="news-content">
+				<div class="title">
+					<span class="text color-primary weight-bold">NOTICIAS</span>
+					<button class="btn btn-primary">Ver todo</button>
+				</div>
+				<div class="newsOne">
+					<card-notice-component
+						news="Donald Trump reconoció a Edmundo González"
+						orientation="horizontal"
+						category="FÚTBOL"
+						author="Por Juan Carlos Garcia Sierra"
+					></card-notice-component>
+				</div>
+				<div class="newsTwo">
+					<card-notice-component
+						news="Donald Trump reconoció a Edmundo González"
+						orientation="horizontal"
+						category="FÚTBOL"
+						author="Por Juan Carlos Garcia Sierra"
+					></card-notice-component>
+				</div>
+				<div class="newsThree">
+					<card-notice-component
+						news="Donald Trump reconoció a Edmundo González"
+						orientation="vertical"
+						category="FÚTBOL"
+						author="Por Juan Carlos Garcia Sierra"
+					></card-notice-component>
+				</div>
+				<div class="newsFourth">
+					<card-notice-component
+						news="Donald Trump reconoció a Edmundo González"
+						orientation="horizontal"
+						category="FÚTBOL"
+						author="Por Juan Carlos Garcia Sierra"
+					></card-notice-component>
+				</div>
+				<div class="newsFive">
+					<card-notice-component
+						news="Donald Trump reconoció a Edmundo González"
+						orientation="horizontal"
+						category="FÚTBOL"
+						author="Por Juan Carlos Garcia Sierra"
+					></card-notice-component>
+				</div>
+				<div class="newsSix">
+					<card-notice-component
+						news="Donald Trump reconoció a Edmundo González"
+						orientation="horizontal"
+						category="FÚTBOL"
+						author="Por Juan Carlos Garcia Sierra"
+					></card-notice-component>
+				</div>
+			</div>
+			<div class="teams-list">
+				<img src="https://crests.football-data.org/65.svg" alt="">
+				<img src="https://crests.football-data.org/65.svg" alt="">
+				<img src="https://crests.football-data.org/65.svg" alt="">
+				<img src="https://crests.football-data.org/65.svg" alt="">
+				<img src="https://crests.football-data.org/65.svg" alt="">
+				<img src="https://crests.football-data.org/65.svg" alt="">
+				<img src="https://crests.football-data.org/65.svg" alt="">
+				<img src="https://crests.football-data.org/65.svg" alt="">
+				<img src="https://crests.football-data.org/65.svg" alt="">
+				<img src="https://crests.football-data.org/65.svg" alt="">
+				<img src="https://crests.football-data.org/65.svg" alt="">
+				<img src="https://crests.football-data.org/65.svg" alt="">
+				<img src="https://crests.football-data.org/65.svg" alt="">
+				<img src="https://crests.football-data.org/65.svg" alt="">
+				<img src="https://crests.football-data.org/65.svg" alt="">
+				<img src="https://crests.football-data.org/65.svg" alt="">
+				<img src="https://crests.football-data.org/65.svg" alt="">
+				<img src="https://crests.football-data.org/65.svg" alt="">
+			</div>
+			<div class="partidos-colombianos">
+				<div class="date-content">
+					<div class="small-circle-red"></div>
+					<span>ACTUALIZACIÓN - JUEVES, 7 SEPTIEMBRE 2025. 7:33PM</span>
+				</div>
+				<div class="title text center color-primary weight-bold">PARTIDOS COLOMBIANOS</div>
+				<div class="tornaments">
+					<div class="sections">
+						<div class="select">
+							<span>CUADRANGULAR A</span>
+							<i class="fa-solid fa-angle-down"></i>
 						</div>
-						<div class="body">
-							<div>
-								<div class="play-icon"><div></div></div>
-								<span class="title">Aston Villa Confirmó dóndo jugará Jhon Durán</span>
+						<div class="groups">
+							<div class="group">
+								<div class="time text color-dark weight-bold">08:00PM</div>
+								<div class="results">
+									<div class="score">
+										<div class="team">
+											<span class="text color-primary weight-bold">Colombia</span>
+											<img src="https://crests.football-data.org/65.svg" alt="">
+										</div>
+										<span class="text color-primary weight-bold">3 - 0</span>
+										<div class="team">
+											<img src="https://crests.football-data.org/65.svg" alt="">
+											<span class="text color-primary weight-bold">Colombia</span>
+										</div>
+									</div>
+									<div class="players">
+										<div class="player">
+											<span class="text color-primary weight-regular">Yaser. A</span>
+											<img src="https://crests.football-data.org/65.svg" alt="">
+										</div>
+										<div class="player">
+											<img src="https://crests.football-data.org/65.svg" alt="">
+											<span class="text color-primary weight-regular">Yaser. A</span>
+										</div>
+									</div>
+								</div>
+								<div class="options">
+									<div class="btn btn-primary">Jugando</div>
+									<div class="btn btn-primary">Info</div>
+								</div>
 							</div>
-							<div class="author">Por: Juan Carlos Garcia Sierra</div>
 						</div>
 					</div>
-					<div class="card">
-						<img src="https://crests.football-data.org/65.svg" alt="">
-						<div class="title">
-						  <span>JHON DURÁN</span>
+					<div class="sections">
+						<div class="select">
+							<span>CUADRANGULAR A</span>
+							<i class="fa-solid fa-angle-down"></i>
 						</div>
-						<div class="body">
-							<div>
-								<div class="content-triangle">
-									<div class="triangle-right"></div>
+						<div class="groups">
+							<div class="group">
+								<div class="time text color-dark weight-bold">08:00PM</div>
+								<div class="results">
+									<div class="score">
+										<div class="team">
+											<span class="text color-primary weight-bold">Colombia</span>
+											<img src="https://crests.football-data.org/65.svg" alt="">
+										</div>
+										<span class="text color-primary weight-bold">3 - 0</span>
+										<div class="team">
+											<img src="https://crests.football-data.org/65.svg" alt="">
+											<span class="text color-primary weight-bold">Colombia</span>
+										</div>
+									</div>
+									<div class="players">
+										<div class="player">
+											<span class="text color-primary weight-regular">Yaser. A</span>
+											<img src="https://crests.football-data.org/65.svg" alt="">
+										</div>
+										<div class="player">
+											<img src="https://crests.football-data.org/65.svg" alt="">
+											<span class="text color-primary weight-regular">Yaser. A</span>
+										</div>
+									</div>
 								</div>
-								<span class="title">Aston Villa Confirmó dóndo jugará Jhon Durán</span>
-							</div>
-							<div class="author">Por: Juan Carlos Garcia Sierra</div>
-						</div>
-					</div>
-					<div class="card">
-						<img src="https://crests.football-data.org/65.svg" alt="">
-						<div class="title">
-						  <span>JHON DURÁN</span>
-						</div>
-						<div class="body">
-							<div>
-								<div class="content-triangle">
-									<div class="triangle-right"></div>
+								<div class="options">
+									<div class="btn btn-primary">Jugando</div>
+									<div class="btn btn-primary">Info</div>
 								</div>
-								<span class="title">Aston Villa Confirmó dóndo jugará Jhon Durán</span>
 							</div>
-							<div class="author">Por: Juan Carlos Garcia Sierra</div>
 						</div>
 					</div>
 				</div>
 			</div>
-    </div>
-  </div>
+			<div class="liga-colombiana">
+				<div class="title">LIGA COLOMBIANA</div>
+				<div class="tabs">
+					<div class="tab active">Resultados</div>
+					<div class="tab">Posiciones</div>
+					<div class="tab">Goles</div>
+				</div>
+				<div class="tornament">
+					<div class="title">TORNEO CLAUSURA</div>
+					<div class="sections">
+						<div class="section">
+							<div class="select">
+								<span>CUADRANGULAR A</span>
+								<i class="fa-solid fa-angle-down"></i>
+							</div>
+							<div class="content">
+								<div class="date-content">
+									<div class="small-circle-red"></div>
+									<span>ACTUALIZACIÓN - JUEVES, 7 SEPTIEMBRE 2025. 7:33PM</span>
+								</div>
+								<div class="rounds">
+									<div class="round">
+										<div class="header">
+											<span class="text weight-bold color-dark">Ronda 5</span>
+											<i class="fa-solid fa-angle-down"></i>
+										</div>
+										<div class="groups">
+											<div class="group">
+												<div class="results">
+													<div class="result">
+														<div class="team">
+															<img src="https://crests.football-data.org/65.svg" alt="">
+															<span class="text color-primary weight-regular">Colombia</span>
+														</div>
+														<div class="score">
+															<span class="text color-success weight-bold">2</span>
+															<span class="text color-success weight-bold">(3)</span>
+														</div>
+													</div>
+													<div class="result">
+														<div class="team">
+															<img src="https://crests.football-data.org/65.svg" alt="">
+															<span class="text color-primary weight-regular">Colombia</span>
+														</div>
+														<div class="score">
+															<span class="text color-success weight-bold">2</span>
+															<span class="text color-success weight-bold">(3)</span>
+														</div>
+													</div>
+												</div>
+												<div class="times">
+													<div>
+														<span class="text color-dark weight-bold">6:30AM</span>
+														<i class="fa-solid fa-angle-down"></i>
+													</div>
+													<div class="button">
+
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="round">
+										<div class="header">
+											<span class="text weight-bold color-dark">Ronda 5</span>
+											<i class="fa-solid fa-angle-down"></i>
+										</div>
+										<div class="groups">
+											<div class="group">
+												<div class="results">
+													<div class="result">
+														<div class="team">
+															<img src="https://crests.football-data.org/65.svg" alt="">
+															<span class="text color-primary weight-regular">Colombia</span>
+														</div>
+														<div class="score">
+															<span class="text color-success weight-bold">2</span>
+															<span class="text color-success weight-bold">(3)</span>
+														</div>
+													</div>
+													<div class="result">
+														<div class="team">
+															<img src="https://crests.football-data.org/65.svg" alt="">
+															<span class="text color-primary weight-regular">Colombia</span>
+														</div>
+														<div class="score">
+															<span class="text color-success weight-bold">2</span>
+															<span class="text color-success weight-bold">(3)</span>
+														</div>
+													</div>
+												</div>
+												<div class="times">
+													<div>
+														<span class="text color-dark weight-bold">6:30AM</span>
+														<i class="fa-solid fa-angle-down"></i>
+													</div>
+													<div class="button">
+
+													</div>
+												</div>
+											</div>
+											<div class="group">
+												<div class="results">
+													<div class="result">
+														<div class="team">
+															<img src="https://crests.football-data.org/65.svg" alt="">
+															<span class="text color-primary weight-regular">Colombia</span>
+														</div>
+														<div class="score">
+															<span class="text color-success weight-bold">2</span>
+															<span class="text color-success weight-bold">(3)</span>
+														</div>
+													</div>
+													<div class="result">
+														<div class="team">
+															<img src="https://crests.football-data.org/65.svg" alt="">
+															<span class="text color-primary weight-regular">Colombia</span>
+														</div>
+														<div class="score">
+															<span class="text color-success weight-bold">2</span>
+															<span class="text color-success weight-bold">(3)</span>
+														</div>
+													</div>
+												</div>
+												<div class="times">
+													<div>
+														<span class="text color-dark weight-bold">6:30AM</span>
+														<i class="fa-solid fa-angle-down"></i>
+													</div>
+													<div class="button">
+
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="articulos-relacionados">
+				<div class="header">
+					<span class="text color-primary weight-bold">ARTÍCULOS RELACIONADOS</span>
+					<button class="btn btn-primary">Ver mas</button>
+				</div>
+				<div class="articles">
+					<card-notice-component
+						news="Donald Trump reconoció a Edmundo González"
+						orientation="vertical"
+						category="FÚTBOL"
+						author="Por Juan Carlos Garcia Sierra"
+					></card-notice-component>
+					<card-notice-component
+						news="Donald Trump reconoció a Edmundo González"
+						orientation="vertical"
+						category="FÚTBOL"
+						author="Por Juan Carlos Garcia Sierra"
+					></card-notice-component>
+					<card-notice-component
+						news="Donald Trump reconoció a Edmundo González"
+						orientation="vertical"
+						category="FÚTBOL"
+						author="Por Juan Carlos Garcia Sierra"
+					></card-notice-component>
+					<card-notice-component
+						news="Donald Trump reconoció a Edmundo González"
+						orientation="vertical"
+						category="FÚTBOL"
+						author="Por Juan Carlos Garcia Sierra"
+					></card-notice-component>
+					<card-notice-component
+						news="Donald Trump reconoció a Edmundo González"
+						orientation="vertical"
+						category="FÚTBOL"
+						author="Por Juan Carlos Garcia Sierra"
+					></card-notice-component>
+					<card-notice-component
+						news="Donald Trump reconoció a Edmundo González"
+						orientation="vertical"
+						category="FÚTBOL"
+						author="Por Juan Carlos Garcia Sierra"
+					></card-notice-component>
+				</div>
+			</div>
+			<div class="publicity">SECCION PUBLICIDAD</div>
+
+			<div class="multimedia-section">
+				<!-- Encabezado con título y botón Ver todo (solo desktop) -->
+				<div class="section-header d-flex justify-content-between align-items-center mb-3">
+					<h2 class="section-title multimedia-title m-0 p-0">MULTIMEDIA</h2>
+					<a href="#" class="btn btn-primary ver-todo-btn d-none d-md-block">Ver todo</a>
+				</div>
+				
+				<!-- Artículo principal (visible en ambos) -->
+				<div class="main-multimedia-article mb-4">
+					<div class="article-image-container video-container">
+						<iframe width="900" height="450" src="https://www.youtube.com/embed/YjRKMtFpZxw?si=z50Qx-Aj3SpPT0Jz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                                        
+					</div>
+					
+					<h3 class="article-title">
+						<div class="category-tag d-none d-md-block">CINE</div>
+						Reapareció María Corina Machado: "Estoy Bien, Estoy Segura"
+					</h3>
+					<div class="article-author">
+						Por: Juan Carlos García Sierra
+					</div>
+					<div class="article-excerpt d-none d-md-block">
+						María Corina Machado reaparece en un video y dice que ya está libre. <a href="#" class="read-more">Leer más</a>
+					</div>
+					<div class="d-md-none">
+						<p class="article-excerpt-mobile">
+							María Corina Machado reaparece en un video y dice que ya está libre. <a href="#" class="read-more">Leer más</a>
+						</p>
+					</div>
+				</div>
+				
+				<!-- Línea divisoria (solo en desktop) -->
+				<hr class="d-none d-md-block mb-4">
+				
+				<!-- Lista de artículos secundarios -->
+				<div class="multimedia-articles-list">
+					<!-- Artículo 1 -->
+					<div class="multimedia-article-item d-flex mb-3">
+						<div class="article-thumbnail">
+							<div class="video-container small-video">
+								<iframe width="100" height="100" src="https://www.youtube.com/embed/Q7yrRaY488A?si=07MGk24bTobMn2mB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                                                
+							</div>
+						</div>
+						<div class="article-content">
+							<div class="category-tag d-none d-md-block">CINE</div>
+							<h4 class="article-title small-title">
+								La hora en la que arranca el nuevo capítulo de "Dragon Ball Daima"
+							</h4>
+							<div class="article-footer">
+								<a href="#" class="read-more">Leer más</a>
+								<span class="article-author">Por: Juan Carlos García Sierra</span>
+							</div>
+						</div>
+					</div>
+					<!-- Artículo 2 -->
+					<div class="multimedia-article-item d-flex mb-3">
+						<div class="article-thumbnail">
+							<div class="video-container small-video">
+								<iframe width="100" height="100" src="https://www.youtube.com/embed/Q7yrRaY488A?si=07MGk24bTobMn2mB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+							</div>
+						</div>
+						<div class="article-content">
+							<div class="category-tag d-none d-md-block">CINE</div>
+							<h4 class="article-title small-title">
+								La hora en la que arranca el nuevo capítulo de "Dragon Ball Daima"
+							</h4>
+							<div class="article-footer">
+								<a href="#" class="read-more">Leer más</a>
+								<span class="article-author">Por: Juan Carlos García Sierra</span>
+							</div>
+						</div>
+					</div>
+						
+						<!-- Artículo 3 -->
+						<div class="multimedia-article-item d-flex mb-3">
+								<div class="article-thumbnail">
+										<div class="video-container small-video">
+												<iframe width="100" height="100" src="https://www.youtube.com/embed/Q7yrRaY488A?si=07MGk24bTobMn2mB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+										</div>
+								</div>
+								<div class="article-content">
+										<div class="category-tag d-none d-md-block">CINE</div>
+										<h4 class="article-title small-title">
+												La hora en la que arranca el nuevo capítulo de "Dragon Ball Daima"
+										</h4>
+										<div class="article-footer">
+												<a href="#" class="read-more">Leer más</a>
+												<span class="article-author">Por: Juan Carlos García Sierra</span>
+										</div>
+								</div>
+						</div>
+						
+						<!-- Artículo 4 -->
+						<div class="multimedia-article-item d-flex mb-3">
+								<div class="article-thumbnail">
+										<div class="video-container small-video">
+												<iframe width="100" height="100" src="https://www.youtube.com/embed/Q7yrRaY488A?si=07MGk24bTobMn2mB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+										</div>
+								</div>
+								<div class="article-content">
+										<div class="category-tag d-none d-md-block">CINE</div>
+										<h4 class="article-title small-title">
+												La hora en la que arranca el nuevo capítulo de "Dragon Ball Daima"
+										</h4>
+										<div class="article-footer">
+												<a href="#" class="read-more">Leer más</a>
+												<span class="article-author">Por: Juan Carlos García Sierra</span>
+										</div>
+								</div>
+						</div>
+						
+						<!-- Artículos adicionales solo para móvil -->
+						<div class="d-md-none">
+								<!-- Artículo 5 (móvil) -->
+								<div class="multimedia-article-item d-flex mb-3">
+										<div class="article-thumbnail">
+												<div class="video-container small-video">
+														<iframe width="100" height="100" src="https://www.youtube.com/embed/Q7yrRaY488A?si=07MGk24bTobMn2mB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+												</div>
+										</div>
+										<div class="article-content">
+												<h4 class="article-title small-title">
+														La hora en la que arranca el nuevo capítulo de "Dragon Ball Daima"
+												</h4>
+												<div class="article-footer">
+														<a href="#" class="read-more">Leer más</a>
+														<span class="article-author">Por: Juan Carlos García Sierra</span>
+												</div>
+										</div>
+								</div>
+						</div>
+				</div>
+				
+				<!-- Botón Ver más -->
+				<div class="text-center mt-4">
+						<a href="#" class="btn btn-primary ver-mas-btn">Ver más</a>
+				</div>
+			</div>
+
+			<div class="news-content">
+				<div class="title">
+					<span class="text color-primary weight-bold">MÁS NOTICIAS</span>
+					<button class="btn btn-primary">Ver todo</button>
+				</div>
+				<div class="newsOne">
+					<card-notice-component
+						news="Donald Trump reconoció a Edmundo González"
+						orientation="horizontal"
+						category="FÚTBOL"
+						author="Por Juan Carlos Garcia Sierra"
+					></card-notice-component>
+				</div>
+				<div class="newsTwo">
+					<card-notice-component
+						news="Donald Trump reconoció a Edmundo González"
+						orientation="horizontal"
+						category="FÚTBOL"
+						author="Por Juan Carlos Garcia Sierra"
+					></card-notice-component>
+				</div>
+				<div class="newsThree">
+					<card-notice-component
+						news="Donald Trump reconoció a Edmundo González"
+						orientation="vertical"
+						category="FÚTBOL"
+						author="Por Juan Carlos Garcia Sierra"
+					></card-notice-component>
+				</div>
+				<div class="newsFourth">
+					<card-notice-component
+						news="Donald Trump reconoció a Edmundo González"
+						orientation="horizontal"
+						category="FÚTBOL"
+						author="Por Juan Carlos Garcia Sierra"
+					></card-notice-component>
+				</div>
+				<div class="newsFive">
+					<card-notice-component
+						news="Donald Trump reconoció a Edmundo González"
+						orientation="horizontal"
+						category="FÚTBOL"
+						author="Por Juan Carlos Garcia Sierra"
+					></card-notice-component>
+				</div>
+				<div class="newsSix">
+					<card-notice-component
+						news="Donald Trump reconoció a Edmundo González"
+						orientation="horizontal"
+						category="FÚTBOL"
+						author="Por Juan Carlos Garcia Sierra"
+					></card-notice-component>
+				</div>
+			</div>
+
+			<div class="latest-news-section">
+				<div class="section-header mb-3">
+					<h2 class="section-title latest-news-title">LO ÚLTIMO EN COLOMBIA</h2>
+				</div>
+				<card-notice-component
+					news="Donald Trump reconoció a Edmundo González"
+					orientation="vertical"
+					category="FÚTBOL"
+					author="Por Juan Carlos Garcia Sierra"
+				></card-notice-component>
+				<card-notice-component
+					news="Donald Trump reconoció a Edmundo González"
+					orientation="horizontal"
+					category="FÚTBOL"
+					author="Por Juan Carlos Garcia Sierra"
+				></card-notice-component>
+				<card-notice-component
+					news="Donald Trump reconoció a Edmundo González"
+					orientation="horizontal"
+					category="FÚTBOL"
+					author="Por Juan Carlos Garcia Sierra"
+				></card-notice-component>
+				<card-notice-component
+					news="Donald Trump reconoció a Edmundo González"
+					orientation="horizontal"
+					category="FÚTBOL"
+					author="Por Juan Carlos Garcia Sierra"
+				></card-notice-component>
+	</div>
+		</div>
+	</section>
+	<footer-component></footer-component>
 </div>
 </body>
 </html>

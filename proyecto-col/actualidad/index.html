@@ -10,113 +10,110 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="stylesheet" href="../styles/style.css">
-    <link rel="stylesheet" href="../styles/actualidad.css">
+    <link rel="stylesheet" href="./styles/actualidad.css">
     <!-- Estilos componentes -->
     <link rel="stylesheet" href="../styles/header.css">
     <link rel="stylesheet" href="../styles/footer.css">
-</head>
+    <link rel="stylesheet" href="../styles/text.css">
+    <!-- Componentes -->
+		<script src="../static/components/footer.js"></script>
+		<script src="../static/components/header.js"></script>
+    <script src="../static/components/socialBar.js"></script>
+  </head>
 <body>
-
-    <div id="main-header"></div>
-
+    <header-component></header-component>
     <!-- Grid Principal -->
-    <div class="row col-12">
-      <!-- Columna para los Social-Bar -->
+    <div class="container">
       <div class="col-1 d-none d-md-flex align-items-start">
-        <div class="social-bar mt-4">
-          <div class="social-icon facebook"><i class="fab fa-facebook-f"></i></div>
-          <div class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></div>
-          <div class="social-icon twitter"><i class="fa-brands fa-x-twitter"></i></div>
-          <div class="social-icon email"><i class="fa-regular fa-envelope"></i></div>
-        </div>
+        <social-bar-component></social-bar-component>
       </div>
-
-      <div class="col">
-        <!-- Sección Frontera con Venezuela -->
-        <section class="venezuela-news-section py-4">
-          <div class="container">
-            <div class="update-info">
-                <i class="fas fa-circle text-danger me-2 blink"></i> ACTUALIZACIÓN - JUEVES, 7 SEPTIEMBRE 2025, 7:33PM
+    </div>
+    <div class="body">
+      <div class="section-main-news">
+        <div class="content">
+          <div class="date-content">
+            <div class="small-circle-red"></div>
+            <span>ACTUALIZACIÓN - JUEVES, 7 SEPTIEMBRE 2025. 7:33PM</span>
+          </div>
+          <div class="news-content">
+            <div class="card-main-news newsOne">
+              <img src="../assets/img/breaking-news-1.png" alt="">
+              <div class="body">
+                <div class="title">
+                  <span class="text color-dark weight-bold">FRONTERA CON VENEZUELA</span>
+                </div>
+                <div class="news">
+                  <div class="play-icon"><div></div></div>
+                  <span class="text color-dark weight-bold">Régimen de Maduro ordenó el cierre de la frontera con Colombia este viernes</span>
+                  <span class="text color-primary weight-bold">Leer más</span>
+                </div>
+                <div class="author">
+                  <span class="text color-dark weight-regular">Por</span>
+                  <span class="text color-dark weight-bold">Juan Carlos Garcia Sierra</span>
+                </div>
+              </div>
             </div>
-            <div class="news-content">
-              <div class="newsOne">
-                <div class="main-article mb-3">
-                  <div>
-                    <img src="../assets/img/breaking-news-1.png" alt="Maduro y Petro" class="img-fluid">
-                  </div>
-                  <div class="article-category">
-                    <span class="category-tag">FRONTERA CON VENEZUELA</span>
-                  </div>
-                  <h3 class="article-title">
-                    <div class="play-icon"><div></div></div> Régimen de Maduro ordenó el cierre de la frontera con Colombia este viernes
-                  </h3>
-                  <div class="article-footer">
-                    <a href="#" class="read-more">Leer más</a>
-                    <span class="article-author">Por: Juan Carlos García Sierra</span>
-                  </div>
+            <div class="card-main-news inverse newsTwo">
+              <div class="body">
+                <div class="title">
+                  <span class="text color-dark weight-bold">FRONTERA CON VENEZUELA</span>
+                </div>
+                <div class="news">
+                  <div class="play-icon"><div></div></div>
+                  <span class="text color-dark weight-bold">Régimen de Maduro ordenó el cierre de la frontera con Colombia este viernes</span>
+                  <span class="text color-primary weight-bold">Leer más</span>
+                </div>
+                <div class="author">
+                  <span class="text color-dark weight-regular">Por</span>
+                  <span class="text color-dark weight-bold">Juan Carlos Garcia Sierra</span>
                 </div>
               </div>
-              
-              <div class="bannerOne">
-                <img src="../assets/img/banner-copa-america.png" alt="Siente la emoción Copa América USA 2024" class="img-fluid">
-              </div>
-
-              <div class="news-item newsTwo">
-                  <div class="category-header">
-                      <h2 class="section-title">GUSTAVO PETRO</h2>
-                  </div>
-                  <h3 class="article-title">
-                      <i class="fas fa-circle text-warning me-1"></i> Petro se desmarca: no irá a posesión de Nicolás Maduro el viernes                                
-                  </h3>
-                  <div class="article-footer">
-                      <a href="#" class="read-more">Leer más</a>                                    
-                  </div>
-                  <div class="article-footer mt-3">                                    
-                      <span class="article-author">Por: Juan Carlos García Sierra</span>
-                  </div>
-              </div>
-              
-              <div class="news-item newsThree">
-                <div class="category-header">
-                  <h2 class="section-title">GUSTAVO PETRO</h2>
+            </div>
+            <div class="bannerOne">
+              <img src="../assets/img/banner-copa-america.png" alt="Siente la emoción Copa América USA 2024" class="img-fluid">
+            </div>
+            <div class="card-main-news inverse newsThree">
+              <div class="body">
+                <div class="title">
+                  <span class="text color-dark weight-bold">FRONTERA CON VENEZUELA</span>
                 </div>
-                <h3 class="article-title">
-                  <i class="fas fa-circle text-warning me-1"></i> Petro se desmarca: no irá a posesión de Nicolás Maduro el viernes                                
-                </h3>
-                <div class="article-footer">
-                  <a href="#" class="read-more">Leer más</a>                                    
+                <div class="news">
+                  <div class="play-icon"><div></div></div>
+                  <span class="text color-dark weight-bold">Régimen de Maduro ordenó el cierre de la frontera con Colombia este viernes</span>
+                  <span class="text color-primary weight-bold">Leer más</span>
                 </div>
-                <div class="article-footer mt-3">                                    
-                  <span class="article-author">Por: Juan Carlos García Sierra</span>
+                <div class="author">
+                  <span class="text color-dark weight-regular">Por</span>
+                  <span class="text color-dark weight-bold">Juan Carlos Garcia Sierra</span>
                 </div>
               </div>
-
-              <div class="videoSection">
-                <div class="category-header">
-                  <h2 class="section-title">GUSTAVO PETRO</h2>
+            </div>
+            <div class="card-main-news inverse videoSection">
+              <iframe width="460" height="215" src="https://www.youtube.com/embed/cB7L9okS2aE?si=xv0R7O8uoSmWfASl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <div class="body">
+                <div class="title">
+                  <span class="text color-dark weight-bold">FRONTERA CON VENEZUELA</span>
                 </div>
-                
-                <div class="news-item">
-                  <div class="article-image-container video-container">                                    
-                    <iframe width="460" height="215" src="https://www.youtube.com/embed/cB7L9okS2aE?si=xv0R7O8uoSmWfASl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                  </div>
-                  <h3 class="article-title">
-                    <i class="fas fa-circle text-warning me-1"></i> Petro se desmarca: no irá a posesión de Nicolás Maduro el viernes
-                  </h3>
-                  <div class="article-footer">
-                    <a href="#" class="read-more">Leer más</a>
-                    <span class="article-author">Por: Juan Carlos García Sierra</span>
-                  </div>
+                <div class="news">
+                  <div class="play-icon"><div></div></div>
+                  <span class="text color-dark weight-bold">Régimen de Maduro ordenó el cierre de la frontera con Colombia este viernes</span>
+                  <span class="text color-primary weight-bold">Leer más</span>
+                </div>
+                <div class="author">
+                  <span class="text color-dark weight-regular">Por</span>
+                  <span class="text color-dark weight-bold">Juan Carlos Garcia Sierra</span>
                 </div>
               </div>
-              
-              <div class="bannerTwo">
-                <img src="../assets/img/banner-copa-america.png" alt="Siente la emoción Copa América USA 2024" class="img-fluid">
-              </div>
+            </div>
+            
+            <div class="bannerTwo">
+              <img src="../assets/img/banner-copa-america.png" alt="Siente la emoción Copa América USA 2024" class="img-fluid">
             </div>
           </div>
-        </section>
-        <div class="container bg-white">
+        </div>
+      </div>
+      <div class="section-secondary-news">
+        <div class="content">
           <div class="news-advanced">
             <section class="button-bar mt-4 header">
               <div class="container">
@@ -130,91 +127,111 @@
                 <hr>
               </div>
             </section>
-            <section class="news">
-              <div class="economia-article mt-3">
-                <div class="article-image-container">
-                  <img src="../assets/img/breaking-news-8.png" alt="Cotización del dólar en Colombia" class="img-fluid">
-                </div>
-                <div class="article-category">
-                  <span class="category-tag economia">ECONOMÍA</span>
-                </div>
-                <h3 class="article-title">
-                  Cotización del dólar en Colombia: este es su precio hoy, 10 de enero
-                </h3>
-                <div class="article-footer">
-                  <a href="#" class="read-more">Leer más</a>
-                  <span class="article-author">Por: Juan Carlos García Sierra</span>
+            <section class="grid-secondary-news">
+              <div class="news-one">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="article-image-container">
+                      <img src="../assets/img/breaking-news-4.png" alt="Dólares" class="img-fluid">
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="article-category">
+                      <span class="category-tag colombianos">COLOMBIANOS</span>
+                    </div>
+                    <h3 class="article-title">
+                      Donald Trump reconoció a Edmundo González
+                    </h3>
+                    <div class="article-footer">
+                      <a href="#" class="read-more">Leer más</a>
+                      <span class="article-author">Por: Juan Carlos García Sierra</span>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div></div>
-              <div class="colombianos-articles">
-                <div class="news-item mb-4">
-                  <div class="row">
-                    <div>
-                      <div class="article-image-container">
-                        <img src="../assets/img/breaking-news-3.png" alt="Galán" class="img-fluid">
-                      </div>
+              <div class="news-two">
+                <div class="row">
+                  <div class="col-4">
+                    <div class="article-image-container">
+                      <img src="../assets/img/breaking-news-5.png" alt="Bandera de Venezuela" class="img-fluid">
                     </div>
-                    <div>
-                      <div class="article-category">
-                        <span class="category-tag colombianos">COLOMBIANOS</span>
-                      </div>
-                      <h3 class="article-title">
-                        Galán respaldó las movilizaciones de venezolanos
-                      </h3>
-                      <div class="article-footer">
-                        <a href="#" class="read-more">Leer más</a>
-                        <span class="article-author">Por: Juan Carlos García Sierra</span>
-                      </div>
+                  </div>
+                  <div class="col-8">
+                    <div class="article-category">
+                      <span class="category-tag colombianos">COLOMBIANOS</span>
+                    </div>
+                    <h3 class="article-title">
+                      Costa Rica hizo oficial su apoyo a Edmundo González
+                    </h3>
+                    <div class="article-footer">
+                      <a href="#" class="read-more">Leer más</a>
+                      <span class="article-author">Por: Juan Carlos García Sierra</span>
                     </div>
                   </div>
                 </div>
-                  
-                  <!-- Artículo 2 -->
-                  <div class="news-item mb-4">
-                      <div class="row">
-                          <div class="col-4">
-                              <div class="article-image-container">
-                                  <img src="../assets/img/breaking-news-4.png" alt="Dólares" class="img-fluid">
-                              </div>
-                          </div>
-                          <div class="col-8">
-                              <div class="article-category">
-                                  <span class="category-tag colombianos">COLOMBIANOS</span>
-                              </div>
-                              <h3 class="article-title">
-                                  Donald Trump reconoció a Edmundo González
-                              </h3>
-                              <div class="article-footer">
-                                  <a href="#" class="read-more">Leer más</a>
-                                  <span class="article-author">Por: Juan Carlos García Sierra</span>
-                              </div>
-                          </div>
+              </div>
+              <div class="news-three">
+                <div class="row">
+                  <div class="col-4">
+                      <div class="article-image-container">
+                          <img src="../assets/img/breaking-news-5.png" alt="Bandera de Venezuela" class="img-fluid">
                       </div>
                   </div>
-                  
-                  <!-- Artículo 3 -->
-                  <div class="news-item">
-                      <div class="row">
-                          <div class="col-4">
-                              <div class="article-image-container">
-                                  <img src="../assets/img/breaking-news-5.png" alt="Bandera de Venezuela" class="img-fluid">
-                              </div>
-                          </div>
-                          <div class="col-8">
-                              <div class="article-category">
-                                  <span class="category-tag colombianos">COLOMBIANOS</span>
-                              </div>
-                              <h3 class="article-title">
-                                  Costa Rica hizo oficial su apoyo a Edmundo González
-                              </h3>
-                              <div class="article-footer">
-                                  <a href="#" class="read-more">Leer más</a>
-                                  <span class="article-author">Por: Juan Carlos García Sierra</span>
-                              </div>
-                          </div>
+                  <div class="col-8">
+                      <div class="article-category">
+                          <span class="category-tag colombianos">COLOMBIANOS</span>
+                      </div>
+                      <h3 class="article-title">
+                          Costa Rica hizo oficial su apoyo a Edmundo González
+                      </h3>
+                      <div class="article-footer">
+                          <a href="#" class="read-more">Leer más</a>
+                          <span class="article-author">Por: Juan Carlos García Sierra</span>
                       </div>
                   </div>
+                </div>
+              </div>
+              <div class="news-fourth">
+                <div class="row">
+                  <div class="col-4">
+                    <div class="article-image-container">
+                      <img src="../assets/img/breaking-news-5.png" alt="Bandera de Venezuela" class="img-fluid">
+                    </div>
+                  </div>
+                  <div class="col-8">
+                    <div class="article-category">
+                      <span class="category-tag colombianos">COLOMBIANOS</span>
+                    </div>
+                    <h3 class="article-title">
+                      Costa Rica hizo oficial su apoyo a Edmundo González
+                    </h3>
+                    <div class="article-footer">
+                      <a href="#" class="read-more">Leer más</a>
+                      <span class="article-author">Por: Juan Carlos García Sierra</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="news-five">
+                <div class="row">
+                  <div class="col-4">
+                    <div class="article-image-container">
+                      <img src="../assets/img/breaking-news-5.png" alt="Bandera de Venezuela" class="img-fluid">
+                    </div>
+                  </div>
+                  <div class="col-8">
+                    <div class="article-category">
+                      <span class="category-tag colombianos">COLOMBIANOS</span>
+                    </div>
+                    <h3 class="article-title">
+                      Costa Rica hizo oficial su apoyo a Edmundo González
+                    </h3>
+                    <div class="article-footer">
+                      <a href="#" class="read-more">Leer más</a>
+                      <span class="article-author">Por: Juan Carlos García Sierra</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </section>
             <section class="bannerOne">
@@ -732,10 +749,8 @@
         </div>
       </div>
     </div>
-
-		<div id="main-footer"></div>
+    <footer-component></footer-component>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-		<script src="../static/loadComponents.js"></script>
 	</body>
 </html>
