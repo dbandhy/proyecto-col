@@ -34,12 +34,18 @@
 		<!-- Estilos componentes -->
 		<link rel="stylesheet" href="../styles/header.css" />
 		<link rel="stylesheet" href="../styles/footer.css" />
+		<link rel="stylesheet" href="../static/components/button/button.css">
 
 		<script src="../static/components/cardNotice/cardNotice.js"></script>
 	</head>
 	<body class="body-container">
 		<div id="main-header"></div>
-
+		<div class="container">
+			<div class="col-1 d-none d-md-flex align-items-start">
+				<social-bar-component></social-bar-component>
+			</div>
+		</div>
+	
 		<!-- Grid Principal -->
 		<main class="main-container">
 			<!-- Seccion actualizacion y noticias -->
@@ -119,9 +125,6 @@
 										<span class="text color-dark weight-bold">Juan Carlos Garcia Sierra</span>
 									</div>
 								</div>
-							</div>
-							<div class="bannerTwo">
-								<img src="../assets/img/banner-copa-america.png" alt="Siente la emoción Copa América USA 2024" class="img-fluid">
 							</div>
 						</div>
 					</div>
@@ -250,6 +253,9 @@
 											class="card-secondary-relevant"
 										></card-notice-component>
 									</div>
+									<div class="button-view-more justify-content-center">
+										<div class="button">Ver más</div>
+									</div>
 								</section>
 								<section class="bannerOne">
 									<div class="sidebar-ad">
@@ -257,44 +263,44 @@
 									</div>
 		
 									<div class="social-sidebar-bn">
-											<div class="social-icons-bn">
-													<a href="#" class="social-icon-link">
-														<div class="social-icon-bn shopping">
-																<i class="fas fa-shopping-cart"></i>
-														</div>
-													</a>
-													<a href="#" class="social-icon-link">
-															<div class="social-icon-bn whatsapp">
-																	<i class="fab fa-whatsapp"></i>
-															</div>
-													</a>
-													<a href="#" class="social-icon-link">
-															<div class="social-icon-bn facebook">
-																	<i class="fab fa-facebook-f"></i>
-															</div>
-													</a>
-													<a href="#" class="social-icon-link">
-															<div class="social-icon-bn youtube">
-																	<i class="fab fa-youtube"></i>
-															</div>
-													</a>
-													<a href="#" class="social-icon-link">
-															<div class="social-icon-bn instagram">
-																	<i class="fab fa-instagram"></i>
-															</div>
-													</a>
-													<a href="#" class="social-icon-link">
-															<div class="social-icon-bn twitter">
-																	<i class="fab fa-twitter"></i>
-															</div>
-													</a>
+										<div class="social-icons-bn">
+											<a href="#" class="social-icon-link">
+											<div class="social-icon-bn shopping">
+												<i class="fas fa-shopping-cart"></i>
 											</div>
+											</a>
+											<a href="#" class="social-icon-link">
+												<div class="social-icon-bn whatsapp">
+													<i class="fab fa-whatsapp"></i>
+												</div>
+											</a>
+											<a href="#" class="social-icon-link">
+												<div class="social-icon-bn facebook">
+													<i class="fab fa-facebook-f"></i>
+												</div>
+											</a>
+											<a href="#" class="social-icon-link">
+												<div class="social-icon-bn youtube">
+													<i class="fab fa-youtube"></i>
+												</div>
+											</a>
+											<a href="#" class="social-icon-link">
+												<div class="social-icon-bn instagram">
+													<i class="fab fa-instagram"></i>
+												</div>
+											</a>
+											<a href="#" class="social-icon-link">
+												<div class="social-icon-bn twitter">
+													<i class="fab fa-twitter"></i>
+												</div>
+											</a>
+										</div>
 									</div>
 								</section>
 								<section class="moreNews">
-									<div class="section-header d-flex justify-content-between align-items-center mb-3">
+									<div class="title">
 										<h2 class="section-title more-news-title m-0 p-0">MÁS NOTICIAS</h2>
-										<a href="#" class="btn btn-primary ver-todo-btn d-none d-md-block">Ver todo</a>
+										<button class="button">Ver todo</button>
 									</div>
 									
 									<div class="news-list">
@@ -354,8 +360,8 @@
 										></card-notice-component>
 									</div>
 									
-									<div class="text-center mt-4">
-											<a href="#" class="btn btn-primary ver-mas-btn">Ver más</a>
+									<div class="d-flex justify-content-center">
+										<a href="#" class="button">Ver más</a>
 									</div>
 								</section>
 								<section class="colombiaNews">
@@ -366,7 +372,15 @@
 											image="../assets/img/breaking-news-5.png"
 											news="Donald Trump reconoció a Edmundo González"
 											orientation="vertical"
-											category="FÚTBOL"
+											author="Por Juan Carlos Garcia Sierra"
+											distribution="none"
+											classnames="new"
+										></card-notice-component>
+										<card-notice-component
+											id="main-card-one"
+											image="../assets/img/breaking-news-5.png"
+											news="Donald Trump reconoció a Edmundo González"
+											orientation="horizontal"
 											author="Por Juan Carlos Garcia Sierra"
 											distribution="equals"
 											classnames="new"
@@ -376,7 +390,6 @@
 											image="../assets/img/breaking-news-5.png"
 											news="Donald Trump reconoció a Edmundo González"
 											orientation="horizontal"
-											category="FÚTBOL"
 											author="Por Juan Carlos Garcia Sierra"
 											distribution="equals"
 											classnames="new"
@@ -386,21 +399,13 @@
 											image="../assets/img/breaking-news-5.png"
 											news="Donald Trump reconoció a Edmundo González"
 											orientation="horizontal"
-											category="FÚTBOL"
 											author="Por Juan Carlos Garcia Sierra"
 											distribution="equals"
 											classnames="new"
 										></card-notice-component>
-										<card-notice-component
-											id="main-card-one"
-											image="../assets/img/breaking-news-5.png"
-											news="Donald Trump reconoció a Edmundo González"
-											orientation="horizontal"
-											category="FÚTBOL"
-											author="Por Juan Carlos Garcia Sierra"
-											distribution="equals"
-											classnames="new"
-										></card-notice-component>
+										<div class="d-flex justify-content-center">
+											<a href="#" class="button">Ver más</a>
+										</div>
 									</div>
 									<!-- <div class="latest-news-section mb-4">
 										<card-notice-component
@@ -555,7 +560,7 @@
 										<div class="grid-articles-2 grid-multimedia">
 											<div class="d-flex justify-content-between align-items-center hide-800">
 												<h2 class="section-title m-0 p-0">MULTIMEDIA</h2>
-												<a href="#" class="btn-azul-blanco">Ver todo</a>
+												<a href="#" class="button">Ver todo</a>
 											</div>
 											<div class="card-article-2 card-article-2-principal card-bottom-separator pt-2">
 												<img src="/assets/img/breaking-news-1.png" alt="Maduro y Petro" />
@@ -618,33 +623,36 @@
 												</div>
 											</div>
 										</div>
+										<div class="d-flex justify-content-center my-3">
+											<button class="button">Ver más</button>
+										</div>
 									</div>
 								</section>
 								<section class="paperwork">
 									<div class="grid-tramitologia">
 										<h2 class="section-title m-0 p-0">TRAMITOLOGÍA</h2>
 										<!-- Trámite 1 -->
-										<div class="card-tramite-item">
+										<div class="card-tramite-item bg-white">
 											<img src="/assets/icons/logo_visa.png" alt="Visa" class="img-fluid" />
 											<h3 class="tramite-title">Solicitud de Expedición De Visa</h3>
 										</div>
 										<!-- Trámite 2 -->
-										<div class="card-tramite-item">
+										<div class="card-tramite-item bg-white">
 											<img src="/assets/icons/logo_id.png" alt="Tarjeta de Identidad" class="img-fluid" />
 											<h3 class="tramite-title">Trámite Tarjeta de Identidad</h3>
 										</div>
 										<!-- Trámite 3 -->
-										<div class="card-tramite-item">
+										<div class="card-tramite-item bg-white">
 											<img src="/assets/icons/logo_passport.png" alt="Pasaporte" class="img-fluid" />
 											<h3 class="tramite-title">Trámite para Obtener el Pasaporte</h3>
 										</div>
 										<!-- Trámite 4 -->
-										<div class="card-tramite-item">
+										<div class="card-tramite-item bg-white">
 											<img src="/assets/icons/logo_sign.png" alt="Apostillar" class="img-fluid" />
 											<h3 class="tramite-title">¿Cómo apostillar un Documento?</h3>
 										</div>
 										<!-- Trámite 5 -->
-										<div class="card-tramite-item">
+										<div class="card-tramite-item bg-white">
 											<img src="/assets/icons/logo_document.png" alt="Documentos" class="img-fluid" />
 											<h3 class="tramite-title">Documentos para estudiar o trabajar en el exterior</h3>
 										</div>
@@ -700,6 +708,12 @@
 											</div>  
 									</div> -->
 								</section>
+								<div class="image-link-one">
+									<img src="../assets/img/banner-copa-america.png" alt="">
+								</div>
+								<div class="image-link-two">
+									<img src="../assets/img/banner-copa-america.png" alt="" srcset="">
+								</div>
 							</div>
 						</div>
 					</div>
@@ -1153,7 +1167,7 @@
             card.setAttribute('distribution', 'large-content');
           }
 					for (const card2 of cardSecondaryRelevant) {
-						card2.setAttribute('distribution', 'large-content')
+						card2.setAttribute('distribution', 'equals')
 						card2.setAttribute('orientation','horizontal')
 					}
         }
