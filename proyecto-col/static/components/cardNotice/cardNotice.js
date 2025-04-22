@@ -76,14 +76,15 @@ class CardNoticeComponent extends HTMLElement {
 
   render () {
     this.innerHTML = `
-      <div class="card-news orientation-${this.orientation} distribution-${this.distribution} ${this.classnames}">
+      <div class="card-news orientation-${this.orientation} distribution-${this.distribution} ${this.classnames || ''}">
         <img src="${this.image}" alt="news">
         <div class="news-content">
-          <span class="category">${this.category}</span>
+          ${this.category ? `<span class="category">${this.category}</span>` : ''}
+          
           <span class="title">${this.news}</span>
-          <span>Leer más</span>
+          <span class="read-more">Leer más</span>
           <span class="author">${this.author}</span>
-          ${this.subtitle? `<span>La ayuda a quien lo necesita no solo beneficia a una persona comunidades</span>` : ''}
+          ${this.subtitle ? `<span class="subtitle">${this.subtitle}</span>` : ''}
         </div>
       </div>
     `

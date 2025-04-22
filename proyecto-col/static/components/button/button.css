@@ -1,0 +1,14 @@
+.button {
+  font-family: Verdana;
+  outline: none;
+  text-decoration: none;
+  border-radius: 20px;
+  background-color: #104596;
+  color: white;
+  font-weight: 700;
+  font-size: 12px;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
