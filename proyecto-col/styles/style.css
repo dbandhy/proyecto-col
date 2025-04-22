@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 /* Estilos generales */
 body {
   margin: 0;
@@ -22,7 +23,7 @@ h2 {
 h3 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 700;
-  font-size: 25px;
+  font-size: clamp(1rem, 0.904rem + 0.385vw, 1.25rem);
   line-height: 30px;
   letter-spacing: 0%;
   color: #191c36;
@@ -45,6 +46,7 @@ p {
   position: relative;
   display: inline-block;
 }
+
 .play-icon div {
   position: absolute;
   top: 50%;
@@ -59,8 +61,6 @@ p {
 
 /* Clase para el contenedor principal que afecta a todas las secciones dentro */
 .sections-container-white {
-  padding-left: 130px;
-  padding-right: 130px;
   background-color: #ffffff;
 }
 
@@ -70,6 +70,14 @@ p {
   background-color: #F3F8FF;
 }
 
+.cartelera-cine-section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px 0;
+  gap: 10px;
+}
+
 /* Versión responsive (opcional) */
 @media (max-width: 768px) {
   .sections-container {
@@ -77,6 +85,7 @@ p {
     padding-right: 20px;
   }
 }
+
 /* Información de actualización */
 .update-info {
   display: flex;
@@ -121,15 +130,19 @@ p {
   border-radius: 0 10px 10px 0;
   overflow: hidden;
 }
+
 .social-bar.facebook {
   background-color: #1869E6;
 }
+
 .social-bar.wathsapp {
   background-color: #00DF00;
 }
+
 .social-bar.twitter {
   background-color: #1C1C1C;
 }
+
 .social-bar.email {
   background-color: #FFDA54;
 }
@@ -191,27 +204,63 @@ p {
     padding-left: 40px;
   }
 }
+
 /* Contenedor de noticias */
 .news-container {
   display: flex;
-  gap: 20px;
+  gap: 12px;
   background-color: #F3F8FF;
+  align-items: center;
+  place-items: flex-start;
 }
 
 /* Columnas de noticias */
 .news-column {
-  flex: 1;
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
 
+.news-horoscopo {
+  display: flex;
+  flex-direction: row;
+}
+
 /* Elementos de noticia */
 .news-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 487px;
   background-color: white;
   border-radius: 8px;
-  padding: 15px;
+  padding: 11px 26px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.news-item p {
+  margin: 0;
+}
+
+.news-author-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-direction: row;
+}
+
+.news-item h2 {
+  display: inline;
+}
+
+.news-header p {
+  font-size: clamp(1.25rem, 1.13rem + 0.481vw, 1.563rem);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0%;
+  color: #191c36;
+  margin: 0;
 }
 
 /* Noticia principal con título de sección */
@@ -240,18 +289,25 @@ p {
 /* Encabezado de noticia con punto amarillo */
 .news-header {
   display: flex;
-  align-items: flex-start;
-  margin-bottom: 10px;
+  flex-direction: row;
+  gap: 5px;
 }
 
 /* Punto amarillo */
-.yellow-dot {
-  color: #FBC800;
-  font-size: 24px;
-  margin-right: 8px;
-  line-height: 1;
-  width: 20;
-  height: 20;
+.circle {
+  width: 64px;
+  height: 20px;
+  max-width: 20px;
+  ;
+  background-color: #FBC800;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #104596;
+  font-size: 10px;
+  margin-top: 6px;
+
 }
 
 /* Autor de la noticia */
@@ -294,15 +350,15 @@ p {
 .news-image {
   width: 100%;
   border-radius: 6px;
-  margin-top: 10px;
+  height: fit-content;
 }
 
 /* Imagen a la derecha */
 .news-image-right {
   float: right;
-  width: 120px;
   border-radius: 6px;
-  margin-left: 10px;
+  height: fit-content;
+
 }
 
 /* Noticia con imagen lateral */
@@ -320,6 +376,8 @@ p {
   width: 40%;
   border-radius: 6px;
   object-fit: cover;
+  max-width: 150px;
+  max-height: 304px
 }
 
 /* Noticia con imagen */
@@ -354,30 +412,34 @@ p {
 @media (max-width: 768px) {
   .news-container {
     flex-direction: column;
+    place-items: center;
   }
+
   .news-section {
     padding: 10px;
   }
+
   .news-item {
     margin-bottom: 15px;
+    width: 100%;
+    max-width: fit-content;
   }
+
+  .news-item h2 {
+    display: none;
+  }
+
   /* Mostrar elementos solo para móvil */
   .mobile-only {
     display: block;
   }
-  /* Ocultar noticias específicas en móvil */
-  .news-column .news-item:not(.main-news),
-  .paranormal-container {
-    display: none;
-  }
-  /* Noticia con imagen lateral */
-  .news-with-side-image {
-    flex-direction: column;
-  }
+
+
   .side-image {
     width: 100%;
     margin-top: 10px;
   }
+
   /* Noticia con imagen pequeña */
   .news-with-image {
     display: flex;
@@ -385,26 +447,35 @@ p {
     align-items: flex-start;
     gap: 15px;
   }
+
   .news-with-image .news-text {
     flex: 1;
   }
+
   .news-with-image img {
     width: 30%;
     border-radius: 6px;
   }
+
   /* Banner publicitario */
   .ad-banner {
     margin: 15px 0;
+    max-width: 500px;
+    max-height: 500px;
   }
+
   .banner-image {
     width: 100%;
     border-radius: 6px;
+    min-width: 300px;
   }
+
   /* Contenedor de noticias pequeñas */
   .small-news-container {
     display: flex;
     gap: 15px;
   }
+
   .small-news-container .small-news {
     flex: 1;
     background-color: #fff;
@@ -412,30 +483,37 @@ p {
     padding: 15px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   }
+
   /* Ajustes específicos para móvil */
   .news-with-image {
     flex-direction: column-reverse;
   }
+
   .news-with-image img {
     width: 100%;
     margin-bottom: 10px;
   }
+
   .small-news-container {
     flex-direction: column;
   }
 }
+
 /* Estilos específicos para móvil */
 @media (max-width: 480px) {
   .update-info {
     font-size: 10px;
   }
+
   .news-title {
     font-size: 16px;
   }
+
   .news-text {
     font-size: 13px;
   }
 }
+
 /* Estilo de los botones */
 .btn-primary {
   background-color: #E8F0FF;
@@ -457,12 +535,38 @@ p {
     display: none;
   }
 }
+
 /* Estilos generales */
 .section-news-banner {
   background-color: white;
-  max-width: 1290px;
   margin: 0 auto;
-  padding: 40px 20px;
+}
+
+.container-max-width {
+  max-width: var(--max-width-content);
+  margin: 0 auto;
+}
+
+
+.btn-azul-blanco {
+  color: #FFFFFF !important;
+  background-color: #104596;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  max-width: 250px;
+}
+
+@media screen and (max-width: 1200px) {
+  .container-max-width {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  .container-max-width-fluid {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
 }
 
 /* Estilos para cada noticia */
@@ -473,9 +577,19 @@ p {
   border: none;
 }
 
+.banner-news {
+  border-right: 0.5px solid;
+  max-width: 220px;
+}
+
+.card-notice {
+  max-width: 750px;
+}
+
 /* Estilo para las imágenes */
 .news-banner-img-large {
   width: 100%;
+  max-width: 220px;
   height: 200px;
   object-fit: cover;
   margin-bottom: 10px;
@@ -528,12 +642,24 @@ p {
     display: none;
   }
 }
+
 /* section TV */
 .section-tv {
   background-color: white;
-  padding: 30px 80px;
   border-radius: 8px;
   margin-top: 20px;
+}
+
+.recetas-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.card-jugador{
+  background-color: #F3F8FF;
+  border-radius: 20px;
+  padding: 80px;
 }
 
 .section-tv h2 {
@@ -607,10 +733,17 @@ p {
   .tv-banner {
     display: none;
   }
+
   .section-tv {
     padding: 20px;
+    
+  }
+
+  .banner-news {
+    border-right: none;
   }
 }
+
 /* Section lo último */
 .section-last-news {
   background-color: #ffffff;
@@ -650,6 +783,9 @@ p {
   background-color: #ffffff;
   padding: 40px 20px;
   margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .section-mas-noticias .section-title {
@@ -691,31 +827,38 @@ p {
     margin-right: auto;
     text-align: center;
   }
+
   .section-mas-noticias .border-start {
     border: none !important;
     padding-left: 0;
     margin-left: 0;
   }
+
   .section-mas-noticias .d-flex {
     flex-direction: column;
   }
+
   .section-mas-noticias .d-flex img {
     width: 100% !important;
     height: auto !important;
     margin-bottom: 10px;
   }
-  .section-mas-noticias .d-flex > div {
+
+  .section-mas-noticias .d-flex>div {
     width: 100%;
   }
+
   .section-mas-noticias .section-title {
     font-size: 1.5rem;
     text-align: center;
   }
+
   .section-mas-noticias .d-flex.justify-content-between {
     flex-direction: column;
     align-items: center;
   }
 }
+
 .section-info-colombia {
   background-color: #F0F4FF;
   padding: 40px 20px;
@@ -752,12 +895,17 @@ p {
   gap: 0;
   padding-right: 0;
   margin-right: 0;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE and Edge */
+  justify-content: center;
+
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
 }
 
 .info-colombia-cards::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
+  display: none;
+  /* Chrome, Safari, Opera */
 }
 
 .card-info {
@@ -766,6 +914,7 @@ p {
   padding: 20px;
   width: 260px;
   flex-shrink: 0;
+  flex-direction: column;
   margin-right: 12px;
   scroll-snap-align: start;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
@@ -822,29 +971,37 @@ p {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
   }
+
   .card-info {
     scroll-snap-align: start;
     min-width: 250px;
     margin-right: 12px;
   }
+
   .card-info:last-child {
     margin-right: 0 !important;
   }
+
   .btn-carousel {
     display: none;
   }
+
   .section-info-colombia .btn-ver-todo {
     margin-top: 1rem;
     margin-left: auto;
     margin-right: auto;
     display: block;
   }
+
   .section-info-colombia .section-title {
     text-align: center;
     font-size: 1.5rem;
   }
 }
+
 /* horóscopo */
+
+
 .section-videos-horoscopo {
   background-color: #fff;
   padding: 40px 20px;
@@ -901,12 +1058,15 @@ p {
 .zodiac-icons {
   gap: 20px;
   overflow-x: auto;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
 }
 
 .zodiac-icons::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
+  display: none;
+  /* Chrome, Safari, Opera */
 }
 
 .zodiac-icon {
@@ -933,8 +1093,15 @@ p {
 .card-horoscopo {
   padding: 15px;
   border-radius: 10px;
+  max-width: clamp(9.375rem, 8.173rem + 4.808vw, 12.5rem);
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
   height: 100%;
+}
+
+.group-horoscopo{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .card-horoscopo img {
@@ -962,26 +1129,41 @@ p {
   font-size: 0.85rem;
 }
 
+.group-notice{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .video-feature img {
     height: auto;
   }
+  .group-notice{
+    flex-direction: column;
+  }
+
   .zodiac-icons {
     flex-wrap: nowrap;
+    max-width: clamp(18.75rem, 6.731rem + 48.077vw, 50rem)
   }
+
   .zodiac-icon {
     width: 50px;
     height: 50px;
     font-size: 1.2rem;
   }
+
   .card-horoscopo img {
     height: 150px;
   }
+
   .btn-ver-todo {
     margin-top: 10px;
   }
 }
+
 /* Sección de Clasificados */
 .section-clasificados {
   background-color: white;
@@ -1372,13 +1554,16 @@ p {
   0% {
     opacity: 1;
   }
+
   50% {
     opacity: 0.5;
   }
+
   100% {
     opacity: 1;
   }
 }
+
 /* Estilos para la sección de Noticias Destacadas y Partidos por TV */
 .section-noticias-partidos {
   background-color: #ffffff;
@@ -1386,6 +1571,8 @@ p {
 }
 
 /* Estilos para las tarjetas de noticias */
+
+
 .noticia-card {
   margin-bottom: 20px;
 }
@@ -1453,6 +1640,10 @@ p {
   margin-top: 30px;
   border-top: 1px solid #e0e0e0;
   padding-top: 20px;
+}
+
+.colombianos-usa-section h3 {
+  color: #104596;
 }
 
 .section-title {
@@ -1524,16 +1715,20 @@ p {
 
 /* Estilos para la sección de Partidos por TV */
 .partidos-tv-section {
-  background-color: #f8f9fa;
-  border-radius: 10px;
+  background-color: #e8f2fc;
+  border-radius: 20px;
   padding: 20px;
   height: 100%;
+}
+
+.tv-header h3 {
+  color: #104596;
 }
 
 .tv-en-vivo {
   color: #ee2924;
   font-weight: bold;
-  font-size: 0.9rem;
+  font-size: clamp(0.75rem, 0.654rem + 0.385vw, 1rem);
   margin-bottom: 10px;
 }
 
@@ -1551,13 +1746,16 @@ p {
   0% {
     opacity: 1;
   }
+
   50% {
     opacity: 0.5;
   }
+
   100% {
     opacity: 1;
   }
 }
+
 /* Estilos compartidos para ambas versiones */
 .section-noticias-partidos {
   background-color: #ffffff;
@@ -1619,13 +1817,16 @@ p {
   0% {
     opacity: 1;
   }
+
   50% {
     opacity: 0.5;
   }
+
   100% {
     opacity: 1;
   }
 }
+
 .tv-en-vivo {
   color: #ee2924;
   font-weight: bold;
@@ -1645,6 +1846,7 @@ p {
 .news-banner-card {
   position: relative;
   margin-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 .news-banner-img-large {
@@ -1661,72 +1863,116 @@ p {
   margin-bottom: 5px;
 }
 
+
+.mobile-only{
+  display: flex !important;
+}
+
+.desktop-only{
+  display: none !important;
+}
+
+.zodiac-icon-mobile {
+  width: 90px;
+  height: 90px;
+  background-color: #f0f4ff;
+  color: #104596;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 50%;
+  justify-content: center;
+  min-width: 90px;
+
+}
+
 /* Estilos para la versión de escritorio */
 @media (min-width: 768px) {
   .section-noticias-partidos {
     padding: 40px 0;
   }
+
+  .desktop-only {
+    display: flex !important;
+  }
+  .mobile-only {
+    display: none !important;
+  }
+
   /* Estilos para las tarjetas de noticias */
   .noticia-card {
     margin-bottom: 20px;
   }
+
   .noticia-card img {
     width: 100%;
     height: 150px;
     object-fit: cover;
     border-radius: 8px;
   }
+
   .categoria-tag {
     font-size: 0.8rem;
     margin: 10px 0 5px;
   }
+
   .noticia-titulo {
     font-size: 1.1rem;
     margin-bottom: 5px;
     line-height: 1.3;
     color: #000;
   }
+
   .noticia-autor {
     font-size: 0.8rem;
     color: #666;
     margin-bottom: 5px;
   }
+
   .noticia-extracto {
     font-size: 0.9rem;
     color: #333;
     margin-bottom: 5px;
   }
+
   .leer-mas {
     font-size: 0.9rem;
   }
+
   /* Estilos para la sección Colombianos en USA */
   .colombianos-usa-section {
     margin-top: 30px;
     border-top: 1px solid #e0e0e0;
     padding-top: 20px;
   }
+
   .section-title {
     font-size: 1.3rem;
     margin-bottom: 0;
   }
+
   .btn-ver-mas {
     padding: 5px 15px;
     font-size: 0.9rem;
   }
+
   .colombianos-carousel {
     position: relative;
     margin-top: 15px;
   }
+
   .noticia-horizontal {
     background-color: #f8f9fa;
     border-radius: 8px;
     padding: 15px;
   }
+
   .noticia-horizontal img {
     width: 100%;
     height: 120px;
     object-fit: cover;
   }
+
   .carousel-nav {
     position: absolute;
     top: 50%;
@@ -1743,72 +1989,112 @@ p {
     cursor: pointer;
     z-index: 10;
   }
+
   .carousel-nav.prev {
     left: -15px;
   }
+
   .carousel-nav.next {
     right: -15px;
   }
+
   /* Estilos para la sección de Partidos por TV */
   .partidos-tv-section {
-    background-color: #f8f9fa;
+    background-color: #e8f2fc;
     border-radius: 10px;
     padding: 20px;
     height: 100%;
   }
+
   .tv-en-vivo {
     font-size: 0.9rem;
     margin-bottom: 10px;
   }
+
   .live-dot {
     width: 8px;
     height: 8px;
     margin-right: 5px;
   }
+
   .tv-subtitle {
-    font-size: 0.85rem;
-    color: #666;
+    font-size: 12px;
+    color: #191C36;
     margin-top: 5px;
     margin-bottom: 15px;
   }
+
   .date-navigation {
     display: flex;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 8px;
     align-items: center;
     justify-content: flex-end;
     margin-bottom: 15px;
+    width: fit-content;
   }
+
   .date-nav {
     background: none;
     border: none;
     color: #104596;
     cursor: pointer;
   }
+
   .current-date {
     margin: 0 10px;
     font-size: 0.9rem;
-    color: #333;
+    color: #104596;
   }
+
   .partidos-list {
     margin-top: 20px;
-  }
-  .partido-item {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .group-partido {
+    display: flex;
+    justify-content: center;
     align-items: center;
     padding: 10px 0;
+    background-color: #fff;
+    flex-direction: column;
+    border-radius: 10px;
     border-bottom: 1px solid #e0e0e0;
   }
+
+  .partido-item {
+    display: flex;
+    flex-direction: row;
+    gap: 35px;
+  }
+
+  
+
+  .btn-azul-blanco {
+    color: #FFFFFF !important;
+    background-color: #104596;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+  }
+
+
   .partido-item:last-child {
+    padding-top: 10px;
+    border-top: 0.25px solid #104596;
     border-bottom: none;
   }
-  .equipos {
-    flex: 1;
-  }
+
   .equipo {
     display: flex;
     align-items: center;
     margin-bottom: 5px;
   }
+
   .bandera {
     width: 24px;
     height: 24px;
@@ -1816,26 +2102,38 @@ p {
     margin-right: 10px;
     object-fit: cover;
   }
+
   .equipo span {
     font-size: 0.9rem;
   }
+
   .partido-info {
     display: flex;
     align-items: center;
     gap: 15px;
   }
+
+  .grupo-hora {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
   .hora {
     font-weight: bold;
     font-size: 0.9rem;
   }
+
   .canal-logo {
     width: 40px;
     height: auto;
   }
+
   .badge.a-tiempo {
     font-size: 0.7rem;
     padding: 3px 8px;
   }
+
   .powered-by {
     display: flex;
     align-items: center;
@@ -1844,92 +2142,115 @@ p {
     color: #666;
     margin-top: 15px;
   }
+
   .score24-logo {
     height: 15px;
     margin-left: 5px;
   }
+
   .btn-ver-mas-grande {
     padding: 8px 25px;
     font-size: 0.9rem;
   }
 }
+
 /* Estilos para la versión móvil */
 @media (max-width: 767.98px) {
   .section-noticias-partidos {
     padding: 20px 0;
   }
+
   /* Estilos para las noticias en móvil */
   .noticias-mobile {
     margin-bottom: 20px;
   }
+
   .noticia-item-mobile {
     padding: 15px 0;
     border-bottom: 1px solid #e0e0e0;
   }
+
   .noticia-item-mobile:last-child {
     border-bottom: none;
   }
+
   .noticia-item-mobile img {
     width: 100%;
     height: 80px;
     object-fit: cover;
     border-radius: 5px;
   }
+
   .categoria-tag {
     font-size: 0.7rem;
     margin: 0 0 5px;
   }
+
   .noticia-titulo-mobile {
     font-size: 0.9rem;
     font-weight: bold;
     margin-bottom: 5px;
     line-height: 1.2;
   }
+
   .noticia-autor-mobile {
     font-size: 0.7rem;
     color: #666;
     margin-bottom: 5px;
   }
+
   .leer-mas {
     font-size: 0.8rem;
   }
+
   /* Estilos para la sección Colombianos en el Exterior */
   .colombianos-exterior-section {
     border-top: 1px solid #e0e0e0;
     padding-top: 20px;
   }
+
   .section-title {
     font-size: 1.1rem;
     margin-bottom: 15px;
   }
+
   .btn-ver-mas-grande {
     padding: 8px 25px;
     font-size: 0.9rem;
   }
+
   /* Estilos para la sección Partidos por TV en móvil */
   .partidos-tv-mobile {
     border-top: 1px solid #e0e0e0;
-    padding-top: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #e8f2fc
+    
   }
+
   .tv-header-mobile {
     margin-bottom: 15px;
   }
+
   .tv-en-vivo {
     font-size: 0.8rem;
     margin-bottom: 5px;
     text-align: center;
   }
+
   .live-dot {
     width: 8px;
     height: 8px;
     margin-right: 5px;
   }
+
   .tv-subtitle {
     font-size: 0.75rem;
     color: #666;
     margin-top: 5px;
     margin-bottom: 15px;
   }
+
   /* Navegación de fechas en móvil */
   .date-navigation-mobile {
     display: flex;
@@ -1940,6 +2261,7 @@ p {
     border-radius: 8px;
     padding: 10px;
   }
+
   .date-nav-mobile {
     background: none;
     border: none;
@@ -1947,26 +2269,31 @@ p {
     cursor: pointer;
     font-size: 1rem;
   }
+
   .date-tabs {
     display: flex;
     justify-content: space-between;
     flex: 1;
     text-align: center;
   }
+
   .date-tab {
     font-size: 0.7rem;
     color: #666;
     padding: 0 5px;
     cursor: pointer;
   }
+
   .date-tab.active {
     color: #104596;
     font-weight: bold;
   }
+
   /* Lista de partidos en móvil */
   .partidos-list-mobile {
     margin-top: 15px;
   }
+
   .partido-item-mobile {
     display: flex;
     justify-content: space-between;
@@ -1974,17 +2301,21 @@ p {
     padding: 10px 0;
     border-bottom: 1px solid #e0e0e0;
   }
+
   .partido-item-mobile:last-child {
     border-bottom: none;
   }
+
   .equipos-mobile {
     flex: 1;
   }
+
   .equipo-mobile {
     display: flex;
     align-items: center;
     margin-bottom: 5px;
   }
+
   .bandera {
     width: 20px;
     height: 20px;
@@ -1992,70 +2323,82 @@ p {
     margin-right: 8px;
     object-fit: cover;
   }
+
   .equipo-mobile span {
     font-size: 0.8rem;
   }
+
   .partido-info-mobile {
     display: flex;
     align-items: center;
     gap: 10px;
   }
+
   .hora-mobile {
     font-weight: bold;
     font-size: 0.8rem;
   }
+
   .canal-logo-mobile {
     width: 30px;
     height: auto;
   }
+
   .badge.a-tiempo {
     font-size: 0.6rem;
     padding: 2px 6px;
   }
+
   .powered-by-mobile {
     font-size: 0.7rem;
     color: #666;
     margin-top: 15px;
   }
+
   .score24-logo-mobile {
     height: 12px;
     margin-left: 5px;
   }
+
   /* Media queries adicionales para dispositivos más pequeños */
 }
+
 @media (max-width: 767.98px) and (max-width: 576px) {
   .noticia-titulo-mobile {
     font-size: 0.85rem;
   }
+
   .date-tab {
     font-size: 0.65rem;
   }
+
   .equipo-mobile span {
     font-size: 0.75rem;
   }
+
   .hora-mobile {
     font-size: 0.75rem;
   }
+
   .canal-logo-mobile {
     width: 25px;
   }
 }
+
 @media (max-width: 767.98px) and (max-width: 320px) {
   .noticia-titulo-mobile {
     font-size: 0.8rem;
   }
+
   .date-tab {
     font-size: 0.6rem;
   }
+
   .partido-info-mobile {
     gap: 5px;
   }
 }
-/* Estilos para la sección de Cartelera de Cine */
-.cartelera-cine-section {
-  background-color: #f8f9fa;
-  padding: 40px 0;
-}
+
 
 /* Estilos compartidos */
 .cartelera-title {
@@ -2254,17 +2597,21 @@ p {
   .cartelera-title {
     font-size: 1.3rem;
   }
+
   .pelicula-titulo-mobile {
     font-size: 0.9rem;
   }
+
   .info-item-mobile {
     font-size: 0.7rem;
   }
+
   .btn-ver-mas-grande {
     padding: 8px 20px;
     font-size: 0.85rem;
   }
 }
+
 /* Estilos para la sección de Ferias y Fiestas */
 .ferias-fiestas-section {
   background-color: #f8f9fa;
@@ -2297,7 +2644,8 @@ p {
   transition: all 0.3s ease;
 }
 
-.btn-nav.active, .btn-nav:hover {
+.btn-nav.active,
+.btn-nav:hover {
   background-color: #104596;
   color: white;
   text-decoration: none;
@@ -2347,7 +2695,8 @@ p {
   color: #333;
 }
 
-.festival-author, .festival-date {
+.festival-author,
+.festival-date {
   font-size: 0.8rem;
   color: #666;
   margin-bottom: 5px;
@@ -2402,7 +2751,8 @@ p {
   transition: all 0.3s ease;
 }
 
-.btn-nav-mobile.active, .btn-nav-mobile:hover {
+.btn-nav-mobile.active,
+.btn-nav-mobile:hover {
   background-color: #104596;
   color: white;
   text-decoration: none;
@@ -2439,26 +2789,32 @@ p {
     width: 25%;
   }
 }
+
 @media (max-width: 768px) {
   .ferias-title {
     font-size: 1.3rem;
   }
+
   .festival-title-mobile {
     font-size: 0.85rem;
   }
 }
+
 @media (max-width: 576px) {
   .ferias-title {
     font-size: 1.2rem;
   }
+
   .btn-nav-mobile {
     padding: 3px 10px;
     font-size: 0.7rem;
   }
+
   .festival-image-mobile img {
     height: 150px;
   }
 }
+
 /* Estilos para la sección de Ferias y Fiestas (Optimizada para SEO) */
 .ferias-fiestas-section {
   background-color: #f8f9fa;
@@ -2491,7 +2847,8 @@ p {
   transition: all 0.3s ease;
 }
 
-.btn-nav.active, .btn-nav:hover {
+.btn-nav.active,
+.btn-nav:hover {
   background-color: #104596;
   color: white;
   text-decoration: none;
@@ -2541,7 +2898,8 @@ p {
   color: #333;
 }
 
-.festival-author, .festival-date {
+.festival-author,
+.festival-date {
   font-size: 0.8rem;
   color: #666;
   margin-bottom: 5px;
@@ -2593,13 +2951,16 @@ p {
   0% {
     opacity: 1;
   }
+
   50% {
     opacity: 0.5;
   }
+
   100% {
     opacity: 1;
   }
 }
+
 /* Estilos para la versión móvil */
 .ferias-nav-mobile {
   display: flex;
@@ -2618,7 +2979,8 @@ p {
   transition: all 0.3s ease;
 }
 
-.btn-nav-mobile.active, .btn-nav-mobile:hover {
+.btn-nav-mobile.active,
+.btn-nav-mobile:hover {
   background-color: #104596;
   color: white;
   text-decoration: none;
@@ -2655,26 +3017,32 @@ p {
     width: 25%;
   }
 }
+
 @media (max-width: 768px) {
   .ferias-title {
     font-size: 1.3rem;
   }
+
   .festival-title-mobile {
     font-size: 0.85rem;
   }
 }
+
 @media (max-width: 576px) {
   .ferias-title {
     font-size: 1.2rem;
   }
+
   .btn-nav-mobile {
     padding: 3px 10px;
     font-size: 0.7rem;
   }
+
   .festival-image-mobile img {
     height: 150px;
   }
 }
+
 /* Estilos para la sección de Herramientas Financieras y Consulares */
 .herramientas-financieras {
   background-color: #f8f9fa;
@@ -2705,6 +3073,7 @@ p {
     background-color: rgba(255, 255, 255, 0.2);
   }
 }
+
 .herramientas-titulo {
   font-size: 1.2rem;
   font-weight: 700;
@@ -2738,7 +3107,8 @@ p {
   color: #0e3b8c;
 }
 
-.btn-convertir, .btn-buscar {
+.btn-convertir,
+.btn-buscar {
   background-color: #ffd54f;
   color: #333;
   border: none;
@@ -2749,7 +3119,8 @@ p {
   transition: all 0.3s ease;
 }
 
-.btn-convertir:hover, .btn-buscar:hover {
+.btn-convertir:hover,
+.btn-buscar:hover {
   background-color: #ffc107;
 }
 
@@ -2765,6 +3136,7 @@ p {
   font-size: 1rem;
   font-weight: 600;
   margin: 0;
+  color: #fff;
 }
 
 .indicador-fecha {
@@ -2831,46 +3203,59 @@ p {
   .herramientas-seccion {
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   }
+
   .herramientas-seccion:last-child {
     border-bottom: none;
   }
+
   .herramientas-titulo {
     font-size: 1.1rem;
     margin-bottom: 15px;
   }
+
   .indicador-nombre {
     font-size: 0.9rem;
   }
+
   .valor {
     font-size: 1rem;
   }
+
   .indicador-adicional {
     padding-right: 5px;
   }
 }
+
 @media (max-width: 576px) {
   .herramientas-panel {
     border-radius: 8px;
   }
+
   .herramientas-seccion {
     padding: 15px;
   }
+
   .form-select {
     font-size: 0.85rem;
     padding: 8px 12px;
   }
-  .btn-convertir, .btn-buscar {
+
+  .btn-convertir,
+  .btn-buscar {
     font-size: 0.85rem;
     padding: 8px;
   }
+
   .indicadores-adicionales {
     margin-top: 15px;
   }
+
   .indicador-adicional .indicador-nombre,
   .indicador-adicional .indicador-valor {
     font-size: 0.75rem;
   }
 }
+
 /* Estilos para la sección de Géneros Musicales y Emisoras de Radio */
 .musica-radio-section {
   background-color: #ffffff;
@@ -3023,55 +3408,68 @@ p {
 
 /* Estilos para versión móvil */
 @media (max-width: 767.98px) {
+
   .generos-grid,
   .emisoras-grid {
     margin-bottom: 30px;
   }
+
   .genero-icon {
     width: 60px;
     height: 60px;
   }
+
   .genero-icon img {
     width: 30px;
     height: 30px;
   }
+
   .genero-name {
     font-size: 0.7rem;
   }
+
   .emisora-logo {
     width: 100%;
     height: auto;
     aspect-ratio: 1/1;
   }
+
   .emisora-name {
     font-size: 0.7rem;
     max-width: 100%;
   }
 }
+
 @media (max-width: 576px) {
   .section-title {
     font-size: 1.1rem;
     margin-bottom: 15px;
   }
+
   .genero-icon {
     width: 50px;
     height: 50px;
   }
+
   .genero-icon img {
     width: 25px;
     height: 25px;
   }
+
   .genero-name {
     font-size: 0.65rem;
   }
+
   .emisora-name {
     font-size: 0.65rem;
   }
+
   .btn-ver-mas {
     padding: 6px 20px;
     font-size: 0.8rem;
   }
 }
+
 /* Estilos para la sección de Recetas Colombianas y Colombianos en el Mundo */
 .recetas-colombianos-section {
   background-color: #ffffff;
@@ -3095,6 +3493,13 @@ p {
   flex-direction: column;
   align-items: center;
   text-align: center;
+}
+
+.categoria-item h2 {
+  color: #104596;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: capitalize;
 }
 
 .categoria-icon {
@@ -3125,6 +3530,11 @@ p {
   margin-bottom: 20px;
 }
 
+.receta-card div {
+  font-size: 14px;
+  font-weight: bold;
+}
+
 .receta-img {
   border-radius: 8px;
   overflow: hidden;
@@ -3145,9 +3555,13 @@ p {
 }
 
 .receta-desc {
-  font-size: 0.8rem;
+  font-size: 14px;
   color: #666;
   margin: 0;
+}
+
+.colombiano-info h4 {
+  color: #191C36;
 }
 
 /* Estilos para las recetas (Mobile) */
@@ -3246,6 +3660,14 @@ p {
 .partidos-title {
   font-size: 1rem;
   font-weight: 600;
+}
+
+.partidos-header {
+  background-color: #104596;
+}
+
+.partidos-header h3 {
+  color: #fff;
 }
 
 .partido-fecha small,
@@ -3349,35 +3771,44 @@ p {
   .section-title {
     font-size: 1rem;
   }
+
   .receta-mobile-title {
     font-size: 0.8rem;
   }
+
   .receta-mobile-desc {
     font-size: 0.7rem;
   }
+
   .futbolista-mobile-name {
     font-size: 0.85rem;
   }
+
   .btn-ver-mas {
     padding: 6px 20px;
     font-size: 0.85rem;
   }
 }
+
 @media (max-width: 576px) {
   .categoria-icon {
     width: 45px;
     height: 45px;
   }
+
   .categoria-icon img {
     width: 22px;
     height: 22px;
   }
+
   .categoria-name {
     font-size: 0.6rem;
   }
+
   .receta-mobile-title {
     font-size: 0.75rem;
   }
+
   .receta-mobile-desc {
     font-size: 0.65rem;
   }
