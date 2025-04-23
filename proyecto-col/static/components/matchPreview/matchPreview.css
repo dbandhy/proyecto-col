@@ -39,7 +39,7 @@
   grid-column: span 8;
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  gap: 10px;
 }
 .match-preview .body .teams-scores .team-score {
   display: flex;
