@@ -98,7 +98,6 @@ class CardNoticeComponent extends HTMLElement {
         ${this.image ? `<img src="${this.image}" alt="news"></img>` : ''}
         <div class="news-content">
           ${this.category ? `<span class="category">${this.category}</span>` : ''}
-          
           <span class="title">${this.news}</span>
           <span class="read-more">Leer más</span>
           <span class="author">${this.author}</span>

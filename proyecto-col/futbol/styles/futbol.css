@@ -146,7 +146,7 @@
   grid-area: news;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: max-content repeat(5, 160px);
+  grid-template-rows: max-content repeat(5, 200px);
   column-gap: 22px;
   row-gap: 22px;
   width: 100%;
@@ -495,7 +495,7 @@
   grid-area: more-news;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: max-content repeat(5, 160px);
+  grid-template-rows: max-content repeat(5, 200px);
   column-gap: 22px;
   row-gap: 22px;
   width: 100%;

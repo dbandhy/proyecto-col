@@ -1,14 +1,22 @@
-async function loadComponent(id, file) {
+async function loadComponent(id, file, script) {
   try {
-    const response = await fetch(file)
-    const data = await response.text()
-    const container = document.getElementById(id)
-    container.innerHTML = data
+    const container = document.getElementById(id);
+    if (!container) {
+      console.warn(`No se encontró el elemento con id "${id}"`);
+      return;
+    }
+    const response = await fetch(file);
+    const data = await response.text();
+    container.innerHTML = data;
+    if (script) {
+      const scriptResponse = await fetch(script);
+      const scriptText = await scriptResponse.text();
+      new Function(scriptText)();
+    }
   } catch (error) {
-    console.error('Error al cargar el archivo:', error)
+    console.error('Error al cargar el archivo:', error);
   }
 }
-
 
 // Cargar el header y footer
 loadComponent('main-header', '/components/header.html');
@@ -20,6 +28,8 @@ loadComponent('main-slider-cartelera', '/cine/components/slider-estreno.html');
 loadComponent('main-slider-recomendado', '/cine/components/slider-estreno.html');
 loadComponent('main-slider-estreno-mobile', '/cine/components/slider-estreno-mobile.html');
 loadComponent('main-slider-detail', '/cine/components/slider-detail.html');
+loadComponent('main-slider-carrusel', '/cine/components/slider-carrusel.html', '/cine/static/slider-carrusel.js');
+
 
 
 

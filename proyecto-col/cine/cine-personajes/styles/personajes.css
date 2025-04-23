@@ -1,28 +1,44 @@
-/* Estilos para el título de sección */
-.section-title {
-    color: #1a3876;
-    font-size: 2.5rem;
+.section-title,
+.subtitle {
+    color: #104596;
+    font-size: clamp(1.125rem, 0.957rem + 0.673vw, 1.563rem);
     font-weight: 900;
     letter-spacing: 1px;
+    text-align: start;
 }
 
-.section-title .subtitle {
-    font-size: 1.5rem;
-    color: #2d62c7;
-    font-weight: 500;
-    margin-left: 8px;
+.subtitle{
+    font-size:clamp(0.75rem, 0.606rem + 0.577vw, 1.125rem)
+}
+
+.subtitle {
+    display: none;
+}
+
+@media (min-width: 780px) {
+    .subtitle {
+        display: inline;
+    }
 }
 
 .personajes-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: 30px;
     margin-top: 32px;
     margin-bottom: 40px;
 }
 
+
+@media (min-width: 1200px) {
+    .personajes-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
 .personaje-card {
     display: flex;
+    justify-content: center;
     flex-direction: row;
     background: transparent;
     overflow: hidden;
@@ -30,44 +46,48 @@
     box-shadow: none;
     border-radius: 0;
     gap: 18px;
-    padding-right: 15px;
+    padding-right: 0;
 }
 
 .personaje-img {
-    width: 150px;
-    height: 180px;
+    width: clamp(12.5rem, 12.115rem + 1.538vw, 13.5rem);
+    height: 300px;
     object-fit: cover;
     border-radius: 0;
 }
 
 .personaje-info {
     padding: 0;
-    flex: 1;
+    width: 137px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
 }
 
 .personaje-nombre {
-    font-size: 1.8rem;
+    font-size: 18px;
     font-weight: 700;
     color: #333;
-    margin-bottom: 18px;
+    margin-bottom: 0;
 }
 
 .personaje-detalle {
-    margin-bottom: 12px;
-    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 0;
 }
 
 .personaje-detalle-label {
     display: block;
-    font-size: 0.9rem;
-    color: #888;
+    font-size: 10px;
+    color: #191C36;
     font-weight: normal;
-    margin-bottom: 2px;
+    margin-bottom: 0;
 }
 
 .personaje-detalle-valor {
     font-weight: 700;
     color: #0047ab;
-    font-size: 1rem;
+    font-size: 10px;
 }
-
