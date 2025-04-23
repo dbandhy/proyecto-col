@@ -63,7 +63,7 @@ const SalaData = [
           </div>
         </div>
         ${index === 2 || index === 5 ?
-          '<div class="justify-content-center align-items-center hide-800 w-100 position-relative pb-4 image-anuncio">' +
+          '<div class="justify-content-center align-items-center hide-800 w-100 position-relative pb-4 pt-4 image-anuncio">' +
           '<img src="/assets/img/banner-copa-america.png" alt="img" />' +
           '</div>' : ''}
       `;

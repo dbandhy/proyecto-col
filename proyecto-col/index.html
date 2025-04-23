@@ -211,7 +211,7 @@
 				</div>
 
 			</section>
-			<div class="col" style="background-color: #f3f8ff">
+			<div class="col bg-white">
 				<div class="sections-container-white container-max-width">
 					<!-- Barra de Botones Solo para Desktop -->
 					<section class="button-bar mt-4">
@@ -240,7 +240,8 @@
 								<div class="row align-items-start container-max-width">
 									<!-- Columna Principal de Noticias -->
 									<div class="col-lg-9">
-										<div class="row" style="border-bottom: 0.5px solid ; margin-bottom: 15px;">
+										<div class="row"
+											style="border-bottom: 0.5px solid #104596 ; margin-bottom: 15px;">
 											<!-- Noticia Principal (Grande) -->
 											<div class="col-lg-5 mb-4 banner-news">
 												<div class="news-banner-card">
@@ -355,7 +356,7 @@
 											<!-- Noticia 1 -->
 											<div class="col-md-4 mb-4" style="border-right: 0.4px solid #104596;">
 												<div class="noticia-card">
-													<img src="/assets/img/section-2-news-2.png" alt="Tecnología"
+													<img src="/assets/img/breaking-news-1.png" alt="Tecnología"
 														class="img-fluid mb-2" />
 													<h2>FÚTBOL</h2>
 													<h3>Rumbo a la Libertadores: Así tras la fecha 5</h3>
@@ -933,78 +934,94 @@
 						<div
 							class="d-flex justify-content-between align-items-center hide-800 w-100 position-relative ">
 							<h2 class="section-title  m-0 p-0">CARTELERA DE CINE</h2>
+							<div class="d-flex flex-row justify-content-end align-items-center gap-5 text-tab d-none d-lg-flex">
+								<p>Cuidad</p>
+								<p>Película</p>
+								<p>Cartelera Completa</p>
+							</div>
+							<div class="d-none d-lg-flex">
+								<button class="btn-azul-blanco">PROXIMOS ESTRENOS</button>
+							</div>
+							<button id="btnAbrirFiltros" class="btn btn-outline-primary align-items-center gap-2 px-4 py-2 rounded-pill btn-filtros d-flex d-lg-none">
+								<i class="fa fa-sliders"></i>
+								<span>Filtros</span>
+							</button>
+							
 						</div>
-						<div id="main-slider-cartelera"></div>
+						<div class="d-flex flex-row justify-content-between gap-3 grid-slider">
+							<div class="slider-carte" id="main-slider-cartelera"></div>
+							<img style="min-width: clamp(12.5rem, 10rem + 10vw, 19rem);" class="img-fluid d-none d-lg-flex" src="/assets/img/movie-1.png" alt="Cartelera de Cine"/>
+						</div>
 
 					</section>
 
 					<!-- Sección de Recetas Colombianas y Colombianos en el Mundo -->
 					<section class="recetas-colombianos-section py-4">
 						<div class="container">
-							<div class="row">
+							<div class="grupo-recetas-jugadores">
 								<!-- Sección de Recetas Colombianas -->
-								<div class="col-lg-6">
+								<div>
 									<div class="recetas-section mb-4">
 										<h3 class="mb-4" style="color: #104596;">RECETAS COLOMBIANAS</h3>
 
 										<!-- Categorías de Recetas (Desktop y Mobile) -->
 										<div class="categorias-recetas mb-4">
-											<div class="row g-2 text-center">
+											<div class="group-categoria">
 												<!-- Categoría 1 -->
-												<div class="col-2">
+												<div class="categoria-circle">
 													<div class="categoria-item">
 														<div class="categoria-icon">
-															<i class="fas fa-utensils"></i>
+															<i class="fas fa-utensils fa-2x"></i>
 														</div>
 														<h2>ENTRADAS</h2>
 													</div>
 												</div>
 
 												<!-- Categoría 2 -->
-												<div class="col-2">
+												<div class="categoria-circle">
 													<div class="categoria-item">
 														<div class="categoria-icon">
-															<i class="fas fa-hamburger"></i>
+															<i class="fas fa-hamburger fa-2x"></i>
 														</div>
 														<h2>AMASIJOS</h2>
 													</div>
 												</div>
 
 												<!-- Categoría 3 -->
-												<div class="col-2">
+												<div class="categoria-circle">
 													<div class="categoria-item">
 														<div class="categoria-icon">
-															<i class="fas fa-pizza-slice"></i>
+															<i class="fas fa-pizza-slice fa-2x"></i>
 														</div>
 														<h2>SOPAS</h2>
 													</div>
 												</div>
 
 												<!-- Categoría 4 -->
-												<div class="col-2">
+												<div class="categoria-circle">
 													<div class="categoria-item">
 														<div class="categoria-icon">
-															<i class="fas fa-ice-cream"></i>
+															<i class="fas fa-ice-cream fa-2x"></i>
 														</div>
 														<h2>PLATO FUERTE</h2>
 													</div>
 												</div>
 
 												<!-- Categoría 5 -->
-												<div class="col-2">
+												<div class="categoria-circle">
 													<div class="categoria-item">
 														<div class="categoria-icon">
-															<i class="fas fa-bread-slice"></i>
+															<i class="fas fa-bread-slice fa-2x"></i>
 														</div>
 														<h2>POSTRES</h2>
 													</div>
 												</div>
 
 												<!-- Categoría 6 -->
-												<div class="col-2">
+												<div class="categoria-circle">
 													<div class="categoria-item">
 														<div class="categoria-icon">
-															<i class="fas fa-coffee"></i>
+															<i class="fas fa-coffee fa-2x"></i>
 														</div>
 														<h2>BEBIDAS</h2>
 													</div>
@@ -1014,9 +1031,9 @@
 
 										<!-- Recetas (Desktop y Tablet) -->
 										<div class="recetas-grid">
-											<div class="row g-3">
+											<div class="row g-3 justify-content-center">
 												<!-- Receta 1 -->
-												<div class="col-md-4">
+												<div style="width: fit-content;">
 													<article class="receta-card">
 														<div class="receta-img">
 															<img src="/assets/img/dish-1.png"
@@ -1029,7 +1046,7 @@
 												</div>
 
 												<!-- Receta 2 -->
-												<div class="col-md-4">
+												<div style="width: fit-content;">
 													<article class="receta-card">
 														<div class="receta-img">
 															<img src="/assets/img/dish-2.png"
@@ -1044,7 +1061,7 @@
 												</div>
 
 												<!-- Receta 3 -->
-												<div class="col-md-4">
+												<div style="width: fit-content;">
 													<article class="receta-card">
 														<div class="receta-img">
 															<img src="/assets/img/dish-3.png"
@@ -1057,7 +1074,7 @@
 												</div>
 
 												<!-- Receta 4 -->
-												<div class="col-md-4">
+												<div style="width: fit-content;">
 													<article class="receta-card">
 														<div class="receta-img">
 															<img src="/assets/img/dish-2.png"
@@ -1070,7 +1087,7 @@
 												</div>
 
 												<!-- Receta 5 -->
-												<div class="col-md-4">
+												<div style="width: fit-content;">
 													<article class="receta-card">
 														<div class="receta-img">
 															<img src="/assets/img/dish-3.png"
@@ -1084,7 +1101,7 @@
 												</div>
 
 												<!-- Receta 6 -->
-												<div class="col-md-4">
+												<div style="width: fit-content;">
 													<article class="receta-card">
 														<div class="receta-img">
 															<img src="/assets/img/dish-3.png" alt="Bebida de coco"
@@ -1097,7 +1114,7 @@
 											</div>
 										</div>
 
-									
+
 									</div>
 
 									<!-- Sección de Radios (Solo Desktop) -->
@@ -1143,7 +1160,7 @@
 								</div>
 
 								<!-- Sección de Colombianos en el Mundo (Desktop) -->
-								<div class="col-lg-6 d-none d-lg-block">
+								<div class="d-none d-lg-block">
 									<div class="colombianos-section">
 										<h3 class="mb-4" style="color: #104596;">COLOMBIANOS EN EL MUNDO</h3>
 
@@ -1335,10 +1352,9 @@
 
 										<article class="futbolista-mobile-card mb-3">
 											<div class="futbolista-mobile-img">
-												<img src="/assets/img/movie-3.png" alt="James Rodríguez"
+												<img src="/assets/img/news-player.jpg" alt="James Rodríguez"
 													class="img-fluid rounded" />
 											</div>
-											<h4 class="futbolista-mobile-name mt-2">JAMES RODRÍGUEZ</h4>
 										</article>
 
 										<div class="text-center mt-4">
@@ -1365,7 +1381,7 @@
 												<!-- Género 1 -->
 												<div class="genero-item">
 													<div class="genero-icon">
-														<i class="fas fa-music"></i>
+														<i class="fas fa-music fa-2x"></i>
 													</div>
 													<h3 class="genero-name">ROCK</h3>
 												</div>
@@ -1373,15 +1389,15 @@
 												<!-- Género 2 -->
 												<div class="genero-item">
 													<div class="genero-icon">
-														<i class="fas fa-guitar"></i>
+														<i class="fas fa-guitar fa-2x"></i>
 													</div>
-													<h3 class="genero-name">SALSA</h3>
+													<h3 class="genero-name fa-2x">SALSA</h3>
 												</div>
 
 												<!-- Género 3 -->
 												<div class="genero-item">
 													<div class="genero-icon">
-														<i class="fas fa-headphones"></i>
+														<i class="fas fa-headphones fa-2x"></i>
 													</div>
 													<h3 class="genero-name">REGGAETON</h3>
 												</div>
@@ -1389,7 +1405,7 @@
 												<!-- Género 4 -->
 												<div class="genero-item">
 													<div class="genero-icon">
-														<i class="fas fa-drum"></i>
+														<i class="fas fa-drum fa-2x"></i>
 													</div>
 													<h3 class="genero-name">VALLENATO</h3>
 												</div>
@@ -1397,7 +1413,7 @@
 												<!-- Género 5 -->
 												<div class="genero-item">
 													<div class="genero-icon">
-														<i class="fas fa-guitar"></i>
+														<i class="fas fa-guitar fa-2x"></i>
 													</div>
 													<h3 class="genero-name">ROMÁNTICA</h3>
 												</div>
@@ -1405,7 +1421,7 @@
 												<!-- Género 6 -->
 												<div class="genero-item">
 													<div class="genero-icon">
-														<i class="fas fa-microphone"></i>
+														<i class="fas fa-microphone fa-2x"></i>
 													</div>
 													<h3 class="genero-name">TROPICAL</h3>
 												</div>
@@ -1413,7 +1429,7 @@
 												<!-- Género 7 -->
 												<div class="genero-item">
 													<div class="genero-icon">
-														<i class="fas fa-guitar"></i>
+														<i class="fas fa-guitar fa-2x"></i>
 													</div>
 													<h3 class="genero-name">HIP HOP</h3>
 												</div>
@@ -1421,7 +1437,7 @@
 												<!-- Género 8 -->
 												<div class="genero-item">
 													<div class="genero-icon">
-														<i class="fas fa-microphone"></i>
+														<i class="fas fa-microphone fa-2x"></i>
 													</div>
 													<h3 class="genero-name">CLÁSICA</h3>
 												</div>
@@ -1442,90 +1458,90 @@
 								<div class="generos-grid d-block d-md-none">
 									<div class="row g-2">
 										<!-- Género 1 -->
-										<div class="col-4">
+										<div class="col-4 d-flex justify-content-center">
 											<div class="genero-item">
 												<div class="genero-icon">
-													<i class="fas fa-headphones"></i>
+													<i class="fas fa-headphones fa-2x"></i>
 												</div>
 												<h3 class="genero-name">ROCK</h3>
 											</div>
 										</div>
 
 										<!-- Género 2 -->
-										<div class="col-4">
+										<div class="col-4 d-flex justify-content-center">
 											<div class="genero-item">
 												<div class="genero-icon">
-													<i class="fas fa-drum"></i>
+													<i class="fas fa-drum fa-2x"></i>
 												</div>
 												<h3 class="genero-name">SALSA</h3>
 											</div>
 										</div>
 
 										<!-- Género 3 -->
-										<div class="col-4">
+										<div class="col-4 d-flex justify-content-center">
 											<div class="genero-item">
 												<div class="genero-icon">
-													<i class="fas fa-headphones"></i>
+													<i class="fas fa-headphones fa-2x"></i>
 												</div>
 												<h3 class="genero-name">REGGAETON</h3>
 											</div>
 										</div>
 
 										<!-- Género 4 -->
-										<div class="col-4">
+										<div class="col-4 d-flex justify-content-center">
 											<div class="genero-item">
 												<div class="genero-icon">
-													<i class="fas fa-drum"></i>
+													<i class="fas fa-drum fa-2x"></i>
 												</div>
 												<h3 class="genero-name">VALLENATO</h3>
 											</div>
 										</div>
 
 										<!-- Género 5 -->
-										<div class="col-4">
+										<div class="col-4 d-flex justify-content-center">
 											<div class="genero-item">
 												<div class="genero-icon">
-													<i class="fas fa-guitar"></i>
+													<i class="fas fa-guitar fa-2x"></i>
 												</div>
 												<h3 class="genero-name">ROMÁNTICA</h3>
 											</div>
 										</div>
 
 										<!-- Género 6 -->
-										<div class="col-4">
+										<div class="col-4 d-flex justify-content-center">
 											<div class="genero-item">
 												<div class="genero-icon">
-													<i class="fas fa-drum"></i>
+													<i class="fas fa-drum fa-2x"></i>
 												</div>
 												<h3 class="genero-name">TROPICAL</h3>
 											</div>
 										</div>
 
 										<!-- Género 7 -->
-										<div class="col-4">
+										<div class="col-4 d-flex justify-content-center">
 											<div class="genero-item">
 												<div class="genero-icon">
-													<i class="fas fa-headphones"></i>
+													<i class="fas fa-headphones fa-2x"></i>
 												</div>
 												<h3 class="genero-name">HIP HOP</h3>
 											</div>
 										</div>
 
 										<!-- Género 8 -->
-										<div class="col-4">
+										<div class="col-4 d-flex justify-content-center">
 											<div class="genero-item">
 												<div class="genero-icon">
-													<i class="fas fa-guitar"></i>
+													<i class="fas fa-guitar fa-2x"></i>
 												</div>
 												<h3 class="genero-name">CLÁSICA</h3>
 											</div>
 										</div>
 
 										<!-- Botón Ver Más -->
-										<div class="col-4">
+										<div class="col-4 d-flex justify-content-center">
 											<div class="genero-item ver-mas">
 												<div class="genero-icon">
-													<i class="fas fa-plus" aria-hidden="true"></i>
+													<i class="fas fa-plus fa-2x" aria-hidden="true"></i>
 												</div>
 												<h3 class="genero-name">MÁS</h3>
 											</div>
@@ -1547,7 +1563,7 @@
 												<div class="emisora-item">
 													<div class="emisora-logo">
 														<img src="/assets/img/emisora-1.png" alt="Corazón Popular"
-															class="img-fluid" />
+															class="img-emisora" />
 													</div>
 													<h3 class="emisora-name">CORAZÓN POPULAR</h3>
 												</div>
@@ -1556,7 +1572,7 @@
 												<div class="emisora-item">
 													<div class="emisora-logo">
 														<img src="/assets/img/emisora-2.png" alt="Melodía Stereo"
-															class="img-fluid" />
+															class="img-emisora" />
 													</div>
 													<h3 class="emisora-name">MELODÍA STEREO</h3>
 												</div>
@@ -1565,7 +1581,7 @@
 												<div class="emisora-item">
 													<div class="emisora-logo">
 														<img src="/assets/img/emisora-3.png" alt="Radio Web Colombia TV"
-															class="img-fluid" />
+															class="img-emisora" />
 													</div>
 													<h3 class="emisora-name">RADIO WEB COLOMBIA TV</h3>
 												</div>
@@ -1574,7 +1590,7 @@
 												<div class="emisora-item">
 													<div class="emisora-logo">
 														<img src="/assets/img/emisora-4.png" alt="Radio Paisa"
-															class="img-fluid" />
+															class="img-emisora" />
 													</div>
 													<h3 class="emisora-name">RADIO PAISA</h3>
 												</div>
@@ -1583,7 +1599,7 @@
 												<div class="emisora-item">
 													<div class="emisora-logo">
 														<img src="/assets/img/emisora-5.png" alt="La Voz de los Pastos"
-															class="img-fluid" />
+															class="img-emisora" />
 													</div>
 													<h3 class="emisora-name">LA VOZ DE LOS PASTOS</h3>
 												</div>
@@ -1592,7 +1608,7 @@
 												<div class="emisora-item">
 													<div class="emisora-logo">
 														<img src="/assets/img/emisora-6.png" alt="Tiempo de Boleros"
-															class="img-fluid" />
+															class="img-emisora" />
 													</div>
 													<h3 class="emisora-name">TIEMPO DE BOLEROS</h3>
 												</div>
@@ -1601,7 +1617,7 @@
 												<div class="emisora-item">
 													<div class="emisora-logo">
 														<img src="/assets/img/emisora-7.png" alt="La Pachanguera"
-															class="img-fluid" />
+															class="img-emisora" />
 													</div>
 													<h3 class="emisora-name">LA PACHANGUERA</h3>
 												</div>
@@ -1610,7 +1626,7 @@
 												<div class="emisora-item">
 													<div class="emisora-logo">
 														<img src="/assets/img/emisora-8.png" alt="Melodía Stereo"
-															class="img-fluid" />
+															class="img-emisora" />
 													</div>
 													<h3 class="emisora-name">MELODÍA STEREO</h3>
 												</div>
@@ -1628,10 +1644,10 @@
 								</div>
 
 								<!-- Versión Mobile (Grid) -->
-								<div class="emisoras-grid d-block d-md-none">
-									<div class="row g-3">
+								<div class="emisoras-grid d-block d-md-none ">
+									<div class="group-emisora">
 										<!-- Emisora 1 -->
-										<div class="col-6">
+										<div style="width: fit-content;">
 											<div class="emisora-item">
 												<div class="emisora-logo">
 													<img src="/assets/img/emisora-1.png" alt="Corazón Popular"
@@ -1642,7 +1658,7 @@
 										</div>
 
 										<!-- Emisora 2 -->
-										<div class="col-6">
+										<div style="width: fit-content;">
 											<div class="emisora-item">
 												<div class="emisora-logo">
 													<img src="/assets/img/emisora-2.png" alt="Melodía Stereo"
@@ -1653,7 +1669,7 @@
 										</div>
 
 										<!-- Emisora 3 -->
-										<div class="col-6">
+										<div style="width: fit-content;">
 											<div class="emisora-item">
 												<div class="emisora-logo">
 													<img src="/assets/img/emisora-3.png" alt="Radio Web Colombia TV"
@@ -1664,7 +1680,7 @@
 										</div>
 
 										<!-- Emisora 4 -->
-										<div class="col-6">
+										<div style="width: fit-content;">
 											<div class="emisora-item">
 												<div class="emisora-logo">
 													<img src="/assets/img/emisora-4.png" alt="Radio Paisa"
@@ -1675,7 +1691,7 @@
 										</div>
 
 										<!-- Emisora 5 -->
-										<div class="col-6">
+										<div style="width: fit-content;">
 											<div class="emisora-item">
 												<div class="emisora-logo">
 													<img src="/assets/img/emisora-5.png" alt="La Voz de los Pastos"
@@ -1686,7 +1702,7 @@
 										</div>
 
 										<!-- Emisora 6 -->
-										<div class="col-6">
+										<div style="width: fit-content;">
 											<div class="emisora-item">
 												<div class="emisora-logo">
 													<img src="/assets/img/emisora-6.png" alt="Tiempo de Boleros"
@@ -1695,6 +1711,27 @@
 												<h3 class="emisora-name">TIEMPO DE BOLEROS</h3>
 											</div>
 										</div>
+										<!-- Emisora 7 -->
+										<div style="width: fit-content;">
+											<div class="emisora-item">
+												<div class="emisora-logo">
+													<img src="/assets/img/emisora-6.png" alt="Tiempo de Boleros"
+														class="img-fluid" />
+												</div>
+												<h3 class="emisora-name">TIEMPO DE BOLEROS</h3>
+											</div>
+										</div>
+										<!-- Emisora 8 -->
+										<div style="width: fit-content;">
+											<div class="emisora-item">
+												<div class="emisora-logo">
+													<img src="/assets/img/emisora-6.png" alt="Tiempo de Boleros"
+														class="img-fluid" />
+												</div>
+												<h3 class="emisora-name">TIEMPO DE BOLEROS</h3>
+											</div>
+										</div>
+
 									</div>
 
 									<!-- Botón Ver Más -->
@@ -1710,11 +1747,15 @@
 					<section class="herramientas-financieras py-4">
 						<div class="container">
 							<div class="herramientas-panel">
-								<div class="row g-0">
+								<div class="row g-0 body-panel">
 									<!-- Cambio de Moneda -->
-									<div class="col-md-4 herramientas-seccion cambio-moneda">
+									<div class="herramientas-seccion cambio-moneda">
 										<div class="herramientas-titulo">CAMBIO DE MONEDA</div>
-
+										<div class="form-group mb-2">
+											<label for="cantidadMoneda" class="form-label">Cantidad</label>
+											<input type="number" class="form-control form-control-lg rounded-pill"
+												id="cantidadMoneda" value="1">
+										</div>
 										<div class="form-group mb-2">
 											<label for="monedaOrigen" class="form-label">DE</label>
 											<select id="monedaOrigen" class="form-select">
@@ -1724,8 +1765,10 @@
 											</select>
 										</div>
 
-										<div class="cambio-icono">
-											<i class="fas fa-exchange-alt" aria-hidden="true"></i>
+										<div class="d-flex align-items-center justify-content-center my-2">
+											<div class="cambio-icono">
+												<i class="fas fa-arrows-alt-v"></i>
+											</div>
 										</div>
 
 										<div class="form-group mb-3">
@@ -1741,7 +1784,7 @@
 									</div>
 
 									<!-- Indicadores Económicos -->
-									<div class="col-md-4 herramientas-seccion indicadores-economicos">
+									<div class="herramientas-seccion indicadores-economicos">
 										<div class="herramientas-titulo">INDICADORES ECONÓMICOS</div>
 
 										<div class="indicador-item">
@@ -1791,7 +1834,7 @@
 									</div>
 
 									<!-- Embajadas y Consulados -->
-									<div class="col-md-4 herramientas-seccion embajadas-consulados">
+									<div class="herramientas-seccion embajadas-consulados">
 										<div class="herramientas-titulo">EMBAJADAS Y CONSULADOS</div>
 
 										<div class="form-group mb-3">
@@ -1895,7 +1938,7 @@
 									</div>
 
 									<!-- Festival 5 -->
-									<div class="col-md-3 col-lg-2-4">
+									<div class="col-md-3 col-lg-2-4 d-lg-block d-none">
 										<article class="festival-card">
 											<div class="festival-image">
 												<img src="/assets/img/feria-3.png" alt="Festival de Teatro de Manizales"
@@ -1954,16 +1997,24 @@
 						<div class="container">
 							<div class="row">
 								<!-- No dejes de ver -->
-								<div class="col-lg-5 mb-4">
+								<div class="col-lg-5 mb-4 d-flex flex-column gap-3">
 									<div class="d-flex justify-content-between align-items-center mb-3">
 										<h3 style="color: #104596;">NO DEJES DE VER</h3>
 										<a href="#" class="btn-azul-blanco">Ver todo</a>
 									</div>
 
 									<!-- Video Principal -->
-									<div class="video-feature mb-3 position-relative">
+									<div class="video-feature mb-3 position-relative d-flex flex-column gap-3">
 										<img src="/assets/img/news-1.png" alt="Video destacado" />
 										<span class="video-icon"><i class="fas fa-play"></i></span>
+										<div class="d-flex flex-column gap-3 pt-1">
+											<h6 class="video-category mb-0">CINE</h6>
+											<p class="video-title mb-0">
+												La hora en la que arranca el nuevo capítulo de "Dragon Ball Daima"
+											</p>
+											<p class="author mb-0">Por: Juan Carlos García Sierra</p>
+											<a href="#">Leer más</a>
+										</div>
 									</div>
 
 									<!-- Lista de videos -->
@@ -2005,110 +2056,164 @@
 
 									<!-- Íconos zodiacales -->
 									<div class="zodiac-icons d-flex align-items-center mb-3 overflow-auto desktop-only">
-										<div class="zodiac-icon">
-											♈
+										<div class="group-zodiac">
+											<div class="zodiac-icon">
+												♈
+											</div>
 											<p>ARIES</p>
 										</div>
-										<div class="zodiac-icon">
-											♉
+										<div class="group-zodiac">
+											<div class="zodiac-icon">
+												♉
+											</div>
 											<p>TAURO</p>
 										</div>
-										<div class="zodiac-icon">
-											♊
+										<div class="group-zodiac">
+											<div class="zodiac-icon">
+												♊
+											</div>
 											<p>GÉMINIS</p>
 										</div>
-										<div class="zodiac-icon">
-											♋
+										<div class="group-zodiac">
+											<div class="zodiac-icon">
+												♋
+											</div>
 											<p>CÁNCER</p>
 										</div>
-										<div class="zodiac-icon">
-											♌
+										<div class="group-zodiac">
+											<div class="zodiac-icon">
+												♌
+											</div>
 											<p>LEO</p>
 										</div>
-										<div class="zodiac-icon">
-											♍
+										<div class="group-zodiac">
+											<div class="zodiac-icon">
+												♍
+											</div>
 											<p>VIRGO</p>
 										</div>
-										<div class="zodiac-icon">
-											♎
+										<div class="group-zodiac">
+											<div class="zodiac-icon">
+												♎
+											</div>
 											<p>LIBRA</p>
 										</div>
-										<div class="zodiac-icon">
-											♏
+										<div class="group-zodiac">
+											<div class="zodiac-icon">
+												♏
+											</div>
 											<p>ESCORPIO</p>
 										</div>
-										<div class="zodiac-icon">
-											♐
+										<div class="group-zodiac">
+											<div class="zodiac-icon">
+												♐
+											</div>
 											<p>SAGITARIO</p>
 										</div>
-										<div class="zodiac-icon">
-											♑
+										<div class="group-zodiac">
+											<div class="zodiac-icon">
+												♑
+											</div>
 											<p>CAPRICORNIO</p>
 										</div>
-										<div class="zodiac-icon">
-											♒
+										<div class="group-zodiac">
+											<div class="zodiac-icon">
+												♒
+											</div>
 											<p>ACUARIO</p>
 										</div>
-										<div class="zodiac-icon">
-											♓
+										<div class="group-zodiac">
+											<div class="zodiac-icon">
+												♓
+											</div>
 											<p>PISCIS</p>
 										</div>
 									</div>
 									<div class="zodiac-icons d-flex align-items-center mb-3 overflow-auto mobile-only">
-										<div class="zodiac-icon-mobile">
-											♈
+										<div class="group-zodiac">
+											<div class="zodiac-icon-mobile">
+												♈
+											</div>
 											<p>ARIES</p>
 										</div>
-										<div class="zodiac-icon-mobile">
-											♉
+										<div class="group-zodiac">
+											<div class="zodiac-icon-mobile">
+												♉
+											</div>
 											<p>TAURO</p>
 										</div>
-										<div class="zodiac-icon-mobile">
-											♊
+										<div class="group-zodiac">
+											<div class="zodiac-icon-mobile">
+												♊
+
+											</div>
 											<p>GÉMINIS</p>
 										</div>
-
-										<div class="zodiac-icon-mobile">
-											♋
+										<div class="group-zodiac">
+											<div class="zodiac-icon-mobile">
+												♈
+											</div>
+											<p>ARIES</p>
+										</div>
+										<div class="group-zodiac">
+											<div class="zodiac-icon-mobile">
+												♋
+											</div>
 											<p>CÁNCER</p>
 										</div>
-										<div class="zodiac-icon-mobile">
-											♌
+										<div class="group-zodiac">
+											<div class="zodiac-icon-mobile">
+												♌
+											</div>
 											<p>LEO</p>
 										</div>
-										<div class="zodiac-icon-mobile">
-											♍
+										<div class="group-zodiac">
+											<div class="zodiac-icon-mobile">
+												♍
+											</div>
 											<p>VIRGO</p>
 										</div>
-										<div class="zodiac-icon-mobile">
-											♎
+										<div class="group-zodiac">
+											<div class="zodiac-icon-mobile">
+												♎
+											</div>
 											<p>LIBRA</p>
 										</div>
-										<div class="zodiac-icon-mobile">
-											♏
+										<div class="group-zodiac">
+											<div class="zodiac-icon-mobile">
+												♏
+											</div>
 											<p>ESCORPIO</p>
 										</div>
-										<div class="zodiac-icon-mobile">
-											♐
+										<div class="group-zodiac">
+											<div class="zodiac-icon-mobile">
+												♐
+											</div>
 											<p>SAGITARIO</p>
 										</div>
-										<div class="zodiac-icon-mobile">
-											♑
+										<div class="group-zodiac">
+											<div class="zodiac-icon-mobile">
+												♑
+											</div>
 											<p>CAPRICORNIO</p>
 										</div>
-										<div class="zodiac-icon-mobile">
-											♒
+										<div class="group-zodiac">
+											<div class="zodiac-icon-mobile">
+												♒
+											</div>
 											<p>ACUARIO</p>
 										</div>
-										<div class="zodiac-icon-mobile">
-											♓
+										<div class="group-zodiac">
+											<div class="zodiac-icon-mobile">
+												♓
+											</div>
 											<p>PISCIS</p>
 										</div>
 									</div>
 
 									<!-- Tarjetas horóscopo -->
 									<div class="group-horoscopo">
-										<div class="card card-horoscopo">
+										<div class="card-horoscopo">
 											<img src="/assets/img/flyer-desk.png" alt="Signos del Zodiaco" />
 											<h6>Signos Del Zodiaco</h6>
 											<p class="author">Por: Juan Carlos García Sierra</p>
@@ -2118,14 +2223,14 @@
 											</p>
 											<a href="#">Leer más</a>
 										</div>
-										<div class="card card-horoscopo">
+										<div class="card-horoscopo">
 											<img src="/assets/img/section-2-news-2.png" alt="Año Nuevo" />
 											<h6>Año Nuevo</h6>
 											<p class="author">Por: Juan Carlos García Sierra</p>
 											<p class="mb-1">Los signos del zodiaco con mejor racha en Año Nuevo.</p>
 											<a href="#">Leer más</a>
 										</div>
-										<div class="card card-horoscopo">
+										<div class="card-horoscopo">
 											<img src="/assets/img/section-2-news-1.png" alt="Transformaciones" />
 											<h6>Transformaciones</h6>
 											<p class="author">Por: Juan Carlos García Sierra</p>
@@ -2142,20 +2247,30 @@
 
 					<!-- Sección de TV -->
 					<section class="section-tv container">
-						<div class="row">
-							<!-- Contenido Principal -->
-							<div class="col-lg-9">
-								<div class="d-flex justify-content-between align-items-center">
-									<h3 style="color: #104596;">TELEVISIÓN</h3>
-									<a href="#" class="btn-azul-blanco">Ver todo</a>
+						<div class="w-100">
+							<div class="w-100">
+								<!-- Contenido Principal -->
+								<div class="d-flex flex-row justify-content-between mb-2">
+									<div
+										class="d-flex flex-row flex-lg-column gap-3 w-80 align-lg-items-center justify-content-between">
+										<h3 style="color: #104596; margin: 0;">TELEVISIÓN</h3>
+										<p class="live-tag"><span class="live-dot"></span> TV EN VIVO</p>
+									</div>
+									<div>
+
+										<a href="#" class="btn-azul-blanco d-none d-lg-block">Ver todo</a>
+									</div>
 								</div>
-								<p class="live-tag mb-5"><span class="live-dot"></span> TV EN VIVO</p>
 
 								<!-- Íconos de Televisión -->
-								<div class="tv-icons d-flex flex-wrap desktop-only">
-									<div class="tv-icon">
+								<div class="tv-icons">
+									<div class=" tv-icon">
 										<img src="/assets/icons/channel-1.png" alt="Telepetróleo" />
 										<p>TELEPETRÓLEO</p>
+									</div>
+									<div class="tv-icon">
+										<img src="/assets/icons/channel-2.png" alt="CMB Televisión" />
+										<p>CMB TV</p>
 									</div>
 									<div class="tv-icon">
 										<img src="/assets/icons/channel-2.png" alt="Salsagorda Televisión" />
@@ -2174,44 +2289,55 @@
 										<p>CMB TV</p>
 									</div>
 								</div>
-								<div class="tv-icons d-flex flex-wrap justify-content-center justify-content-md-start">
-									<div class="tv-icon">
-										<img src="/assets/icons/channel-1.png" alt="Telepetróleo" />
-										<p>TELEPETRÓLEO</p>
-									</div>
-									<div class="tv-icon">
-										<img src="/assets/icons/channel-2.png" alt="Salsagorda Televisión" />
-										<p>SALSAGORDA <br />TELEVISIÓN</p>
-									</div>
-									<div class="tv-icon">
-										<img src="/assets/icons/channel-3.png" alt="TV Gracia" />
-										<p>TV GRACIA</p>
-									</div>
-									<div class="tv-icon">
-										<img src="/assets/icons/channel-2.png" alt="CMB Televisión" />
-										<p>CMB TV</p>
-									</div>
-									<div class="tv-icon">
-										<img src="/assets/icons/channel-3.png" alt="Canal 9" />
-										<p>CANAL 9</p>
-									</div>
+								<div class="d-flex flex-row justify-content-center mb-2 d-lg-none">
+									<a href="#" class="btn-azul-blanco d-block d-lg-block w-30">Ver todo</a>
 								</div>
 							</div>
 
-							<!-- Banner Publicitario -->
-							<div class="col-lg-3 tv-banner">
-								<img src="/assets/img/banner-tv.png" alt="Publicidad" />
+							<div class="tv-icons d-none d-lg-grid">
+								<div class="tv-icon">
+									<img src="/assets/icons/channel-1.png" alt="Telepetróleo" />
+									<p>TELEPETRÓLEO</p>
+								</div>
+								<div class="tv-icon">
+									<img src="/assets/icons/channel-2.png" alt="Salsagorda Televisión" />
+									<p>SALSAGORDA <br />TELEVISIÓN</p>
+								</div>
+								<div class="tv-icon">
+									<img src="/assets/icons/channel-3.png" alt="TV Gracia" />
+									<p>TV GRACIA</p>
+								</div>
+								<div class="tv-icon">
+									<img src="/assets/icons/channel-4.png" alt="MI TV" />
+									<p>MI TV</p>
+								</div>
+								<div class="tv-icon">
+									<img src="/assets/icons/channel-2.png" alt="CMB Televisión" />
+									<p>CMB TV</p>
+								</div>
+								<div class="tv-icon">
+									<img src="/assets/icons/channel-2.png" alt="CMB Televisión" />
+									<p>CMB TV</p>
+								</div>
 							</div>
 						</div>
+
+
+
+						<!-- Banner Publicitario -->
+						<div class="col-lg-3 tv-banner d-sm-none d-lg-block">
+							<img src="/assets/img/banner-tv.png" alt="Publicidad" />
+						</div>
+
 					</section>
 
 					<!-- Información de Colombia -->
-					<section class="section-info-colombia py-5">
+					<section class="section-info-colombia py-5 ">
 						<div class="container">
 							<!-- Título y botón -->
 							<div class="d-flex justify-content-between align-items-center mb-4">
 								<h3 style="color: #104596;">INFORMACIÓN DE COLOMBIA</h3>
-								<a href="#" class="btn-azul-blanco">Ver todo</a>
+								<a href="#" class="btn-azul-blanco d-none d-lg-block">Ver todo</a>
 							</div>
 
 							<!-- Carrusel -->
@@ -2259,205 +2385,252 @@
 								<button class="btn-carousel right"><i class="fas fa-chevron-right"></i></button>
 							</div>
 						</div>
-					</section>
+						<div class="d-flex flex-row justify-content-center mb-2 d-lg-none">
+							<a href="#" class="btn-azul-blanco d-block d-lg-block w-30">Ver todo</a>
+						</div>
+				</div>
+				</section>
 
-					<!-- Section más noticias -->
-					<section class="section-mas-noticias py-5">
-						<div class="container">
-							<!-- Título y botón -->
-							<div class="d-flex justify-content-between align-items-center mb-4">
-								<h3 style="color: #104596;">MÁS NOTICIAS</h3>
+				<!-- Section más noticias -->
+				<section class="section-mas-noticias ">
+					<div class="container">
+						<!-- Título y botón -->
+						<div class="d-flex justify-content-between align-items-center mb-4">
+							<h3 style="color: #104596;">MÁS NOTICIAS</h3>
+						</div>
+
+						<div class="row">
+							<!-- Columna de Noticias -->
+							<div class="col-lg-8">
+								<!-- Noticia 1 -->
+								<div class="d-flex mb-4 border-bottom pb-3">
+									<img src="/assets/img/news-5.png" alt="Noticia"
+										style="width: 140px; height: 100px; object-fit: cover; border-radius: 8px"
+										class="me-3" />
+									<div>
+										<h6 class="news-category">FÚTBOL</h6>
+										<h5 class="fw-bold">
+											<span class="live-dot mb-1"></span>
+											Rumbo a la Libertadores: Así va la reclasificación tras la fecha 5
+										</h5>
+										<p class="author mb-1">Por: Juan Carlos García Sierra</p>
+										<p class="mb-0">
+											Este jueves se disputó la fecha 5, dejando apretadas las cosas en la
+											tabla
+											de reclasificación rumbo a los cupos para las competencias internas.
+											<a href="#">Leer más</a>
+										</p>
+									</div>
+								</div>
+
+								<!-- Noticia 2 -->
+								<div class="d-flex mb-4 border-bottom pb-3">
+									<img src="/assets/img/section-2-news-3.png" alt="Noticia"
+										style="width: 140px; height: 100px; object-fit: cover; border-radius: 8px"
+										class="me-3" />
+									<div>
+										<h6 class="news-category">COLOMBIANOS</h6>
+										<h6 class="fw-bold">
+											¡Qué alivio! Colombianos en EE.UU pueden recibir apoyo por discapacidad
+										</h6>
+										<p class="author mb-1">Por: Juan Carlos García Sierra</p>
+										<p class="mb-0">
+											La ayuda a quien lo necesita no solo beneficia a una persona, también a
+											las familias y comunidades.
+											<a href="#">Leer más</a>
+										</p>
+									</div>
+								</div>
+
+								<!-- Noticia 3 -->
+								<div class="d-flex">
+									<img src="/assets/img/section-2-news-2.png" alt="Noticia"
+										style="width: 140px; height: 100px; object-fit: cover; border-radius: 8px"
+										class="me-3" />
+									<div>
+										<h6 class="news-category">COLOMBIANOS</h6>
+										<h6 class="fw-bold">
+											¡Qué alivio! Colombianos en EE.UU pueden recibir apoyo por discapacidad
+										</h6>
+										<p class="author mb-1">Por: Juan Carlos García Sierra</p>
+										<p class="mb-0">
+											La ayuda a quien lo necesita no solo beneficia a una persona, también a
+											las familias y comunidades.
+											<a href="#">Leer más</a>
+										</p>
+									</div>
+								</div>
 							</div>
 
-							<div class="row">
-								<!-- Columna de Noticias -->
-								<div class="col-lg-8">
+							<!-- Columna del Banner -->
+							<div class="col-lg-3 d-none d-lg-block ps-4 border-start border-primary"
+								style="border-width: 2px !important">
+								<img src="/assets/img/poster-vertical.png" alt="Banner Publicitario"
+									style="width: 100%; border-radius: 8px; object-fit: cover; max-height: 500px" />
+							</div>
+							<div class="d-flex flex-row justify-content-center d-lg-none mt-4">
+								<a href="#" class="btn-azul-blanco">Ver Mas</a>
+
+							</div>
+
+						</div>
+
+					</div>
+				</section>
+
+				<!-- Lo último -->
+				<section class="section-last-news py-5">
+					<div class="container">
+						<div class="d-flex justify-content-between align-items-center mb-4">
+							<h3 style="color: #104596;">LO ÚLTIMO</h3>
+							<a href="#" class="btn-azul-blanco d-none d-lg-block">Ver todo</a>
+						</div>
+						<div class="row">
+							<!-- Columna 1: Noticia destacada -->
+							<div class="col-lg-4 mb-4">
+								<h6 class="text-uppercase text-muted">ACTUALIDAD</h6>
+								<div class="d-flex align-items-start">
+									<span class="me-2 live-dot" style="font-size: 1.2rem"></span>
+									<div>
+										<h5 class="fw-bold">
+											Rumbo a la Libertadores: Así va la reclasificación tras la fecha 5
+										</h5>
+										<p class="author mb-1">Por: Juan Carlos García Sierra</p>
+										<p class="mb-2">
+											Este jueves se disputó la fecha 5, dejando apretadas las cosas en la
+											tabla
+											de reclasificación competencias...
+										</p>
+										<a href="#">Leer más</a>
+									</div>
+								</div>
+							</div>
+
+							<!-- Columna 2: Noticias pequeñas -->
+							<div class="col-lg-4 mb-4">
+								<div class="row g-4">
 									<!-- Noticia 1 -->
-									<div class="d-flex mb-4 border-bottom pb-3">
-										<img src="/assets/img/news-5.png" alt="Noticia"
-											style="width: 140px; height: 100px; object-fit: cover; border-radius: 8px"
-											class="me-3" />
+									<div class="col-6">
 										<div>
-											<h6 class="news-category">FÚTBOL</h6>
-											<h5 class="fw-bold">
-												<span class="live-dot mb-1"></span>
-												Rumbo a la Libertadores: Así va la reclasificación tras la fecha 5
-											</h5>
+											<img src="/assets/img/section-2-news-1.png" alt="Noticia 1"
+												style="width: 100%; height: 90px; object-fit: cover; border-radius: 8px"
+												class="mb-2" />
+											<h6 class="news-category text-primary">ENTRETENIMIENTO</h6>
+											<h6 class="mb-1">¡Qué alivio! Colombianos apoyo por discapacidad</h6>
 											<p class="author mb-1">Por: Juan Carlos García Sierra</p>
-											<p class="mb-0">
-												Este jueves se disputó la fecha 5, dejando apretadas las cosas en la
-												tabla
-												de reclasificación rumbo a los cupos para las competencias internas.
-												<a href="#">Leer más</a>
-											</p>
+											<a href="#">Leer más</a>
 										</div>
 									</div>
 
 									<!-- Noticia 2 -->
-									<div class="d-flex mb-4 border-bottom pb-3">
-										<img src="/assets/img/section-2-news-3.png" alt="Noticia"
-											style="width: 140px; height: 100px; object-fit: cover; border-radius: 8px"
-											class="me-3" />
+									<div class="col-6">
 										<div>
-											<h6 class="news-category">COLOMBIANOS</h6>
-											<h6 class="fw-bold">
-												¡Qué alivio! Colombianos en EE.UU pueden recibir apoyo por discapacidad
+											<img src="/assets/img/section-2-news-2.png" alt="Noticia 2"
+												style="width: 100%; height: 90px; object-fit: cover; border-radius: 8px"
+												class="mb-2" />
+											<h6 class="news-category text-primary">ENTRETENIMIENTO</h6>
+											<h6 class="mb-1">
+												Daddy Yankee da su opinión a lo sucedido con Jessica Cediel
 											</h6>
 											<p class="author mb-1">Por: Juan Carlos García Sierra</p>
-											<p class="mb-0">
-												La ayuda a quien lo necesita no solo beneficia a una persona, también a
-												las familias y comunidades.
-												<a href="#">Leer más</a>
-											</p>
-										</div>
-									</div>
-
-									<!-- Noticia 3 -->
-									<div class="d-flex">
-										<img src="/assets/img/section-2-news-2.png" alt="Noticia"
-											style="width: 140px; height: 100px; object-fit: cover; border-radius: 8px"
-											class="me-3" />
-										<div>
-											<h6 class="news-category">COLOMBIANOS</h6>
-											<h6 class="fw-bold">
-												¡Qué alivio! Colombianos en EE.UU pueden recibir apoyo por discapacidad
-											</h6>
-											<p class="author mb-1">Por: Juan Carlos García Sierra</p>
-											<p class="mb-0">
-												La ayuda a quien lo necesita no solo beneficia a una persona, también a
-												las familias y comunidades.
-												<a href="#">Leer más</a>
-											</p>
-										</div>
-									</div>
-								</div>
-
-								<!-- Columna del Banner -->
-								<div class="col-lg-3 d-none d-lg-block ps-4 border-start border-primary"
-									style="border-width: 2px !important">
-									<img src="/assets/img/poster-vertical.png" alt="Banner Publicitario"
-										style="width: 100%; border-radius: 8px; object-fit: cover; max-height: 500px" />
-								</div>
-								<div class="d-flex flex-row justify-content-center d-lg-none mt-4">
-									<a href="#" class="btn-azul-blanco">Ver Mas</a>
-
-								</div>
-
-							</div>
-
-						</div>
-					</section>
-
-					<!-- Lo último -->
-					<section class="section-last-news py-5">
-						<div class="container">
-							<div class="d-flex justify-content-between align-items-center mb-4">
-								<h3 style="color: #104596;">LO ÚLTIMO</h3>
-								<a href="#" class="btn-azul-blanco">Ver todo</a>
-							</div>
-
-							<div class="row">
-								<!-- Columna 1: Noticia destacada -->
-								<div class="col-lg-4 mb-4">
-									<h6 class="text-uppercase text-muted">ACTUALIDAD</h6>
-									<div class="d-flex align-items-start">
-										<span class="me-2 live-dot" style="font-size: 1.2rem"></span>
-										<div>
-											<h5 class="fw-bold">
-												Rumbo a la Libertadores: Así va la reclasificación tras la fecha 5
-											</h5>
-											<p class="author mb-1">Por: Juan Carlos García Sierra</p>
-											<p class="mb-2">
-												Este jueves se disputó la fecha 5, dejando apretadas las cosas en la
-												tabla
-												de reclasificación competencias...
-											</p>
 											<a href="#">Leer más</a>
 										</div>
 									</div>
-								</div>
-
-								<!-- Columna 2: Noticias pequeñas -->
-								<div class="col-lg-4 mb-4">
-									<div class="row g-4">
-										<!-- Noticia 1 -->
-										<div class="col-6">
-											<div>
-												<img src="/assets/img/section-2-news-1.png" alt="Noticia 1"
-													style="width: 100%; height: 90px; object-fit: cover; border-radius: 8px"
-													class="mb-2" />
-												<h6 class="news-category text-primary">ENTRETENIMIENTO</h6>
-												<h6 class="mb-1">¡Qué alivio! Colombianos apoyo por discapacidad</h6>
-												<p class="author mb-1">Por: Juan Carlos García Sierra</p>
-												<a href="#">Leer más</a>
-											</div>
-										</div>
-
-										<!-- Noticia 2 -->
-										<div class="col-6">
-											<div>
-												<img src="/assets/img/section-2-news-2.png" alt="Noticia 2"
-													style="width: 100%; height: 90px; object-fit: cover; border-radius: 8px"
-													class="mb-2" />
-												<h6 class="news-category text-primary">ENTRETENIMIENTO</h6>
-												<h6 class="mb-1">
-													Daddy Yankee da su opinión a lo sucedido con Jessica Cediel
-												</h6>
-												<p class="author mb-1">Por: Juan Carlos García Sierra</p>
-												<a href="#">Leer más</a>
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<!-- Columna 3: Loterías -->
-								<div class="col-lg-4">
-									<div class="last-lottery p-4 rounded">
-										<h5 class="fw-bold mb-4">LOTERÍAS QUE SE JUEGAN HOY</h5>
-										<ul class="list-unstyled">
-											<li class="d-flex justify-content-between align-items-center mb-3">
-												<div class="d-flex align-items-center gap-2">
-													<img src="/assets/icons/channel-1.png" width="30" alt="Lotería" />
-													<span>Caribeña</span>
-												</div>
-												<span class="badge bg-warning text-dark">☀️</span>
-											</li>
-											<li class="d-flex justify-content-between align-items-center mb-3">
-												<div class="d-flex align-items-center gap-2">
-													<img src="/assets/icons/channel-2.png" width="30" alt="Lotería" />
-													<span>Sinuao</span>
-												</div>
-												<span class="badge bg-primary">🌙</span>
-											</li>
-											<li class="d-flex justify-content-between align-items-center mb-3">
-												<div class="d-flex align-items-center gap-2">
-													<img src="/assets/icons/channel-3.png" width="30" alt="Lotería" />
-													<span>Motilón</span>
-												</div>
-												<span class="badge bg-primary">🌙</span>
-											</li>
-											<li class="d-flex justify-content-between align-items-center mb-3">
-												<div class="d-flex align-items-center gap-2">
-													<img src="/assets/icons/channel-3.png" width="30" alt="Lotería" />
-													<span>Motilón</span>
-												</div>
-												<span class="badge bg-primary">🌙</span>
-											</li>
-											<li class="d-flex justify-content-between align-items-center">
-												<div class="d-flex align-items-center gap-2">
-													<img src="/assets/icons/channel-1.png" width="30" alt="Lotería" />
-													<span>Caribeña</span>
-												</div>
-												<span class="badge bg-primary">🌙</span>
-											</li>
-										</ul>
+									<div class="d-flex flex-row justify-content-center d-block d-lg-none">
+										<a href="#" class="btn-azul-blanco ">Ver todo</a>
 									</div>
 								</div>
 							</div>
+
+							<!-- Columna 3: Loterías -->
+							<div class="col-lg-4">
+								<div class="last-lottery p-4 rounded">
+									<h5 class="fw-bold">LOTERÍAS QUE SE JUEGAN HOY</h5>
+									<ul class="list-unstyled">
+										<div class="d-flex justify-content-center align-items-center d-lg-none"
+											style="height: 100px;">
+											<div class="day-night-switch">
+												<input type="checkbox" id="dayNightSwitch" class="day-night-checkbox" />
+												<label for="dayNightSwitch" class="day-night-label">
+													<span class="switch-slider"></span>
+													<span class="switch-icon sun">
+														<svg width="32" height="32" viewBox="0 0 32 32">
+															<circle cx="16" cy="16" r="9" fill="#FFD93B" />
+															<g stroke="#174a8c" stroke-width="2">
+																<circle cx="16" cy="16" r="9" fill="none" />
+																<line x1="16" y1="2" x2="16" y2="6" />
+																<line x1="16" y1="26" x2="16" y2="30" />
+																<line x1="2" y1="16" x2="6" y2="16" />
+																<line x1="26" y1="16" x2="30" y2="16" />
+																<line x1="6.93" y1="6.93" x2="9.76" y2="9.76" />
+																<line x1="22.24" y1="22.24" x2="25.07" y2="25.07" />
+																<line x1="6.93" y1="25.07" x2="9.76" y2="22.24" />
+																<line x1="22.24" y1="9.76" x2="25.07" y2="6.93" />
+															</g>
+														</svg>
+													</span>
+													<span class="switch-icon moon">
+														<svg width="32" height="32" viewBox="0 0 32 32">
+															<path d="M24 22a10 10 0 0 1-9.95-11.1A10 10 0 1 0 24 22Z"
+																fill="#fff" stroke="#174a8c" stroke-width="2" />
+															<circle cx="25" cy="13" r="1" fill="#174a8c" />
+															<circle cx="27" cy="16" r="1" fill="#174a8c" />
+															<circle cx="23" cy="16" r="1" fill="#174a8c" />
+														</svg>
+													</span>
+												</label>
+											</div>
+										</div>
+
+										<li class="d-flex justify-content-between align-items-center mb-3 card-loteria">
+											<div class="d-flex align-items-center gap-2">
+												<img src="/assets/icons/channel-1.png" width="30" alt="Lotería" />
+												<span>Caribeña</span>
+											</div>
+											<span class="badge bg-warning text-dark d-none d-lg-block">☀️</span>
+											<span class="text-hora d-block d-lg-none">9:30 AM</span>
+										</li>
+										<li class="d-flex justify-content-between align-items-center mb-3 card-loteria">
+											<div class="d-flex align-items-center gap-2">
+												<img src="/assets/icons/channel-2.png" width="30" alt="Lotería" />
+												<span>Sinuao</span>
+											</div>
+											<span class="badge bg-primary text-dark d-none d-lg-block">🌙</span>
+											<span class="text-hora d-block d-lg-none">10:00 AM</span>
+										</li>
+										<li class="d-flex justify-content-between align-items-center mb-3 card-loteria">
+											<div class="d-flex align-items-center gap-2">
+												<img src="/assets/icons/channel-3.png" width="30" alt="Lotería" />
+												<span>Motilón</span>
+											</div>
+											<span class="badge bg-primary text-dark d-none d-lg-block">🌙</span>
+											<span class="text-hora d-block d-lg-none">11:30 AM</span>
+										</li>
+										<li class="d-flex justify-content-between align-items-center mb-3 card-loteria">
+											<div class="d-flex align-items-center gap-2">
+												<img src="/assets/icons/channel-3.png" width="30" alt="Lotería" />
+												<span>Motilón</span>
+											</div>
+											<span class="badge bg-warning text-dark d-none d-lg-block">☀️</span>
+											<span class="text-hora d-block d-lg-none">3:00 PM</span>
+										</li>
+										<li class="d-flex justify-content-between align-items-center card-loteria">
+											<div class="d-flex align-items-center gap-2">
+												<img src="/assets/icons/channel-1.png" width="30" alt="Lotería" />
+												<span>Caribeña</span>
+											</div>
+											<span class="badge bg-warning text-dark d-none d-lg-block">☀️</span>
+											<span class="text-hora d-block d-lg-none">5:00 PM</span>
+										</li>
+									</ul>
+								</div>
+							</div>
 						</div>
-					</section>
-				</div>
+						
+					</div>
+				</section>
 			</div>
+		</div>
 		</div>
 	</main>
 
@@ -2467,6 +2640,7 @@
 	<script src="./static/loadComponents.js"></script>
 	<script src="./static/main.js"></script>
 	<script src="/cine/static/slider-estreno.js"></script>
+
 
 	<script>
 		// Carrusel de Información de Colombia

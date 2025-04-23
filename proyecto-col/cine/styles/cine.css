@@ -28,11 +28,6 @@
 		padding-left: 1rem !important;
 		padding-right: 1rem !important;
 	}
-
-	.container-max-width-fluid {
-		padding-left: 0 !important;
-		padding-right: 0 !important;
-	}
 }
 
 /* Grilla de division de contenido en 2 columnas 60% y 40% */
@@ -291,67 +286,6 @@
 
 .social-icon-bn-link {
 	text-decoration: none;
-}
-
-.grid-lo-ultimo-colombia {
-	padding: 20px;
-	background: #bfbfbf1a;
-	border-radius: 20px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	gap: 20px;
-}
-
-.card-indicador-economico {
-	width: 100%;
-	border-radius: 20px;
-	background: #104596;
-	max-width: 800px;
-	width: 100%;
-	margin: auto;
-	padding: 20px 12%;
-}
-
-.card-indicador-economico-title {
-	font-family: Verdana;
-	font-weight: 700;
-	color: #ffffff;
-	line-height: normal;
-	text-align: center;
-	font-size: 25px;
-	text-align: center;
-	max-width: 300px;
-	margin: auto;
-}
-
-.card-indicador-economicos-label,
-.card-indicador-economico-value,
-.card-indicador-economicos-date {
-	font-family: Verdana;
-	font-weight: 700;
-	font-size: 14px;
-	color: #fff;
-	line-height: normal;
-}
-
-.card-indicador-economicos-date {
-	font-weight: 400;
-	font-size: 14px;
-}
-
-.card-indicador-economico-value {
-	font-size: 16px;
-}
-
-.img-yoga {
-	width: 100%;
-	height: 100%;
-	max-height: 580px;
-	object-fit: cover;
-	border-radius: 4px;
-	margin-bottom: 1rem;
 }
 
 /* Estilo para la tarjeta recomendada */
