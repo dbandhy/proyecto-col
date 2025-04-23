@@ -166,8 +166,6 @@ function renderHorarios() {
 
 document.addEventListener('DOMContentLoaded', renderHorarios);
 
-
-
 function renderDetallePelicula() {
     const detalleHTML = `
     <div class="detalle-pelicula-container container-max-width">
@@ -218,5 +216,4 @@ function renderDetallePelicula() {
 
 document.addEventListener('DOMContentLoaded', () => {
     renderDetallePelicula();
-    renderHorarios();
 });

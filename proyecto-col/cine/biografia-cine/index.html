@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="../styles/slider_cine.css" />
     <link rel="stylesheet" href="../styles/slider_estreno.css" />
     <link rel="stylesheet" href="../styles/slider_detail.css" />
-    <link rel="stylesheet" href="./styles/cartelera.css" />
+    <link rel="stylesheet" href="./styles/biografia.css" />
 
     <!-- JavaScript-->
     <script src="../static/slider-estreno.js"></script>
@@ -38,78 +38,68 @@
 
         <!-- Seccion grilla cartelera -->
         <section class="main-section-content py-5 bg-white">
-            <div class=" container-max-width">
-                <div class="d-flex flex-column gap-3 hide-800 w-100 position-relative ">
-                    <div class="title">
-                        <h2 class="section-title m-0 p-0">CARTELERA CINE</h2>
-                        <button id="btnAbrirFiltros" class="btn btn-outline-primary align-items-center gap-2 px-4 py-2 rounded-pill btn-filtros">
-                            <i class="fa fa-sliders"></i>
-                            <span>Filtros</span>
-                        </button>
-                        <div id="filtrosModal" class="modal filtros-modal" tabindex="-1">
-                            <div class="modal-dialog filtros-modal-dialog">
-                                <div class="modal-content filtros-modal-content">
-                                    <div class="modal-header border-0 pb-0 d-flex flex-column align-items-center">
-                                        <h2 class="modal-title mb-3 filtros-modal-title">Filtros</h2>
-                                    </div>
-                                    <div class="modal-body d-flex flex-column gap-3">
-                                        <select id="selectCiudad" class="form-select mb-2 filtros-select"></select>
-                                        <select id="selectSala" class="form-select mb-4 filtros-select"></select>
-                                        <button id="btnConsultar" class="btn btn-primary rounded-pill w-100 btn-consultar">Consultar</button>
-                                    </div>
-                                </div>
+            <div class="container-max-width">
+                <div class="row align-items-start">
+                    <!-- Columna izquierda: Foto y datos -->
+                    <div class="col-lg-8">
+                        <div class="row mb-4">
+                            <!-- Foto -->
+                            <div
+                                class="col-md-4 text-center text-md-start mb-3 mb-md-0 d-flex flex-column align-items-center align-items-md-start">
+                                <h2 class="section-title fw-bold mb-3" style="color:#1746a2;">JESSE EISENBERG</h2>
+                                <img src="/assets/img/movie-1.png" alt="Jesse Eisenberg" class="img-fluid rounded-4"
+                                    style="max-width: 180px;">
+                            </div>
+                            <!-- Biografía -->
+                            <div class="col-md-8 d-flex flex-column justify-content-center">
+                                <p class="fw-bold mb-2" style="font-size: 1.1rem; color:#1746a2;">
+                                    Nominado a los Premios Oscar, los Globos de Oro y los BAFTA tras su impecable
+                                    actuación en "Red Social" donde encarnó a Mark Zuckerberg, Eisenberg ha sabido
+                                    crearse un nombre en la industria del cine, siendo considerado uno de los actores
+                                    más importantes del momento.
+                                </p>
+                                <p class="mb-0">
+                                    Lo que muchos no saben es que Eisenberg fue diagnosticado con TOC (Trastorno
+                                    obsesivo-compulsivo) además de ser vegano y un amante empedernido de los gatos.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Datos personales -->
+                        <div class="row text-center border-top pt-4 mt-2 gx-0">
+                            <div class="col-12 col-md-4 mb-3 mb-md-0">
+                                <span class="text-secondary">Nombre artístico:</span><br>
+                                <span class="fw-bold" style="color:#1746a2;">Jesse Eisenberg</span>
+                            </div>
+                            <div class="col-12 col-md-4 mb-3 mb-md-0">
+                                <span class="text-secondary">Fecha nacimiento:</span><br>
+                                <span class="fw-bold" style="color:#1746a2;">10 de Agosto de 1983</span>
+                            </div>
+                            <div class="col-12 col-md-4 mb-3 mb-md-0">
+                                <span class="text-secondary">Lugar de Nacimiento:</span><br>
+                                <span class="fw-bold" style="color:#1746a2;">Queens, Nueva York</span>
+                            </div>
+                            <div class="col-12 col-md-4 mb-3 mb-md-0">
+                                <span class="text-secondary">Nacionalidad:</span><br>
+                                <span class="fw-bold" style="color:#1746a2;">Estadounidense</span>
+                            </div>
+                            <div class="col-12 col-md-4 mb-3 mb-md-0">
+                                <span class="text-secondary">Edad:</span><br>
+                                <span class="fw-bold" style="color:#1746a2;">41 años</span>
+                            </div>
+                            <div class="col-12 col-md-4 mb-3 mb-md-0">
+                                <span class="text-secondary">Inicio de carrera:</span><br>
+                                <span class="fw-bold" style="color:#1746a2;">1999</span>
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="group-filter">                       
-                        <button id="btnCiudad"
-                            class="form-select mb-3 d-flex align-items-center justify-content-between" type="button"
-                            onclick="mostrarCiudades()" style="cursor:pointer;">
-                            <span id="btnCiudadText">Ciudad</span>
-                        </button>
-                        <div id="ciudades-listado" class="ciudades-modal" style="display:none;">
-                            <h2 class="section-title text-center mb-3">ELIGE TU CIUDAD</h2>
-                            <div class="ciudades-search-bar mb-3">
-                                <div class="search-input-wrapper">
-                                    <span class="search-icon"><i class="fa fa-search"></i></span>
-                                    <input type="text" class="form-control search-input" placeholder="Buscar ciudad...">
-                                </div>
-                            </div>
-                            <div class="ciudades-grid">
-                            </div>
-                        </div>
-                        <button id="btnSala" class="form-select mb-3 d-flex align-items-center justify-content-between"
-                            type="button" onclick="mostrarSalas()" style="cursor:pointer;">
-                            <span id="btnSalaText">Sala</span>
-                        </button>
-                        <div id="salas-listado" class="salas-modal" style="display:none;">
-                            <div class="d-flex justify-content-between align-items-center mb-3">
-                                <h2 class="section-title text-start mb-0" style="font-size:1.2rem;"><b>Salas</b></h2>
-                                <i class="fa fa-chevron-up" style="cursor:pointer;" onclick="cerrarSalas()"></i>
-                            </div>
-                            <div class="sala-grid">
-                            </div>
-                        </div>
-                        <div class="search-bar">
-                            <input type="text" placeholder="Buscar...">
-                            <button type="button" class="fa fa-search" aria-label="Buscar"></button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="grid-two-section-60-40">
-                    <div class="section-cartelera-derecha gap-5">
-                    </div>
-
-                    <div class="grid-two-section-60-40-rgt d-grid gap-4">
+                    <!-- Columna derecha: Anuncio y redes -->
+                    <div class="col-lg-4">
                         <div class="flyer pb-3 row">
                             <div class="sidebar-ad col-10">
-                                <img src="/assets/img/breaking-news-banner.png"
+                                <img src="/assets/img/poster-vertical.png"
                                     alt="¿Cuánto tiempo toma tonificar el cuerpo con yoga de silla según mi edad?"
                                     class="img-fluid img-yoga" />
                             </div>
-
                             <div class="col-2">
                                 <div class="social-sidebar-bn">
                                     <div class="social-icons-bn">
@@ -147,29 +137,15 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Seccion grilla estrenos -->
-        <div id="main-slider-cine"></div>
-
-        <!-- Seccion grilla recomendados -->
-        <section class="main-section-content container-max-width slider-cartelera">
-            <div class="d-flex justify-content-between align-items-center hide-800 w-100 position-relative ">
-                <h2 class="section-title  m-0 p-0">PRÓXIMOS ESTRENOS</h2>
-            </div>
-            <div id="main-slider-cartelera"></div>
-        </section>
-
-        <!-- Seccion grilla mas peliculas mobile -->
-        <section class="main-section-content container-max-width slider-estreno ">
-            <div class="d-flex justify-content-between align-items-center hide-800 w-100">
-                <h2 class="section-title m-0 p-0">Mas Películas</h2>
-            </div>
-            <div id="main-slider-estreno"></div>
+        <!-- Línea de tiempo de filmografía -->
+        <section class="main-section-content py-5 bg-white">
+            <h2 class="filmografia-title">FILMOGRAFÍA</h2>
+            
         </section>
 
         <!-- Seccion flayer y grilla noticias -->
@@ -256,58 +232,7 @@
                         </div>
                     </div>
                     <!-- Seccion derecho -->
-                    <div class="grid-two-section-60-40-right d-grid gap-4">
-                        <div class="grid-articles-2 grid-lo-ultimo-colombia">
-                            <div class="d-flex justify-content-center align-items-center hide-800">
-                                <h2 class="section-title m-0 p-0">Lo último en Colombia</h2>
-                            </div>
-                            <div class="card-article-2 card-article-2-principal card-bottom-separator pt-2">
-                                <img src="/assets/img/breaking-news-14.png" alt="Maduro y Petro" />
-                                <div class="card-article-2-content">
-                                    <h2 class="card-article-2-title">
-                                        Cotización del dólar en Colombia: este es su precio hoy, 10 de enero
-                                    </h2>
-                                    <p class="card-article-2-autor">Por: <b>Juan Carlos García Sierra</b></p>
-                                    <p>
-                                        María Corina Machado reaparece en un video y dice que ya está libre. Leer más
-                                        <a href="#" class="card-article-2-leer-mas">Leer más</a>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="grid-articles-2">
-                                <div class="card-article-2 card-bottom-separator">
-                                    <img src="/assets/img/breaking-news-5.png" alt="Maduro y Petro" />
-                                    <div class="card-article-2-content">
-                                        <h2 class="card-article-2-title">
-                                            Costa Rica hizo oficial su apoyo a Edmundo González
-                                        </h2>
-                                        <a href="#" class="card-article-2-leer-mas">Leer más</a>
-                                        <p class="card-article-2-autor">Por: <b>Juan Carlos García Sierra</b></p>
-                                    </div>
-                                </div>
-                                <div class="card-article-2 card-bottom-separator">
-                                    <img src="/assets/img/breaking-news-5.png" alt="Maduro y Petro" />
-                                    <div class="card-article-2-content">
-                                        <h2 class="card-article-2-title">
-                                            Costa Rica hizo oficial su apoyo a Edmundo González
-                                        </h2>
-                                        <a href="#" class="card-article-2-leer-mas">Leer más</a>
-                                        <p class="card-article-2-autor">Por: <b>Juan Carlos García Sierra</b></p>
-                                    </div>
-                                </div>
-                                <div class="card-article-2">
-                                    <img src="/assets/img/breaking-news-5.png" alt="Maduro y Petro" />
-                                    <div class="card-article-2-content">
-                                        <h2 class="card-article-2-title">
-                                            Costa Rica hizo oficial su apoyo a Edmundo González
-                                        </h2>
-                                        <a href="#" class="card-article-2-leer-mas">Leer más</a>
-                                        <p class="card-article-2-autor">Por: <b>Juan Carlos García Sierra</b></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </section>
