@@ -112,7 +112,11 @@ function renderPersonajes() {
               <span class="personaje-detalle-valor">${personaje.inicioCarrera}</span>
             </div>          
           </div>
-        </div>            
+        </div>      
+        ${index === 2 || index === 5 ?
+          '<div class="justify-content-center align-items-center hide-800 w-100 position-relative image-anuncio">' +
+          '<img src="/assets/img/banner-copa-america.png" alt="img" />' +
+          '</div>' : ''}      
       `;
     });
 

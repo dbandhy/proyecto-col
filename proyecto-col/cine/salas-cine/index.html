@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Personajes</title>
+    <title>Salas Cine</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
     <link rel="stylesheet"
@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="../styles/slider_cine.css" />
     <link rel="stylesheet" href="../styles/slider_estreno.css" />
     <link rel="stylesheet" href="../styles/slider_detail.css" />
-    <link rel="stylesheet" href="./styles/personajes.css" />
+    <link rel="stylesheet" href="./styles/salas.css" />
 
     <!-- JavaScript-->
     <script src="./static/index.js"></script>
@@ -33,19 +33,39 @@
     <div id="main-header-cine"></div>
 
     <main class="main-container">
+        <!-- Seccion grilla de horarios -->
+        <section class="cine-horarios-section">
+            <div class="cine-horarios-grid container-max-width">
 
-        <section class="main-section-content py-5 bg-white">
-            <div class="d-flex flex-column gap-4 container-max-width">
-                <div class="d-flex flex-column gap-3 hide-800 w-100 position-relative">
-                    <div class="title">
-                        <h2 class="section-title m-0 p-0">PERSONAS <span class="subtitle">(Actores, Actrices, Directores)</span></h2>
+                <div class="cine-horarios-list">
+                    <div class="cine-horarios-header mb-4">
+                        <div class="d-flex flex-column">
+                            <div class="d-flex align-items-start group-title">
+                                <span
+                                    class="cine-title">
+                                    SALAS DE CINE
+                                </span>
+                                <div class="d-flex flex-row gap-2 flex-grow-1">
+                                    <div class="search-box">
+                                        <input type="text" placeholder="Buscar Sala"
+                                            class="form-control rounded-pill border-primary">
+                                        <span class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+                                    </div>
+                                    <div class="ms-3">
+                                        <div class="circle-btn">
+                                            <i class="fa-solid fa-arrow-up"></i>
+                                            <i class="fa-solid fa-arrow-down"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
                     </div>
+                    <div id="cine-salas-content"></div>
                 </div>
-
-                <div class="grid-two-section-60-40">
-                    <div class="section-cartelera-derecha gap-5">
-                    </div>
-                    <div class="grid-two-section-60-40-rgt d-grid gap-4">
+                <div class="cine-horarios-sidebar">
+                    <div class="grid-two-section-60-40-rgt d-grid gap-4 ">
                         <div class="flyer pb-3 row">
                             <div class="sidebar-ad col-10">
                                 <img src="/assets/img/poster-vertical.png"
@@ -89,111 +109,7 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="main-section-content align-items-start container-max-width slider-cartelera">
-            <h2 class="section-title m-0 p-0">RECOMENDADOS</h2>
-            <div id="main-slider-cartelera"></div>
-        </section>
-
-        <!-- Seccion grilla mas peliculas mobile -->
-        <section class="main-section-content container-max-width slider-estreno ">
-            <div class="d-flex justify-content-between align-items-center hide-800 w-100">
-                <h2 class="section-title m-0 p-0">Recomendados</h2>
-            </div>
-            <div id="main-slider-estreno"></div>
-
-        </section>
-
-        <!-- Seccion flayer y grilla noticias -->
-        <section class="main-section-content py-5 bg-white">
-            <div class="container-max-width">
-
-                <div class="grid-two-section-60-40">
-                    <!-- Seccion izquierdo -->
-                    <div class="grid-two-section-60-40-lft">
-                        <div class="grid-articles-2 grid-mas-noticias">
-                            <div class="d-flex justify-content-between align-items-center hide-800 w-100">
-                                <h2 class="section-title m-0 p-0">NOTICIAS RELACIONADAS</h2>
-                                <a href="#" class="btn-azul-blanco">Ver todo</a>
-                            </div>
-                            <div class="card-article-2 card-article-2-variant-column card-bottom-separator pt-2">
-                                <img src="/assets/img/breaking-news-10.png"
-                                    alt="Donald Trump reconoció a Edmundo González" />
-                                <div class="card-article-2-content">
-                                    <p class="card-article-2-tag">CINE</p>
-                                    <h2 class="card-article-2-title">Donald Trump reconoció a Edmundo González</h2>
-                                    <a href="#" class="card-article-2-leer-mas">Leer más</a>
-                                    <p class="card-article-2-autor">Por: <b>Juan Carlos García Sierra</b></p>
-                                </div>
-                            </div>
-                            <div class="card-article-2 card-article-2-variant-column card-bottom-separator pt-2">
-                                <img src="/assets/img/breaking-news-7.png"
-                                    alt="Costa Rica hizo oficial su apoyo a Edmundo González" />
-                                <div class="card-article-2-content">
-                                    <p class="card-article-2-tag">CINE</p>
-                                    <h2 class="card-article-2-title">
-                                        Costa Rica hizo oficial su apoyo a Edmundo González
-                                    </h2>
-                                    <a href="#" class="card-article-2-leer-mas">Leer más</a>
-                                    <p class="card-article-2-autor">Por: <b>Juan Carlos García Sierra</b></p>
-                                </div>
-                            </div>
-                            <div class="grid-articles-2">
-                                <div class="card-article-2 card-bottom-separator">
-                                    <img src="/assets/img/breaking-news-6.png" alt="Maduro y Petro" />
-                                    <div class="card-article-2-content">
-                                        <p class="card-article-2-tag">CINE</p>
-                                        <h2 class="card-article-2-title">
-                                            Venezuela tiene carteles de se busca con la cara expresidentes
-                                        </h2>
-                                        <a href="#" class="card-article-2-leer-mas">Leer más</a>
-                                        <p class="card-article-2-autor">Por: <b>Juan Carlos García Sierra</b></p>
-                                    </div>
-                                </div>
-                                <div class="card-article-2 card-bottom-separator">
-                                    <img src="/assets/img/breaking-news-5.png" alt="Maduro y Petro" />
-                                    <div class="card-article-2-content">
-                                        <p class="card-article-2-tag">CINE</p>
-                                        <h2 class="card-article-2-title">
-                                            ¡Qué alivio! Colombianos en EE.UU pueden recibir apoyo por discapacidad
-                                        </h2>
-                                        <a href="#" class="card-article-2-leer-mas">Leer más</a>
-                                        <p class="card-article-2-autor">Por: <b>Juan Carlos García Sierra</b></p>
-                                    </div>
-                                </div>
-                                <div class="card-article-2 card-bottom-separator">
-                                    <img src="/assets/img/breaking-news-13.png" alt="Maduro y Petro" />
-                                    <div class="card-article-2-content">
-                                        <p class="card-article-2-tag">CINE</p>
-                                        <h2 class="card-article-2-title">
-                                            <i class="fas fa-circle text-warning me-1"></i>
-                                            La hora en la que arranca el nuevo capítulo de "Dragon Ball Daima"
-                                        </h2>
-                                        <a href="#" class="card-article-2-leer-mas">Leer más</a>
-                                        <p class="card-article-2-autor">Por: <b>Juan Carlos García Sierra</b></p>
-                                    </div>
-                                </div>
-                                <div class="card-article-2 card-bottom-separator">
-                                    <img src="/assets/img/breaking-news-12.png" alt="Maduro y Petro" />
-                                    <div class="card-article-2-content">
-                                        <p class="card-article-2-tag">CINE</p>
-                                        <h2 class="card-article-2-title">
-                                            <i class="fas fa-circle text-warning me-1"></i>
-                                            La hora en la que arranca el nuevo capítulo de "Dragon Ball Daima"
-                                        </h2>
-                                        <a href="#" class="card-article-2-leer-mas">Leer más</a>
-                                        <p class="card-article-2-autor">Por: <b>Juan Carlos García Sierra</b></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Seccion derecho -->
                     <div class="grid-two-section-60-40-right d-grid gap-4">
                         <div class="grid-articles-2 grid-lo-ultimo-colombia">
                             <div class="d-flex justify-content-center align-items-center hide-800">
@@ -246,11 +162,11 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
 
-        
     </main>
 
     <div id="main-footer"></div>
