@@ -27,12 +27,14 @@
 			crossorigin="anonymous"
 			referrerpolicy="no-referrer"
 		/>
-		<link rel="stylesheet" href="../styles/style.css" />
+		
     <link rel="stylesheet" href="./styles/futbol.css">
+		<link rel="stylesheet" href="../styles/style.css" />
 		<!-- Estilos componentes -->
 		<link rel="stylesheet" href="../styles/header.css" />
 		<link rel="stylesheet" href="../styles/footer.css" />
 		<link rel="stylesheet" href="../styles/text.css">
+		<link rel="stylesheet" href="../static/components/button/button.css">
 		<link rel="stylesheet" href="../static/components/newsCard/newsCard.css" />
 		<link rel="stylesheet" href="../static/components/matchPreview/matchPreview.css">
 		<link rel="stylesheet" href="../static/components/cardNotice/cardNotice.css">
@@ -45,8 +47,10 @@
 		<script src="../static/components/socialBar.js"></script>
 </head>
 <body class="body-container">
+<body class="body-container">
 	<header-component></header-component>
 
+	<div class="container">
 	<div class="container">
 		<div class="col-1 d-none d-md-flex align-items-start">
 			<social-bar-component></social-bar-component>
@@ -54,7 +58,6 @@
 	</div>
 
 	<main class="main-container">
-		<!-- Seccion actualizacion y noticias -->
 		<section class="main-section-content">
 			<div class="container-max-width">
 				<div class="matches-section">
@@ -84,8 +87,11 @@
 								<div class="btn-icon"><i class="fa-solid fa-angle-right"></i></div>
 							</div>
 							<div class="options">
-								<a href="#" class="btn btn-primary">Ver por torneo</a>
-								<a href="#" class="btn btn-warning">Ver todos los partidos</a>
+								<div href="#" class="select">
+									<span>Ver por torneo</span>
+									<i class="fa-solid fa-angle-down"></i>
+								</div>
+								<a href="#" class="button color-warning size-large rounded-large">Ver todos los partidos</a>
 							</div>
 							<div class="partidos">
 								<match-preview-component></match-preview-component>
@@ -100,57 +106,61 @@
 			</div>
 		</section>
 		<section class="main-section-content bg-white">
-			<div class="container-max-width">
-				<div class="body">
-					<div class="content">
+			<div class="container-max-width d-lg-flex justify-content-center align-items-center w-100">
+				<div class="section-news-content">
+					<div class="news-advanced">
 						<div class="news-content">
 							<div class="title">
 								<span class="text color-primary weight-bold">NOTICIAS</span>
-								<button class="btn btn-primary">Ver todo</button>
+								<button class="button">Ver todo</button>
 							</div>
 							<div class="newsOne">
 								<card-notice-component
-									image="../assets/img/breaking-news-10.png"
+									image="https://static.vecteezy.com/system/resources/thumbnails/026/489/436/small/exciting-soccer-competition-with-intense-goals-skilled-kicks-and-passionate-footballers-showcasing-their-talent-on-the-field-ai-generated-photo.jpg"
 									news="Donald Trump reconoció a Edmundo González"
 									orientation="horizontal"
 									category="FÚTBOL"
 									author="Por Juan Carlos Garcia Sierra"
 									distribution="large-image"
+									class="orientation-vertical-responsive"
 								></card-notice-component>
 							</div>
 							<div class="newsTwo">
 								<card-notice-component
-									image="../assets/img/breaking-news-10.png"
+									image="../assets/img/breaking-news-5.png"
 									news="Donald Trump reconoció a Edmundo González"
 									orientation="horizontal"
 									category="FÚTBOL"
 									author="Por Juan Carlos Garcia Sierra"
 									distribution="large-image"
+									class="orientation-vertical-responsive"
 								></card-notice-component>
 							</div>
 							<div class="newsThree">
 								<card-notice-component
-									image="../assets/img/breaking-news-10.png"
+									image="../assets/img/breaking-news-5.png"
 									news="Donald Trump reconoció a Edmundo González"
 									orientation="vertical"
 									category="FÚTBOL"
 									author="Por Juan Carlos Garcia Sierra"
 									distribution="large-image"
+									class="orientation-horizontal-responsive distribution-equals-responsive"
 								></card-notice-component>
 							</div>
 							<div class="newsFourth">
 								<card-notice-component
-									image="../assets/img/breaking-news-10.png"
+									image="../assets/img/breaking-news-5.png"
 									news="Donald Trump reconoció a Edmundo González"
 									orientation="horizontal"
 									category="FÚTBOL"
 									author="Por Juan Carlos Garcia Sierra"
 									distribution="equals"
+									
 								></card-notice-component>
 							</div>
 							<div class="newsFive">
 								<card-notice-component
-									image="../assets/img/breaking-news-10.png"
+									image="../assets/img/breaking-news-5.png"
 									news="Donald Trump reconoció a Edmundo González"
 									orientation="horizontal"
 									category="FÚTBOL"
@@ -160,7 +170,7 @@
 							</div>
 							<div class="newsSix">
 								<card-notice-component
-									image="../assets/img/breaking-news-10.png"
+									image="../assets/img/breaking-news-5.png"
 									news="Donald Trump reconoció a Edmundo González"
 									orientation="horizontal"
 									category="FÚTBOL"
@@ -172,7 +182,6 @@
 						<div class="teams-list">
 							<img src="https://crests.football-data.org/65.svg" alt="">
 							<img src="https://crests.football-data.org/65.svg" alt="">
-							<!-- <img src="https://crests.football-data.org/65.svg" alt="">
 							<img src="https://crests.football-data.org/65.svg" alt="">
 							<img src="https://crests.football-data.org/65.svg" alt="">
 							<img src="https://crests.football-data.org/65.svg" alt="">
@@ -187,7 +196,8 @@
 							<img src="https://crests.football-data.org/65.svg" alt="">
 							<img src="https://crests.football-data.org/65.svg" alt="">
 							<img src="https://crests.football-data.org/65.svg" alt="">
-							<img src="https://crests.football-data.org/65.svg" alt=""> -->
+							<img src="https://crests.football-data.org/65.svg" alt="">
+							<img src="https://crests.football-data.org/65.svg" alt="">
 						</div>
 						<div class="partidos-colombianos">
 							<div class="date-content">
@@ -228,8 +238,8 @@
 												</div>
 											</div>
 											<div class="options">
-												<div class="btn btn-primary">Jugando</div>
-												<div class="btn btn-primary">Info</div>
+												<div class="button color-primary size-medium rounded-small w-100">Jugando</div>
+												<div class="button color-primary size-medium rounded-small ghost w-100">Info</div>
 											</div>
 										</div>
 									</div>
@@ -266,8 +276,8 @@
 												</div>
 											</div>
 											<div class="options">
-												<div class="btn btn-primary">Jugando</div>
-												<div class="btn btn-primary">Info</div>
+												<div class="button color-primary size-medium rounded-small w-100">Jugando</div>
+												<div class="button color-primary size-medium rounded-small ghost w-100">Info</div>
 											</div>
 										</div>
 									</div>
@@ -327,10 +337,10 @@
 															<div class="times">
 																<div>
 																	<span class="text color-dark weight-bold">6:30AM</span>
-																	<i class="fa-solid fa-angle-down"></i>
+																	<i class="fa-solid fa-tv"></i>
 																</div>
-																<div class="button">
-			
+																<div class="button color-warning size-medium rounded-small">
+																	A tiempo
 																</div>
 															</div>
 														</div>
@@ -368,10 +378,10 @@
 															<div class="times">
 																<div>
 																	<span class="text color-dark weight-bold">6:30AM</span>
-																	<i class="fa-solid fa-angle-down"></i>
+																	<i class="fa-solid fa-tv"></i>
 																</div>
-																<div class="button">
-			
+																<div class="button color-warning size-medium rounded-small">
+																	A tiempo
 																</div>
 															</div>
 														</div>
@@ -401,10 +411,10 @@
 															<div class="times">
 																<div>
 																	<span class="text color-dark weight-bold">6:30AM</span>
-																	<i class="fa-solid fa-angle-down"></i>
+																	<i class="fa-solid fa-tv"></i>
 																</div>
-																<div class="button">
-			
+																<div class="button color-warning size-medium rounded-small">
+																	A tiempo
 																</div>
 															</div>
 														</div>
@@ -416,69 +426,63 @@
 								</div>
 							</div>
 						</div>
-						<div class="articulos-relacionados">
+						<!-- <div class="articulos-relacionados">
 							<div class="header">
 								<span class="text color-primary weight-bold">ARTÍCULOS RELACIONADOS</span>
-								<button class="btn btn-primary">Ver mas</button>
+								<button class="button color-primary size-large">Ver todo</button>
 							</div>
 							<div class="articles">
 								<card-notice-component
 									image="../assets/img/breaking-news-10.png"
 									news="Donald Trump reconoció a Edmundo González"
 									orientation="vertical"
-									category="FÚTBOL"
 									author="Por Juan Carlos Garcia Sierra"
-									distribution="equals"
+									distribution="large-image"
 								></card-notice-component>
 								<card-notice-component
 									image="../assets/img/breaking-news-10.png"
 									news="Donald Trump reconoció a Edmundo González"
 									orientation="vertical"
-									category="FÚTBOL"
 									author="Por Juan Carlos Garcia Sierra"
-									distribution="equals"
+									distribution="large-image"
 								></card-notice-component>
 								<card-notice-component
 									image="../assets/img/breaking-news-10.png"
 									news="Donald Trump reconoció a Edmundo González"
 									orientation="vertical"
-									category="FÚTBOL"
 									author="Por Juan Carlos Garcia Sierra"
-									distribution="equals"
+									distribution="large-image"
 								></card-notice-component>
 								<card-notice-component
 									image="../assets/img/breaking-news-10.png"
 									news="Donald Trump reconoció a Edmundo González"
 									orientation="vertical"
-									category="FÚTBOL"
 									author="Por Juan Carlos Garcia Sierra"
-									distribution="equals"
+									distribution="large-image"
 								></card-notice-component>
 								<card-notice-component
 									image="../assets/img/breaking-news-10.png"
 									news="Donald Trump reconoció a Edmundo González"
 									orientation="vertical"
-									category="FÚTBOL"
 									author="Por Juan Carlos Garcia Sierra"
-									distribution="equals"
+									distribution="large-image"
 								></card-notice-component>
 								<card-notice-component
 									image="../assets/img/breaking-news-10.png"
 									news="Donald Trump reconoció a Edmundo González"
 									orientation="vertical"
-									category="FÚTBOL"
 									author="Por Juan Carlos Garcia Sierra"
-									distribution="equals"
+									distribution="large-image"
 								></card-notice-component>
 							</div>
-						</div>
-						<div class="publicity">
+						</div> -->
+						<!-- <div class="publicity">
 							<img src="../assets/img/banner-copa-america.png" alt="Siente la emoción Copa América USA 2024" class="img-fluid">
-						</div>
+						</div> -->
 						<div class="section-more-news-one">
 							<div class="title">
 								<span class="text color-primary weight-bold">MÁS NOTICIAS</span>
-								<button class="btn btn-primary">Ver todo</button>
+								<button class="button color-primary size-large">Ver todo</button>
 							</div>
 							<div class="newsOne">
 								<card-notice-component
@@ -488,6 +492,7 @@
 									category="FÚTBOL"
 									author="Por Juan Carlos Garcia Sierra"
 									distribution="large-image"
+									class="orientation-vertical-responsive"
 								></card-notice-component>
 							</div>
 							<div class="newsTwo">
@@ -498,6 +503,7 @@
 									category="FÚTBOL"
 									author="Por Juan Carlos Garcia Sierra"
 									distribution="large-image"
+									class="orientation-vertical-responsive"
 								></card-notice-component>
 							</div>
 							<div class="newsThree">
@@ -508,6 +514,7 @@
 									category="FÚTBOL"
 									author="Por Juan Carlos Garcia Sierra"
 									distribution="large-image"
+									class="orientation-horizontal-responsive distribution-equals-responsive"
 								></card-notice-component>
 							</div>
 							<div class="newsFourth">
@@ -549,9 +556,8 @@
 									image="../assets/img/breaking-news-5.png"
 									news="Donald Trump reconoció a Edmundo González"
 									orientation="vertical"
-									category="FÚTBOL"
 									author="Por Juan Carlos Garcia Sierra"
-									distribution="equals"
+									distribution="none"
 									classnames="new"
 								></card-notice-component>
 								<card-notice-component
@@ -626,13 +632,11 @@
 							</div>
 						</section>
 						<div class="multimedia-section">
-							<!-- Encabezado con título y botón Ver todo (solo desktop) -->
 							<div class="section-header d-flex justify-content-between align-items-center mb-3">
 								<h2 class="section-title multimedia-title m-0 p-0">MULTIMEDIA</h2>
-								<a href="#" class="btn btn-primary ver-todo-btn d-none d-md-block">Ver todo</a>
+								<button class="button color-primary size-large">Ver todo</button>
 							</div>
 							
-							<!-- Artículo principal (visible en ambos) -->
 							<div class="main-multimedia-article mb-4">
 								<div class="article-image-container video-container">
 									<iframe width="900" height="450" src="https://www.youtube.com/embed/YjRKMtFpZxw?si=z50Qx-Aj3SpPT0Jz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                                        
@@ -655,12 +659,9 @@
 								</div>
 							</div>
 							
-							<!-- Línea divisoria (solo en desktop) -->
 							<hr class="d-none d-md-block mb-4">
 							
-							<!-- Lista de artículos secundarios -->
 							<div class="multimedia-articles-list">
-								<!-- Artículo 1 -->
 								<div class="multimedia-article-item d-flex mb-3">
 									<div class="article-thumbnail">
 										<div class="video-container small-video">
@@ -678,7 +679,6 @@
 										</div>
 									</div>
 								</div>
-								<!-- Artículo 2 -->
 								<div class="multimedia-article-item d-flex mb-3">
 									<div class="article-thumbnail">
 										<div class="video-container small-video">
@@ -697,7 +697,6 @@
 									</div>
 								</div>
 									
-									<!-- Artículo 3 -->
 									<div class="multimedia-article-item d-flex mb-3">
 											<div class="article-thumbnail">
 													<div class="video-container small-video">
@@ -716,7 +715,6 @@
 											</div>
 									</div>
 									
-									<!-- Artículo 4 -->
 									<div class="multimedia-article-item d-flex mb-3">
 											<div class="article-thumbnail">
 													<div class="video-container small-video">
@@ -735,9 +733,7 @@
 											</div>
 									</div>
 									
-									<!-- Artículos adicionales solo para móvil -->
 									<div class="d-md-none">
-											<!-- Artículo 5 (móvil) -->
 											<div class="multimedia-article-item d-flex mb-3">
 													<div class="article-thumbnail">
 															<div class="video-container small-video">
@@ -757,7 +753,6 @@
 									</div>
 							</div>
 							
-							<!-- Botón Ver más -->
 							<div class="text-center mt-4">
 									<a href="#" class="btn btn-primary ver-mas-btn">Ver más</a>
 							</div>
@@ -768,7 +763,7 @@
 									<div class="small-circle-red"></div>
 									<span>ACTUALIZACIÓN - JUEVES, 7 SEPTIEMBRE 2025. 7:33PM</span>
 								</div>
-								<div class="title text center color-primary weight-bold">PARTIDOS COLOMBIANOS</div>
+								<div class="title text center color-primary weight-bold">RESULTADOS EN VIVO</div>
 								<div class="tornaments">
 									<div class="sections">
 										<div class="select">
@@ -802,8 +797,8 @@
 													</div>
 												</div>
 												<div class="options">
-													<div class="btn btn-primary">Jugando</div>
-													<div class="btn btn-primary">Info</div>
+													<div class="button color-primary size-medium rounded-small w-100">Jugando</div>
+													<div class="button color-primary size-medium rounded-small ghost w-100">Info</div>
 												</div>
 											</div>
 										</div>
@@ -840,8 +835,8 @@
 													</div>
 												</div>
 												<div class="options">
-													<div class="btn btn-primary">Jugando</div>
-													<div class="btn btn-primary">Info</div>
+													<div class="button color-primary size-medium rounded-small w-100">Jugando</div>
+													<div class="button color-primary size-medium rounded-small ghost w-100">Info</div>
 												</div>
 											</div>
 										</div>
@@ -852,14 +847,13 @@
 						<div class="section-related-articles-two">
 							<div class="title">
 								<span class="text color-primary weight-bold">ARTÍCULOS RELACIONADOS</span>
-								<button class="btn btn-primary">Ver Todo</button>
+								<button class="button color-primary size-large">Ver todo</button>
 							</div>
 							<div class="articles">
 								<card-notice-component
 									image="../assets/img/breaking-news-10.png"
 									news="Donald Trump reconoció a Edmundo González"
 									orientation="vertical"
-									category="FÚTBOL"
 									author="Por Juan Carlos Garcia Sierra"
 									distribution="large-image"
 								></card-notice-component>
@@ -867,7 +861,6 @@
 									image="../assets/img/breaking-news-10.png"
 									news="Donald Trump reconoció a Edmundo González"
 									orientation="vertical"
-									category="FÚTBOL"
 									author="Por Juan Carlos Garcia Sierra"
 									distribution="large-image"
 								></card-notice-component>
@@ -875,7 +868,6 @@
 									image="../assets/img/breaking-news-10.png"
 									news="Donald Trump reconoció a Edmundo González"
 									orientation="vertical"
-									category="FÚTBOL"
 									author="Por Juan Carlos Garcia Sierra"
 									distribution="large-image"
 								></card-notice-component>
@@ -883,7 +875,6 @@
 									image="../assets/img/breaking-news-10.png"
 									news="Donald Trump reconoció a Edmundo González"
 									orientation="vertical"
-									category="FÚTBOL"
 									author="Por Juan Carlos Garcia Sierra"
 									distribution="large-image"
 								></card-notice-component>
@@ -891,7 +882,6 @@
 									image="../assets/img/breaking-news-10.png"
 									news="Donald Trump reconoció a Edmundo González"
 									orientation="vertical"
-									category="FÚTBOL"
 									author="Por Juan Carlos Garcia Sierra"
 									distribution="large-image"
 								></card-notice-component>
@@ -899,7 +889,6 @@
 									image="../assets/img/breaking-news-10.png"
 									news="Donald Trump reconoció a Edmundo González"
 									orientation="vertical"
-									category="FÚTBOL"
 									author="Por Juan Carlos Garcia Sierra"
 									distribution="large-image"
 								></card-notice-component>
@@ -908,7 +897,7 @@
 						<div class="section-more-news-two">
 							<div class="title">
 								<span class="text color-primary weight-bold">MÁS NOTICIAS</span>
-								<button class="btn btn-primary">Ver todo</button>
+								<button class="button color-primary size-large">Ver todo</button>
 							</div>
 							<div class="news-one">
 								<card-notice-component
@@ -918,6 +907,7 @@
 									category="FÚTBOL"
 									author="Por Juan Carlos Garcia Sierra"
 									distribution="large-content"
+									subtitle="La ayuda a quien lo necesita no solo beneficia a una persona comunidades"
 								></card-notice-component>
 							</div>
 							<div class="news-two">
@@ -928,6 +918,7 @@
 									category="FÚTBOL"
 									author="Por Juan Carlos Garcia Sierra"
 									distribution="large-content"
+									subtitle="La ayuda a quien lo necesita no solo beneficia a una persona comunidades"
 								></card-notice-component>
 							</div>
 							<div class="news-three">
@@ -938,6 +929,7 @@
 									category="FÚTBOL"
 									author="Por Juan Carlos Garcia Sierra"
 									distribution="large-content"
+									subtitle="La ayuda a quien lo necesita no solo beneficia a una persona comunidades"
 								></card-notice-component>
 							</div>
 							<div class="news-fourth">
@@ -948,13 +940,17 @@
 									category="FÚTBOL"
 									author="Por Juan Carlos Garcia Sierra"
 									distribution="large-content"
+									subtitle="La ayuda a quien lo necesita no solo beneficia a una persona comunidades"
 								></card-notice-component>
+							</div>
+							<div class="d-flex justify-content-center w-100">
+								<button class="button color-primary size-large">Ver más</button>
 							</div>
 						</div>
 						<div class="section-more-news-three">
 							<div class="title">
 								<span class="text color-primary weight-bold">NOTICIAS</span>
-								<button class="btn btn-primary">Ver todo</button>
+								<button class="button color-primary size-large">Ver todo</button>
 							</div>
 							<div class="newsOne">
 								<card-notice-component
@@ -1059,7 +1055,7 @@
 						<div class="section-more-news-fourth">
 							<div class="title">
 								<span class="text color-primary weight-bold">MÁS NOTICIAS</span>
-								<button class="btn btn-primary">Ver todo</button>
+								<button class="button color-primary size-large">Ver todo</button>
 							</div>
 							<div class="news-one">
 								<card-notice-component
@@ -1098,11 +1094,10 @@
 						<div class="section-last-news">
 							<div class="title">
 								<span class="text color-primary weight-bold">LO ÚLTIMO</span>
-								<button class="btn btn-primary">Ver todo</button>
+								<button class="button color-primary size-large">Ver todo</button>
 							</div>
 							<div class="news">
 								<card-notice-component
-									image="../assets/img/breaking-news-10.png"
 									news="Donald Trump reconoció a Edmundo González"
 									orientation="vertical"
 									category="FÚTBOL"
@@ -1117,7 +1112,7 @@
 									category="FÚTBOL"
 									author="Por Juan Carlos Garcia Sierra"
 									distribution="large-content"
-									subtitle="Este Jueves se disputó la fecha 5, dejando apretadas las cosas en la tabla de reclasificación rumbo a los cupos para las competencias internas"
+									subtitle="La ayuda a quien lo necesita no solo beneficia a una persona comunidades"
 								></card-notice-component>
 								<card-notice-component
 									image="../assets/img/breaking-news-10.png"
@@ -1126,7 +1121,7 @@
 									category="FÚTBOL"
 									author="Por Juan Carlos Garcia Sierra"
 									distribution="large-content"
-									subtitle="Este Jueves se disputó la fecha 5, dejando apretadas las cosas en la tabla de reclasificación rumbo a los cupos para las competencias internas"
+									subtitle="La ayuda a quien lo necesita no solo beneficia a una persona comunidades"
 								></card-notice-component>
 								<card-notice-component
 									image="../assets/img/breaking-news-10.png"
@@ -1135,7 +1130,7 @@
 									category="FÚTBOL"
 									author="Por Juan Carlos Garcia Sierra"
 									distribution="large-content"
-									subtitle="Este Jueves se disputó la fecha 5, dejando apretadas las cosas en la tabla de reclasificación rumbo a los cupos para las competencias internas"
+									subtitle="La ayuda a quien lo necesita no solo beneficia a una persona comunidades"
 								></card-notice-component>
 								<card-notice-component
 									image="../assets/img/breaking-news-10.png"
@@ -1144,58 +1139,67 @@
 									category="FÚTBOL"
 									author="Por Juan Carlos Garcia Sierra"
 									distribution="large-content"
-									subtitle="Este Jueves se disputó la fecha 5, dejando apretadas las cosas en la tabla de reclasificación rumbo a los cupos para las competencias internas"
+									subtitle="La ayuda a quien lo necesita no solo beneficia a una persona comunidades"
 								></card-notice-component>
 							</div>
 						</div>
+						<div class="section-ligue">
+							<div class="title">
+								<span class="text color-primary weight-bold">LIGAS Y TORNEOS DE FÚTBOL</span>
+							</div>
+							<div class="ligues">
+								<div class="ligue">
+									<img src="https://crests.football-data.org/65.svg" alt="Ligue 1">
+									<span class="text color-dark weight-regular">Ligue 1</span>
+								</div>
+								<div class="ligue">
+									<img src="https://crests.football-data.org/65.svg" alt="Serie A">
+									<span class="text color-dark weight-regular">Serie A</span>
+								</div>
+								<div class="ligue">
+									<img src="https://crests.football-data.org/65.svg" alt="Premier League">
+									<span class="text color-dark weight-regular">Premier League</span>
+								</div>
+								<div class="ligue">
+									<img src="https://crests.football-data.org/65.svg" alt="Eredivisie">
+									<span class="text color-dark weight-regular">Eredivisie</span>
+								</div>
+								<div class="ligue">
+									<img src="https://crests.football-data.org/65.svg" alt="Ligue 1">
+									<span class="text color-dark weight-regular">Ligue 1</span>
+								</div>
+								<div class="ligue">
+									<img src="https://crests.football-data.org/65.svg" alt="Serie A">
+									<span class="text color-dark weight-regular">Serie A</span>
+								</div>
+								<div class="ligue">
+									<img src="https://crests.football-data.org/65.svg" alt="Premier League">
+									<span class="text color-dark weight-regular">Premier League</span>
+								</div>
+								<div class="ligue">
+									<img src="https://crests.football-data.org/65.svg" alt="Eredivisie">
+									<span class="text color-dark weight-regular">Eredivisie</span>
+								</div>
+								<div class="ligue">
+									<img src="https://crests.football-data.org/65.svg" alt="Ligue 1">
+									<span class="text color-dark weight-regular">Ligue 1</span>
+								</div>
+								<div class="ligue">
+									<img src="https://crests.football-data.org/65.svg" alt="Serie A">
+									<span class="text color-dark weight-regular">Serie A</span>
+								</div>
+							</div>
+						</div>
+						<div class="section-partido-live"></div>
 					</div>
 				</div>
 			</div>
 		</section>
 	</main>
 
-	<!-- <section class="matches-section">
-		<div class="content">
-			<div class="updates">
-				<div class="title">
-					<div class="small-circle-red"></div>
-					<span>ACTUALIZACIÓN - JUEVES, 7 SEPTIEMBRE 2025. 7:33PM</span>
-				</div>
-				<div class="list-cards">
-					<news-card-component title="JHON DURÁN" image="https://crests.football-data.org/65.svg"></news-card-component>
-					<news-card-component title="FICHAJES" image="https://crests.football-data.org/65.svg"></news-card-component>
-					<news-card-component title="SUPERLIGA" image="https://crests.football-data.org/65.svg"></news-card-component>
-				</div>
-			</div>
-			<div class="matches-television">
-				<div class="title">PARTIDOS POR TELEVISIÓN</div>
-				<div class="date">
-					<div class="btn-icon"><i class="fa-solid fa-angle-left"></i></div>
-					<div class="dates-content">
-						<div class="date-item">JUEVES 16 ENERO</div>
-						<div class="separator"></div>
-						<div class="date-item">JUEVES 17 ENERO</div>
-						<div class="separator"></div>
-						<div class="date-item">JUEVES 18 ENERO</div>
-					</div>
-					<div class="btn-icon"><i class="fa-solid fa-angle-right"></i></div>
-				</div>
-				<div class="options">
-					<a href="#" class="btn btn-primary">Ver por torneo</a>
-					<a href="#" class="btn btn-warning">Ver todos los partidos</a>
-				</div>
-				<div class="partidos">
-					<match-preview-component></match-preview-component>
-					<match-preview-component></match-preview-component>
-					<match-preview-component></match-preview-component>
-					<match-preview-component></match-preview-component>
-					<match-preview-component></match-preview-component>
-				</div>
-			</div>
-		</div>
-	</section> -->
-
 	<footer-component></footer-component>
+
+	<script src="../static/responsive.js"></script>
 </div>
 </body>
 </html>

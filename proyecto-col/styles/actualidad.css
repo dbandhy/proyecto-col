@@ -251,67 +251,67 @@
     display: flex !important;
     justify-content: center;
   }
-  .section-secondary-news .content .news-advanced {
+  .section-secondary-news .news-advanced {
     grid-template-columns: 1fr;
     grid-template-areas: "image-link-one" "news" "paperwork" "image-link-two" "indicators" "moreNews" "colombiaNews" "multimedia";
     background-color: white;
   }
-  .section-secondary-news .content .news-advanced .image-link-one, .section-secondary-news .content .news-advanced .image-link-two {
+  .section-secondary-news .news-advanced .image-link-one, .section-secondary-news .news-advanced .image-link-two {
     display: flex !important;
     justify-content: center;
   }
-  .section-secondary-news .content .news-advanced .grid-secondary-news {
+  .section-secondary-news .news-advanced .grid-secondary-news {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, max-content);
   }
-  .section-secondary-news .content .news-advanced .grid-secondary-news .news-one {
+  .section-secondary-news .news-advanced .grid-secondary-news .news-one {
     grid-column: 1/3;
     grid-row: 1/2;
   }
-  .section-secondary-news .content .news-advanced .grid-secondary-news .news-two {
+  .section-secondary-news .news-advanced .grid-secondary-news .news-two {
     grid-column: 1/2;
     grid-row: 2/3;
   }
-  .section-secondary-news .content .news-advanced .grid-secondary-news .news-three {
+  .section-secondary-news .news-advanced .grid-secondary-news .news-three {
     grid-column: 2/3;
     grid-row: 2/3;
   }
-  .section-secondary-news .content .news-advanced .grid-secondary-news .news-fourth {
+  .section-secondary-news .news-advanced .grid-secondary-news .news-fourth {
     grid-column: 1/2;
     grid-row: 3/4;
   }
-  .section-secondary-news .content .news-advanced .grid-secondary-news .news-five {
+  .section-secondary-news .news-advanced .grid-secondary-news .news-five {
     grid-column: 2/3;
     grid-row: 3/4;
     display: flex !important;
   }
-  .section-secondary-news .content .news-advanced .grid-secondary-news .button-view-more {
+  .section-secondary-news .news-advanced .grid-secondary-news .button-view-more {
     display: flex !important;
     margin-top: 10px;
     grid-column: 1/3;
   }
-  .section-secondary-news .content .news-advanced .grid-secondary-news .button-view-more > .button {
+  .section-secondary-news .news-advanced .grid-secondary-news .button-view-more > .button {
     width: 100%;
   }
-  .section-secondary-news .content .news-advanced .bannerOne {
+  .section-secondary-news .news-advanced .bannerOne {
     display: none !important;
   }
-  .section-secondary-news .content .news-advanced .moreNews {
+  .section-secondary-news .news-advanced .moreNews {
     width: 100%;
   }
-  .section-secondary-news .content .news-advanced .moreNews .title {
+  .section-secondary-news .news-advanced .moreNews .title {
     justify-content: center;
   }
-  .section-secondary-news .content .news-advanced .moreNews .title span {
+  .section-secondary-news .news-advanced .moreNews .title span {
     font-size: 18px;
   }
-  .section-secondary-news .content .news-advanced .moreNews .title > .button {
+  .section-secondary-news .news-advanced .moreNews .title > .button {
     display: none;
   }
-  .section-secondary-news .content .news-advanced .colombiaNews > span {
+  .section-secondary-news .news-advanced .colombiaNews > span {
     font-size: 18px;
   }
-  .section-secondary-news .content .news-advanced .publicity {
+  .section-secondary-news .news-advanced .publicity {
     display: none;
   }
 }

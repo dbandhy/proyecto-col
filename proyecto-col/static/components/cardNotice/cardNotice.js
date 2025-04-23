@@ -74,13 +74,30 @@ class CardNoticeComponent extends HTMLElement {
     this.render()
   }
 
+  generateClassnames () {
+    let classnames = ''
+    if (this.orientation) {
+      classnames += ` orientation-${this.orientation}`
+    }
+    if (this.distribution) {
+      classnames += ` distribution-${this.distribution}`
+    }
+    if (this.classnames) {
+      classnames += ` ${this.classnames}`
+    }
+    if (!this.image) {
+      classnames += ' none-image'
+    }
+    return classnames
+  }
+
   render () {
+    const classNames = this.generateClassnames()
     this.innerHTML = `
-      <div class="card-news orientation-${this.orientation} distribution-${this.distribution} ${this.classnames || ''}">
-        <img src="${this.image}" alt="news">
+      <div class="card-news ${classNames}">
+        ${this.image ? `<img src="${this.image}" alt="news"></img>` : ''}
         <div class="news-content">
           ${this.category ? `<span class="category">${this.category}</span>` : ''}
-          
           <span class="title">${this.news}</span>
           <span class="read-more">Leer más</span>
           <span class="author">${this.author}</span>

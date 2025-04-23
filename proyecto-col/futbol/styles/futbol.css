@@ -30,10 +30,10 @@
 .matches-section {
   display: grid;
   background-color: #F3F8FF;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(24, 1fr);
 }
 .matches-section > .content {
-  grid-column: 2/12;
+  grid-column: 2/24;
   display: flex;
   flex-direction: column;
   padding: 17px 0;
@@ -60,17 +60,17 @@
 }
 .matches-section > .content .matches-television {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   row-gap: 34px;
 }
 .matches-section > .content .matches-television > .title {
-  grid-column: span 12;
+  grid-column: span 5;
   font-size: 25px;
   font-weight: 700;
   text-align: center;
 }
 .matches-section > .content .matches-television .date {
-  grid-column: span 8;
+  grid-column: span 3;
   padding: 30px;
   background-color: white;
   border-radius: 10px;
@@ -114,65 +114,70 @@
   background-color: #104596;
 }
 .matches-section > .content .matches-television .options {
-  grid-column: span 4;
+  grid-column: span 2;
   display: flex;
   align-items: center;
   gap: 10px;
 }
+.matches-section > .content .matches-television .options > div {
+  flex: 1;
+}
 .matches-section > .content .matches-television .partidos {
-  grid-column: span 12;
+  grid-column: span 5;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   column-gap: 45px;
 }
 
-.body {
-  grid-column: 2/12;
-  margin-top: 40px;
-}
-.body .content {
+.section-news-content {
+  padding: 30px 0 30px 0;
   display: grid;
-  grid-template-columns: 7fr 5fr;
+  grid-template-columns: repeat(24, 1fr);
+}
+.section-news-content > .news-advanced {
+  grid-column: 2/24;
+  display: grid;
+  grid-template-columns: 6fr 4fr;
   column-gap: 50px;
   row-gap: 50px;
   grid-template-areas: "news teams" "news liga-colombiana" "news liga-colombiana" "partidos-colombianos publicity-one" "articulos-relacionados articulos-relacionados" "more-news colombia-news" "more-news colombia-news" "results-live banner-one" "results-live ligue" "results-live partido-live" "section-more-news-two banner-two" "section-more-news-two banner-two" "related-articles-two related-articles-two" "section-more-news-three banner-three" "section-more-news-fourth section-more-news-fourth" "section-last-news section-last-news" "multimedia das";
 }
-.body .content > .news-content {
+.section-news-content > .news-advanced > .news-content {
   grid-area: news;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(5, max-content);
+  grid-template-rows: max-content repeat(5, 200px);
   column-gap: 22px;
   row-gap: 22px;
   width: 100%;
   grid-template-areas: "title title title" "news-one news-one news-one" "news-two news-two news-two" "news-three news-fourth news-fourth" "news-three news-five news-five" "news-three news-six news-six";
 }
-.body .content > .news-content > .title {
+.section-news-content > .news-advanced > .news-content > .title {
   grid-area: title;
   display: flex;
   justify-content: space-between;
   width: 100%;
   align-items: center;
 }
-.body .content > .news-content .newsOne {
+.section-news-content > .news-advanced > .news-content .newsOne {
   grid-area: news-one;
 }
-.body .content > .news-content .newsTwo {
+.section-news-content > .news-advanced > .news-content .newsTwo {
   grid-area: news-two;
 }
-.body .content > .news-content .newsThree {
+.section-news-content > .news-advanced > .news-content .newsThree {
   grid-area: news-three;
 }
-.body .content > .news-content .newsFourth {
+.section-news-content > .news-advanced > .news-content .newsFourth {
   grid-area: news-fourth;
 }
-.body .content > .news-content .newsFive {
+.section-news-content > .news-advanced > .news-content .newsFive {
   grid-area: news-five;
 }
-.body .content > .news-content .newsSix {
+.section-news-content > .news-advanced > .news-content .newsSix {
   grid-area: news-six;
 }
-.body .content .teams-list {
+.section-news-content > .news-advanced .teams-list {
   grid-area: teams;
   display: grid;
   grid-template-columns: repeat(6, 60px);
@@ -182,12 +187,12 @@
   align-self: flex-start;
   justify-self: flex-start;
 }
-.body .content .teams-list img {
+.section-news-content > .news-advanced .teams-list img {
   width: 100%;
   height: 100%;
   cursor: pointer;
 }
-.body .content .partidos-colombianos {
+.section-news-content > .news-advanced .partidos-colombianos {
   grid-area: partidos-colombianos;
   display: flex;
   flex-direction: column;
@@ -196,94 +201,95 @@
   background-color: #F3F8FF;
   gap: 10px;
 }
-.body .content .partidos-colombianos .title {
+.section-news-content > .news-advanced .partidos-colombianos .title {
   font-size: 20px;
 }
-.body .content .partidos-colombianos > .tornaments {
+.section-news-content > .news-advanced .partidos-colombianos > .tornaments {
   display: flex;
   gap: 25px;
   flex-direction: column;
 }
-.body .content .partidos-colombianos > .tornaments .sections {
+.section-news-content > .news-advanced .partidos-colombianos > .tornaments .sections {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-.body .content .partidos-colombianos > .tornaments .sections .groups {
+.section-news-content > .news-advanced .partidos-colombianos > .tornaments .sections .groups {
   padding: 15px;
   display: flex;
   flex-direction: column;
   gap: 15px;
   background-color: white;
 }
-.body .content .partidos-colombianos > .tornaments .sections .groups .group {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
+.section-news-content > .news-advanced .partidos-colombianos > .tornaments .sections .groups .group {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  column-gap: 35px;
 }
-.body .content .partidos-colombianos > .tornaments .sections .groups .group .time {
+.section-news-content > .news-advanced .partidos-colombianos > .tornaments .sections .groups .group .time {
   font-size: 14px;
 }
-.body .content .partidos-colombianos > .tornaments .sections .groups .group .results {
+.section-news-content > .news-advanced .partidos-colombianos > .tornaments .sections .groups .group .results {
   display: flex;
   gap: 10px;
   flex-direction: column;
 }
-.body .content .partidos-colombianos > .tornaments .sections .groups .group .results .score {
+.section-news-content > .news-advanced .partidos-colombianos > .tornaments .sections .groups .group .results .score {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
 }
-.body .content .partidos-colombianos > .tornaments .sections .groups .group .results .score > span {
+.section-news-content > .news-advanced .partidos-colombianos > .tornaments .sections .groups .group .results .score > span {
   font-size: 15px;
 }
-.body .content .partidos-colombianos > .tornaments .sections .groups .group .results .score .team {
+.section-news-content > .news-advanced .partidos-colombianos > .tornaments .sections .groups .group .results .score .team {
   display: flex;
   gap: 10px;
   align-items: center;
 }
-.body .content .partidos-colombianos > .tornaments .sections .groups .group .results .score .team span {
+.section-news-content > .news-advanced .partidos-colombianos > .tornaments .sections .groups .group .results .score .team span {
   font-size: 14px;
 }
-.body .content .partidos-colombianos > .tornaments .sections .groups .group .results .score .team img {
+.section-news-content > .news-advanced .partidos-colombianos > .tornaments .sections .groups .group .results .score .team img {
   width: 40px;
   height: 40px;
 }
-.body .content .partidos-colombianos > .tornaments .sections .groups .group .results .players {
+.section-news-content > .news-advanced .partidos-colombianos > .tornaments .sections .groups .group .results .players {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 }
-.body .content .partidos-colombianos > .tornaments .sections .groups .group .results .players .player {
+.section-news-content > .news-advanced .partidos-colombianos > .tornaments .sections .groups .group .results .players .player {
   display: flex;
   gap: 10px;
   align-items: center;
 }
-.body .content .partidos-colombianos > .tornaments .sections .groups .group .results .players .player span {
+.section-news-content > .news-advanced .partidos-colombianos > .tornaments .sections .groups .group .results .players .player span {
   font-size: 12px;
 }
-.body .content .partidos-colombianos > .tornaments .sections .groups .group .results .players .player img {
+.section-news-content > .news-advanced .partidos-colombianos > .tornaments .sections .groups .group .results .players .player img {
   width: 40px;
   height: 40px;
 }
-.body .content .partidos-colombianos > .tornaments .sections .groups .group .options {
+.section-news-content > .news-advanced .partidos-colombianos > .tornaments .sections .groups .group .options {
   display: flex;
   flex-direction: column;
   gap: 4px;
   justify-items: center;
+  align-items: center;
 }
-.body .content .partidos-colombianos > .tornaments .sections .groups .group:last-child {
+.section-news-content > .news-advanced .partidos-colombianos > .tornaments .sections .groups .group:last-child {
   padding-bottom: 0;
   border: none;
 }
-.body .content .partidos-colombianos .footer {
+.section-news-content > .news-advanced .partidos-colombianos .footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.body .content .liga-colombiana {
+.section-news-content > .news-advanced .liga-colombiana {
   grid-area: liga-colombiana;
   display: flex;
   flex-direction: column;
@@ -292,20 +298,20 @@
   border-radius: 20px;
   gap: 10px;
 }
-.body .content .liga-colombiana .title {
+.section-news-content > .news-advanced .liga-colombiana .title {
   font-weight: 700;
   font-size: 20px;
   color: #104596;
   margin-bottom: 10px;
   text-align: center;
 }
-.body .content .liga-colombiana .tabs {
+.section-news-content > .news-advanced .liga-colombiana .tabs {
   display: flex;
   border-radius: 20px;
   background-color: white;
   width: 100%;
 }
-.body .content .liga-colombiana .tabs .tab {
+.section-news-content > .news-advanced .liga-colombiana .tabs .tab {
   display: flex;
   flex: 1;
   justify-content: center;
@@ -315,207 +321,221 @@
   border-radius: 20px;
   padding: 6px 14px;
   cursor: pointer;
+  font-size: 14px;
 }
-.body .content .liga-colombiana .tabs .tab.active {
+.section-news-content > .news-advanced .liga-colombiana .tabs .tab.active {
   font-weight: 700;
   color: white;
   background-color: #104596;
 }
-.body .content .liga-colombiana .tornament {
+.section-news-content > .news-advanced .liga-colombiana .tornament {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.body .content .liga-colombiana .tornament .title {
+.section-news-content > .news-advanced .liga-colombiana .tornament .title {
   font-weight: 700;
   font-size: 14px;
   color: #191C36;
 }
-.body .content .liga-colombiana .tornament .sections {
+.section-news-content > .news-advanced .liga-colombiana .tornament .sections {
   display: flex;
   flex-direction: column;
 }
-.body .content .liga-colombiana .tornament .sections .section {
+.section-news-content > .news-advanced .liga-colombiana .tornament .sections .section {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.body .content .liga-colombiana .tornament .sections .section .content {
+.section-news-content > .news-advanced .liga-colombiana .tornament .sections .section .content {
   display: flex;
   flex-direction: column;
   gap: 11px;
 }
-.body .content .liga-colombiana .tornament .sections .section .content .rounds {
+.section-news-content > .news-advanced .liga-colombiana .tornament .sections .section .content .rounds {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
-.body .content .liga-colombiana .tornament .sections .section .content .rounds .round {
+.section-news-content > .news-advanced .liga-colombiana .tornament .sections .section .content .rounds .round {
   display: flex;
   flex-direction: column;
   background-color: white;
   border-radius: 10px;
   overflow: hidden;
 }
-.body .content .liga-colombiana .tornament .sections .section .content .rounds .round .header {
+.section-news-content > .news-advanced .liga-colombiana .tornament .sections .section .content .rounds .round .header {
   padding: 8px 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #104596;
 }
-.body .content .liga-colombiana .tornament .sections .section .content .rounds .round .header span {
+.section-news-content > .news-advanced .liga-colombiana .tornament .sections .section .content .rounds .round .header span {
   font-size: 14px;
 }
-.body .content .liga-colombiana .tornament .sections .section .content .rounds .round .groups {
+.section-news-content > .news-advanced .liga-colombiana .tornament .sections .section .content .rounds .round .groups {
   padding: 15px;
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
-.body .content .liga-colombiana .tornament .sections .section .content .rounds .round .groups .group {
+.section-news-content > .news-advanced .liga-colombiana .tornament .sections .section .content .rounds .round .groups .group {
   display: flex;
   justify-content: space-between;
   gap: 20px;
   padding-bottom: 8px;
   border-bottom: 1px solid #104596;
 }
-.body .content .liga-colombiana .tornament .sections .section .content .rounds .round .groups .group .results {
+.section-news-content > .news-advanced .liga-colombiana .tornament .sections .section .content .rounds .round .groups .group .results {
   display: flex;
   gap: 10px;
   flex-direction: column;
 }
-.body .content .liga-colombiana .tornament .sections .section .content .rounds .round .groups .group .results .result {
+.section-news-content > .news-advanced .liga-colombiana .tornament .sections .section .content .rounds .round .groups .group .results .result {
   display: flex;
   align-items: center;
   gap: 6px;
 }
-.body .content .liga-colombiana .tornament .sections .section .content .rounds .round .groups .group .results .result .team {
+.section-news-content > .news-advanced .liga-colombiana .tornament .sections .section .content .rounds .round .groups .group .results .result .team {
   display: flex;
   gap: 10px;
   align-items: center;
 }
-.body .content .liga-colombiana .tornament .sections .section .content .rounds .round .groups .group .results .result .team img {
+.section-news-content > .news-advanced .liga-colombiana .tornament .sections .section .content .rounds .round .groups .group .results .result .team img {
   width: 25px;
   height: 25px;
   border-radius: 50%;
 }
-.body .content .liga-colombiana .tornament .sections .section .content .rounds .round .groups .group .results .result .team span {
+.section-news-content > .news-advanced .liga-colombiana .tornament .sections .section .content .rounds .round .groups .group .results .result .team span {
   font-size: 12px;
 }
-.body .content .liga-colombiana .tornament .sections .section .content .rounds .round .groups .group .results .result .score {
+.section-news-content > .news-advanced .liga-colombiana .tornament .sections .section .content .rounds .round .groups .group .results .result .score {
   display: flex;
   gap: 5px;
   align-items: center;
 }
-.body .content .liga-colombiana .tornament .sections .section .content .rounds .round .groups .group .results .result .score span {
+.section-news-content > .news-advanced .liga-colombiana .tornament .sections .section .content .rounds .round .groups .group .results .result .score span {
   font-size: 15px;
 }
-.body .content .liga-colombiana .tornament .sections .section .content .rounds .round .groups .group .times {
+.section-news-content > .news-advanced .liga-colombiana .tornament .sections .section .content .rounds .round .groups .group .times {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 20px;
 }
-.body .content .liga-colombiana .tornament .sections .section .content .rounds .round .groups .group .times > div:first-child {
+.section-news-content > .news-advanced .liga-colombiana .tornament .sections .section .content .rounds .round .groups .group .times > div:first-child {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 20px;
 }
-.body .content .liga-colombiana .tornament .sections .section .content .rounds .round .groups .group .times > div:first-child span {
+.section-news-content > .news-advanced .liga-colombiana .tornament .sections .section .content .rounds .round .groups .group .times > div:first-child i {
+  color: #104596;
+}
+.section-news-content > .news-advanced .liga-colombiana .tornament .sections .section .content .rounds .round .groups .group .times > div:first-child span {
   font-size: 14px;
 }
-.body .content .liga-colombiana .tornament .sections .section .content .rounds .round .groups .group .times > .button {
+.section-news-content > .news-advanced .liga-colombiana .tornament .sections .section .content .rounds .round .groups .group .times > .button {
   width: 100%;
 }
-.body .content .liga-colombiana .tornament .sections .section .content .rounds .round .groups .group:last-child {
+.section-news-content > .news-advanced .liga-colombiana .tornament .sections .section .content .rounds .round .groups .group:last-child {
   padding-bottom: 0;
   border: none;
 }
-.body .content .liga-colombiana .footer {
+.section-news-content > .news-advanced .liga-colombiana .footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.body .content .articulos-relacionados {
+.section-news-content > .news-advanced .articulos-relacionados {
   grid-area: articulos-relacionados;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.body .content .articulos-relacionados .header {
+.section-news-content > .news-advanced .articulos-relacionados .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.body .content .articulos-relacionados .header span {
+.section-news-content > .news-advanced .articulos-relacionados .header span {
   font-size: 25px;
 }
-.body .content .articulos-relacionados .articles {
+.section-news-content > .news-advanced .articulos-relacionados .articles {
   display: flex;
   gap: 32px;
   width: 100%;
 }
-.body .content .latest-news-section {
+.section-news-content > .news-advanced .articulos-relacionados .articles .title {
+  font-size: 14px !important;
+}
+.section-news-content > .news-advanced .latest-news-section {
   grid-area: last-news;
 }
-.body .content .multimedia-section {
+.section-news-content > .news-advanced .multimedia-section {
   grid-area: multimedia;
 }
-.body .content .publicity {
+.section-news-content > .news-advanced .multimedia-section iframe {
+  width: 100%;
+}
+.section-news-content > .news-advanced .publicity {
   grid-area: publicity-one;
   display: flex;
   justify-content: center;
 }
-.body .content .publicity img {
+.section-news-content > .news-advanced .publicity img {
   width: max-content;
   height: max-content;
 }
-.body .content .results-live {
+.section-news-content > .news-advanced .results-live {
   grid-area: results-live;
 }
-.body .content .section-more-news-one {
+.section-news-content > .news-advanced .section-more-news-one {
   grid-area: more-news;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(5, max-content);
+  grid-template-rows: max-content repeat(5, 200px);
   column-gap: 22px;
   row-gap: 22px;
   width: 100%;
   grid-template-areas: "title title title" "news-one news-one news-one" "news-two news-two news-two" "news-three news-fourth news-fourth" "news-three news-five news-five" "news-three news-six news-six";
 }
-.body .content .section-more-news-one > .title {
+.section-news-content > .news-advanced .section-more-news-one > .title {
   grid-area: title;
   display: flex;
   justify-content: space-between;
   width: 100%;
   align-items: center;
 }
-.body .content .section-more-news-one .newsOne {
+.section-news-content > .news-advanced .section-more-news-one > .title span {
+  font-size: 25px;
+}
+.section-news-content > .news-advanced .section-more-news-one .newsOne {
   grid-area: news-one;
 }
-.body .content .section-more-news-one .newsTwo {
+.section-news-content > .news-advanced .section-more-news-one .newsTwo {
   grid-area: news-two;
 }
-.body .content .section-more-news-one .newsThree {
+.section-news-content > .news-advanced .section-more-news-one .newsThree {
   grid-area: news-three;
 }
-.body .content .section-more-news-one .newsFourth {
+.section-news-content > .news-advanced .section-more-news-one .newsFourth {
   grid-area: news-fourth;
 }
-.body .content .section-more-news-one .newsFive {
+.section-news-content > .news-advanced .section-more-news-one .newsFive {
   grid-area: news-five;
 }
-.body .content .section-more-news-one .newsSix {
+.section-news-content > .news-advanced .section-more-news-one .newsSix {
   grid-area: news-six;
 }
-.body .content .section-banner-one {
+.section-news-content > .news-advanced .section-banner-one {
   grid-area: banner-one;
   display: flex;
   gap: 60px;
   width: 100%;
 }
-.body .content .section-more-news-two {
+.section-news-content > .news-advanced .section-more-news-two {
   grid-area: section-more-news-two;
   display: grid;
   grid-template-columns: 1fr;
@@ -524,26 +544,29 @@
   width: 100%;
   grid-template-areas: "title" "news-one" "news-two" "news-three" "news-fourth";
 }
-.body .content .section-more-news-two > .title {
+.section-news-content > .news-advanced .section-more-news-two > .title {
   grid-area: title;
   display: flex;
   justify-content: space-between;
   width: 100%;
   align-items: center;
 }
-.body .content .section-more-news-two .news-one {
+.section-news-content > .news-advanced .section-more-news-two > .title span {
+  font-size: 25px;
+}
+.section-news-content > .news-advanced .section-more-news-two .news-one {
   grid-area: news-one;
 }
-.body .content .section-more-news-two .news-two {
+.section-news-content > .news-advanced .section-more-news-two .news-two {
   grid-area: news-two;
 }
-.body .content .section-more-news-two .news-three {
+.section-news-content > .news-advanced .section-more-news-two .news-three {
   grid-area: news-three;
 }
-.body .content .section-more-news-two .news-fourth {
+.section-news-content > .news-advanced .section-more-news-two .news-fourth {
   grid-area: news-fourth;
 }
-.body .content .section-more-news-three {
+.section-news-content > .news-advanced .section-more-news-three {
   grid-area: section-more-news-three;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -553,66 +576,72 @@
   width: 100%;
   grid-template-areas: "title title title" "news-one news-one news-one" "news-two news-two news-two" "news-three news-fourth news-fourth" "news-three news-five news-five" "news-three news-six news-six";
 }
-.body .content .section-more-news-three > .title {
+.section-news-content > .news-advanced .section-more-news-three > .title {
   grid-area: title;
   display: flex;
   justify-content: space-between;
   width: 100%;
   align-items: center;
 }
-.body .content .section-more-news-three .newsOne {
+.section-news-content > .news-advanced .section-more-news-three > .title span {
+  font-size: 25px;
+}
+.section-news-content > .news-advanced .section-more-news-three .newsOne {
   grid-area: news-one;
 }
-.body .content .section-more-news-three .newsTwo {
+.section-news-content > .news-advanced .section-more-news-three .newsTwo {
   grid-area: news-two;
 }
-.body .content .section-more-news-three .newsThree {
+.section-news-content > .news-advanced .section-more-news-three .newsThree {
   grid-area: news-three;
 }
-.body .content .section-more-news-three .newsFourth {
+.section-news-content > .news-advanced .section-more-news-three .newsFourth {
   grid-area: news-fourth;
 }
-.body .content .section-more-news-three .newsFive {
+.section-news-content > .news-advanced .section-more-news-three .newsFive {
   grid-area: news-five;
 }
-.body .content .section-more-news-three .newsSix {
+.section-news-content > .news-advanced .section-more-news-three .newsSix {
   grid-area: news-six;
 }
-.body .content .section-related-articles-two {
+.section-news-content > .news-advanced .section-related-articles-two {
   grid-area: related-articles-two;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-.body .content .section-related-articles-two .title {
+.section-news-content > .news-advanced .section-related-articles-two .title {
   grid-column: span 6;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.body .content .section-related-articles-two .title span {
+.section-news-content > .news-advanced .section-related-articles-two .title span {
   font-size: 25px;
 }
-.body .content .section-related-articles-two .articles {
+.section-news-content > .news-advanced .section-related-articles-two .articles {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   column-gap: 38px;
 }
-.body .content .section-more-news-fourth {
+.section-news-content > .news-advanced .section-related-articles-two .articles .title {
+  font-size: 14px !important;
+}
+.section-news-content > .news-advanced .section-more-news-fourth {
   grid-area: section-more-news-fourth;
   display: flex;
   flex-direction: column;
   gap: 25px;
 }
-.body .content .section-more-news-fourth .title {
+.section-news-content > .news-advanced .section-more-news-fourth .title {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.body .content .section-more-news-fourth .title span {
+.section-news-content > .news-advanced .section-more-news-fourth .title span {
   font-size: 25px;
 }
-.body .content .section-more-news-fourth > .news {
+.section-news-content > .news-advanced .section-more-news-fourth > .news {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, max-content);
@@ -620,39 +649,88 @@
   width: 100%;
   grid-template-areas: "title" "news-one" "news-two" "news-three" "news-fourth";
 }
-.body .content .section-more-news-fourth > .news .news-one {
+.section-news-content > .news-advanced .section-more-news-fourth > .news .news-one {
   grid-area: news-one;
 }
-.body .content .section-more-news-fourth > .news .news-two {
+.section-news-content > .news-advanced .section-more-news-fourth > .news .news-two {
   grid-area: news-two;
 }
-.body .content .section-more-news-fourth > .news .news-three {
+.section-news-content > .news-advanced .section-more-news-fourth > .news .news-three {
   grid-area: news-three;
 }
-.body .content .section-last-news {
+.section-news-content > .news-advanced .section-more-news-fourth > .news .news-fourth {
+  grid-area: news-fourth;
+}
+.section-news-content > .news-advanced .section-more-news-fourth > .news .news-five {
+  grid-area: news-five;
+}
+.section-news-content > .news-advanced .section-last-news {
   grid-area: section-last-news;
   display: flex;
   flex-direction: column;
   gap: 25px;
 }
-.body .content .section-last-news .title {
+.section-news-content > .news-advanced .section-last-news .title {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.body .content .section-last-news .title span {
+.section-news-content > .news-advanced .section-last-news .title span {
   font-size: 25px;
 }
-.body .content .section-last-news > .news {
+.section-news-content > .news-advanced .section-last-news > .news {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   column-gap: 30px;
 }
-.body .content .banner-three {
+.section-news-content > .news-advanced .banner-three {
   grid-area: banner-three;
   display: flex;
   gap: 60px;
   width: 100%;
+}
+.section-news-content > .news-advanced .section-ligue {
+  grid-area: ligue;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #F3F8FF;
+  padding: 22px 13px 30px 30px;
+  border-radius: 20px;
+}
+.section-news-content > .news-advanced .section-ligue > .title {
+  display: flex;
+  justify-content: center;
+}
+.section-news-content > .news-advanced .section-ligue > .title span {
+  font-size: 18px;
+}
+.section-news-content > .news-advanced .section-ligue .ligues {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-right: 16px;
+  overflow: auto;
+}
+.section-news-content > .news-advanced .section-ligue .ligues .ligue {
+  display: flex;
+  gap: 25px;
+  background-color: white;
+  border-radius: 40px;
+  align-items: center;
+  padding: 9px 37px;
+}
+.section-news-content > .news-advanced .section-ligue .ligues .ligue img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.section-news-content > .news-advanced .section-ligue .ligues .ligue span {
+  font-size: 16px;
+}
+.section-news-content > .news-advanced .section-partido-live {
+  grid-area: partido-live;
 }
 
 /* COMPONENTS */
@@ -767,9 +845,66 @@
   }
   .matches-section .content .matches-television .partidos {
     grid-template-columns: repeat(2, 1fr);
+    gap: 13px;
   }
   .matches-section .content .matches-television .partidos match-preview-component:nth-child(n+3) {
     display: none;
+  }
+  .section-news-content {
+    grid-column: 2/12;
+    padding: 30px 0 30px 0;
+  }
+  .section-news-content > .news-advanced {
+    display: grid;
+    grid-template-columns: 100%;
+    column-gap: 50px;
+    row-gap: 50px;
+    grid-template-areas: "publicity-one" "news" "liga-colombiana" "teams" "partidos-colombianos" "more-news" "section-more-news-fourth" "section-more-news-two" "colombia-news" "results-live" "articulos-relacionados" "section-more-news-three" "related-articles-two" "section-last-news" "ligue" "partido-live" "multimedia";
+  }
+  .section-news-content > .news-advanced .news-content {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: max-content;
+    grid-template-areas: "title" "news-one" "news-two" "news-three" "news-fourth" "news-five" "news-six";
+  }
+  .section-news-content > .news-advanced .news-content .title {
+    justify-content: center;
+  }
+  .section-news-content > .news-advanced .news-content .title > .button {
+    display: none !important;
+  }
+  .section-news-content > .news-advanced .news-content .title span {
+    font-size: 18px;
+  }
+  .section-news-content > .news-advanced .liga-colombiana {
+    padding: 23px 35px;
+  }
+  .section-news-content > .news-advanced .teams-list {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .section-news-content > .news-advanced .section-more-news-one {
+    grid-template-columns: 100%;
+    grid-template-rows: max-content;
+    grid-template-areas: "title" "news-one" "news-two" "news-three" "news-fourth" "news-five" "news-six";
+  }
+  .section-news-content > .news-advanced .section-more-news-fourth {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "title title" "news-one news-one" "news-two news-three" "news-fourth news-five";
+  }
+  .section-news-content > .news-advanced .section-more-news-fourth .news-fourth {
+    display: flex !important;
+  }
+  .section-news-content > .news-advanced .section-more-news-fourth .news-five {
+    display: flex !important;
+  }
+  .section-news-content > .news-advanced .section-banner-one {
+    display: none !important;
+  }
+  .section-news-content > .news-advanced .section-banner-two {
+    display: none !important;
+  }
+  .section-news-content > .news-advanced .banner-three {
+    display: none !important;
   }
 }
 /***** GENERICS *****/

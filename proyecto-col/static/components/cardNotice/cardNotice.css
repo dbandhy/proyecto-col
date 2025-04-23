@@ -2,8 +2,11 @@
   display: grid;
   width: 100%;
   max-width: 100%;
-  height: max-content;
+  height: 100%;
   overflow: hidden;
+}
+.card-news.none-image {
+  display: flex !important;
 }
 .card-news.orientation-vertical {
   gap: 15px;
@@ -13,6 +16,7 @@
 .card-news.orientation-vertical img {
   width: 100%;
   height: 100%;
+  max-width: 100%;
   object-fit: cover;
 }
 .card-news.orientation-vertical > .news-content {
@@ -75,6 +79,7 @@
   display: flex;
   flex-direction: column;
   gap: 5px;
+  height: auto;
 }
 .card-news .news-content > .category {
   font-size: 14px;
@@ -94,7 +99,7 @@
   font-weight: 700;
   color: #104596;
 }
-.card-news .news-content .card-news .news-content > .subtitle {
+.card-news .news-content .subtitle {
   font-size: 14px;
   font-weight: 400;
 }
