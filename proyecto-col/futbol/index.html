@@ -51,7 +51,6 @@
 	<header-component></header-component>
 
 	<div class="container">
-	<div class="container">
 		<div class="col-1 d-none d-md-flex align-items-start">
 			<social-bar-component></social-bar-component>
 		</div>
@@ -114,69 +113,77 @@
 								<span class="text color-primary weight-bold">NOTICIAS</span>
 								<button class="button">Ver todo</button>
 							</div>
-							<div class="newsOne">
-								<card-notice-component
-									image="https://static.vecteezy.com/system/resources/thumbnails/026/489/436/small/exciting-soccer-competition-with-intense-goals-skilled-kicks-and-passionate-footballers-showcasing-their-talent-on-the-field-ai-generated-photo.jpg"
-									news="Donald Trump reconoció a Edmundo González"
-									orientation="horizontal"
-									category="FÚTBOL"
-									author="Por Juan Carlos Garcia Sierra"
-									distribution="large-image"
-									class="orientation-vertical-responsive"
-								></card-notice-component>
-							</div>
-							<div class="newsTwo">
-								<card-notice-component
-									image="../assets/img/breaking-news-5.png"
-									news="Donald Trump reconoció a Edmundo González"
-									orientation="horizontal"
-									category="FÚTBOL"
-									author="Por Juan Carlos Garcia Sierra"
-									distribution="large-image"
-									class="orientation-vertical-responsive"
-								></card-notice-component>
-							</div>
-							<div class="newsThree">
-								<card-notice-component
-									image="../assets/img/breaking-news-5.png"
-									news="Donald Trump reconoció a Edmundo González"
-									orientation="vertical"
-									category="FÚTBOL"
-									author="Por Juan Carlos Garcia Sierra"
-									distribution="large-image"
-									class="orientation-horizontal-responsive distribution-equals-responsive"
-								></card-notice-component>
-							</div>
-							<div class="newsFourth">
-								<card-notice-component
-									image="../assets/img/breaking-news-5.png"
-									news="Donald Trump reconoció a Edmundo González"
-									orientation="horizontal"
-									category="FÚTBOL"
-									author="Por Juan Carlos Garcia Sierra"
-									distribution="equals"
-									
-								></card-notice-component>
-							</div>
-							<div class="newsFive">
-								<card-notice-component
-									image="../assets/img/breaking-news-5.png"
-									news="Donald Trump reconoció a Edmundo González"
-									orientation="horizontal"
-									category="FÚTBOL"
-									author="Por Juan Carlos Garcia Sierra"
-									distribution="equals"
-								></card-notice-component>
-							</div>
-							<div class="newsSix">
-								<card-notice-component
-									image="../assets/img/breaking-news-5.png"
-									news="Donald Trump reconoció a Edmundo González"
-									orientation="horizontal"
-									category="FÚTBOL"
-									author="Por Juan Carlos Garcia Sierra"
-									distribution="equals"
-								></card-notice-component>
+							<card-notice-component
+								image="https://static.vecteezy.com/system/resources/thumbnails/026/489/436/small/exciting-soccer-competition-with-intense-goals-skilled-kicks-and-passionate-footballers-showcasing-their-talent-on-the-field-ai-generated-photo.jpg"
+								news="Donald Trump reconoció a Edmundo González"
+								orientation="horizontal"
+								category="FÚTBOL"
+								author="Por Juan Carlos Garcia Sierra"
+								distribution="large-image"
+								class="
+									newsOne
+									orientation-vertical-responsive
+									distribution-none-responsive
+									no-category-responsive
+								"
+							></card-notice-component>
+							<card-notice-component
+								image="../assets/img/breaking-news-5.png"
+								news="Donald Trump reconoció a Edmundo González"
+								orientation="horizontal"
+								category="FÚTBOL"
+								author="Por Juan Carlos Garcia Sierra"
+								distribution="large-image"
+								class="
+									newsTwo
+									orientation-vertical-responsive
+									distribution-none-responsive
+									no-category-responsive	
+								"
+							></card-notice-component>
+							<card-notice-component
+								image="../assets/img/breaking-news-5.png"
+								news="Donald Trump reconoció a Edmundo González"
+								orientation="vertical"
+								category="FÚTBOL"
+								author="Por Juan Carlos Garcia Sierra"
+								distribution="large-image"
+								class="
+									newsThree
+									orientation-horizontal-responsive
+									distribution-equals-responsive
+									no-category-responsive	
+								"
+							></card-notice-component>
+							<card-notice-component
+								image="../assets/img/breaking-news-5.png"
+								news="Donald Trump reconoció a Edmundo González"
+								orientation="horizontal"
+								category="FÚTBOL"
+								author="Por Juan Carlos Garcia Sierra"
+								distribution="equals"
+								class="newsFourth no-category-responsive"
+							></card-notice-component>
+							<card-notice-component
+								image="../assets/img/breaking-news-5.png"
+								news="Donald Trump reconoció a Edmundo González"
+								orientation="horizontal"
+								category="FÚTBOL"
+								author="Por Juan Carlos Garcia Sierra"
+								distribution="equals"
+								class="newsFive no-category-responsive"
+							></card-notice-component>
+							<card-notice-component
+								image="../assets/img/breaking-news-5.png"
+								news="Donald Trump reconoció a Edmundo González"
+								orientation="horizontal"
+								category="FÚTBOL"
+								author="Por Juan Carlos Garcia Sierra"
+								distribution="equals"
+								class="newsSix no-category-responsive"
+							></card-notice-component>
+							<div class="options">
+								<button class="button color-primary rounded-large size-large">Ver más</button>
 							</div>
 						</div>
 						<div class="teams-list">
@@ -426,7 +433,13 @@
 								</div>
 							</div>
 						</div>
-						<!-- <div class="articulos-relacionados">
+						<div class="image-publicity-one">
+							<img src="../assets/img/banner-copa-america.png" alt="Siente la emoción Copa América USA 2024" class="img-fluid">
+						</div>
+						<div class="image-publicity-two">
+							<img src="../assets/img/banner-copa-america.png" alt="Siente la emoción Copa América USA 2024" class="img-fluid">
+						</div>
+						<div class="articulos-relacionados">
 							<div class="header">
 								<span class="text color-primary weight-bold">ARTÍCULOS RELACIONADOS</span>
 								<button class="button color-primary size-large">Ver todo</button>
@@ -475,77 +488,96 @@
 									distribution="large-image"
 								></card-notice-component>
 							</div>
-						</div> -->
-						<!-- <div class="publicity">
+						</div>
+						<div class="publicity">
 							<img src="../assets/img/banner-copa-america.png" alt="Siente la emoción Copa América USA 2024" class="img-fluid">
-						</div> -->
+						</div>
 						<div class="section-more-news-one">
 							<div class="title">
 								<span class="text color-primary weight-bold">MÁS NOTICIAS</span>
 								<button class="button color-primary size-large">Ver todo</button>
 							</div>
-							<div class="newsOne">
-								<card-notice-component
-									image="../assets/img/breaking-news-10.png"
-									news="Donald Trump reconoció a Edmundo González"
-									orientation="horizontal"
-									category="FÚTBOL"
-									author="Por Juan Carlos Garcia Sierra"
-									distribution="large-image"
-									class="orientation-vertical-responsive"
-								></card-notice-component>
-							</div>
-							<div class="newsTwo">
-								<card-notice-component
-									image="../assets/img/breaking-news-10.png"
-									news="Donald Trump reconoció a Edmundo González"
-									orientation="horizontal"
-									category="FÚTBOL"
-									author="Por Juan Carlos Garcia Sierra"
-									distribution="large-image"
-									class="orientation-vertical-responsive"
-								></card-notice-component>
-							</div>
-							<div class="newsThree">
-								<card-notice-component
-									image="../assets/img/breaking-news-10.png"
-									news="Donald Trump reconoció a Edmundo González"
-									orientation="vertical"
-									category="FÚTBOL"
-									author="Por Juan Carlos Garcia Sierra"
-									distribution="large-image"
-									class="orientation-horizontal-responsive distribution-equals-responsive"
-								></card-notice-component>
-							</div>
-							<div class="newsFourth">
-								<card-notice-component
-									image="../assets/img/breaking-news-10.png"
-									news="Donald Trump reconoció a Edmundo González"
-									orientation="horizontal"
-									category="FÚTBOL"
-									author="Por Juan Carlos Garcia Sierra"
-									distribution="equals"
-								></card-notice-component>
-							</div>
-							<div class="newsFive">
-								<card-notice-component
-									image="../assets/img/breaking-news-10.png"
-									news="Donald Trump reconoció a Edmundo González"
-									orientation="horizontal"
-									category="FÚTBOL"
-									author="Por Juan Carlos Garcia Sierra"
-									distribution="equals"
-								></card-notice-component>
-							</div>
-							<div class="newsSix">
-								<card-notice-component
-									image="../assets/img/breaking-news-10.png"
-									news="Donald Trump reconoció a Edmundo González"
-									orientation="horizontal"
-									category="FÚTBOL"
-									author="Por Juan Carlos Garcia Sierra"
-									distribution="equals"
-								></card-notice-component>
+							<card-notice-component
+								image="../assets/img/breaking-news-10.png"
+								news="Donald Trump reconoció a Edmundo González"
+								orientation="horizontal"
+								category="FÚTBOL"
+								author="Por Juan Carlos Garcia Sierra"
+								distribution="large-image"
+								class="
+									newsOne
+									orientation-vertical-responsive
+									distribution-none-responsive
+									no-category-responsive
+								"
+							></card-notice-component>
+							<card-notice-component
+								image="../assets/img/breaking-news-10.png"
+								news="Donald Trump reconoció a Edmundo González"
+								orientation="horizontal"
+								category="FÚTBOL"
+								author="Por Juan Carlos Garcia Sierra"
+								distribution="large-image"
+								class="
+									newsTwo
+									orientation-vertical-responsive
+									distribution-equals-responsive
+									no-category-responsive	
+								"
+							></card-notice-component>
+							<card-notice-component
+								image="../assets/img/breaking-news-10.png"
+								news="Donald Trump reconoció a Edmundo González"
+								orientation="vertical"
+								category="FÚTBOL"
+								author="Por Juan Carlos Garcia Sierra"
+								distribution="large-image"
+								class="
+									newsThree
+									orientation-vertical-responsive
+									distribution-equals-responsive
+									no-category-responsive	
+								"
+							></card-notice-component>
+							<card-notice-component
+								image="../assets/img/breaking-news-10.png"
+								news="Donald Trump reconoció a Edmundo González"
+								orientation="horizontal"
+								category="FÚTBOL"
+								author="Por Juan Carlos Garcia Sierra"
+								distribution="equals"
+								class="
+									newsFourth
+									orientation-vertical-responsive
+									distribution-equals-responsive
+									no-category-responsive	
+								"
+							></card-notice-component>
+							<card-notice-component
+								image="../assets/img/breaking-news-10.png"
+								news="Donald Trump reconoció a Edmundo González"
+								orientation="horizontal"
+								category="FÚTBOL"
+								author="Por Juan Carlos Garcia Sierra"
+								distribution="equals"
+								class="
+									newsFive
+									orientation-vertical-responsive
+									distribution-equals-responsive
+									no-category-responsive	
+								"
+							></card-notice-component>
+							<card-notice-component
+								image="../assets/img/breaking-news-10.png"
+								news="Donald Trump reconoció a Edmundo González"
+								orientation="horizontal"
+								category="FÚTBOL"
+								author="Por Juan Carlos Garcia Sierra"
+								distribution="equals"
+								class="newsSix"
+							></card-notice-component>
+							<div class="options">
+								<button class="button color-primary-size-large rounded-large">Ver más</button>
 							</div>
 						</div>
 						<section class="colombiaNews">
@@ -565,7 +597,6 @@
 									image="../assets/img/breaking-news-5.png"
 									news="Donald Trump reconoció a Edmundo González"
 									orientation="horizontal"
-									category="FÚTBOL"
 									author="Por Juan Carlos Garcia Sierra"
 									distribution="equals"
 									classnames="new"
@@ -575,7 +606,6 @@
 									image="../assets/img/breaking-news-5.png"
 									news="Donald Trump reconoció a Edmundo González"
 									orientation="horizontal"
-									category="FÚTBOL"
 									author="Por Juan Carlos Garcia Sierra"
 									distribution="equals"
 									classnames="new"
@@ -585,7 +615,6 @@
 									image="../assets/img/breaking-news-5.png"
 									news="Donald Trump reconoció a Edmundo González"
 									orientation="horizontal"
-									category="FÚTBOL"
 									author="Por Juan Carlos Garcia Sierra"
 									distribution="equals"
 									classnames="new"
@@ -631,7 +660,7 @@
 								</div>
 							</div>
 						</section>
-						<div class="multimedia-section">
+					  <div class="multimedia-section">
 							<div class="section-header d-flex justify-content-between align-items-center mb-3">
 								<h2 class="section-title multimedia-title m-0 p-0">MULTIMEDIA</h2>
 								<button class="button color-primary size-large">Ver todo</button>
@@ -695,64 +724,60 @@
 											<span class="article-author">Por: Juan Carlos García Sierra</span>
 										</div>
 									</div>
+								</div>		
+								<div class="multimedia-article-item d-flex mb-3">
+										<div class="article-thumbnail">
+												<div class="video-container small-video">
+														<iframe width="100" height="100" src="https://www.youtube.com/embed/Q7yrRaY488A?si=07MGk24bTobMn2mB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+												</div>
+										</div>
+										<div class="article-content">
+												<div class="category-tag d-none d-md-block">CINE</div>
+												<h4 class="article-title small-title">
+														La hora en la que arranca el nuevo capítulo de "Dragon Ball Daima"
+												</h4>
+												<div class="article-footer">
+														<a href="#" class="read-more">Leer más</a>
+														<span class="article-author">Por: Juan Carlos García Sierra</span>
+												</div>
+										</div>
 								</div>
-									
-									<div class="multimedia-article-item d-flex mb-3">
-											<div class="article-thumbnail">
-													<div class="video-container small-video">
-															<iframe width="100" height="100" src="https://www.youtube.com/embed/Q7yrRaY488A?si=07MGk24bTobMn2mB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-													</div>
-											</div>
-											<div class="article-content">
-													<div class="category-tag d-none d-md-block">CINE</div>
-													<h4 class="article-title small-title">
-															La hora en la que arranca el nuevo capítulo de "Dragon Ball Daima"
-													</h4>
-													<div class="article-footer">
-															<a href="#" class="read-more">Leer más</a>
-															<span class="article-author">Por: Juan Carlos García Sierra</span>
-													</div>
-											</div>
-									</div>
-									
-									<div class="multimedia-article-item d-flex mb-3">
-											<div class="article-thumbnail">
-													<div class="video-container small-video">
-															<iframe width="100" height="100" src="https://www.youtube.com/embed/Q7yrRaY488A?si=07MGk24bTobMn2mB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-													</div>
-											</div>
-											<div class="article-content">
-													<div class="category-tag d-none d-md-block">CINE</div>
-													<h4 class="article-title small-title">
-															La hora en la que arranca el nuevo capítulo de "Dragon Ball Daima"
-													</h4>
-													<div class="article-footer">
-															<a href="#" class="read-more">Leer más</a>
-															<span class="article-author">Por: Juan Carlos García Sierra</span>
-													</div>
-											</div>
-									</div>
-									
-									<div class="d-md-none">
-											<div class="multimedia-article-item d-flex mb-3">
-													<div class="article-thumbnail">
-															<div class="video-container small-video">
-																	<iframe width="100" height="100" src="https://www.youtube.com/embed/Q7yrRaY488A?si=07MGk24bTobMn2mB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-															</div>
-													</div>
-													<div class="article-content">
-															<h4 class="article-title small-title">
-																	La hora en la que arranca el nuevo capítulo de "Dragon Ball Daima"
-															</h4>
-															<div class="article-footer">
-																	<a href="#" class="read-more">Leer más</a>
-																	<span class="article-author">Por: Juan Carlos García Sierra</span>
-															</div>
-													</div>
-											</div>
-									</div>
+								<div class="multimedia-article-item d-flex mb-3">
+										<div class="article-thumbnail">
+												<div class="video-container small-video">
+														<iframe width="100" height="100" src="https://www.youtube.com/embed/Q7yrRaY488A?si=07MGk24bTobMn2mB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+												</div>
+										</div>
+										<div class="article-content">
+												<div class="category-tag d-none d-md-block">CINE</div>
+												<h4 class="article-title small-title">
+														La hora en la que arranca el nuevo capítulo de "Dragon Ball Daima"
+												</h4>
+												<div class="article-footer">
+														<a href="#" class="read-more">Leer más</a>
+														<span class="article-author">Por: Juan Carlos García Sierra</span>
+												</div>
+										</div>
+								</div>
+								<div class="d-md-none">
+										<div class="multimedia-article-item d-flex mb-3">
+												<div class="article-thumbnail">
+														<div class="video-container small-video">
+																<iframe width="100" height="100" src="https://www.youtube.com/embed/Q7yrRaY488A?si=07MGk24bTobMn2mB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+														</div>
+												</div>
+												<div class="article-content">
+														<h4 class="article-title small-title">
+																La hora en la que arranca el nuevo capítulo de "Dragon Ball Daima"
+														</h4>
+														<div class="article-footer">
+																<a href="#" class="read-more">Leer más</a>
+																<span class="article-author">Por: Juan Carlos García Sierra</span>
+														</div>
+												</div>
+										</div>
+								</div>
 							</div>
-							
 							<div class="text-center mt-4">
 									<a href="#" class="btn btn-primary ver-mas-btn">Ver más</a>
 							</div>
@@ -899,39 +924,51 @@
 								<span class="text color-primary weight-bold">MÁS NOTICIAS</span>
 								<button class="button color-primary size-large">Ver todo</button>
 							</div>
-							<div class="news-one">
-								<card-notice-component
-									image="../assets/img/breaking-news-10.png"
-									news="Donald Trump reconoció a Edmundo González"
-									orientation="horizontal"
-									category="FÚTBOL"
-									author="Por Juan Carlos Garcia Sierra"
-									distribution="large-content"
-									subtitle="La ayuda a quien lo necesita no solo beneficia a una persona comunidades"
-								></card-notice-component>
-							</div>
-							<div class="news-two">
-								<card-notice-component
-									image="../assets/img/breaking-news-10.png"
-									news="Donald Trump reconoció a Edmundo González"
-									orientation="horizontal"
-									category="FÚTBOL"
-									author="Por Juan Carlos Garcia Sierra"
-									distribution="large-content"
-									subtitle="La ayuda a quien lo necesita no solo beneficia a una persona comunidades"
-								></card-notice-component>
-							</div>
-							<div class="news-three">
-								<card-notice-component
-									image="../assets/img/breaking-news-10.png"
-									news="Donald Trump reconoció a Edmundo González"
-									orientation="horizontal"
-									category="FÚTBOL"
-									author="Por Juan Carlos Garcia Sierra"
-									distribution="large-content"
-									subtitle="La ayuda a quien lo necesita no solo beneficia a una persona comunidades"
-								></card-notice-component>
-							</div>
+							<card-notice-component
+								image="../assets/img/breaking-news-10.png"
+								news="Donald Trump reconoció a Edmundo González"
+								orientation="horizontal"
+								category="FÚTBOL"
+								author="Por Juan Carlos Garcia Sierra"
+								distribution="large-content"
+								subtitle="La ayuda a quien lo necesita no solo beneficia a una persona comunidades"
+								class="
+									news-one
+									orientation-vertical-responsive
+									no-subtitle-responsive
+									distribution-none-responsive
+									no-category-responsive"
+							></card-notice-component>
+							<card-notice-component
+								image="../assets/img/breaking-news-10.png"
+								news="Donald Trump reconoció a Edmundo González"
+								orientation="horizontal"
+								category="FÚTBOL"
+								author="Por Juan Carlos Garcia Sierra"
+								distribution="large-content"
+								subtitle="La ayuda a quien lo necesita no solo beneficia a una persona comunidades"
+								class="
+									news-two
+									orientation-vertical-responsive
+									no-subtitle-responsive
+									no-category-responsive	
+								"
+							></card-notice-component>
+							<card-notice-component
+								image="../assets/img/breaking-news-10.png"
+								news="Donald Trump reconoció a Edmundo González"
+								orientation="horizontal"
+								category="FÚTBOL"
+								author="Por Juan Carlos Garcia Sierra"
+								distribution="large-content"
+								subtitle="La ayuda a quien lo necesita no solo beneficia a una persona comunidades"
+								class="
+									news-three
+									orientation-vertical-responsive
+									no-subtitle-responsive
+									no-category-responsive	
+								"
+							></card-notice-component>
 							<div class="news-fourth">
 								<card-notice-component
 									image="../assets/img/breaking-news-10.png"
@@ -941,9 +978,22 @@
 									author="Por Juan Carlos Garcia Sierra"
 									distribution="large-content"
 									subtitle="La ayuda a quien lo necesita no solo beneficia a una persona comunidades"
+									class="orientation-vertical-responsive no-subtitle-responsive"	
 								></card-notice-component>
 							</div>
-							<div class="d-flex justify-content-center w-100">
+							<div class="news-five">
+								<card-notice-component
+									image="../assets/img/breaking-news-10.png"
+									news="Donald Trump reconoció a Edmundo González"
+									orientation="horizontal"
+									category="FÚTBOL"
+									author="Por Juan Carlos Garcia Sierra"
+									distribution="large-content"
+									subtitle="La ayuda a quien lo necesita no solo beneficia a una persona comunidades"
+									class="orientation-vertical-responsive no-subtitle-responsive"
+								></card-notice-component>
+							</div>
+							<div class="options">
 								<button class="button color-primary size-large">Ver más</button>
 							</div>
 						</div>
@@ -952,7 +1002,7 @@
 								<span class="text color-primary weight-bold">NOTICIAS</span>
 								<button class="button color-primary size-large">Ver todo</button>
 							</div>
-							<div class="newsOne">
+							<div class="news">
 								<card-notice-component
 									image="../assets/img/breaking-news-10.png"
 									news="Donald Trump reconoció a Edmundo González"
@@ -960,9 +1010,13 @@
 									category="FÚTBOL"
 									author="Por Juan Carlos Garcia Sierra"
 									distribution="large-image"
+									class="
+										news-1
+										orientation-vertical-responsive
+										distribution-none-responsive
+										no-category-responsive	
+									"
 								></card-notice-component>
-							</div>
-							<div class="newsTwo">
 								<card-notice-component
 									image="../assets/img/breaking-news-10.png"
 									news="Donald Trump reconoció a Edmundo González"
@@ -970,9 +1024,13 @@
 									category="FÚTBOL"
 									author="Por Juan Carlos Garcia Sierra"
 									distribution="large-image"
+									class="
+										news-2
+										orientation-vertical-responsive
+										distribution-equals-responsive
+										no-category-responsive	
+									"
 								></card-notice-component>
-							</div>
-							<div class="newsThree">
 								<card-notice-component
 									image="../assets/img/breaking-news-10.png"
 									news="Donald Trump reconoció a Edmundo González"
@@ -980,9 +1038,13 @@
 									category="FÚTBOL"
 									author="Por Juan Carlos Garcia Sierra"
 									distribution="large-image"
+									class="
+										news-3
+										orientation-vertical-responsive
+										distribution-equals-responsive
+										no-category-responsive	
+									"
 								></card-notice-component>
-							</div>
-							<div class="newsFourth">
 								<card-notice-component
 									image="../assets/img/breaking-news-10.png"
 									news="Donald Trump reconoció a Edmundo González"
@@ -990,9 +1052,13 @@
 									category="FÚTBOL"
 									author="Por Juan Carlos Garcia Sierra"
 									distribution="equals"
+									class="
+										news-4
+										orientation-vertical-responsive
+										distribution-equals-responsive
+										no-category-responsive	
+									"
 								></card-notice-component>
-							</div>
-							<div class="newsFive">
 								<card-notice-component
 									image="../assets/img/breaking-news-10.png"
 									news="Donald Trump reconoció a Edmundo González"
@@ -1000,9 +1066,13 @@
 									category="FÚTBOL"
 									author="Por Juan Carlos Garcia Sierra"
 									distribution="equals"
+									class="
+										news-5
+										orientation-vertical-responsive
+										distribution-equals-responsive
+										no-category-responsive	
+									"
 								></card-notice-component>
-							</div>
-							<div class="newsSix">
 								<card-notice-component
 									image="../assets/img/breaking-news-10.png"
 									news="Donald Trump reconoció a Edmundo González"
@@ -1010,7 +1080,11 @@
 									category="FÚTBOL"
 									author="Por Juan Carlos Garcia Sierra"
 									distribution="equals"
+									class="news-6"
 								></card-notice-component>
+							</div>
+							<div class="options">
+								<button class="button color-primary size-large rounded-large">Ver más</button>
 							</div>
 						</div>
 						<div class="banner-three">
@@ -1057,7 +1131,58 @@
 								<span class="text color-primary weight-bold">MÁS NOTICIAS</span>
 								<button class="button color-primary size-large">Ver todo</button>
 							</div>
-							<div class="news-one">
+							<div class="news">
+								<div class="news-1">
+									<card-notice-component
+										image="../assets/img/breaking-news-10.png"
+										news="Donald Trump reconoció a Edmundo González"
+										orientation="horizontal"
+										category="FÚTBOL"
+										author="Por Juan Carlos Garcia Sierra"
+										distribution="large-content"
+										subtitle="Este Jueves se disputó la fecha 5, dejando apretadas las cosas en la tabla de reclasificación rumbo a los cupos para las competencias internas"
+										class="
+											no-subtitle-responsive
+											orientation-vertical-responsive
+											distribution-none-responsive
+											no-category-responsive
+										"
+									></card-notice-component>
+								</div>
+								<div class="news-2">
+									<card-notice-component
+										image="../assets/img/breaking-news-10.png"
+										news="Donald Trump reconoció a Edmundo González"
+										orientation="horizontal"
+										category="FÚTBOL"
+										author="Por Juan Carlos Garcia Sierra"
+										distribution="large-content"
+										subtitle="Este Jueves se disputó la fecha 5, dejando apretadas las cosas en la tabla de reclasificación rumbo a los cupos para las competencias internas"
+										class="
+											no-subtitle-responsive
+											orientation-vertical-responsive
+											distribution-none-responsive
+											no-category-responsive
+										"
+									></card-notice-component>
+								</div>
+								<div class="news-3">
+									<card-notice-component
+										image="../assets/img/breaking-news-10.png"
+										news="Donald Trump reconoció a Edmundo González"
+										orientation="horizontal"
+										category="FÚTBOL"
+										author="Por Juan Carlos Garcia Sierra"
+										distribution="large-content"
+										subtitle="Este Jueves se disputó la fecha 5, dejando apretadas las cosas en la tabla de reclasificación rumbo a los cupos para las competencias internas"
+										class="
+											no-subtitle-responsive
+											orientation-vertical-responsive
+											distribution-none-responsive
+											no-category-responsive
+										"
+									></card-notice-component>
+								</div>
 								<card-notice-component
 									image="../assets/img/breaking-news-10.png"
 									news="Donald Trump reconoció a Edmundo González"
@@ -1066,29 +1191,81 @@
 									author="Por Juan Carlos Garcia Sierra"
 									distribution="large-content"
 									subtitle="Este Jueves se disputó la fecha 5, dejando apretadas las cosas en la tabla de reclasificación rumbo a los cupos para las competencias internas"
+									class="
+										news-4
+										no-subtitle-responsive
+										orientation-vertical-responsive
+										distribution-none-responsive
+										no-category-responsive
+									"	
+								></card-notice-component>
+								<card-notice-component
+									image="../assets/img/breaking-news-10.png"
+									news="Donald Trump reconoció a Edmundo González"
+									orientation="horizontal"
+									author="Por Juan Carlos Garcia Sierra"
+									distribution="equals"
+									class="news-5"
+								></card-notice-component>
+								<card-notice-component
+									image="../assets/img/breaking-news-10.png"
+									news="Donald Trump reconoció a Edmundo González"
+									orientation="horizontal"
+									author="Por Juan Carlos Garcia Sierra"
+									distribution="equals"
+									class="news-6"
+								></card-notice-component>
+								<card-notice-component
+									image="../assets/img/breaking-news-10.png"
+									news="Donald Trump reconoció a Edmundo González"
+									orientation="horizontal"
+									author="Por Juan Carlos Garcia Sierra"
+									distribution="equals"
+									class="news-7"
+								></card-notice-component>
+								<card-notice-component
+									image="../assets/img/breaking-news-10.png"
+									news="Donald Trump reconoció a Edmundo González"
+									orientation="horizontal"
+									author="Por Juan Carlos Garcia Sierra"
+									distribution="equals"
+									class="news-8"
+								></card-notice-component>
+								<card-notice-component
+									image="../assets/img/breaking-news-10.png"
+									news="Donald Trump reconoció a Edmundo González"
+									orientation="horizontal"
+									author="Por Juan Carlos Garcia Sierra"
+									distribution="equals"
+									class="news-9"
+								></card-notice-component>
+								<card-notice-component
+									image="../assets/img/breaking-news-10.png"
+									news="Donald Trump reconoció a Edmundo González"
+									orientation="horizontal"
+									author="Por Juan Carlos Garcia Sierra"
+									distribution="equals"
+									class="news-10"
+								></card-notice-component>
+								<card-notice-component
+									image="../assets/img/breaking-news-10.png"
+									news="Donald Trump reconoció a Edmundo González"
+									orientation="horizontal"
+									author="Por Juan Carlos Garcia Sierra"
+									distribution="equals"
+									class="news-11"	
+								></card-notice-component>
+								<card-notice-component
+									image="../assets/img/breaking-news-10.png"
+									news="Donald Trump reconoció a Edmundo González"
+									orientation="horizontal"
+									author="Por Juan Carlos Garcia Sierra"
+									distribution="equals"
+									class="news-12"	
 								></card-notice-component>
 							</div>
-							<div class="news-two">
-								<card-notice-component
-									image="../assets/img/breaking-news-10.png"
-									news="Donald Trump reconoció a Edmundo González"
-									orientation="horizontal"
-									category="FÚTBOL"
-									author="Por Juan Carlos Garcia Sierra"
-									distribution="large-content"
-									subtitle="Este Jueves se disputó la fecha 5, dejando apretadas las cosas en la tabla de reclasificación rumbo a los cupos para las competencias internas"
-								></card-notice-component>
-							</div>
-							<div class="news-three">
-								<card-notice-component
-									image="../assets/img/breaking-news-10.png"
-									news="Donald Trump reconoció a Edmundo González"
-									orientation="horizontal"
-									category="FÚTBOL"
-									author="Por Juan Carlos Garcia Sierra"
-									distribution="large-content"
-									subtitle="Este Jueves se disputó la fecha 5, dejando apretadas las cosas en la tabla de reclasificación rumbo a los cupos para las competencias internas"
-								></card-notice-component>
+							<div class="options">
+								<button class="button color-primary-size-large rounded-large">Ver más</button>
 							</div>
 						</div>
 						<div class="section-last-news">
@@ -1104,6 +1281,7 @@
 									author="Por Juan Carlos Garcia Sierra"
 									distribution="large-content"
 									subtitle="Este Jueves se disputó la fecha 5, dejando apretadas las cosas en la tabla de reclasificación rumbo a los cupos para las competencias internas"
+									class="news-1"
 								></card-notice-component>
 								<card-notice-component
 									image="../assets/img/breaking-news-10.png"
@@ -1113,6 +1291,12 @@
 									author="Por Juan Carlos Garcia Sierra"
 									distribution="large-content"
 									subtitle="La ayuda a quien lo necesita no solo beneficia a una persona comunidades"
+									class="
+										news-2
+										distribution-none-responsive
+										no-category-responsive
+										no-subtitle-responsive
+									"	
 								></card-notice-component>
 								<card-notice-component
 									image="../assets/img/breaking-news-10.png"
@@ -1122,6 +1306,12 @@
 									author="Por Juan Carlos Garcia Sierra"
 									distribution="large-content"
 									subtitle="La ayuda a quien lo necesita no solo beneficia a una persona comunidades"
+									class="
+										news-3
+										distribution-none-responsive
+										no-category-responsive
+										no-subtitle-responsive
+									"		
 								></card-notice-component>
 								<card-notice-component
 									image="../assets/img/breaking-news-10.png"
@@ -1131,6 +1321,12 @@
 									author="Por Juan Carlos Garcia Sierra"
 									distribution="large-content"
 									subtitle="La ayuda a quien lo necesita no solo beneficia a una persona comunidades"
+									class="
+										news-4
+										distribution-none-responsive
+										no-category-responsive
+										no-subtitle-responsive
+									"		
 								></card-notice-component>
 								<card-notice-component
 									image="../assets/img/breaking-news-10.png"
@@ -1140,7 +1336,72 @@
 									author="Por Juan Carlos Garcia Sierra"
 									distribution="large-content"
 									subtitle="La ayuda a quien lo necesita no solo beneficia a una persona comunidades"
+									class="
+										news-5
+										distribution-equals-responsive
+										no-category-responsive
+										no-subtitle-responsive
+									"		
 								></card-notice-component>
+								<card-notice-component
+									image="../assets/img/breaking-news-10.png"
+									news="Donald Trump reconoció a Edmundo González"
+									orientation="vertical"
+									author="Por Juan Carlos Garcia Sierra"
+									distribution="equals"
+									class="news-6"		
+								></card-notice-component>
+								<card-notice-component
+									image="../assets/img/breaking-news-10.png"
+									news="Donald Trump reconoció a Edmundo González"
+									orientation="vertical"
+									author="Por Juan Carlos Garcia Sierra"
+									distribution="equals"
+									class="news-7"		
+								></card-notice-component>
+								<card-notice-component
+									image="../assets/img/breaking-news-10.png"
+									news="Donald Trump reconoció a Edmundo González"
+									orientation="vertical"
+									author="Por Juan Carlos Garcia Sierra"
+									distribution="equals"
+									class="news-8"		
+								></card-notice-component>
+								<card-notice-component
+									image="../assets/img/breaking-news-10.png"
+									news="Donald Trump reconoció a Edmundo González"
+									orientation="vertical"
+									author="Por Juan Carlos Garcia Sierra"
+									distribution="equals"
+									class="news-9"		
+								></card-notice-component>
+								<card-notice-component
+									image="../assets/img/breaking-news-10.png"
+									news="Donald Trump reconoció a Edmundo González"
+									orientation="vertical"
+									author="Por Juan Carlos Garcia Sierra"
+									distribution="equals"
+									class="news-10"		
+								></card-notice-component>
+								<card-notice-component
+									image="../assets/img/breaking-news-10.png"
+									news="Donald Trump reconoció a Edmundo González"
+									orientation="vertical"
+									author="Por Juan Carlos Garcia Sierra"
+									distribution="equals"
+									class="news-11"		
+								></card-notice-component>
+								<card-notice-component
+									image="../assets/img/breaking-news-10.png"
+									news="Donald Trump reconoció a Edmundo González"
+									orientation="vertical"
+									author="Por Juan Carlos Garcia Sierra"
+									distribution="equals"
+									class="news-12"		
+								></card-notice-component>
+							</div>
+							<div class="options">
+								<button class="button color-primary size-large rounded-large">Ver más</button>
 							</div>
 						</div>
 						<div class="section-ligue">

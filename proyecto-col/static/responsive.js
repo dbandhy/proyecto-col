@@ -9,6 +9,10 @@ const updateResponsiveAttributes = () => {
     orientation: {
       vertical: Array.from(document.getElementsByClassName('orientation-vertical-responsive')),
       horizontal: Array.from(document.getElementsByClassName('orientation-horizontal-responsive'))
+    },
+    content: {
+      noCategory: Array.from(document.getElementsByClassName('no-category-responsive')),
+      noSubtitle: Array.from(document.getElementsByClassName('no-subtitle-responsive'))
     }
   }
   if (window.innerWidth < 768) {
@@ -19,6 +23,9 @@ const updateResponsiveAttributes = () => {
 
     cards.orientation.horizontal.forEach(card => card.setAttribute('orientation', 'horizontal'));
     cards.orientation.vertical.forEach(card => card.setAttribute('orientation', 'vertical'));
+  
+    cards.content.noCategory.forEach(card => card.setAttribute('category', ''));
+    cards.content.noSubtitle.forEach(card => card.setAttribute('subtitle', ''));
   }
 };
 

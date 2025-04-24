@@ -75,31 +75,31 @@
 .card-news.orientation-horizontal.distribution-large-content .news-content {
   grid-column: 3/7;
 }
-.card-news .news-content {
+.card-news > .news-content {
   display: flex;
   flex-direction: column;
   gap: 5px;
   height: auto;
 }
-.card-news .news-content > .category {
+.card-news > .news-content > .category {
   font-size: 14px;
   font-weight: 400;
   color: #104596;
 }
-.card-news .news-content > .title {
+.card-news > .news-content > .title {
   font-size: 20px;
   font-weight: 700;
 }
-.card-news .news-content > .author {
+.card-news > .news-content > .author {
   font-size: 9px;
   font-weight: 700;
 }
-.card-news .news-content .read-more {
+.card-news > .news-content .read-more {
   font-size: 12px;
   font-weight: 700;
   color: #104596;
 }
-.card-news .news-content .subtitle {
+.card-news > .news-content .subtitle {
   font-size: 14px;
   font-weight: 400;
 }
