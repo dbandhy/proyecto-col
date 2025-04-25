@@ -553,11 +553,11 @@ p {
   flex-direction: row;
 }
 
-
 .btn-azul-blanco {
   color: #FFFFFF !important;
   background-color: #104596;
   padding: 10px 20px;
+  font-size: 12px;
   border-radius: 20px;
   text-decoration: none;
   max-width: 250px;
@@ -1067,8 +1067,8 @@ p {
 
 .section-videos-horoscopo {
   background-color: #fff;
-  padding: 40px 20px;
   margin-top: 20px;
+  
 }
 
 .section-videos-horoscopo .section-title {
@@ -1212,7 +1212,7 @@ p {
 
   .zodiac-icons {
     flex-wrap: nowrap;
-    max-width: clamp(31.25rem, 12.019rem + 76.923vw, 81.25rem)
+    max-width: clamp(15.625rem, -9.615rem + 100.962vw, 81.25rem)
   }
 
   .zodiac-icon {
@@ -2129,17 +2129,6 @@ p {
     flex-direction: row;
     gap: 35px;
   }
-
-  
-
-  .btn-azul-blanco {
-    color: #FFFFFF !important;
-    background-color: #104596;
-    padding: 10px 20px;
-    border-radius: 20px;
-    text-decoration: none;
-  }
-
 
   .partido-item:last-child {
     padding-top: 10px;
