@@ -313,7 +313,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let current = 0;
 
     function updateSlider() {
-        const cardWidth = cards[0].offsetWidth + 32; 
+        const cardWidth = cards[0].offsetWidth -30; 
         slider.style.transform = `translateX(-${current * cardWidth}px)`;
     }
 

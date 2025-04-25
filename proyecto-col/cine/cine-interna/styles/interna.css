@@ -12,6 +12,37 @@
     }
 }
 
+.read-more {
+    font-size: 14px;
+    color: #104596;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.grupo-article {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.video-title {
+    font-size: 12px;
+    color: #191C36;
+    font-weight: bold;
+}
+
+.video-favorite {
+    color: #104596;
+
+}
+
+.main-section-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0 1rem;
+}
+
 .movie-detail-container {
     display: grid;
     grid-template-columns: 60% 40%;
@@ -36,6 +67,12 @@
     height: auto;
     display: block;
     border-radius: 8px;
+}
+
+.border-article {
+    width: 100%;
+    height: 1px;
+    background-color: #104596;
 }
 
 .estreno-badge {
@@ -152,13 +189,145 @@
     justify-content: space-between;
 }
 
-@media (min-width: 770px) {
-    .btn-filtros {
+.anuncio-vertical {
+    display: none;
+}
+
+.group-video {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.group-subvideo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+
+}
+
+.section-right {
+    display: none;
+}
+
+.poster {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.group-actor{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+
+.group-actor-description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+
+.grupo-elenco-mobile{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.grupo-elenco{
+    display: none;
+    flex-direction: row;
+    gap: 5px;
+}
+
+
+@media (min-width: 992px) {
+    .grupo-elenco{
+        display: flex;
+    }
+    .grupo-elenco-mobile{
+        display: none;
+    }
+    
+    .group-actor{
+        display: flex;
+    }
+    .group-actor-description{
+        display: none;
+    }
+    .anuncio-vertical {
+        display: flex;
+        flex-direction: row;
+    }
+    .group-star{
+        justify-content: start;
+    }
+    .trailer-container{
+        display: flex !important;
+    }
+    
+    .trailer-container-mobile{
         display: none;
     }
 
     .group-filter {
         display: flex;
+    }
+
+    .poster {
+        display: grid;
+        grid-template-columns: 30% 70%;
+        gap: 20px;
+        align-items: normal;
+    }
+    .schedule-button{
+        display: inline-block !important;
+    }
+
+    .section-title {
+        text-align: start !important;
+    }
+
+    .movie-title-2 {
+        text-align: start !important;
+    }
+
+    .grupo-article {
+        display: grid;
+        grid-template-columns: 65% 5% 30%;
+    }
+
+    .border-article {
+        width: 1px;
+        height: 100%;
+    }
+
+    .section-right {
+        display: flex;
+    }
+}
+
+
+
+@media (min-width: 770px) {
+
+    .btn-filtros {
+        display: none;
+    }
+
+    .group-subvideo {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 20px;
+    }
+
+    .group-video {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
     }
 }
 
@@ -208,13 +377,28 @@
     background-color: #104596;
 }
 
-/* --- MOVED INLINE STYLES FROM HTML --- */
 .trailer-container {
-    background: #222 !important;
+    display: none;
     border-radius: 1rem;
-    overflow: hidden;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    max-width: clamp(22.688rem, 11.269rem + 45.673vw, 52.375rem);
+    height: 100%;
 }
+
+.trailer-container-mobile{
+    display: flex;
+    margin: 0 auto;
+    max-width: clamp(22.688rem, 11.269rem + 45.673vw, 52.375rem);
+}
+
+.trailer-container img,.img-poster img{
+    height: 100%;
+}
+
+
+.img-poster{
+    max-width: 285px;
+}
+
 
 .trailer-preview {
     object-fit: cover;
@@ -248,21 +432,45 @@
 }
 
 .movie-metadata {
-    gap: 0.5rem;
+    gap:20px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
     flex-wrap: wrap;
+}
+
+.group-star{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5px;
+    min-width: 350px
 }
 
 .movie-tag {
     padding: 0.5rem 1.2rem;
-    border: 1px solid #6c757d;
     border-radius: 50px;
-    background: #f8f9fa;
-    color: #212529;
-    font-size: 1rem;
+    background: #fff;
+    color: #104596;
+    align-content: center;
+    font-size: clamp(0.625rem, 0.583rem + 0.185vw, 0.75rem);
 }
+
+
 
 .schedule-button {
     margin-left: 0.5rem;
+    border: 1px solid #104596;
+    background: #fff;
+    display: none;
+    color: #104596;
+}
+.schedule-button-mobile{
+    margin-left: 0.5rem;
+    border: 1px solid #104596;
+    background: #fff;
+    color: #104596;
 }
 
 .rate-button {
@@ -289,34 +497,96 @@
 }
 
 .elenco-img {
-    width: 120px;
-    height: 120px;
+    width: 110px;
+    height: 110px;
     overflow: hidden;
     border-radius: 24px;
     background: #f3f3f3;
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  .elenco-img img {
+}
+
+.elenco-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
-  .elenco-nombre {
-    font-size: 1.1rem;
-    color: #174389;
-  }
-  .elenco-personaje {
-    font-size: 1rem;
+}
+
+.elenco-nombre {
+    font-size: 14px;
+    font-weight: 700;
+    color: #191C36;
+}
+
+.elenco-personaje {
+    font-size: 12px;
     color: #232f3e;
-  }
-  .elenco-arrow {
+}
+
+.elenco-arrow {
     background: none;
     border: none;
     outline: none;
-  }
-  .elenco-slider-anim {
-    transition: transform 0.5s cubic-bezier(.4,1.5,.5,1);
+}
+
+.elenco-slider-anim {
+    transition: transform 0.5s cubic-bezier(.4, 1.5, .5, 1);
     will-change: transform;
-  }
+}
+
+.section-title {
+    font-size: clamp(1.125rem, 0.979rem + 0.648vw, 1.563rem);
+    font-weight: bold;
+    color: #104596;
+    text-align: center;
+}
+
+.movie-title-2 {
+    font-size: clamp(1.375rem, 1.313rem + 0.278vw, 1.563rem);
+    font-weight: 700;
+    color: #191C36;
+    text-align: center;
+}
+
+.movie-title-2-span {
+    font-size: clamp(0.875rem, 0.792rem + 0.37vw, 1.125rem);
+    font-weight: 400;
+    color: #191C36;
+}
+
+.movie-text {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.reparto-desc {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.movie-title-3 {
+    font-size: clamp(1.125rem, 0.979rem + 0.648vw, 1.563rem);
+    font-weight: 700;
+    color: #191C36;
+}
+
+.movie-title-s {
+    font-size: clamp(0.75rem, 0.625rem + 0.556vw, 1.125rem);
+    font-weight: 400;
+    color: #191C36;
+}
+
+.sinopsis-movie{
+    font-size: 14px;
+    font-weight: 700;
+    color: #104596;
+    text-align: justify;
+}
+
+.sinopsis-title {
+    font-size: 14px;
+    font-weight: 400;
+    color: #191C36;
+    text-align: justify;
+}

@@ -7,7 +7,7 @@
 
 .carousel-viewport {
     overflow: hidden;
-    width: 100%;
+    width: clamp(18.75rem, -4.412rem + 88.235vw, 75rem);
     padding: 0 30px;
 }
 
