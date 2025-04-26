@@ -109,7 +109,6 @@ nav {
 	font-weight: bold;
 }
 
-/* Barra de búsqueda */
 .search-bar {
 	display: flex;
 	align-items: center;
@@ -119,7 +118,7 @@ nav {
 
 .search-bar input {
 	width: 220px;
-	padding: 8px 40px 8px 15px; /* Espacio para el ícono a la derecha */
+	padding: 8px 40px 8px 15px; 
 	border: 1px solid #ddd;
 	border-radius: 20px;
 	font-size: 14px;
@@ -141,10 +140,10 @@ nav {
 	padding: 0;
 }
 
-/* Responsive */
+
 @media (max-width: 992px) {
 	.menu-links {
-		gap: 15px; /* Menos espacio en tablets */
+		gap: 15px; 
 	}
 
 	.menu-links a {
@@ -158,21 +157,10 @@ nav {
 
 @media (max-width: 768px) {
 	nav {
-		display: none; /* Ocultar en móvil según el código original */
+		display: none; 
 	}
 }
 
-.menu-logo {
-	display: flex;
-	align-items: center;
-	width: 100%;
-	display: flex;
-	justify-content: flex-start; /* Alinear a la izquierda */
-	padding: 10px 15px;
-	background-color: #ffffff;
-	margin: 0;
-	order: 2; /* Colocar después del header principal */
-}
 
 .news-btn {
 	background-color: #f1f5f9;
@@ -300,11 +288,10 @@ nav a:hover {
 		border: none;
 	}
 
-	/* Mover los iconos al costado del logo */
 	.top-links {
 		display: flex;
-		order: 3; /* Colocar a la derecha */
-		position: static; /* Quitar posición absoluta */
+		order: 3; 
+		position: static; 
 		margin: 0;
 	}
 
@@ -318,18 +305,6 @@ nav a:hover {
 		display: none;
 	}
 
-	/* Reorganizar menu-logo para los botones */
-	.menu-logo {
-		width: 100%;
-		display: flex;
-		justify-content: flex-start; /* Alinear a la izquierda */
-		padding: 10px 15px;
-		background-color: #ffffff;
-		margin: 0;
-		order: 2; /* Colocar después del header principal */
-	}
-
-	/* Ajustar botones */
 	.news-btn {
 		margin: 0;
 		font-size: 14px;
@@ -340,7 +315,6 @@ nav a:hover {
 		padding: 8px 14px;
 	}
 
-	/* Quitar el punto del HTML y ponerlo con CSS */
 	.news-btn::before {
 		content: '●';
 		color: #ff3641;
@@ -348,20 +322,18 @@ nav a:hover {
 		display: inline-block;
 	}
 
-	/* Mover el botón de campaña al contenedor de botones */
 	.campain-btn {
-		margin-left: auto; /* Empujar a la derecha */
+		margin-left: auto; 
 		font-size: 14px;
 		padding: 8px 14px;
-		order: 2; /* Colocar a la derecha en el contenedor */
+		order: 2; 
 	}
 
-	/* Menú móvil */
 	nav.mobile-menu {
 		display: none;
 		flex-direction: column;
 		position: absolute;
-		top: 150px; /* Ajustar según la altura del header */
+		top: 150px; 
 		left: 0;
 		width: 100%;
 		background-color: white;
@@ -387,7 +359,6 @@ nav a:hover {
 	}
 }
 
-/* Estilos para el menú desplegable */
 .menu-overlay {
 	position: fixed;
 	top: 0;
@@ -404,7 +375,6 @@ nav a:hover {
 	display: block;
 }
 
-/* Botón de cierre */
 .close-menu {
 	position: absolute;
 	top: 20px;
@@ -417,7 +387,6 @@ nav a:hover {
 	z-index: 2100;
 }
 
-/* Contenedor del menú */
 .menu-container {
 	max-width: 1200px;
 	margin: 0 auto;
@@ -425,23 +394,10 @@ nav a:hover {
 	color: white;
 }
 
-/* Estilos para versión Desktop */
 .menu-desktop {
 	display: flex;
 	flex-direction: column;
 	gap: 30px;
-}
-
-/* Logo y navegación superior */
-.menu-header {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	margin-top: 20px;
-}
-
-.menu-header .menu-logo img {
-	width: 150px;
 }
 
 .menu-quick-icons {
@@ -454,18 +410,7 @@ nav a:hover {
 	font-size: 22px;
 }
 
-.menu-search {
-	display: flex;
-	width: 40%;
-}
 
-.menu-search input {
-	width: 100%;
-	padding: 10px 15px;
-	border: none;
-	border-radius: 20px 0 0 20px;
-	outline: none;
-}
 
 .search-btn {
 	background-color: #ffd700;
@@ -477,7 +422,6 @@ nav a:hover {
 	cursor: pointer;
 }
 
-/* Botones destacados */
 .menu-featured-buttons {
 	display: flex;
 	gap: 15px;
