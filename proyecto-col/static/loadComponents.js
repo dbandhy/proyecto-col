@@ -11,22 +11,24 @@ async function loadComponent(id, file, script) {
     if (script) {
       const scriptResponse = await fetch(script);
       const scriptText = await scriptResponse.text();
-      new Function(scriptText)();
+      new Function(scriptText)(); 
     }
+
   } catch (error) {
     console.error('Error al cargar el archivo:', error);
   }
 }
 
 // Cargar el header y footer
-loadComponent('main-header', '/components/header.html');
+loadComponent('main-header', '/components/header.html','/static/menu-desplegable.js');
 loadComponent('main-footer', '/components/footer.html');
-loadComponent('main-header-cine', '/cine/components/header-cine.html');
+loadComponent('main-menu-despegable', '/components/menu-despegable.html');
+loadComponent('main-header-cine', '/cine/components/header-cine.html','/static/menu-desplegable.js');
 loadComponent('main-slider-cine', '/cine/components/slider-cine.html');
-loadComponent('main-slider-estreno', '/cine/components/slider-estreno.html');
-loadComponent('main-slider-cartelera', '/cine/components/slider-estreno.html');
-loadComponent('main-slider-recomendado', '/cine/components/slider-estreno.html');
-loadComponent('main-slider-estreno-mobile', '/cine/components/slider-estreno-mobile.html');
+loadComponent('main-slider-estreno', '/cine/components/slider-estreno.html','/cine/static/slider-estreno.js');
+loadComponent('main-slider-cartelera', '/cine/components/slider-estreno.html','/cine/static/slider-estreno.js');
+loadComponent('main-slider-recomendado', '/cine/components/slider-estreno.html','/cine/static/slider-estreno.js');
+loadComponent('main-slider-estreno-mobile', '/cine/components/slider-estreno-mobile.html','/cine/static/slider-estreno.js');
 loadComponent('main-slider-detail', '/cine/components/slider-detail.html');
 loadComponent('main-slider-carrusel', '/cine/components/slider-carrusel.html', '/cine/static/slider-carrusel.js');
 

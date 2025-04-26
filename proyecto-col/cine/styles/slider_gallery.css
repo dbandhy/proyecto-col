@@ -1,3 +1,8 @@
+.carousel-gallery{
+    overflow: hidden;
+    width: clamp(18.75rem, 10.75rem + 35.556vw, 42.75rem);
+
+}
 .carousel-gallery .gallery-thumb.active {
     border: 3px solid #2056a7;
     opacity: 1;
