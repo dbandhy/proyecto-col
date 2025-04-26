@@ -429,17 +429,6 @@ nav a:hover {
 	gap: 30px;
 }
 
-/* Logo y navegación superior */
-.menu-header {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	margin-top: 20px;
-}
-
-.menu-header .menu-logo img {
-	width: 150px;
-}
 
 .menu-quick-icons {
 	display: flex;
@@ -451,18 +440,6 @@ nav a:hover {
 	font-size: 22px;
 }
 
-.menu-search {
-	display: flex;
-	width: 40%;
-}
-
-.menu-search input {
-	width: 100%;
-	padding: 10px 15px;
-	border: none;
-	border-radius: 20px 0 0 20px;
-	outline: none;
-}
 
 .search-btn {
 	background-color: #ffd700;
