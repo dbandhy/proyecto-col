@@ -29,5 +29,13 @@ const updateResponsiveAttributes = () => {
   }
 };
 
+export const getDeviceByWidth = () => {
+  const innerWidth = window.innerWidth;
+  if (innerWidth < 768) {
+    return 'mobile';
+  }
+  return 'desktop';
+}
+
 window.addEventListener('resize', updateResponsiveAttributes);
 updateResponsiveAttributes();
