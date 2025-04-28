@@ -5,49 +5,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Futbol Page</title>
   <link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
-		/>
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-		/>
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css"
-		/>
-		<link
-			href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
-			rel="stylesheet"
-		/>
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-			integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-			crossorigin="anonymous"
-			referrerpolicy="no-referrer"
-		/>
-		
-    <link rel="stylesheet" href="./styles/futbol.css">
-		<link rel="stylesheet" href="../styles/style.css" />
-		<!-- Estilos componentes -->
-		<link rel="stylesheet" href="../styles/header.css" />
-		<link rel="stylesheet" href="../styles/footer.css" />
-		<link rel="stylesheet" href="../styles/text.css">
-		<link rel="stylesheet" href="../static/components/button/button.css">
-		<link rel="stylesheet" href="../static/components/newsCard/newsCard.css" />
-		<link rel="stylesheet" href="../static/components/matchPreview/matchPreview.css">
-		<link rel="stylesheet" href="../static/components/cardNotice/cardNotice.css">
-		<!-- Componentes -->
-		<script src="../static/components/footer.js"></script>
-		<script src="../static/components/header.js"></script>
-		<script src="../static/components/newsCard/newsCard.js"></script>
-		<script src="../static/components/matchPreview/matchPreview.js"></script>
-		<script type="module" src="../static/components/Text/index.js"></script>
-		<script src="../static/components/cardNotice/cardNotice.js"></script>
-		<script src="../static/components/socialBar.js"></script>
+		rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+	/>
+	<link
+		rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+	/>
+	<link
+		rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css"
+	/>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
+		rel="stylesheet"
+	/>
+	<link
+		rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+		integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+		crossorigin="anonymous"
+		referrerpolicy="no-referrer"
+	/>
+	
+	<link rel="stylesheet" href="./styles/futbol.css">
+	<link rel="stylesheet" href="../styles/style.css" />
+	<!-- Estilos componentes -->
+	<link rel="stylesheet" href="../styles/header.css" />
+	<link rel="stylesheet" href="../styles/footer.css" />
+	<link rel="stylesheet" href="../styles/text.css">
+	<link rel="stylesheet" href="../static/components/button/button.css">
+	<link rel="stylesheet" href="../static/components/newsCard/newsCard.css" />
+	<link rel="stylesheet" href="../static/components/matchPreview/matchPreview.css">
+	<link rel="stylesheet" href="../static/components/cardNotice/cardNotice.css">
+	
+	<script src="../static/responsive.js"></script>
+	<!-- Componentes -->
+	<script src="../static/components/footer.js"></script>
+	<script src="../static/components/header.js"></script>
+	<script src="../static/components/newsCard/newsCard.js"></script>
+	<script src="../static/components/matchPreview/matchPreview.js"></script>
+	<script src="../static/components/Text/index.js"></script>
+	<script src="../static/components/cardNotice/cardNotice.js"></script>
+	<script src="../static/components/socialBar.js"></script>
 </head>
-<body class="body-container">
 <body class="body-container">
 	<header-component></header-component>
 
@@ -56,7 +57,7 @@
 			<social-bar-component></social-bar-component>
 		</div>
 	</div>
-	<text-component text="MI TEXTO" size="large"></text-component>
+
 	<main class="main-container">
 		<section class="main-section-content">
 			<div class="container-max-width">
@@ -661,7 +662,7 @@
 								</div>
 							</div>
 						</section>
-					  <div class="multimedia-section">
+					  <!-- <div class="multimedia-section">
 							<div class="section-header d-flex justify-content-between align-items-center mb-3">
 								<h2 class="section-title multimedia-title m-0 p-0">MULTIMEDIA</h2>
 								<button class="button color-primary size-large">Ver todo</button>
@@ -782,7 +783,7 @@
 							<div class="text-center mt-4">
 									<a href="#" class="btn btn-primary ver-mas-btn">Ver más</a>
 							</div>
-						</div>
+						</div> -->
 						<div class="results-live">
 							<div class="partidos-colombianos">
 								<div class="date-content">
@@ -1461,7 +1462,9 @@
 
 	<footer-component></footer-component>
 
-	<script src="../static/responsive.js"></script>
+	<script>
+		window.addEventListener('resize', updateResponsiveAttributes);
+	</script>
 </div>
 </body>
 </html>
