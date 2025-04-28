@@ -1,5 +1,3 @@
-import { getDeviceByWidth } from '../../responsive'
-
 class TextComponent extends HTMLElement {
   static get observedAttributes() {
     return ['size-mobile', 'size-desktop', 'text','weight','color', 'align'];
@@ -15,7 +13,7 @@ class TextComponent extends HTMLElement {
       this.render();
     }
     if (name === 'color') {
-      this.align = newValue;
+      this.color = newValue;
       this.render();
     }
     if (name === 'align') {
@@ -78,17 +76,16 @@ class TextComponent extends HTMLElement {
   }
 
   generateClassnames () {
-    let classnames = ''
+    let classnames = 'text'
     const typeDevice = getDeviceByWidth()
 
-    console.log('typeDevice', typeDevice)
-
-    if (this.sizeMobile) {
-      
-      switch (this.sizeMobile) {
-      
-      }
-      classnames += ` size-mobile-${this.sizeMobile}`
+    switch (typeDevice) {
+      case 'mobile':
+        classnames += ` size-${this.sizeMobile}`
+        break
+      case 'desktop':
+        classnames += ` size-${this.sizeDesktop}`
+        break
     }
     if (this.weight) {
       classnames += ` weight-${this.weight}`
@@ -99,6 +96,7 @@ class TextComponent extends HTMLElement {
     if (this.align) {
       classnames += ` align-${this.align}`
     }
+    
     return classnames
   }
 
@@ -106,7 +104,7 @@ class TextComponent extends HTMLElement {
     const classNames = this.generateClassnames()
 
     this.innerHTML = `
-      <span class=${classNames}>${this.text}</span>
+      <span class="${classNames}">${this.text}</span>
     `
   }
 }
