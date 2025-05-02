@@ -16,7 +16,6 @@ const updateResponsiveAttributes = () => {
     }
   }
 
-  console.log(window.innerWidth);
   if (window.innerWidth < 768) {
     cards.distribution.largeContent.forEach(card => card.setAttribute('distribution', 'equals'));
     cards.distribution.largeImage.forEach(card => card.setAttribute('distribution', 'large-content'));
