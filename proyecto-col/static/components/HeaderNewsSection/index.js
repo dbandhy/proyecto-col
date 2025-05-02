@@ -47,7 +47,7 @@ class HeaderNewsSection extends HTMLElement {
         <button-component
           text="${this.buttonText}"
           color="primary"
-          size="largue"
+          size="large"
           rounded="medium"
         ></button-component>
       </div>

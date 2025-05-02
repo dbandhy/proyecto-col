@@ -113,6 +113,24 @@
 .section-secondary .content .section-news-1 .news .news-4 {
   grid-area: news-4;
 }
+.section-secondary .content .section-news-1 .btn-more-news {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.section-secondary .content .section-news-1 .btn-more-news .button {
+  position: relative;
+  z-index: 2;
+}
+.section-secondary .content .section-news-1 .btn-more-news .separator-line {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #104596;
+  top: 50%;
+  transform: translateY(-50%);
+}
 .section-secondary .content .colombia-news {
   grid-area: colombia-news;
 }
@@ -152,9 +170,12 @@
   grid-template-columns: 1fr 1fr max-content 1fr 1fr;
   grid-template-areas: "hour country-1 results country-2 options";
   column-gap: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 25px;
   padding-top: 20px;
   border-bottom: 0.25px solid #104596;
+}
+.qualifiers .scores .score:last-child {
+  border-bottom: none;
 }
 .qualifiers .scores .score .country-1, .qualifiers .scores .score .country-2 {
   display: flex;
@@ -170,6 +191,7 @@
 }
 .qualifiers .scores .score .country-1 {
   grid-area: country-1;
+  justify-content: flex-end;
 }
 .qualifiers .scores .score .results {
   grid-area: results;
@@ -180,6 +202,17 @@
 }
 .qualifiers .scores .score .options {
   grid-area: options;
+}
+.qualifiers .options {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+.qualifiers .options img {
+  width: 150px;
+  height: 30px;
+  object-fit: cover;
 }
 
 .ligues-container {
@@ -225,7 +258,8 @@
   text-decoration: none;
 }
 .ligues-container.version-2 .list-ligues {
-  grid-template-columns: max-content max-content;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 100px;
   justify-content: space-between;
 }
 .ligues-container.version-2 .list-ligues .ligue {
@@ -233,6 +267,23 @@
 }
 .ligues-container.version-2 .list-ligues .ligue a {
   text-decoration: underline;
+}
+
+.date-content {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+  align-items: center;
+}
+.date-content div:first-child {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #FF3842;
+}
+.date-content span {
+  font-size: 9px;
+  font-weight: 400;
 }
 
 @media (max-width: 1200px) {
