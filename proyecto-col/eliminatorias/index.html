@@ -31,6 +31,7 @@
 
   <!-- STYLES -->
   <link rel="stylesheet" href="../styles/style.css" />
+  <link rel="stylesheet" href="../styles/components.css" />
   <link rel="stylesheet" href="./index.css">
 
   <!-- COMPONENTS STYLES -->
@@ -66,13 +67,7 @@
         <div class="updates">
           <div class="date-content">
             <div></div>
-            <text-component
-              size-mobile="9"
-              size-desktop="9"
-              text="ACTUALIZACIÓN - JUEVES, 7 SEPTIEMBRE 2025. 7:33PM"
-              weight="regular"
-              color="dark"
-            ></text-component>
+            <span>ACTUALIZACIÓN - JUEVES, 7 SEPTIEMBRE 2025. 7:33PM</span>
           </div>
           <div class="news">
             <news-card-component
@@ -99,23 +94,184 @@
               orientation="vertical"
               class="news-3"
             ></news-card-component>
+            <div class="publicity">
+              <img src="../assets/img/banner-copa-america.png" alt="Siente la emoción Copa América USA 2024" class="img-fluid">
+            </div>
           </div>
         </div>
         <section class="social-sidebar">
-          <social-sidebar
-            image="../assets/img/breaking-news-banner.png"
-            link=""
-          ></social-sidebar>
+          <social-sidebar image="../assets/img/breaking-news-banner.png" link=""></social-sidebar>
         </section>
         <div class="qualifiers">
-          ELIMINATORIAS
+          <text-component
+            size-mobile="18"
+            size-desktop="25"
+            text="ELIMINATORIAS SUDAMERICANA"
+            weight="bold"
+            color="primary"
+          ></text-component>
+          <div class="tabs theme-sky">
+            <div class="tab active">Resultados</div>
+            <div class="tab">Posiciones</div>
+            <div class="tab">Goles</div>
+          </div>
+          <header-desplegable-component class="w-100" text="Fase Regular" size="medium"></header-desplegable-component>
+          <div class="scores">
+            <div class="score">
+              <text-component
+                text="10:00PM"
+                color="dark"
+                size-mobile="14"
+                size-desktop="14"
+                weight="bold"
+              ></text-component>
+              <div class="country-1">
+                <text-component
+                  text="Colombia"
+                  color="primary"
+                  size-mobile="12"
+                  size-desktop="14"
+                  weight="bold"
+                ></text-component>
+                <img src="../assets/img/breaking-news-5.png" alt="country">
+              </div>
+              <div class="results">
+                <text-component
+                  text="3 - 0"
+                  color="primary"
+                  size-mobile="12"
+                  size-desktop="14"
+                  weight="bold"
+                ></text-component>
+              </div>
+              <div class="country-2">
+                <img src="../assets/img/breaking-news-5.png" alt="country">
+                <text-component
+                  text="Ecuador"
+                  color="primary"
+                  size-mobile="12"
+                  size-desktop="14"
+                  weight="bold"
+                ></text-component>
+              </div>
+              <div class="options">
+                <button-component
+                  text="Jugando"
+                  color="primary"
+                  size="small"
+                  rounded="small"
+                ></button-component>
+              </div>
+            </div>
+            <div class="score">
+              <text-component
+                text="10:00PM"
+                color="dark"
+                size-mobile="14"
+                size-desktop="14"
+                weight="bold"
+              ></text-component>
+              <div class="country-1">
+                <text-component
+                  text="Colombia"
+                  color="primary"
+                  size-mobile="12"
+                  size-desktop="14"
+                  weight="bold"
+                ></text-component>
+                <img src="../assets/img/breaking-news-5.png" alt="country">
+              </div>
+              <div class="results">
+                <text-component
+                  text="3 - 0"
+                  color="primary"
+                  size-mobile="12"
+                  size-desktop="14"
+                  weight="bold"
+                ></text-component>
+              </div>
+              <div class="country-2">
+                <img src="../assets/img/breaking-news-5.png" alt="country">
+                <text-component
+                  text="Ecuador"
+                  color="primary"
+                  size-mobile="12"
+                  size-desktop="14"
+                  weight="bold"
+                ></text-component>
+              </div>
+              <div class="options">
+                <button-component
+                  text="Jugando"
+                  color="primary"
+                  size="small"
+                  rounded="small"
+                ></button-component>
+              </div>
+            </div>
+            <div class="score">
+              <text-component
+                text="10:00PM"
+                color="dark"
+                size-mobile="14"
+                size-desktop="14"
+                weight="bold"
+              ></text-component>
+              <div class="country-1">
+                <text-component
+                  text="Colombia"
+                  color="primary"
+                  size-mobile="12"
+                  size-desktop="14"
+                  weight="bold"
+                ></text-component>
+                <img src="../assets/img/breaking-news-5.png" alt="country">
+              </div>
+              <div class="results">
+                <text-component
+                  text="3 - 0"
+                  color="primary"
+                  size-mobile="12"
+                  size-desktop="14"
+                  weight="bold"
+                ></text-component>
+              </div>
+              <div class="country-2">
+                <img src="../assets/img/breaking-news-5.png" alt="country">
+                <text-component
+                  text="Ecuador"
+                  color="primary"
+                  size-mobile="12"
+                  size-desktop="14"
+                  weight="bold"
+                ></text-component>
+              </div>
+              <div class="options">
+                <button-component
+                  text="Jugando"
+                  color="primary"
+                  size="small"
+                  rounded="small"
+                ></button-component>
+              </div>
+            </div>
+          </div>
+          <div class="options">
+            <img src="../../assets/img/breaking-news-5.png" alt="powered-by score 24">
+            <button-component
+              text="Ver más"
+              size="large"
+              color="primary"
+              rounded="large"
+            ></button-component>
+          </div>
         </div>
       </div>
     </div>
     <div class="section-secondary">
       <div class="content">
         <div class="section-ligues">
-          <div class="ligues-container version-2">
+          <div class="ligues-container version-2" id="ligue">
             <text-component
               size-mobile="18"
               size-desktop="25"
@@ -213,6 +369,12 @@
               author="Por Juan Carlos Garcia Sierra"
               distribution="large-content"
               subtitle="La ayuda a quien lo necesita no solo beneficia a una persona comunidades"
+              class="
+                orientation-vertical-responsive
+                distribution-none-responsive
+                no-category-responsive
+                no-subtitle-responsive
+              "
             ></card-notice-component>
             <card-notice-component
               image="../assets/img/breaking-news-10.png"
@@ -222,6 +384,12 @@
               author="Por Juan Carlos Garcia Sierra"
               distribution="large-content"
               subtitle="La ayuda a quien lo necesita no solo beneficia a una persona comunidades"
+              class="
+                orientation-vertical-responsive
+                distribution-none-responsive
+                no-category-responsive
+                no-subtitle-responsive
+              "  
             ></card-notice-component>
             <card-notice-component
               image="../assets/img/breaking-news-10.png"
@@ -231,6 +399,10 @@
               author="Por Juan Carlos Garcia Sierra"
               distribution="large-content"
               subtitle="La ayuda a quien lo necesita no solo beneficia a una persona comunidades"
+              class="
+                no-category-responsive
+                no-subtitle-responsive
+              "    
             ></card-notice-component>
             <card-notice-component
               image="../assets/img/breaking-news-10.png"
@@ -240,7 +412,46 @@
               author="Por Juan Carlos Garcia Sierra"
               distribution="large-content"
               subtitle="La ayuda a quien lo necesita no solo beneficia a una persona comunidades"
+              class="
+                no-category-responsive
+                no-subtitle-responsive
+              "  
             ></card-notice-component>
+            <card-notice-component
+              image="../assets/img/breaking-news-10.png"
+              news="Donald Trump reconoció a Edmundo González"
+              category="COLOMBIANOS"
+              orientation="horizontal"
+              author="Por Juan Carlos Garcia Sierra"
+              distribution="large-content"
+              subtitle="La ayuda a quien lo necesita no solo beneficia a una persona comunidades"
+              class="
+                no-category-responsive
+                no-subtitle-responsive
+              "  
+            ></card-notice-component>
+            <card-notice-component
+              image="../assets/img/breaking-news-10.png"
+              news="Donald Trump reconoció a Edmundo González"
+              category="COLOMBIANOS"
+              orientation="horizontal"
+              author="Por Juan Carlos Garcia Sierra"
+              distribution="large-content"
+              subtitle="La ayuda a quien lo necesita no solo beneficia a una persona comunidades"
+              class="
+                no-category-responsive
+                no-subtitle-responsive
+              "  
+            ></card-notice-component>
+          </div>
+          <div class="btn-more-news">
+            <div class="separator-line"></div>
+            <button-component
+              text="Ver más"
+              rounded="medium"
+              color="primary"
+              size="large"
+            ></button-component>
           </div>
         </div>
         <div class="section-multimedia">
@@ -248,7 +459,6 @@
             title-text="MULTIMEDIA"
             button-text="Ver todo"
           ></header-news-section>
-
           <div class="videos">
             <card-notice-component
               video="https://www.youtube.com/embed/Q7yrRaY488A?si=07MGk24bTobMn2mB"
@@ -296,56 +506,68 @@
               subtitle="La ayuda a quien lo necesita no solo beneficia a una persona comunidades"
             ></card-notice-component>
           </div>
-          
         </div>
         <div class="publicity-1">
           <img src="../assets/img/banner-copa-america.png" alt="Siente la emoción Copa América USA 2024" class="img-fluid">
         </div>
-        <section class="colombiaNews">
-          <span class="text color-primary weight-bold center">LO ÚLTIMO EN COLOMBIA</span>
-          <div class="news">
-            <card-notice-component
-              id="main-card-one"
-              image="../assets/img/breaking-news-5.png"
-              news="Donald Trump reconoció a Edmundo González"
-              orientation="vertical"
-              author="Por Juan Carlos Garcia Sierra"
-              distribution="none"
-              classnames="new"
-            ></card-notice-component>
-            <card-notice-component
-              id="main-card-one"
-              image="../assets/img/breaking-news-5.png"
-              news="Donald Trump reconoció a Edmundo González"
-              orientation="horizontal"
-              author="Por Juan Carlos Garcia Sierra"
-              distribution="equals"
-              classnames="new"
-            ></card-notice-component>
-            <card-notice-component
-              id="main-card-one"
-              image="../assets/img/breaking-news-5.png"
-              news="Donald Trump reconoció a Edmundo González"
-              orientation="horizontal"
-              author="Por Juan Carlos Garcia Sierra"
-              distribution="equals"
-              classnames="new"
-            ></card-notice-component>
-            <card-notice-component
-              id="main-card-one"
-              image="../assets/img/breaking-news-5.png"
-              news="Donald Trump reconoció a Edmundo González"
-              orientation="horizontal"
-              author="Por Juan Carlos Garcia Sierra"
-              distribution="equals"
-              classnames="new"
-            ></card-notice-component>
+        <section class="colombia-news">
+          <div class="colombiaNews">
+            <span class="text color-primary weight-bold center">LO ÚLTIMO EN COLOMBIA</span>
+            <div class="news">
+              <card-notice-component
+                id="main-card-one"
+                image="../assets/img/breaking-news-5.png"
+                news="Donald Trump reconoció a Edmundo González"
+                orientation="vertical"
+                author="Por Juan Carlos Garcia Sierra"
+                distribution="none"
+                classnames="new"
+              ></card-notice-component>
+              <card-notice-component
+                id="main-card-one"
+                image="../assets/img/breaking-news-5.png"
+                news="Donald Trump reconoció a Edmundo González"
+                orientation="horizontal"
+                author="Por Juan Carlos Garcia Sierra"
+                distribution="equals"
+                classnames="new"
+              ></card-notice-component>
+              <card-notice-component
+                id="main-card-one"
+                image="../assets/img/breaking-news-5.png"
+                news="Donald Trump reconoció a Edmundo González"
+                orientation="horizontal"
+                author="Por Juan Carlos Garcia Sierra"
+                distribution="equals"
+                classnames="new"
+              ></card-notice-component>
+              <card-notice-component
+                id="main-card-one"
+                image="../assets/img/breaking-news-5.png"
+                news="Donald Trump reconoció a Edmundo González"
+                orientation="horizontal"
+                author="Por Juan Carlos Garcia Sierra"
+                distribution="equals"
+                classnames="new"
+              ></card-notice-component>
+            </div>
           </div>
+          
         </section>
       </div>
     </div>
     <footer-component></footer-component>
     <script>
+      const ligue = document.getElementById("ligue")
+
+      if (window.innerWidth < 768) {
+        ligue.classList.remove("version-2")
+        ligue.classList.add("version-1")
+      } else {
+        ligue.classList.remove("version-1")
+        ligue.classList.add("version-2")
+      }
+
       updateResponsiveAttributes()
     </script>
   </div>

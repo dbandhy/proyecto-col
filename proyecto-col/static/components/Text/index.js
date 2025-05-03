@@ -1,6 +1,6 @@
 class TextComponent extends HTMLElement {
   static get observedAttributes() {
-    return ['size-mobile', 'size-desktop', 'text','weight','color', 'align'];
+    return ['size-mobile', 'size-desktop', 'text','weight','color', 'align', 'classnames'];
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
@@ -26,6 +26,10 @@ class TextComponent extends HTMLElement {
     }
     if (name === 'size-desktop') {
       this.sizeDesktop = newValue;
+      this.render();
+    }
+    if (name === 'classnames') {
+      this.classnames = newValue;
       this.render();
     }
   }
@@ -62,6 +66,14 @@ class TextComponent extends HTMLElement {
     return this._align
   }
 
+  set classnames (val) {
+    this._classnames = val
+    this.render()
+  }
+  get classnames () {
+    return this._classnames
+  }
+
   set sizeMobile (val) {
     this._sizeMobile = val
     this.render()
@@ -96,13 +108,16 @@ class TextComponent extends HTMLElement {
     if (this.align) {
       classnames += ` align-${this.align}`
     }
-    
+    if (this.classnames) {
+      classnames += ` ${this.classnames}`
+    }
+
     return classnames
   }
 
   render () {
     const classNames = this.generateClassnames()
-
+    this.style.height = 'max-content'
     this.innerHTML = `
       <span class="${classNames}">${this.text}</span>
     `
