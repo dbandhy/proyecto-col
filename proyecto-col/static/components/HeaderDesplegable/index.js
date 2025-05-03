@@ -36,7 +36,6 @@ class HeaderDesplegableComponent extends HTMLElement {
 
   generateClassnames () {
     let classnames = ''
-    const typeDevice = getDeviceByWidth()
 
     if (this.size) {
       classnames += ` size-${this.size}`
@@ -48,11 +47,9 @@ class HeaderDesplegableComponent extends HTMLElement {
     const classnames = this.generateClassnames()
 
     this.innerHTML = `
-      <div class="select ${classnames}">
-        <div class="placeholder">
-          <span>Ver por torneo</span>
-          <i class="fa-solid fa-angle-down"></i>
-        </div>
+      <div class="header-desplegable ${classnames}">
+        <span>${this.text}</span>
+        <i class="fa-solid fa-angle-down"></i>
       </div>
     `
   }
