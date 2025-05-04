@@ -1,5 +1,7 @@
 .text {
-  width: max-content;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
   /* SIZES */
   /* COLOR */
   /* WEIGHT */
@@ -52,6 +54,9 @@
 }
 .text.color-dark {
   color: #191C36;
+}
+.text.color-gray {
+  color: #7C7C7C;
 }
 .text.weight-regular {
   font-weight: 400;
