@@ -1,6 +1,6 @@
 class TextComponent extends HTMLElement {
   static get observedAttributes() {
-    return ['size-mobile', 'size-desktop', 'text','weight','color', 'align', 'classnames'];
+    return ['size-mobile', 'size-desktop', 'text','weight','color', 'text-align', 'classnames'];
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
@@ -16,8 +16,8 @@ class TextComponent extends HTMLElement {
       this.color = newValue;
       this.render();
     }
-    if (name === 'align') {
-      this.align = newValue;
+    if (name === 'text-align') {
+      this.textAlign = newValue;
       this.render();
     }
     if (name === 'size-mobile') {
@@ -58,12 +58,12 @@ class TextComponent extends HTMLElement {
     return this._color
   }
 
-  set align (val) {
-    this._align = val
+  set text_align (val) {
+    this._textAlign = val
     this.render()
   }
-  get align () {
-    return this._align
+  get textAlign () {
+    return this._textAlign
   }
 
   set classnames (val) {
@@ -105,8 +105,8 @@ class TextComponent extends HTMLElement {
     if (this.color) {
       classnames += ` color-${this.color}`
     }
-    if (this.align) {
-      classnames += ` align-${this.align}`
+    if (this.textAlign) {
+      classnames += ` align-${this.textAlign}`
     }
     if (this.classnames) {
       classnames += ` ${this.classnames}`
@@ -118,6 +118,7 @@ class TextComponent extends HTMLElement {
   render () {
     const classNames = this.generateClassnames()
     this.style.height = 'max-content'
+    this.style.width = 'max-content'
     this.innerHTML = `
       <span class="${classNames}">${this.text}</span>
     `

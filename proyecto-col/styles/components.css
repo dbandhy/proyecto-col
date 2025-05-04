@@ -1,15 +1,17 @@
 .tabs {
-  display: flex;
+  display: grid;
   border-radius: 20px;
   background-color: white;
   width: 100%;
+  grid-template-columns: repeat(3, minmax(max-content, 1fr));
 }
 .tabs.theme-sky {
   background-color: #F3F8FF;
 }
 .tabs .tab {
   display: flex;
-  flex: 1;
+  width: auto;
+  max-width: 100%;
   justify-content: center;
   align-items: center;
   color: #191C36;
