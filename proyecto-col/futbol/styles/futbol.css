@@ -135,7 +135,7 @@
   max-width: var(--max-width-content);
   grid-template-columns: 6fr 4fr;
   grid-template-rows: auto;
-  grid-template-areas: "news teams" "news liga-colombiana" "news liga-colombiana" "partidos-colombianos publicity-one" "articulos-relacionados articulos-relacionados" "more-news colombia-news" "more-news colombia-news" "results-live banner-one" "results-live ligue" "results-live partido-live" "section-more-news-two banner-two" "section-more-news-two banner-two" "related-articles-two related-articles-two" "section-more-news-three banner-three" "section-more-news-fourth section-more-news-fourth" "section-last-news section-last-news" "multimedia das";
+  grid-template-areas: "section-news-1 teams" "section-news-1 liga-colombiana" "section-news-1 liga-colombiana" "partidos-colombianos publicity-one" "articulos-relacionados articulos-relacionados" "more-news colombia-news" "more-news colombia-news" "results-live banner-one" "results-live ligue" "results-live partido-live" "section-more-news-two banner-two" "section-more-news-two banner-two" "related-articles-two related-articles-two" "section-more-news-three banner-three" "section-more-news-fourth section-more-news-fourth" "section-last-news section-last-news" "multimedia das";
   column-gap: 33px;
   row-gap: 37px;
   margin: 0 auto;
@@ -415,7 +415,7 @@
 }
 .section-secondary .content .image-publicity-one {
   grid-area: image-publicity-one;
-  display: flex;
+  display: none;
   justify-content: center;
 }
 .section-secondary .content .image-publicity-one img {
@@ -454,10 +454,15 @@
   font-size: 14px !important;
 }
 .section-secondary .content .multimedia-section {
-  grid-area: multimedia;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
 }
-.section-secondary .content .multimedia-section iframe {
-  width: 100%;
+.section-secondary .content .multimedia-section .videos {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  row-gap: 16px;
 }
 .section-secondary .content .publicity {
   grid-area: publicity-one;
@@ -471,8 +476,8 @@
 .section-secondary .content .results-live {
   grid-area: results-live;
 }
-.section-secondary .content > .news-content {
-  grid-area: news;
+.section-secondary .content .section-news-1 {
+  grid-area: section-news-1;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: max-content repeat(5, 200px);
@@ -481,32 +486,32 @@
   width: 100%;
   grid-template-areas: "title title title" "news-one news-one news-one" "news-two news-two news-two" "news-three news-fourth news-fourth" "news-three news-five news-five" "news-three news-six news-six";
 }
-.section-secondary .content > .news-content > .title {
+.section-secondary .content .section-news-1 > .title {
   grid-area: title;
   display: flex;
   justify-content: space-between;
   width: 100%;
   align-items: center;
 }
-.section-secondary .content > .news-content .newsOne {
+.section-secondary .content .section-news-1 .newsOne {
   grid-area: news-one;
 }
-.section-secondary .content > .news-content .newsTwo {
+.section-secondary .content .section-news-1 .newsTwo {
   grid-area: news-two;
 }
-.section-secondary .content > .news-content .newsThree {
+.section-secondary .content .section-news-1 .newsThree {
   grid-area: news-three;
 }
-.section-secondary .content > .news-content .newsFourth {
+.section-secondary .content .section-news-1 .newsFourth {
   grid-area: news-fourth;
 }
-.section-secondary .content > .news-content .newsFive {
+.section-secondary .content .section-news-1 .newsFive {
   grid-area: news-five;
 }
-.section-secondary .content > .news-content .newsSix {
+.section-secondary .content .section-news-1 .newsSix {
   grid-area: news-six;
 }
-.section-secondary .content > .news-content .options {
+.section-secondary .content .section-news-1 .options {
   display: none;
 }
 .section-secondary .content .section-more-news-one {
@@ -602,7 +607,7 @@
 .section-secondary .content .section-more-news-three > .title span {
   font-size: 25px;
 }
-.section-secondary .content .section-more-news-three > .news {
+.section-secondary .content .section-more-news-three .news {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(5, max-content);
@@ -610,22 +615,22 @@
   row-gap: 22px;
   grid-template-areas: "news-1 news-1 news-1" "news-2 news-2 news-2" "news-3 news-4 news-4" "news-3 news-5 news-5" "news-3 news-6 news-6";
 }
-.section-secondary .content .section-more-news-three > .news .news-1 {
+.section-secondary .content .section-more-news-three .news .news-1 {
   grid-area: news-1;
 }
-.section-secondary .content .section-more-news-three > .news .news-2 {
+.section-secondary .content .section-more-news-three .news .news-2 {
   grid-area: news-2;
 }
-.section-secondary .content .section-more-news-three > .news .news-3 {
+.section-secondary .content .section-more-news-three .news .news-3 {
   grid-area: news-3;
 }
-.section-secondary .content .section-more-news-three > .news .news-4 {
+.section-secondary .content .section-more-news-three .news .news-4 {
   grid-area: news-4;
 }
-.section-secondary .content .section-more-news-three > .news .news-5 {
+.section-secondary .content .section-more-news-three .news .news-5 {
   grid-area: news-5;
 }
-.section-secondary .content .section-more-news-three > .news .news-6 {
+.section-secondary .content .section-more-news-three .news .news-6 {
   grid-area: news-6;
 }
 .section-secondary .content .section-more-news-three .options {
@@ -877,29 +882,26 @@
 }
 
 @media (max-width: 768px) {
-  .container-max-width {
-    padding: 0 !important;
-  }
-  .matches-section .content .updates {
+  .section-main .content .updates {
     display: flex;
     gap: 13px;
     flex-direction: column;
   }
-  .matches-section .content .updates .list-cards {
+  .section-main .content .updates .list-cards {
     flex-direction: column;
   }
-  .matches-section .content .updates .list-cards .body .title {
+  .section-main .content .updates .list-cards .body .title {
     font-size: 22px;
   }
-  .matches-section .content .matches-television {
+  .section-main .content .matches-television {
     display: grid;
     grid-template-columns: 100%;
     row-gap: 15px;
   }
-  .matches-section .content .matches-television > .title {
+  .section-main .content .matches-television > .title {
     font-size: 18px;
   }
-  .matches-section .content .matches-television .date {
+  .section-main .content .matches-television .date {
     grid-column: span 12 !important;
     margin-right: 0 !important;
     column-gap: 10px;
@@ -907,237 +909,236 @@
     background-color: transparent;
     align-items: center;
   }
-  .matches-section .content .matches-television .date .dates-content {
+  .section-main .content .matches-television .date .dates-content {
     background-color: white;
     padding: 20px 30px;
   }
-  .matches-section .content .matches-television .date .dates-content .date-item {
+  .section-main .content .matches-television .date .dates-content .date-item {
     font-size: 10px !important;
   }
-  .matches-section .content .matches-television .options {
+  .section-main .content .matches-television .options {
     grid-column: span 12 !important;
     display: flex;
     flex-direction: column;
   }
-  .matches-section .content .matches-television .options .select {
+  .section-main .content .matches-television .options .select {
     width: max-content;
   }
-  .matches-section .content .matches-television .options > div {
+  .section-main .content .matches-television .options > div {
     width: 100%;
   }
-  .matches-section .content .matches-television .partidos {
+  .section-main .content .matches-television .partidos {
     grid-template-columns: repeat(2, 1fr);
     gap: 13px;
   }
-  .matches-section .content .matches-television .partidos match-preview-component:nth-child(n+3) {
+  .section-main .content .matches-television .partidos match-preview-component:nth-child(n+3) {
     display: none;
   }
-  .matches-section .content .publicity {
+  .section-main .content .publicity {
     display: none !important;
   }
-  .section-news-content {
-    grid-column: 2/12;
+  .section-secondary {
     padding: 30px 0 30px 0;
   }
-  .section-news-content > .news-advanced {
+  .section-secondary .content {
     display: grid;
     grid-template-columns: 100%;
     column-gap: 50px;
     row-gap: 50px;
-    grid-template-areas: "publicity-one" "news" "liga-colombiana" "image-publicity-one" "teams" "partidos-colombianos" "more-news" "colombia-news" "section-more-news-two" "results-live" "section-more-news-three" "section-more-news-fourth" "image-publicity-two" "section-last-news" "ligue" "partido-live" "multimedia";
+    grid-template-areas: "publicity-one" "section-news-1" "liga-colombiana" "image-publicity-one" "teams" "partidos-colombianos" "more-news" "colombia-news" "section-more-news-two" "results-live" "section-more-news-three" "section-more-news-fourth" "image-publicity-two" "section-last-news" "ligue" "partido-live" "multimedia";
   }
-  .section-news-content > .news-advanced > .news-content {
+  .section-secondary .content .section-news-1 {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: max-content;
     grid-template-areas: "title" "news-one" "news-two" "news-three" "news-fourth" "news-five" "news-six";
   }
-  .section-news-content > .news-advanced > .news-content .title {
+  .section-secondary .content .section-news-1 .title {
     justify-content: center;
   }
-  .section-news-content > .news-advanced > .news-content .title > .button {
+  .section-secondary .content .section-news-1 .title > .button {
     display: none !important;
   }
-  .section-news-content > .news-advanced > .news-content .title span {
+  .section-secondary .content .section-news-1 .title span {
     font-size: 18px;
   }
-  .section-news-content > .news-advanced > .news-content .options {
+  .section-secondary .content .section-news-1 .options {
     display: flex !important;
     justify-content: center;
   }
-  .section-news-content > .news-advanced .liga-colombiana {
+  .section-secondary .content .liga-colombiana {
     padding: 23px 35px;
   }
-  .section-news-content > .news-advanced .teams-list {
+  .section-secondary .content .teams-list {
     grid-template-columns: repeat(5, 1fr);
   }
-  .section-news-content > .news-advanced .section-more-news-one {
+  .section-secondary .content .section-more-news-one {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: max-content;
     grid-template-areas: "title title" "news-one news-one" "news-two news-three" "news-fourth news-five" "options options";
   }
-  .section-news-content > .news-advanced .section-more-news-one > .title {
+  .section-secondary .content .section-more-news-one > .title {
     justify-content: center;
   }
-  .section-news-content > .news-advanced .section-more-news-one > .title span {
+  .section-secondary .content .section-more-news-one > .title span {
     font-size: 18px;
   }
-  .section-news-content > .news-advanced .section-more-news-one > .title .button {
+  .section-secondary .content .section-more-news-one > .title .button {
     display: none !important;
   }
-  .section-news-content > .news-advanced .section-more-news-one .newsSix {
+  .section-secondary .content .section-more-news-one .newsSix {
     display: none !important;
   }
-  .section-news-content > .news-advanced .section-more-news-one .options {
+  .section-secondary .content .section-more-news-one .options {
     grid-area: options;
     display: flex !important;
     justify-content: center;
   }
-  .section-news-content > .news-advanced .section-more-news-two {
+  .section-secondary .content .section-more-news-two {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: max-content;
     column-gap: 12px;
     grid-template-areas: "title title" "news-one news-one" "news-two news-three" "news-fourth news-five" "options options";
   }
-  .section-news-content > .news-advanced .section-more-news-two > .title {
+  .section-secondary .content .section-more-news-two > .title {
     justify-content: center;
   }
-  .section-news-content > .news-advanced .section-more-news-two > .title span {
+  .section-secondary .content .section-more-news-two > .title span {
     font-size: 18px;
   }
-  .section-news-content > .news-advanced .section-more-news-two > .title .button {
+  .section-secondary .content .section-more-news-two > .title .button {
     display: none !important;
   }
-  .section-news-content > .news-advanced .section-more-news-two .news-five {
+  .section-secondary .content .section-more-news-two .news-five {
     display: flex !important;
   }
-  .section-news-content > .news-advanced .section-more-news-two .options {
+  .section-secondary .content .section-more-news-two .options {
     display: flex !important;
     justify-content: center;
   }
-  .section-news-content > .news-advanced .section-more-news-three .title {
+  .section-secondary .content .section-more-news-three .title {
     justify-content: center;
   }
-  .section-news-content > .news-advanced .section-more-news-three .title span {
+  .section-secondary .content .section-more-news-three .title span {
     font-size: 18px;
   }
-  .section-news-content > .news-advanced .section-more-news-three .title .button {
+  .section-secondary .content .section-more-news-three .title .button {
     display: none !important;
   }
-  .section-news-content > .news-advanced .section-more-news-three .news {
+  .section-secondary .content .section-more-news-three .news {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: max-content;
     grid-template-areas: "news-1 news-1" "news-2 news-3" "news-4 news-5";
   }
-  .section-news-content > .news-advanced .section-more-news-three .news .news-6 {
+  .section-secondary .content .section-more-news-three .news .news-6 {
     display: none;
   }
-  .section-news-content > .news-advanced .section-more-news-three .options {
+  .section-secondary .content .section-more-news-three .options {
     display: flex !important;
     justify-content: center;
   }
-  .section-news-content > .news-advanced .section-more-news-fourth > .title {
+  .section-secondary .content .section-more-news-fourth > .title {
     justify-content: center;
   }
-  .section-news-content > .news-advanced .section-more-news-fourth > .title span {
+  .section-secondary .content .section-more-news-fourth > .title span {
     font-size: 18px;
   }
-  .section-news-content > .news-advanced .section-more-news-fourth > .title .button {
+  .section-secondary .content .section-more-news-fourth > .title .button {
     display: none !important;
   }
-  .section-news-content > .news-advanced .section-more-news-fourth > .news {
+  .section-secondary .content .section-more-news-fourth > .news {
     grid-template-areas: "news-1" "news-2" "news-3" "news-4" "news-5" "news-6" "news-7" "news-8" "news-9" "news-10" "news-11" "news-12";
   }
-  .section-news-content > .news-advanced .section-more-news-fourth > .news .news-4 {
+  .section-secondary .content .section-more-news-fourth > .news .news-4 {
     display: flex !important;
   }
-  .section-news-content > .news-advanced .section-more-news-fourth > .news .news-5 {
+  .section-secondary .content .section-more-news-fourth > .news .news-5 {
     display: flex !important;
   }
-  .section-news-content > .news-advanced .section-more-news-fourth > .news .news-6 {
+  .section-secondary .content .section-more-news-fourth > .news .news-6 {
     display: flex !important;
   }
-  .section-news-content > .news-advanced .section-more-news-fourth > .news .news-7 {
+  .section-secondary .content .section-more-news-fourth > .news .news-7 {
     display: flex !important;
   }
-  .section-news-content > .news-advanced .section-more-news-fourth > .news .news-8 {
+  .section-secondary .content .section-more-news-fourth > .news .news-8 {
     display: flex !important;
   }
-  .section-news-content > .news-advanced .section-more-news-fourth > .news .news-9 {
+  .section-secondary .content .section-more-news-fourth > .news .news-9 {
     display: flex !important;
   }
-  .section-news-content > .news-advanced .section-more-news-fourth > .news .news-10 {
+  .section-secondary .content .section-more-news-fourth > .news .news-10 {
     display: flex !important;
   }
-  .section-news-content > .news-advanced .section-more-news-fourth > .news .news-12 {
+  .section-secondary .content .section-more-news-fourth > .news .news-12 {
     display: flex !important;
   }
-  .section-news-content > .news-advanced .section-more-news-fourth .options {
+  .section-secondary .content .section-more-news-fourth .options {
     display: flex !important;
     justify-content: center;
   }
-  .section-news-content > .news-advanced .section-last-news .title {
+  .section-secondary .content .section-last-news .title {
     justify-content: center;
   }
-  .section-news-content > .news-advanced .section-last-news .title span {
+  .section-secondary .content .section-last-news .title span {
     font-size: 18px;
   }
-  .section-news-content > .news-advanced .section-last-news .title .button {
+  .section-secondary .content .section-last-news .title .button {
     display: none !important;
   }
-  .section-news-content > .news-advanced .section-last-news > .news {
+  .section-secondary .content .section-last-news > .news {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: max-content;
     row-gap: 20px;
     grid-template-areas: "news-2 news-2" "news-3 news-3" "news-4 news-4" "news-5 news-6" "news-7 news-8" "news-9 news-10" "news-11 news-12";
   }
-  .section-news-content > .news-advanced .section-last-news > .news .news-1 {
+  .section-secondary .content .section-last-news > .news .news-1 {
     display: none !important;
   }
-  .section-news-content > .news-advanced .section-last-news > .news .news-6 {
+  .section-secondary .content .section-last-news > .news .news-6 {
     display: flex !important;
   }
-  .section-news-content > .news-advanced .section-last-news > .news .news-7 {
+  .section-secondary .content .section-last-news > .news .news-7 {
     display: flex !important;
   }
-  .section-news-content > .news-advanced .section-last-news > .news .news-8 {
+  .section-secondary .content .section-last-news > .news .news-8 {
     display: flex !important;
   }
-  .section-news-content > .news-advanced .section-last-news > .news .news-9 {
+  .section-secondary .content .section-last-news > .news .news-9 {
     display: flex !important;
   }
-  .section-news-content > .news-advanced .section-last-news > .news .news-10 {
+  .section-secondary .content .section-last-news > .news .news-10 {
     display: flex !important;
   }
-  .section-news-content > .news-advanced .section-last-news > .news .news-11 {
+  .section-secondary .content .section-last-news > .news .news-11 {
     display: flex !important;
   }
-  .section-news-content > .news-advanced .section-last-news > .news .news-12 {
+  .section-secondary .content .section-last-news > .news .news-12 {
     display: flex !important;
   }
-  .section-news-content > .news-advanced .section-last-news .options {
+  .section-secondary .content .section-last-news .options {
     display: flex !important;
     justify-content: center;
   }
-  .section-news-content > .news-advanced .section-banner-one {
+  .section-secondary .content .section-banner-one {
     display: none !important;
   }
-  .section-news-content > .news-advanced .section-banner-two {
+  .section-secondary .content .section-banner-two {
     display: none !important;
   }
-  .section-news-content > .news-advanced .banner-three {
+  .section-secondary .content .banner-three {
     display: none !important;
   }
-  .section-news-content > .news-advanced .image-publicity-one {
+  .section-secondary .content .image-publicity-one {
     display: flex !important;
   }
-  .section-news-content > .news-advanced .image-publicity-two {
+  .section-secondary .content .image-publicity-two {
     display: flex !important;
   }
-  .section-news-content > .news-advanced .section-related-articles-two {
+  .section-secondary .content .section-related-articles-two {
     display: none;
   }
-  .section-news-content > .news-advanced .articulos-relacionados {
+  .section-secondary .content .articulos-relacionados {
     display: none;
   }
   .colombiaNews span {
