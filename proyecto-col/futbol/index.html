@@ -75,6 +75,9 @@
 					</div>
 					<div class="list-cards">
 						<news-card-component category="JHON DURÁN" title="Aston Villa confirmó dónde jugará Jhon Durán" image="https://crests.football-data.org/65.svg"></news-card-component>
+						<div class="publicity-1">
+							<img src="../assets/img/banner-copa-america.png" alt="Siente la emoción Copa América USA 2024" class="img-fluid">
+						</div>
 						<news-card-component category="FICHAJES" title="Aston Villa confirmó dónde jugará Jhon Durán" image="https://crests.football-data.org/65.svg"></news-card-component>
 						<news-card-component category="SUPERLIGA" title="Aston Villa confirmó dónde jugará Jhon Durán" image="https://crests.football-data.org/65.svg"></news-card-component>
 					</div>
@@ -93,10 +96,7 @@
 						<div class="btn-icon"><i class="fa-solid fa-angle-right"></i></div>
 					</div>
 					<div class="options">
-						<div href="#" class="select">
-							<span>Ver por torneo</span>
-							<i class="fa-solid fa-angle-down"></i>
-						</div>
+						<header-desplegable-component text="Ver por torneo" size="medium"></header-desplegable-component>
 						<a href="#" class="button color-warning size-large rounded-large">Ver todos los partidos</a>
 					</div>
 					<div class="partidos">
@@ -214,80 +214,176 @@
 						<div class="small-circle-red"></div>
 						<span>ACTUALIZACIÓN - JUEVES, 7 SEPTIEMBRE 2025. 7:33PM</span>
 					</div>
-					<div class="title text center color-primary weight-bold">PARTIDOS COLOMBIANOS</div>
+					<text-component text="PARTIDOS DE LOS COLOMBIANOS" weight="bold" color="primary" size-desktop="20" size-mobile="20"></text-component>
 					<div class="tornaments">
 						<div class="sections">
-							<div class="select">
-								<span>CUADRANGULAR A</span>
-								<i class="fa-solid fa-angle-down"></i>
-							</div>
+							<header-desplegable-component class="w-100" text="CUADRANGULAR" size="medium"></header-desplegable-component>
 							<div class="groups">
-								<div class="group">
-									<div class="time text color-dark weight-bold">08:00PM</div>
+								<div class="score">
+									<text-component
+										text="6:30 AM"
+										color="dark"
+										size-mobile="14"
+										size-desktop="14"
+										weight="bold"
+										class="hour"
+									></text-component>
+									<div class="country-1">
+										<text-component
+											text="Colombia"
+											color="dark"
+											size-mobile="12"
+											size-desktop="14"
+											weight="bold"
+										></text-component>
+										<img src="../../assets/img/breaking-news-5.png" alt="country">
+									</div>
 									<div class="results">
-										<div class="score">
-											<div class="team">
-												<span class="text color-primary weight-bold">Colombia</span>
-												<img src="https://crests.football-data.org/65.svg" alt="">
-											</div>
-											<span class="text color-primary weight-bold">3 - 0</span>
-											<div class="team">
-												<img src="https://crests.football-data.org/65.svg" alt="">
-												<span class="text color-primary weight-bold">Colombia</span>
-											</div>
+										<text-component
+											text="1 - 0"
+											color="primary"
+											size-mobile="15"
+											size-desktop="15"
+											weight="bold"
+										></text-component>
+									</div>
+									<div class="country-2">
+										<img src="../../assets/img/breaking-news-5.png" alt="country">
+										<text-component
+											text="Colombia"
+											color="dark"
+											size-mobile="12"
+											size-desktop="14"
+											weight="bold"
+										></text-component>
+									</div>
+									<div class="details-1">
+										<div class="detail">
+											<text-component
+												text="46' R. Borré Amaury"
+												color="primary"
+												size-mobile="12"
+												size-desktop="12"
+												weight="regular"
+											></text-component>
+											<img src="../../assets/img/breaking-news-5.png" alt="country">
 										</div>
-										<div class="players">
-											<div class="player">
-												<span class="text color-primary weight-regular">Yaser. A</span>
-												<img src="https://crests.football-data.org/65.svg" alt="">
-											</div>
-											<div class="player">
-												<img src="https://crests.football-data.org/65.svg" alt="">
-												<span class="text color-primary weight-regular">Yaser. A</span>
-											</div>
+										<div class="detail">
+											<text-component
+												text="46' R. Borré Amaury"
+												color="primary"
+												size-mobile="12"
+												size-desktop="12"
+												weight="regular"
+											></text-component>
+											<img src="../../assets/img/breaking-news-5.png" alt="country">
+										</div>
+									</div>
+									<div class="details-2">
+										<div class="detail">
+											<img src="../../assets/img/breaking-news-5.png" alt="country">
+											<text-component
+												text="46' R. Borré Amaury"
+												color="dark"
+												size-mobile="12"
+												size-desktop="14"
+												weight="regular"
+											></text-component>
 										</div>
 									</div>
 									<div class="options">
-										<div class="button color-primary size-medium rounded-small w-100">Jugando</div>
-										<div class="button color-primary size-medium rounded-small ghost w-100">Info</div>
+										<button-component
+											text="Jugado"
+											color="primary"
+											size="small"
+											rounded="small"
+										></button-component>
 									</div>
 								</div>
 							</div>
 						</div>
 						<div class="sections">
-							<div class="select">
-								<span>CUADRANGULAR A</span>
-								<i class="fa-solid fa-angle-down"></i>
-							</div>
+							<header-desplegable-component class="w-100" text="CUADRANGULAR" size="medium"></header-desplegable-component>
 							<div class="groups">
-								<div class="group">
-									<div class="time text color-dark weight-bold">08:00PM</div>
+								<div class="score">
+									<text-component
+										text="6:30 AM"
+										color="dark"
+										size-mobile="14"
+										size-desktop="14"
+										weight="bold"
+										class="hour"
+									></text-component>
+									<div class="country-1">
+										<text-component
+											text="Colombia"
+											color="dark"
+											size-mobile="12"
+											size-desktop="14"
+											weight="bold"
+										></text-component>
+										<img src="../../assets/img/breaking-news-5.png" alt="country">
+									</div>
 									<div class="results">
-										<div class="score">
-											<div class="team">
-												<span class="text color-primary weight-bold">Colombia</span>
-												<img src="https://crests.football-data.org/65.svg" alt="">
-											</div>
-											<span class="text color-primary weight-bold">3 - 0</span>
-											<div class="team">
-												<img src="https://crests.football-data.org/65.svg" alt="">
-												<span class="text color-primary weight-bold">Colombia</span>
-											</div>
+										<text-component
+											text="1 - 0"
+											color="primary"
+											size-mobile="15"
+											size-desktop="15"
+											weight="bold"
+										></text-component>
+									</div>
+									<div class="country-2">
+										<img src="../../assets/img/breaking-news-5.png" alt="country">
+										<text-component
+											text="Colombia"
+											color="dark"
+											size-mobile="12"
+											size-desktop="14"
+											weight="bold"
+										></text-component>
+									</div>
+									<div class="details-1">
+										<div class="detail">
+											<text-component
+												text="46' R. Borré Amaury"
+												color="dark"
+												size-mobile="12"
+												size-desktop="14"
+												weight="regular"
+											></text-component>
+											<img src="../../assets/img/breaking-news-5.png" alt="country">
 										</div>
-										<div class="players">
-											<div class="player">
-												<span class="text color-primary weight-regular">Yaser. A</span>
-												<img src="https://crests.football-data.org/65.svg" alt="">
-											</div>
-											<div class="player">
-												<img src="https://crests.football-data.org/65.svg" alt="">
-												<span class="text color-primary weight-regular">Yaser. A</span>
-											</div>
+										<div class="detail">
+											<text-component
+												text="46' R. Borré Amaury"
+												color="dark"
+												size-mobile="12"
+												size-desktop="14"
+												weight="regular"
+											></text-component>
+											<img src="../../assets/img/breaking-news-5.png" alt="country">
+										</div>
+									</div>
+									<div class="details-2">
+										<div class="detail">
+											<img src="../../assets/img/breaking-news-5.png" alt="country">
+											<text-component
+												text="46' R. Borré Amaury"
+												color="dark"
+												size-mobile="12"
+												size-desktop="14"
+												weight="regular"
+											></text-component>
 										</div>
 									</div>
 									<div class="options">
-										<div class="button color-primary size-medium rounded-small w-100">Jugando</div>
-										<div class="button color-primary size-medium rounded-small ghost w-100">Info</div>
+										<button-component
+											text="Jugado"
+											color="primary"
+											size="small"
+											rounded="small"
+										></button-component>
 									</div>
 								</div>
 							</div>
@@ -305,10 +401,7 @@
 						<div class="title">TORNEO CLAUSURA</div>
 						<div class="sections">
 							<div class="section">
-								<div class="select">
-									<span>CUADRANGULAR A</span>
-									<i class="fa-solid fa-angle-down"></i>
-								</div>
+								<header-desplegable-component class="w-100" text="CUADRANGULAR A" size="medium"></header-desplegable-component>
 								<div class="content">
 									<div class="date-content">
 										<div class="small-circle-red"></div>
@@ -437,7 +530,7 @@
 					</div>
 				</div>
 				<div class="image-publicity-one">
-					<img src="../assets/img/banner-copa-america.png" alt="Siente la emoción Copa América USA 2024" class="img-fluid">
+					<img src="../assets/img/banner-copa-america.png" alt="Siente la emoción Copa América USA 2024">
 				</div>
 				<div class="image-publicity-two">
 					<img src="../assets/img/banner-copa-america.png" alt="Siente la emoción Copa América USA 2024" class="img-fluid">
@@ -583,45 +676,47 @@
 						<button class="button color-primary-size-large rounded-large">Ver más</button>
 					</div>
 				</div>
-				<div class="colombia-news colombiaNews">
-					<span class="text color-primary weight-bold center">LO ÚLTIMO EN COLOMBIA</span>
-					<div class="news">
-						<card-notice-component
-							id="main-card-one"
-							image="../assets/img/breaking-news-5.png"
-							news="Donald Trump reconoció a Edmundo González"
-							orientation="vertical"
-							author="Por Juan Carlos Garcia Sierra"
-							distribution="none"
-							classnames="new"
-						></card-notice-component>
-						<card-notice-component
-							id="main-card-one"
-							image="../assets/img/breaking-news-5.png"
-							news="Donald Trump reconoció a Edmundo González"
-							orientation="horizontal"
-							author="Por Juan Carlos Garcia Sierra"
-							distribution="equals"
-							classnames="new"
-						></card-notice-component>
-						<card-notice-component
-							id="main-card-one"
-							image="../assets/img/breaking-news-5.png"
-							news="Donald Trump reconoció a Edmundo González"
-							orientation="horizontal"
-							author="Por Juan Carlos Garcia Sierra"
-							distribution="equals"
-							classnames="new"
-						></card-notice-component>
-						<card-notice-component
-							id="main-card-one"
-							image="../assets/img/breaking-news-5.png"
-							news="Donald Trump reconoció a Edmundo González"
-							orientation="horizontal"
-							author="Por Juan Carlos Garcia Sierra"
-							distribution="equals"
-							classnames="new"
-						></card-notice-component>
+				<div class="colombia-news">
+					<div class="colombiaNews">
+						<text-component text="LO ÚLTIMO EN COLOMBIA" color="primary" weight="bold" size-desktop="25" size-mobile="18"></text-component>
+						<div class="news">
+							<card-notice-component
+								id="main-card-one"
+								image="../assets/img/breaking-news-5.png"
+								news="Donald Trump reconoció a Edmundo González"
+								orientation="vertical"
+								author="Por Juan Carlos Garcia Sierra"
+								distribution="none"
+								classnames="new"
+							></card-notice-component>
+							<card-notice-component
+								id="main-card-one"
+								image="../assets/img/breaking-news-5.png"
+								news="Donald Trump reconoció a Edmundo González"
+								orientation="horizontal"
+								author="Por Juan Carlos Garcia Sierra"
+								distribution="equals"
+								classnames="new"
+							></card-notice-component>
+							<card-notice-component
+								id="main-card-one"
+								image="../assets/img/breaking-news-5.png"
+								news="Donald Trump reconoció a Edmundo González"
+								orientation="horizontal"
+								author="Por Juan Carlos Garcia Sierra"
+								distribution="equals"
+								classnames="new"
+							></card-notice-component>
+							<card-notice-component
+								id="main-card-one"
+								image="../assets/img/breaking-news-5.png"
+								news="Donald Trump reconoció a Edmundo González"
+								orientation="horizontal"
+								author="Por Juan Carlos Garcia Sierra"
+								distribution="equals"
+								classnames="new"
+							></card-notice-component>
+						</div>
 					</div>
 				</div>
 				<section class="section-banner-one">
@@ -689,77 +784,173 @@
 						<div class="title text center color-primary weight-bold">RESULTADOS EN VIVO</div>
 						<div class="tornaments">
 							<div class="sections">
-								<div class="select">
-									<span>CUADRANGULAR A</span>
-									<i class="fa-solid fa-angle-down"></i>
-								</div>
+								<header-desplegable-component class="w-100" text="CUADRANGULAR A" size="medium"></header-desplegable-component>
 								<div class="groups">
-									<div class="group">
-										<div class="time text color-dark weight-bold">08:00PM</div>
+									<div class="score">
+										<text-component
+											text="6:30 AM"
+											color="dark"
+											size-mobile="14"
+											size-desktop="14"
+											weight="bold"
+											class="hour"
+										></text-component>
+										<div class="country-1">
+											<text-component
+												text="Colombia"
+												color="dark"
+												size-mobile="12"
+												size-desktop="14"
+												weight="bold"
+											></text-component>
+											<img src="../../assets/img/breaking-news-5.png" alt="country">
+										</div>
 										<div class="results">
-											<div class="score">
-												<div class="team">
-													<span class="text color-primary weight-bold">Colombia</span>
-													<img src="https://crests.football-data.org/65.svg" alt="">
-												</div>
-												<span class="text color-primary weight-bold">3 - 0</span>
-												<div class="team">
-													<img src="https://crests.football-data.org/65.svg" alt="">
-													<span class="text color-primary weight-bold">Colombia</span>
-												</div>
+											<text-component
+												text="1 - 0"
+												color="primary"
+												size-mobile="15"
+												size-desktop="15"
+												weight="bold"
+											></text-component>
+										</div>
+										<div class="country-2">
+											<img src="../../assets/img/breaking-news-5.png" alt="country">
+											<text-component
+												text="Colombia"
+												color="dark"
+												size-mobile="12"
+												size-desktop="14"
+												weight="bold"
+											></text-component>
+										</div>
+										<div class="details-1">
+											<div class="detail">
+												<text-component
+													text="46' R. Borré Amaury"
+													color="dark"
+													size-mobile="12"
+													size-desktop="14"
+													weight="regular"
+												></text-component>
+												<img src="../../assets/img/breaking-news-5.png" alt="country">
 											</div>
-											<div class="players">
-												<div class="player">
-													<span class="text color-primary weight-regular">Yaser. A</span>
-													<img src="https://crests.football-data.org/65.svg" alt="">
-												</div>
-												<div class="player">
-													<img src="https://crests.football-data.org/65.svg" alt="">
-													<span class="text color-primary weight-regular">Yaser. A</span>
-												</div>
+											<div class="detail">
+												<text-component
+													text="46' R. Borré Amaury"
+													color="dark"
+													size-mobile="12"
+													size-desktop="14"
+													weight="regular"
+												></text-component>
+												<img src="../../assets/img/breaking-news-5.png" alt="country">
+											</div>
+										</div>
+										<div class="details-2">
+											<div class="detail">
+												<img src="../../assets/img/breaking-news-5.png" alt="country">
+												<text-component
+													text="46' R. Borré Amaury"
+													color="dark"
+													size-mobile="12"
+													size-desktop="14"
+													weight="regular"
+												></text-component>
 											</div>
 										</div>
 										<div class="options">
-											<div class="button color-primary size-medium rounded-small w-100">Jugando</div>
-											<div class="button color-primary size-medium rounded-small ghost w-100">Info</div>
+											<button-component
+												text="Jugado"
+												color="primary"
+												size="small"
+												rounded="small"
+											></button-component>
 										</div>
 									</div>
 								</div>
 							</div>
 							<div class="sections">
-								<div class="select">
-									<span>CUADRANGULAR A</span>
-									<i class="fa-solid fa-angle-down"></i>
-								</div>
+								<header-desplegable-component class="w-100" text="CUADRANGULAR A" size="medium"></header-desplegable-component>
 								<div class="groups">
-									<div class="group">
-										<div class="time text color-dark weight-bold">08:00PM</div>
+									<div class="score">
+										<text-component
+											text="6:30 AM"
+											color="dark"
+											size-mobile="14"
+											size-desktop="14"
+											weight="bold"
+											class="hour"
+										></text-component>
+										<div class="country-1">
+											<text-component
+												text="Colombia"
+												color="dark"
+												size-mobile="12"
+												size-desktop="14"
+												weight="bold"
+											></text-component>
+											<img src="../../assets/img/breaking-news-5.png" alt="country">
+										</div>
 										<div class="results">
-											<div class="score">
-												<div class="team">
-													<span class="text color-primary weight-bold">Colombia</span>
-													<img src="https://crests.football-data.org/65.svg" alt="">
-												</div>
-												<span class="text color-primary weight-bold">3 - 0</span>
-												<div class="team">
-													<img src="https://crests.football-data.org/65.svg" alt="">
-													<span class="text color-primary weight-bold">Colombia</span>
-												</div>
+											<text-component
+												text="1 - 0"
+												color="primary"
+												size-mobile="15"
+												size-desktop="15"
+												weight="bold"
+											></text-component>
+										</div>
+										<div class="country-2">
+											<img src="../../assets/img/breaking-news-5.png" alt="country">
+											<text-component
+												text="Colombia"
+												color="dark"
+												size-mobile="12"
+												size-desktop="14"
+												weight="bold"
+											></text-component>
+										</div>
+										<div class="details-1">
+											<div class="detail">
+												<text-component
+													text="46' R. Borré Amaury"
+													color="dark"
+													size-mobile="12"
+													size-desktop="14"
+													weight="regular"
+												></text-component>
+												<img src="../../assets/img/breaking-news-5.png" alt="country">
 											</div>
-											<div class="players">
-												<div class="player">
-													<span class="text color-primary weight-regular">Yaser. A</span>
-													<img src="https://crests.football-data.org/65.svg" alt="">
-												</div>
-												<div class="player">
-													<img src="https://crests.football-data.org/65.svg" alt="">
-													<span class="text color-primary weight-regular">Yaser. A</span>
-												</div>
+											<div class="detail">
+												<text-component
+													text="46' R. Borré Amaury"
+													color="dark"
+													size-mobile="12"
+													size-desktop="14"
+													weight="regular"
+												></text-component>
+												<img src="../../assets/img/breaking-news-5.png" alt="country">
+											</div>
+										</div>
+										<div class="details-2">
+											<div class="detail">
+												<img src="../../assets/img/breaking-news-5.png" alt="country">
+												<text-component
+													text="46' R. Borré Amaury"
+													color="dark"
+													size-mobile="12"
+													size-desktop="14"
+													weight="regular"
+												></text-component>
 											</div>
 										</div>
 										<div class="options">
-											<div class="button color-primary size-medium rounded-small w-100">Jugando</div>
-											<div class="button color-primary size-medium rounded-small ghost w-100">Info</div>
+											<button-component
+												text="Jugado"
+												color="primary"
+												size="small"
+												rounded="small"
+											></button-component>
 										</div>
 									</div>
 								</div>
