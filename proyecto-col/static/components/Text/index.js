@@ -117,8 +117,8 @@ class TextComponent extends HTMLElement {
 
   render () {
     const classNames = this.generateClassnames()
-    this.style.height = 'max-content'
-    this.style.width = 'max-content'
+    // this.style.height = 'max-content'
+    // this.style.width = 'max-content'
     this.innerHTML = `
       <span class="${classNames}">${this.text}</span>
     `

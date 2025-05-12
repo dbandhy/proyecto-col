@@ -286,15 +286,13 @@
   font-weight: 400;
 }
 
-@media (max-width: 1200px) {
-  .section-main, .section-secondary {
-    padding-right: 30px;
-    padding-left: 30px;
-  }
-}
 @media (max-width: 768px) {
   .section-main .content {
     grid-template-columns: 1fr;
+  }
+  .section-main .content .updates {
+    padding-left: 30px;
+    padding-right: 30px;
   }
   .section-main .content .updates .news {
     grid-template-columns: 1fr;
@@ -315,6 +313,27 @@
     grid-template-columns: 1fr;
     grid-template-areas: "section-ligues" "section-news-1" "publicity-1" "colombia-news" "multimedia";
   }
+  .section-secondary .content .section-ligues {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  .section-secondary .content .section-ligues .ligues-container {
+    border-radius: 20px;
+  }
+  .section-secondary .content .section-multimedia {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  .section-secondary .content .colombia-news {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  .section-secondary .content .section-news-1 .btn-more-news .separator-line {
+    display: none;
+  }
+  .qualifiers {
+    border-radius: 0;
+  }
   .qualifiers .scores .score {
     grid-template-columns: 1fr max-content 1fr;
     grid-template-areas: "country-1 hour country-2" "country-1 results country-2" "country-1 options country-2";
@@ -323,6 +342,10 @@
   .qualifiers .scores .score .country-1, .qualifiers .scores .score .country-2 {
     flex-direction: row-reverse;
     align-self: center;
+  }
+  .qualifiers .scores .score .country-1 img, .qualifiers .scores .score .country-2 img {
+    width: 25px;
+    height: 25px;
   }
   .qualifiers .scores .score .hour, .qualifiers .scores .score .results, .qualifiers .scores .score .options {
     align-self: center;

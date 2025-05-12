@@ -61,6 +61,95 @@
 }
 .section-main .content .graphics-content {
   grid-area: graphics;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 50px;
+  border-radius: 20px;
+  background-color: white;
+  gap: 70px;
+}
+.section-main .content .graphics-content .score-container {
+  display: flex;
+  gap: 13px;
+  align-items: center;
+  justify-content: space-around;
+}
+.section-main .content .graphics-content .history {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+.section-main .content .graphics-content .history .countries {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.section-main .content .graphics-content .history .countries img {
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+}
+.section-main .content .graphics-content .history .time-line {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+.section-main .content .graphics-content .history .time-line .main-line {
+  width: 100%;
+  height: 4px;
+  background-color: #104596;
+}
+.section-main .content .graphics-content .history .time-line .point-marker {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background-color: #104596;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section-main .content .graphics-content .history .time-line .point-marker div {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: white;
+}
+.section-main .content .graphics-content .history .time-line .point-marker._20 {
+  left: 20%;
+}
+.section-main .content .graphics-content .history .time-line .line-marker {
+  width: 1px;
+  background-color: #104596;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+.section-main .content .graphics-content .history .time-line .line-marker.initial {
+  left: 0;
+}
+.section-main .content .graphics-content .history .time-line .line-marker._15 {
+  left: 15%;
+}
+.section-main .content .graphics-content .history .time-line .line-marker._30 {
+  left: 30%;
+}
+.section-main .content .graphics-content .history .time-line .line-marker._45 {
+  left: 50%;
+}
+.section-main .content .graphics-content .history .time-line .line-marker._60 {
+  left: 60%;
+}
+.section-main .content .graphics-content .history .time-line .line-marker._75 {
+  left: 75%;
+}
+.section-main .content .graphics-content .history .time-line .line-marker.final {
+  left: 100%;
 }
 .section-main .content .futbol-detail {
   grid-area: futbol-detail;
@@ -183,6 +272,33 @@
 .section-main .content .publicity-1 {
   grid-area: publicity-1;
   display: none;
+}
+
+.favorite {
+  cursor: pointer;
+  position: relative;
+  width: max-content;
+}
+.favorite.active {
+  color: #FFDA54;
+}
+.favorite i {
+  font-size: 30px;
+}
+.favorite i:hover {
+  color: #FFDA54;
+}
+.favorite .tag {
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 50%;
+  display: flex;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #FFDA54;
+}
+.favorite .tag span {
+  width: max-content;
 }
 
 .results {
