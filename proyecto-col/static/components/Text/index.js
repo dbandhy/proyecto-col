@@ -58,7 +58,7 @@ class TextComponent extends HTMLElement {
     return this._color
   }
 
-  set text_align (val) {
+  set textAlign (val) {
     this._textAlign = val
     this.render()
   }
@@ -105,8 +105,8 @@ class TextComponent extends HTMLElement {
     if (this.color) {
       classnames += ` color-${this.color}`
     }
-    if (this.textAlign) {
-      classnames += ` align-${this.textAlign}`
+    if (this.textAlign === 'center') {
+      this.style.textAlign = 'center'
     }
     if (this.classnames) {
       classnames += ` ${this.classnames}`
@@ -117,8 +117,9 @@ class TextComponent extends HTMLElement {
 
   render () {
     const classNames = this.generateClassnames()
-    this.style.height = 'max-content'
-    this.style.width = 'max-content'
+    // this.style.height = 'max-content'
+    // this.style.width = 'max-content'
+    
     this.innerHTML = `
       <span class="${classNames}">${this.text}</span>
     `

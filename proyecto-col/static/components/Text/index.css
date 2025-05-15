@@ -2,6 +2,7 @@
   word-wrap: break-word;
   overflow-wrap: break-word;
   white-space: normal;
+  display: inline-block;
   /* SIZES */
   /* COLOR */
   /* WEIGHT */
@@ -57,6 +58,9 @@
 }
 .text.color-gray {
   color: #7C7C7C;
+}
+.text.color-danger {
+  color: #FF3842;
 }
 .text.weight-regular {
   font-weight: 400;
