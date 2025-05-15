@@ -124,29 +124,35 @@
   left: 20%;
 }
 .section-main .content .graphics-content .history .time-line .line-marker {
+  position: absolute;
+  gap: 10px;
+  display: flex;
+  width: max-content;
+  height: 100%;
+}
+.section-main .content .graphics-content .history .time-line .line-marker .line {
   width: 1px;
   background-color: #104596;
   height: 100%;
-  position: absolute;
   top: 0;
 }
 .section-main .content .graphics-content .history .time-line .line-marker.initial {
   left: 0;
 }
 .section-main .content .graphics-content .history .time-line .line-marker._15 {
-  left: 15%;
+  left: 18%;
 }
 .section-main .content .graphics-content .history .time-line .line-marker._30 {
-  left: 30%;
+  left: 35%;
 }
 .section-main .content .graphics-content .history .time-line .line-marker._45 {
   left: 50%;
 }
 .section-main .content .graphics-content .history .time-line .line-marker._60 {
-  left: 60%;
+  left: 65%;
 }
 .section-main .content .graphics-content .history .time-line .line-marker._75 {
-  left: 75%;
+  left: 83%;
 }
 .section-main .content .graphics-content .history .time-line .line-marker.final {
   left: 100%;
@@ -169,34 +175,74 @@
   width: 100%;
   flex-direction: column;
 }
-.section-main .content .futbol-detail .details .graphics-content {
+.section-main .content .futbol-detail .details .graphics-container {
   display: flex;
   gap: 25px;
   flex-direction: column;
   align-items: center;
 }
-.section-main .content .futbol-detail .details .graphics-content .graphic {
-  position: relative;
-  border-radius: 10px;
-}
-.section-main .content .futbol-detail .details .graphics-content .graphic .players {
-  display: grid;
-  width: 100%;
-  padding: 15px;
-  grid-template-columns: repeat(5, 1fr);
-  column-gap: 25px;
-}
-.section-main .content .futbol-detail .details .graphics-content .graphic .players .players-line {
+.section-main .content .futbol-detail .details .graphics-container .country {
   display: flex;
-  justify-content: center;
+  gap: 10px;
+  align-self: center;
 }
-.section-main .content .futbol-detail .details .graphics-content .graphic img {
-  z-index: 1;
+.section-main .content .futbol-detail .details .graphics-container .country img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.section-main .content .futbol-detail .details .graphics-container .graphic {
+  border-radius: 10px;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: max-content;
+  background-image: url("https://img.freepik.com/vector-gratis/campo-futbol-verde_225004-1137.jpg?semt=ais_hybrid&w=740");
+}
+.section-main .content .futbol-detail .details .graphics-container .graphic .players {
+  display: flex;
+  padding: 20px;
+  gap: 25px;
+  flex-direction: column;
+}
+.section-main .content .futbol-detail .details .graphics-container .graphic .players .players-line {
+  display: flex;
+  justify-content: space-around;
+}
+.section-main .content .futbol-detail .details .graphics-container .graphic .players .players-line .player {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+}
+.section-main .content .futbol-detail .details .graphics-container .graphic .players .players-line .player .options {
+  display: flex;
   position: absolute;
-  top: 0;
+  top: -10px;
+  left: 0;
+  flex-direction: column;
+  gap: 5px;
+}
+.section-main .content .futbol-detail .details .graphics-container .graphic .players .players-line .player .options .option {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #104596;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+}
+.section-main .content .futbol-detail .details .graphics-container .graphic .players .players-line .player img {
+  width: 55px;
+  height: 40px;
+}
+.section-main .content .futbol-detail .details .graphics-container .graphic .players .players-line .player .name {
+  display: flex;
+  padding: 6px 5px;
+  border-radius: 5px;
+  background-color: #104596;
+  color: white;
+  font-size: 10px;
+  font-weight: 400;
 }
 .section-main .content .qualifiers {
   grid-area: qualifiers;
@@ -382,6 +428,10 @@
 .futbol-card.red {
   background-color: #FF3842;
 }
+.futbol-card.small {
+  width: 7px;
+  height: 12px;
+}
 
 @media (max-width: 1200px) {
   .section-main {
@@ -422,6 +472,9 @@
     width: max-content;
     height: max-content;
   }
+  .section-main .content .graphics-content .history {
+    display: none;
+  }
   .section-main .content .futbol-detail {
     padding-left: 0;
     padding-right: 0;
@@ -431,10 +484,21 @@
     padding-left: 0;
     padding-right: 0;
   }
-  .section-main .content .graphics-content {
-    background-color: white;
-    padding-left: 30px;
-    padding-right: 30px;
+  .section-main .content .futbol-detail .details .graphics-container .graphic .players .players-line .player img {
+    width: 40px;
+    height: 32px;
+  }
+  .section-main .content .futbol-detail .details .graphics-container .graphic .players .players-line .player .name {
+    font-size: 8px;
+  }
+  .section-main .content .futbol-detail .details .graphics-container .graphic .players .players-line .player .options .option {
+    width: 15px;
+    height: 15px;
+  }
+  .section-main .content .futbol-detail .details .graphics-container .graphic .players .players-line .player .options .option .futbol-card {
+    width: 5px;
+    height: 8px;
+    border-radius: 2px;
   }
   .results {
     padding-left: 0;
