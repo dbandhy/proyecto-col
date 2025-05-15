@@ -114,12 +114,15 @@
 }
 
 @media (max-width: 1200px) {
-  .section-main {
-    padding-right: 30px;
-    padding-left: 30px;
+  .section-main .content .colombia-news {
+    padding-right: 25px;
+    padding-left: 25px;
   }
 }
 @media (max-width: 768px) {
+  .section-main {
+    background-color: white;
+  }
   .section-main .content {
     grid-template-columns: 1fr;
     grid-template-areas: "qualifiers" "publicity-1" "colombia-news";
@@ -133,5 +136,11 @@
     width: max-content;
     height: max-content;
     object-fit: cover;
+  }
+  .section-main .content .qualifiers .stadistics .stadistics-item {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .section-main .content .qualifiers .stadistics .stadistics-item:nth-child(3), .section-main .content .qualifiers .stadistics .stadistics-item :nth-child(4), .section-main .content .qualifiers .stadistics .stadistics-item :nth-child(5), .section-main .content .qualifiers .stadistics .stadistics-item :nth-child(6), .section-main .content .qualifiers .stadistics .stadistics-item :nth-child(7), .section-main .content .qualifiers .stadistics .stadistics-item :nth-child(8) {
+    display: none;
   }
 }

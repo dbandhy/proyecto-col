@@ -30,7 +30,7 @@
 .section-main .content {
   display: grid;
   max-width: var(--max-width-content);
-  grid-template-columns: 8fr 4fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-areas: "qualifiers social-sidebar" "qualifiers colombia-news";
   grid-auto-rows: max-content;
   column-gap: 33px;
@@ -170,19 +170,32 @@
   align-items: center;
   height: 42px;
   padding: 0 17px 0 20px;
+  background-color: white;
   border-radius: 10px;
-  background-color: #104596;
+  border: 1px solid #104596;
+}
+.desplegable-round-header span {
+  color: #104596;
 }
 .desplegable-round-header > .icon {
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  background-color: white;
+  background-color: #F3F8FF;
   width: 26px;
   height: 26px;
 }
 .desplegable-round-header > .icon i {
+  color: #104596;
+}
+.desplegable-round-header:hover {
+  background-color: #104596;
+}
+.desplegable-round-header:hover span {
+  color: white;
+}
+.desplegable-round-header:hover > .icon > i {
   color: #104596;
 }
 
@@ -199,8 +212,9 @@
 
 @media (max-width: 768px) {
   .section-main {
-    padding-left: 0;
-    padding-right: 0;
+    background-color: white;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
   .section-main .content {
     grid-template-columns: 1fr;

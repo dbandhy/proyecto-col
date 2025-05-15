@@ -152,13 +152,10 @@
   border-radius: 50%;
 }
 
-@media (max-width: 1200px) {
-  .section-main {
-    padding-right: 30px;
-    padding-left: 30px;
-  }
-}
 @media (max-width: 768px) {
+  .section-main {
+    background-color: white;
+  }
   .section-main .content {
     grid-template-columns: 1fr;
     grid-template-areas: "qualifiers" "publicity-1";

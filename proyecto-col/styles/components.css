@@ -29,6 +29,7 @@
 
 .colombiaNews {
   width: 100%;
+  align-items: center;
   height: max-content;
   display: flex;
   flex-direction: column;

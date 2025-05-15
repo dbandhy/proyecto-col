@@ -790,6 +790,126 @@
   gap: 60px;
   width: 100%;
 }
+.section-secondary .content .section-partidos-tv {
+  grid-area: partido-live;
+  display: flex;
+  border-radius: 20px;
+  background-color: #F3F8FF;
+  padding: 20px 26px;
+  flex-direction: column;
+}
+.section-secondary .content .section-partidos-tv .header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.section-secondary .content .section-partidos-tv .header .information {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.section-secondary .content .section-partidos-tv .header > .date-content {
+  display: flex;
+  padding: 8px 15px;
+  background-color: white;
+  border-radius: 30px;
+  gap: 20px;
+  width: max-content;
+  justify-content: space-between;
+}
+.section-secondary .content .section-partidos-tv .header > .date-content .date {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.section-secondary .content .section-partidos-tv .header > .date-content .date i {
+  color: #104596;
+}
+.section-secondary .content .section-partidos-tv .header > .date-content i {
+  color: #104596;
+}
+.section-secondary .content .section-partidos-tv > text-component span {
+  margin-bottom: 20px;
+}
+.section-secondary .content .section-partidos-tv .partidos {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.section-secondary .content .section-partidos-tv .partidos .partido-list {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 25px;
+  border-radius: 10px;
+  background-color: white;
+}
+.section-secondary .content .section-partidos-tv .partidos .partido-list .partido {
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  grid-template-areas: "country-1 logo hour" "country-2 logo options";
+  column-gap: 20px;
+  row-gap: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #104596;
+  margin-bottom: 15px;
+}
+.section-secondary .content .section-partidos-tv .partidos .partido-list .partido .country-1 {
+  grid-area: country-1;
+}
+.section-secondary .content .section-partidos-tv .partidos .partido-list .partido .country-2 {
+  grid-area: country-2;
+}
+.section-secondary .content .section-partidos-tv .partidos .partido-list .partido .logo {
+  grid-area: logo;
+  align-self: center;
+  justify-self: center;
+}
+.section-secondary .content .section-partidos-tv .partidos .partido-list .partido .logo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+}
+.section-secondary .content .section-partidos-tv .partidos .partido-list .partido .hour {
+  grid-area: hour;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.section-secondary .content .section-partidos-tv .partidos .partido-list .partido .options {
+  grid-area: options;
+  justify-content: space-between;
+  align-items: center;
+}
+.section-secondary .content .section-partidos-tv .partidos .partido-list .partido .country-1, .section-secondary .content .section-partidos-tv .partidos .partido-list .partido .country-2 {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+.section-secondary .content .section-partidos-tv .partidos .partido-list .partido .country-1 img, .section-secondary .content .section-partidos-tv .partidos .partido-list .partido .country-2 img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+.section-secondary .content .section-partidos-tv .partidos .partido-list .partido:last-child {
+  border: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+.section-secondary .content .section-partidos-tv .options {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.section-secondary .content .section-partidos-tv .options img {
+  width: 150px;
+  height: 30px;
+  object-fit: cover;
+}
 
 .score {
   display: grid;
