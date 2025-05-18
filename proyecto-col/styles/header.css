@@ -359,6 +359,17 @@ nav a:hover {
 	}
 }
 
+@media (max-width: 768px) {
+	#main-header .header .menu-logo {
+		justify-content: space-around;
+		margin-bottom: 25px;
+		margin-top: 15px;
+	}
+	#main-header .header .menu-logo .campain-btn {
+		margin-left: 0;
+	}
+}
+
 @media (min-width: 769px) {
 	.mobile-menu {
 		display: none;

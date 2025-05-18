@@ -149,7 +149,6 @@
 }
 .section-main .content .section-sidebar {
   grid-area: social-sidebar;
-  height: max-content;
 }
 .section-main .content .section-colombia-news {
   grid-area: colombia-news;
@@ -163,6 +162,9 @@
   }
 }
 @media (max-width: 768px) {
+  .body-container {
+    grid-template-rows: auto 0 0 1fr auto;
+  }
   .section-main .content {
     grid-template-columns: 1fr;
     grid-template-areas: "section-news-1" "publicity-1" "colombia-news";

@@ -269,6 +269,9 @@
 }
 
 @media (max-width: 768px) {
+  .body-container {
+    grid-template-rows: auto 0 0 1fr auto;
+  }
   .section-main .content {
     grid-template-columns: 1fr;
     grid-template-areas: "emision-television" "publicity-1";

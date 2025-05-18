@@ -248,6 +248,9 @@
 }
 
 @media (max-width: 768px) {
+  .body-container {
+    grid-template-rows: auto 0 0 1fr auto;
+  }
   .content .news-content {
     display: grid;
     grid-template-columns: 1fr;
@@ -318,7 +321,7 @@
   .section-secondary-news .news-advanced .moreNews .title span {
     font-size: 18px;
   }
-  .section-secondary-news .news-advanced .moreNews .title > .button {
+  .section-secondary-news .news-advanced .moreNews .title .button {
     display: none;
   }
   .section-secondary-news .news-advanced .colombiaNews > span {

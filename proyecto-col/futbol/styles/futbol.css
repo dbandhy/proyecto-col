@@ -985,6 +985,9 @@
 
 /* COMPONENTS */
 @media (max-width: 768px) {
+  .body-container {
+    grid-template-rows: auto 0 0 1fr auto;
+  }
   .section-main {
     padding-top: 12px;
   }
@@ -1071,7 +1074,7 @@
   .section-secondary .content .section-news-1 .title {
     justify-content: center;
   }
-  .section-secondary .content .section-news-1 .title > .button {
+  .section-secondary .content .section-news-1 .title .button {
     display: none !important;
   }
   .section-secondary .content .section-news-1 .title span {

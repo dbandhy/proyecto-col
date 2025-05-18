@@ -39,14 +39,58 @@
 		<link rel="stylesheet" href="../static/components/button/button.css">
 		<link rel="stylesheet" href="../static/components/Text/index.css">
 		<link rel="stylesheet" href="../static/components/HeaderNewsSection/index.css">
+		<link rel="stylesheet" href="../styles/social-bar.css">
+		<link rel="stylesheet" href="../static/components/MenuDesplegable/index.css">
+		<link rel="stylesheet" href="../../static/components/SocialSidebar/index.css">
 		<!-- COMPONENTES -->
+		<script src="../../static/components/footer.js"></script>
+  	<script src="../../static/components/header.js"></script>
 		<script src="../static/components/button/index.js"></script>
 		<script src="../static/components/Text/index.js"></script>	
 		<script src="../static/components/cardNotice/cardNotice.js"></script>
 		<script src="../static/components/HeaderNewsSection/index.js"></script>
+		<script src="../static/components/socialBar.js"></script>
+		<script src="../static/components/MenuDesplegable/index.js"></script>
+		<script src="../../static/components/SocialSidebar/index.js"></script>
 	</head>
 	<body class="body-container">
-		<div id="main-header"></div>
+		<header-component></header-component>
+		<menu-desplegable></menu-desplegable>
+
+		<div class="social-bar-desplegable">
+			<div class="social-container">
+				<div class="social-item">
+					<img src="../../assets/img/banner-tv.png" alt="social-image">
+					<span>GOOGLE NEWS</span>
+				</div>
+				<div class="social-item">
+					<img src="../../assets/img/banner-tv.png" alt="social-image">
+					<span>GOOGLE NEWS</span>
+				</div>
+				<div class="social-item">
+					<img src="../../assets/img/banner-tv.png" alt="social-image">
+					<span>GOOGLE NEWS</span>
+				</div>
+				<div class="social-item">
+					<img src="../../assets/img/banner-tv.png" alt="social-image">
+					<span>GOOGLE NEWS</span>
+				</div>
+				<div class="social-item">
+					<img src="../../assets/img/banner-tv.png" alt="social-image">
+					<span>GOOGLE NEWS</span>
+				</div>
+				<div class="social-item">
+					<img src="../../assets/img/banner-tv.png" alt="social-image">
+					<span>GOOGLE NEWS</span>
+				</div>
+			</div>
+			<div class="item" id="social-bar-item">
+				<i class="fas fa-angle-right"></i>
+				<span>SÍGUENOS</span>
+			</div>
+		</div>
+		<social-bar-component></social-bar-component>
+
 		<div class="container">
 			<div class="col-1 d-none d-md-flex align-items-start">
 				<social-bar-component></social-bar-component>
@@ -212,53 +256,30 @@
 										></card-notice-component>
 									</div>
 									<div class="button-view-more justify-content-center">
-										<div class="button">Ver más</div>
+										<button-component
+											text="Ver más"
+											size="large"
+											color="primary"
+											rounded="large"
+										></button-component>
 									</div>
 								</section>
 								<section class="bannerOne">
-									<div class="sidebar-ad">
-										<img src="../assets/img/breaking-news-banner.png" alt="¿Cuánto tiempo toma tonificar el cuerpo con yoga de silla según mi edad?" class="img-fluid">
-									</div>
-		
-									<div class="social-sidebar-bn">
-										<div class="social-icons-bn">
-											<a href="#" class="social-icon-link">
-											<div class="social-icon-bn shopping">
-												<i class="fas fa-shopping-cart"></i>
-											</div>
-											</a>
-											<a href="#" class="social-icon-link">
-												<div class="social-icon-bn whatsapp">
-													<i class="fab fa-whatsapp"></i>
-												</div>
-											</a>
-											<a href="#" class="social-icon-link">
-												<div class="social-icon-bn facebook">
-													<i class="fab fa-facebook-f"></i>
-												</div>
-											</a>
-											<a href="#" class="social-icon-link">
-												<div class="social-icon-bn youtube">
-													<i class="fab fa-youtube"></i>
-												</div>
-											</a>
-											<a href="#" class="social-icon-link">
-												<div class="social-icon-bn instagram">
-													<i class="fab fa-instagram"></i>
-												</div>
-											</a>
-											<a href="#" class="social-icon-link">
-												<div class="social-icon-bn twitter">
-													<i class="fab fa-twitter"></i>
-												</div>
-											</a>
-										</div>
-									</div>
+									<social-sidebar
+										image="../assets/img/breaking-news-banner.png"
+										link=""
+										class="social-sidebar"
+									></social-sidebar>
 								</section>
 								<section class="moreNews">
 									<div class="title">
 										<h2 class="section-title more-news-title m-0 p-0">MÁS NOTICIAS</h2>
-										<button class="button">Ver todo</button>
+										<button-component
+											text="Ver todo"
+											size="large"
+											color="primary"
+											rounded="large"
+										></button-component>
 									</div>
 									<div class="news-list">
 										<card-notice-component
@@ -317,11 +338,22 @@
 										></card-notice-component>
 									</div>
 									<div class="d-flex justify-content-center">
-										<a href="#" class="button">Ver más</a>
+										<button-component
+											text="Ver más"
+											size="large"
+											color="primary"
+											rounded="large"
+										></button-component>
 									</div>
 								</section>
-								<section class="colombiaNews">
-									<span class="text color-primary weight-bold center">LO ÚLTIMO EN COLOMBIA</span>
+								<div class="colombiaNews">
+									<text-component
+										size-mobile="18"
+										size-desktop="25"
+										text="LO ÚLTIMO EN COLOMBIA"
+										weight="bold"
+										color="primary"
+									></text-component>
 									<div class="news">
 										<card-notice-component
 											id="main-card-one"
@@ -359,11 +391,8 @@
 											distribution="equals"
 											classnames="new"
 										></card-notice-component>
-										<div class="d-flex justify-content-center">
-											<a href="#" class="button">Ver más</a>
-										</div>
 									</div>
-								</section>
+								</div>
 								<section class="indicators">
 									<div>
 										<div class="card-indicador-economico">
@@ -521,9 +550,21 @@
 		<script src="../static/responsive.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-		<script src="../static/loadComponents.js"></script>
+	 	<script src="../static/menu-desplegable.js"></script>
 		<script>
-			updateResponsiveAttributes()
+			const btnSocialBarItem = document.getElementById('social-bar-item');
+			
+			btnSocialBarItem.addEventListener('click', function() {
+				const parentElement = btnSocialBarItem.parentElement;
+
+				if (parentElement.classList.contains('active')) {
+					parentElement.classList.remove('active');
+				} else {
+					parentElement.classList.add('active');
+				}
+			});
+
+			updateResponsiveAttributes();
 		</script>
 	</body>
 </html>

@@ -29,7 +29,8 @@
 		referrerpolicy="no-referrer"
 	/>
   <!-- COMPONENTS STYLES -->
-   <link rel="stylesheet" href="../../styles/components.css">
+  <link rel="stylesheet" href="../../styles/style.css">
+  <link rel="stylesheet" href="../../styles/components.css">
   <link rel="stylesheet" href="./index.css" />
   <link rel="stylesheet" href="../../styles/header.css" />
   <link rel="stylesheet" href="../../styles/footer.css" />
@@ -38,6 +39,8 @@
   <link rel="stylesheet" href="../../static/components/HeaderDesplegable/index.css">
   <link rel="stylesheet" href="../../static/components/cardNotice/cardNotice.css">
   <link rel="stylesheet" href="../../static/components/SocialSidebar/index.css">
+  <link rel="stylesheet" href="../../styles/social-bar.css">
+	<link rel="stylesheet" href="../../static/components/MenuDesplegable/index.css">
 
   <script src="../../static/responsive.js"></script>
 
@@ -49,9 +52,47 @@
   <script src="../../static/components/HeaderDesplegable/index.js"></script>
   <script src="../../static/components/SocialSidebar/index.js"></script>
   <script src="../../static/components/cardNotice/cardNotice.js"></script>
+  <script src="../../static/components/socialBar.js"></script>
+	<script src="../../static/components/MenuDesplegable/index.js"></script>
 </head>
 <body class="body-container">
   <header-component></header-component>
+	<menu-desplegable></menu-desplegable>
+
+	<div class="social-bar-desplegable">
+		<div class="social-container">
+			<div class="social-item">
+				<img src="../../assets/img/banner-tv.png" alt="social-image">
+				<span>GOOGLE NEWS</span>
+			</div>
+			<div class="social-item">
+				<img src="../../assets/img/banner-tv.png" alt="social-image">
+				<span>GOOGLE NEWS</span>
+			</div>
+			<div class="social-item">
+				<img src="../../assets/img/banner-tv.png" alt="social-image">
+				<span>GOOGLE NEWS</span>
+			</div>
+			<div class="social-item">
+				<img src="../../assets/img/banner-tv.png" alt="social-image">
+				<span>GOOGLE NEWS</span>
+			</div>
+			<div class="social-item">
+				<img src="../../assets/img/banner-tv.png" alt="social-image">
+				<span>GOOGLE NEWS</span>
+			</div>
+			<div class="social-item">
+				<img src="../../assets/img/banner-tv.png" alt="social-image">
+				<span>GOOGLE NEWS</span>
+			</div>
+		</div>
+		<div class="item" id="social-bar-item">
+			<i class="fas fa-angle-right"></i>
+			<span>SÍGUENOS</span>
+		</div>
+	</div>
+	<social-bar-component></social-bar-component>
+
   <div class="main-container">
     <div class="section-main">
       <div class="content">
@@ -355,8 +396,22 @@
     </div>
   </div>
   <footer-component></footer-component>
-  <script>
-    updateResponsiveAttributes()
-  </script>
+
+	<script src="../../static/menu-desplegable.js"></script>
+	<script>
+		const btnSocialBarItem = document.getElementById('social-bar-item');
+		
+		btnSocialBarItem.addEventListener('click', function() {
+			const parentElement = btnSocialBarItem.parentElement;
+
+			if (parentElement.classList.contains('active')) {
+				parentElement.classList.remove('active');
+			} else {
+				parentElement.classList.add('active');
+			}
+		});
+
+		updateResponsiveAttributes();
+	</script>
 </body>
 </html>
