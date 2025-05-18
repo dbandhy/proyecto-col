@@ -42,6 +42,8 @@
   <link rel="stylesheet" href="../static/components/SocialSidebar/index.css">
   <link rel="stylesheet" href="../static/components/HeaderNewsSection/index.css">
 	<link rel="stylesheet" href="../static/components/matchPreview/matchPreview.css">
+	<link rel="stylesheet" href="../styles/social-bar.css">
+	<link rel="stylesheet" href="../static/components/MenuDesplegable/index.css">
 
 	<script src="../static/responsive.js"></script>
 	<!-- Componentes -->
@@ -55,15 +57,46 @@
   <script src="../static/components/SocialSidebar/index.js"></script>
   <script src="../static/components/HeaderNewsSection/index.js"></script>
 	<script src="../static/components/matchPreview/matchPreview.js"></script>
+	<script src="../static/components/socialBar.js"></script>
+	<script src="../static/components/MenuDesplegable/index.js"></script>
 </head>
 <body class="body-container">
 	<header-component></header-component>
+	<menu-desplegable></menu-desplegable>
 
-	<!-- <div class="container">
-		<div class="col-1 d-none d-md-flex align-items-start">
-			<social-bar-component></social-bar-component>
+	<div class="social-bar-desplegable">
+		<div class="social-container">
+			<div class="social-item">
+				<img src="../assets/img/banner-tv.png" alt="social-image">
+				<span>GOOGLE NEWS</span>
+			</div>
+			<div class="social-item">
+				<img src="../assets/img/banner-tv.png" alt="social-image">
+				<span>GOOGLE NEWS</span>
+			</div>
+			<div class="social-item">
+				<img src="../assets/img/banner-tv.png" alt="social-image">
+				<span>GOOGLE NEWS</span>
+			</div>
+			<div class="social-item">
+				<img src="../assets/img/banner-tv.png" alt="social-image">
+				<span>GOOGLE NEWS</span>
+			</div>
+			<div class="social-item">
+				<img src="../assets/img/banner-tv.png" alt="social-image">
+				<span>GOOGLE NEWS</span>
+			</div>
+			<div class="social-item">
+				<img src="../assets/img/banner-tv.png" alt="social-image">
+				<span>GOOGLE NEWS</span>
+			</div>
 		</div>
-	</div> -->
+		<div class="item" id="social-bar-item">
+			<i class="fas fa-angle-right"></i>
+			<span>SÍGUENOS</span>
+		</div>
+	</div>
+	<social-bar-component></social-bar-component>
 
 	<div class="main-container">
 		<div class="section-main">
@@ -97,7 +130,13 @@
 					</div>
 					<div class="options">
 						<header-desplegable-component text="Ver por torneo" size="medium"></header-desplegable-component>
-						<a href="#" class="button color-warning size-large rounded-large">Ver todos los partidos</a>
+						<button-component
+							text="Ver todos los partidos"
+							color="warning"
+							size="large"
+							rounded="large"
+						>
+						</button-component>
 					</div>
 					<div class="partidos">
 						<match-preview-component></match-preview-component>
@@ -114,7 +153,12 @@
 				<div class="section-news-1">
 					<div class="title">
 						<span class="text color-primary weight-bold">NOTICIAS</span>
-						<button class="button">Ver todo</button>
+						<button-component
+							text="Ver todo"
+							color="primary"
+							size="large"
+							rounded="large"
+						></button-component>
 					</div>
 					<card-notice-component
 						image="../assets/img/breaking-news-10.png"
@@ -186,7 +230,12 @@
 						class="newsSix no-category-responsive"
 					></card-notice-component>
 					<div class="options">
-						<button class="button color-primary rounded-large size-large">Ver más</button>
+						<button-component
+							text="Ver más"
+							color="primary"
+							size="large"
+							rounded="large"
+						></button-component>
 					</div>
 				</div>
 				<div class="teams-list">
@@ -442,9 +491,12 @@
 															<span class="text color-dark weight-bold">6:30AM</span>
 															<i class="fa-solid fa-tv"></i>
 														</div>
-														<div class="button color-warning size-medium rounded-small">
-															A tiempo
-														</div>
+														<button-component
+															text="A tiempo"
+															color="warning"
+															size="small"
+															rounded="small"
+														></button-component>
 													</div>
 												</div>
 											</div>
@@ -483,9 +535,12 @@
 															<span class="text color-dark weight-bold">6:30AM</span>
 															<i class="fa-solid fa-tv"></i>
 														</div>
-														<div class="button color-warning size-medium rounded-small">
-															A tiempo
-														</div>
+														<button-component
+															text="A tiempo"
+															color="warning"
+															size="small"
+															rounded="small"
+														></button-component>
 													</div>
 												</div>
 												<div class="group">
@@ -516,9 +571,12 @@
 															<span class="text color-dark weight-bold">6:30AM</span>
 															<i class="fa-solid fa-tv"></i>
 														</div>
-														<div class="button color-warning size-medium rounded-small">
-															A tiempo
-														</div>
+														<button-component
+															text="A tiempo"
+															color="warning"
+															size="small"
+															rounded="small"
+														></button-component>
 													</div>
 												</div>
 											</div>
@@ -766,7 +824,12 @@
 				<div class="articulos-relacionados">
 					<div class="header">
 						<span class="text color-primary weight-bold">ARTÍCULOS RELACIONADOS</span>
-						<button class="button color-primary size-large">Ver todo</button>
+						<button-component
+							text="Ver todo"
+							color="primary"
+							size="large"
+							rounded="large"
+						></button-component>
 					</div>
 					<div class="articles">
 						<card-notice-component
@@ -819,7 +882,12 @@
 				<div class="section-more-news-one">
 					<div class="title">
 						<span class="text color-primary weight-bold">MÁS NOTICIAS</span>
-						<button class="button color-primary size-large">Ver todo</button>
+						<button-component
+							text="Ver todo"
+							color="primary"
+							size="large"
+							rounded="large"
+						></button-component>
 					</div>
 					<card-notice-component
 						image="../assets/img/breaking-news-10.png"
@@ -901,7 +969,12 @@
 						class="newsSix"
 					></card-notice-component>
 					<div class="options">
-						<button class="button color-primary-size-large rounded-large">Ver más</button>
+						<button-component
+							text="Ver más"
+							color="primary"
+							size="large"
+							rounded="large"
+						></button-component>
 					</div>
 				</div>
 				<div class="colombia-news">
@@ -1189,7 +1262,12 @@
 				<div class="section-related-articles-two">
 					<div class="title">
 						<span class="text color-primary weight-bold">ARTÍCULOS RELACIONADOS</span>
-						<button class="button color-primary size-large">Ver todo</button>
+						<button-component
+							text="Ver todo"
+							color="primary"
+							size="large"
+							rounded="large"
+						></button-component>
 					</div>
 					<div class="articles">
 						<card-notice-component
@@ -1239,7 +1317,12 @@
 				<div class="section-more-news-two">
 					<div class="title">
 						<span class="text color-primary weight-bold">MÁS NOTICIAS</span>
-						<button class="button color-primary size-large">Ver todo</button>
+						<button-component
+							text="Ver todo"
+							color="primary"
+							size="large"
+							rounded="large"
+						></button-component>
 					</div>
 					<card-notice-component
 						image="../assets/img/breaking-news-10.png"
@@ -1311,13 +1394,23 @@
 						></card-notice-component>
 					</div>
 					<div class="options">
-						<button class="button color-primary size-large">Ver más</button>
+						<button-component
+							text="Ver más"
+							color="primary"
+							size="large"
+							rounded="large"
+						></button-component>
 					</div>
 				</div>
 				<div class="section-more-news-three">
 					<div class="title">
 						<span class="text color-primary weight-bold">NOTICIAS</span>
-						<button class="button color-primary size-large">Ver todo</button>
+						<button-component
+							text="Ver todo"
+							color="primary"
+							size="large"
+							rounded="large"
+						></button-component>
 					</div>
 					<div class="news">
 						<card-notice-component
@@ -1401,7 +1494,12 @@
 						></card-notice-component>
 					</div>
 					<div class="options">
-						<button class="button color-primary size-large rounded-large">Ver más</button>
+						<button-component
+							text="Ver más"
+							color="primary"
+							size="large"
+							rounded="large"
+						></button-component>
 					</div>
 				</div>
 				<div class="banner-three">
@@ -1410,7 +1508,12 @@
 				<div class="section-more-news-fourth">
 					<div class="title">
 						<span class="text color-primary weight-bold">MÁS NOTICIAS</span>
-						<button class="button color-primary size-large">Ver todo</button>
+						<button-component
+							text="Ver todo"
+							color="primary"
+							size="large"
+							rounded="large"
+						></button-component>
 					</div>
 					<div class="news">
 						<div class="news-1">
@@ -1546,13 +1649,23 @@
 						></card-notice-component>
 					</div>
 					<div class="options">
-						<button class="button color-primary-size-large rounded-large">Ver más</button>
+						<button-component
+							text="Ver más"
+							color="primary"
+							size="large"
+							rounded="large"
+						></button-component>
 					</div>
 				</div>
 				<div class="section-last-news">
 					<div class="title">
 						<span class="text color-primary weight-bold">LO ÚLTIMO</span>
-						<button class="button color-primary size-large">Ver todo</button>
+						<button-component
+							text="Ver todo"
+							color="primary"
+							size="large"
+							rounded="large"
+						></button-component>
 					</div>
 					<div class="news">
 						<card-notice-component
@@ -1682,7 +1795,12 @@
 						></card-notice-component>
 					</div>
 					<div class="options">
-						<button class="button color-primary size-large rounded-large">Ver más</button>
+						<button-component
+							text="Ver más"
+							color="primary"
+							size="large"
+							rounded="large"
+						></button-component>
 					</div>
 				</div>
 				<div class="section-ligue">
@@ -1737,7 +1855,21 @@
 	</div>
 
 	<footer-component></footer-component>
+
+	<script src="../static/menu-desplegable.js"></script>
 	<script>
+		const btnSocialBarItem = document.getElementById('social-bar-item');
+		
+		btnSocialBarItem.addEventListener('click', function() {
+			const parentElement = btnSocialBarItem.parentElement;
+
+			if (parentElement.classList.contains('active')) {
+				parentElement.classList.remove('active');
+			} else {
+				parentElement.classList.add('active');
+			}
+		});
+
 		updateResponsiveAttributes();
 	</script>
 </body>

@@ -153,6 +153,9 @@
 }
 
 @media (max-width: 768px) {
+  .body-container {
+    grid-template-rows: auto 0 0 1fr auto;
+  }
   .section-main {
     background-color: white;
   }
