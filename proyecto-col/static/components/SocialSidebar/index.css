@@ -3,17 +3,20 @@
   justify-content: space-between;
   gap: 30px;
   width: 100%;
+  position: sticky;
+  top: 0;
 }
 .social-bar-container .social-sidebar-bn {
-  position: sticky;
   top: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .social-bar-container .social-sidebar-bn .social-icons-bn {
+  position: sticky;
   display: flex;
   flex-direction: column;
+  top: 0;
   gap: 10px;
 }
 .social-bar-container .social-sidebar-bn .social-icons-bn .social-icon-bn-link {
