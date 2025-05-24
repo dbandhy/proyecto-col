@@ -121,6 +121,14 @@
   grid-area: news-22;
   display: none;
 }
+.section-main .content .section-news-1 .news card-notice-component .card-news {
+  padding-bottom: 23px;
+  border-bottom: 1px solid #104596;
+}
+.section-main .content .section-news-1 .news card-notice-component:last-child .card-news {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
 .section-main .content .section-news-1 .news .publicity-1 {
   grid-area: publicity-1;
   display: none;
@@ -156,9 +164,28 @@
 }
 
 @media (max-width: 1200px) {
-  .section-main, .section-secondary {
-    padding-right: 30px;
-    padding-left: 30px;
+  .section-main .content .section-news-1 .news card-notice-component:nth-child(1) .card-news, .section-main .content .section-news-1 .news card-notice-component:nth-child(2) .card-news {
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+  .section-main .content .section-news-1 .news card-notice-component:nth-child(1) .card-news .news-content, .section-main .content .section-news-1 .news card-notice-component:nth-child(2) .card-news .news-content {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+  .section-main .content .section-news-1 .news card-notice-component:nth-child(n+3) {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+  .section-main .content .section-news-1 .news card-notice-component:nth-child(n+3) .card-news {
+    padding-bottom: 32px;
+  }
+  .section-main .content .section-news-1 .news card-notice-component:last-child .card-news {
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+  .section-main .content .section-colombia-news {
+    padding-left: 23px;
+    padding-right: 23px;
   }
 }
 @media (max-width: 768px) {
@@ -186,7 +213,7 @@
   .section-main .content .section-news-1 .news .news-17, .section-main .content .section-news-1 .news .news-18, .section-main .content .section-news-1 .news .news-19, .section-main .content .section-news-1 .news .news-20, .section-main .content .section-news-1 .news .news-21, .section-main .content .section-news-1 .news .news-22 {
     display: flex !important;
   }
-  .section-main .content .section-news-1 .news .btn-more-news .separator-line {
+  .section-main .content .section-news-1 .btn-more-news .separator-line {
     display: none;
   }
   .section-main .content .publicity-1 {

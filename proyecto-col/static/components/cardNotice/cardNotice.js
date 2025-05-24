@@ -154,9 +154,15 @@ class CardNoticeComponent extends HTMLElement {
         <div class="news-content">
           ${this.category ? `<span class="category">${this.category}</span>` : ''}
           <span class="title">${this.news}</span>
-          <span class="read-more">Leer más</span>
-          <span class="author">${this.author}</span>
-          ${this.subtitle ? `<span class="subtitle">${this.subtitle}</span>` : ''}
+          ${!this.subtitle ? `<span class="read-more">Leer más</span>` : ''}
+          <span class="author">
+            <span>Por: </span>
+            <span>${this.author}</span>
+          </span>
+          ${this.subtitle ? `<span class="subtitle-content">
+            <span class="subtitle">${this.subtitle}</span>
+            <span class="read-more">Leer más</span>
+          </span>` : ''}
         </div>
       </div>
     `

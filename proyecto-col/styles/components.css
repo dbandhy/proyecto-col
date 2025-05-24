@@ -50,7 +50,6 @@
   gap: 24px;
 }
 .colombiaNews > .news .new {
-  padding-bottom: 10px;
   border-bottom: 1px solid #104596;
 }
 .colombiaNews > .news .new:last-child {
