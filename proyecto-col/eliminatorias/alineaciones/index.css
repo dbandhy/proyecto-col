@@ -337,7 +337,7 @@
 .favorite .tag {
   position: absolute;
   top: calc(100% + 5px);
-  left: 50%;
+  left: -50%;
   display: flex;
   padding: 5px 10px;
   border-radius: 5px;
@@ -446,6 +446,7 @@
   .section-main {
     padding-right: 0;
     padding-left: 0;
+    background-color: white;
   }
   .section-main .content {
     grid-template-columns: 1fr;

@@ -161,7 +161,7 @@
   }
   .section-main .content {
     grid-template-columns: 1fr;
-    grid-template-areas: "qualifiers" "publicity-1";
+    grid-template-areas: "qualifiers" "publicity-1" "colombia-news";
   }
   .section-main .content .qualifiers .rounds .scores .score {
     grid-template-columns: 1fr repeat(3, max-content) 1fr;
@@ -194,7 +194,8 @@
     height: max-content;
   }
   .section-main .content .colombia-news {
-    display: none;
+    padding-left: 22px;
+    padding-right: 22px;
   }
   .section-main .content .social-sidebar {
     display: none;

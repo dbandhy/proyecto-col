@@ -95,13 +95,23 @@
   font-weight: 700;
 }
 .card-news > .news-content > .author {
+  display: flex;
+  gap: 5px;
+}
+.card-news > .news-content > .author span {
   font-size: 9px;
+}
+.card-news > .news-content > .author span:first-child {
+  font-weight: 400;
+}
+.card-news > .news-content > .author span:last-child {
   font-weight: 700;
 }
 .card-news > .news-content .read-more {
   font-size: 12px;
   font-weight: 700;
   color: #104596;
+  cursor: pointer;
 }
 .card-news > .news-content .subtitle {
   font-size: 14px;
