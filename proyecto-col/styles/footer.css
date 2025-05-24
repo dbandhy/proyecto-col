@@ -42,6 +42,7 @@ body {
 	font-weight: 700;
 	text-align: center;
 	padding: 0px 30px;
+	height: 40px;
 	font-size: 1rem;
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -52,6 +53,24 @@ body {
 .footer .member {
 	margin-bottom: 20px;
 }
+
+.logo {
+	width: 241px;
+	height: 100px;
+}
+
+.icon{
+	width: 77px;
+	height: 39px;
+}
+
+ul{
+	display: flex;
+	flex-direction: column;
+	padding: 0;
+	gap: 10px;
+}
+
 .footer .disclaimer {
 	font-size: 14px;
 	text-align: center;

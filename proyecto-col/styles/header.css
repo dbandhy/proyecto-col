@@ -116,7 +116,7 @@ nav {
 }
 
 .search-bar input {
-	padding: 8px 40px 8px 15px; /* Espacio para el ícono a la derecha */
+	padding: 8px 15px 8px 40px; /* Espacio para el ícono a la derecha */
 	border: 1px solid #ddd;
 	border-radius: 20px;
 	font-size: 14px;
@@ -130,7 +130,7 @@ nav {
 
 .search-bar .fa-search {
 	position: absolute;
-	right: 15px;
+	left: 15px;
 	color: #0f3c81;
 	cursor: pointer;
 	background: none;
