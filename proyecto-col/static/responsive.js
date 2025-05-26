@@ -12,7 +12,7 @@ const updateResponsiveAttributes = () => {
     },
     content: {
       noCategory: Array.from(document.getElementsByClassName('no-category-responsive')),
-      noSubtitle: Array.from(document.getElementsByClassName('no-subtitle-responsive'))
+      noSubtitle: Array.from(document.getElementsByClassName('no-subtitle-responsive')),
     }
   }
 
