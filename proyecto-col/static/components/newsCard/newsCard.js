@@ -42,10 +42,23 @@ class NewsCardComponent extends HTMLElement {
     this.render()
   }
 
+  generateClassnames () {
+    let classnames = 'news-card-main'
+    if (this.orientation) {
+      classnames += ` orientation-${this.orientation}`
+    }
+    return classnames
+  }
+
   render () {
+    const classnames = this.generateClassnames()
+
     this.innerHTML = `
-      <div class="news-card-main">
-        <img src="${this.image}" alt="">
+      <div class="${classnames}">
+        <div class="image">
+          <img src="${this.image}" alt="">
+        </div>
+        
         <div class="content">
           <div class="category">
             <span>${this.category}</span>

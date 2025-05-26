@@ -30,7 +30,7 @@
 .section-main .content {
   display: grid;
   max-width: var(--max-width-content);
-  grid-template-columns: 8fr 4fr;
+  grid-template-columns: 9fr 3fr;
   grid-template-areas: "emision-television publicity-1";
   column-gap: 38px;
   row-gap: 40px;
@@ -50,8 +50,26 @@
 .section-main .content .emision-television .info-aditional {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 20px;
   width: 100%;
+}
+.section-main .content .emision-television .info-aditional .btn-share {
+  display: none;
+  gap: 10px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-color: white;
+}
+.section-main .content .emision-television .info-aditional .btn-share span, .section-main .content .emision-television .info-aditional .btn-share i {
+  color: #104596;
+}
+.section-main .content .emision-television .info-aditional .btn-share i {
+  font-size: 16px;
+}
+.section-main .content .emision-television .info-aditional .btn-share span {
+  font-size: 12px;
+  font-weight: 700;
 }
 .section-main .content .emision-television .partidos {
   display: flex;
@@ -63,6 +81,9 @@
   background-color: white;
   padding: 24px;
   flex-direction: column;
+}
+.section-main .content .emision-television .partidos .partido .title > span {
+  text-decoration: underline;
 }
 .section-main .content .emision-television .partidos .partido .header {
   display: flex;
@@ -91,7 +112,7 @@
 .section-secondary .content {
   display: grid;
   max-width: var(--max-width-content);
-  grid-template-columns: 8fr 4fr;
+  grid-template-columns: 13fr 8fr;
   grid-template-areas: "section-news-1 colombia-news";
   column-gap: 38px;
   row-gap: 40px;
@@ -109,6 +130,9 @@
   grid-template-areas: "news-1 news-1 news-1" "news-2 news-2 news-2" "news-3 news-4 news-4" "news-3 news-5 news-5" "news-3 news-6 news-6";
   column-gap: 23px;
   row-gap: 23px;
+}
+.section-secondary .content .section-news-1 .news .line-1, .section-secondary .content .section-news-1 .news .line-2, .section-secondary .content .section-news-1 .news .line-3, .section-secondary .content .section-news-1 .news .line-4 {
+  display: none;
 }
 .section-secondary .content .section-news-1 .news-1 {
   grid-area: news-1;
@@ -164,6 +188,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  align-self: center;
   background-color: #104596;
   border-radius: 50%;
 }
@@ -172,6 +197,7 @@
 }
 .date .dates-content {
   display: flex;
+  height: auto;
   justify-content: center;
   align-items: center;
   column-gap: 30px;
@@ -183,13 +209,13 @@
   font-weight: 700;
   cursor: pointer;
   color: rgba(25, 28, 54, 0.5);
-  text-align: center;
 }
 .date .dates-content .date-item:hover {
   color: #104596;
 }
-.date .dates-content .separator {
+.date .dates-content > .separator {
   width: 1px;
+  min-height: 100%;
   height: 100%;
   background-color: #104596;
 }
@@ -199,11 +225,35 @@
   grid-template-columns: max-content 1fr max-content 1fr max-content;
   column-gap: 10px;
   grid-template-areas: "hour country-1 results country-2 chanel" "hour details-1 options details-2 chanel";
-  row-gap: 20px;
+  row-gap: 10px;
 }
 .score .hour {
   grid-area: hour;
   padding-right: 20px;
+}
+.score .icon-tv {
+  grid-area: icon-tv;
+  display: none;
+}
+.score .icon-tv i {
+  color: #104596;
+  font-size: 15px;
+}
+.score .score-text {
+  grid-area: score-text;
+  display: none;
+  font-size: 14px;
+  font-weight: 700;
+  color: #FF3842;
+  align-items: center;
+  gap: 7px;
+}
+.score .score-text::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #FF3842;
 }
 .score .country-1 {
   grid-area: country-1;
@@ -230,6 +280,9 @@
 }
 .score .details-1 .detail {
   justify-content: flex-end;
+}
+.score hr {
+  display: none;
 }
 .score .details-2 {
   grid-area: details-2;
@@ -287,23 +340,57 @@
   .section-main .content .emision-television .controls .header-desplegable {
     display: none;
   }
+  .section-main .content .emision-television .info-aditional .btn-share {
+    display: flex !important;
+  }
   .section-main .content .emision-television .partidos {
     width: 100%;
     max-width: 100%;
   }
   .section-main .content .emision-television .partidos .partido {
-    gap: 60px;
+    gap: 50px;
   }
   .section-main .content .emision-television .partidos .partido .header {
     display: none;
+  }
+  .section-main .content .emision-television .partidos .partido .title > span {
+    text-align: center;
   }
   .section-secondary .content {
     grid-template-columns: 1fr;
     grid-template-areas: "section-news-1" "colombia-news";
   }
+  .section-secondary .content .section-news-1 {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
   .section-secondary .content .section-news-1 .news {
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "news-1 news-1" "news-2 news-3" "news-4 news-5";
+    grid-template-columns: 1fr max-content 1fr;
+    grid-template-areas: "news-1 news-1 news-1" "line-1 line-1 line-1" "news-2 line-2 news-3" "line-3 line-3 line-3" "news-4 line-4 news-5";
+  }
+  .section-secondary .content .section-news-1 .news .line-1 {
+    grid-area: line-1;
+  }
+  .section-secondary .content .section-news-1 .news .line-2 {
+    grid-area: line-2;
+  }
+  .section-secondary .content .section-news-1 .news .line-3 {
+    grid-area: line-3;
+  }
+  .section-secondary .content .section-news-1 .news .line-4 {
+    grid-area: line-4;
+  }
+  .section-secondary .content .section-news-1 .news .line-1, .section-secondary .content .section-news-1 .news .line-2, .section-secondary .content .section-news-1 .news .line-3, .section-secondary .content .section-news-1 .news .line-4 {
+    display: block !important;
+    background-color: #104596;
+  }
+  .section-secondary .content .section-news-1 .news .line-1, .section-secondary .content .section-news-1 .news .line-3 {
+    width: 100%;
+    height: 1px;
+  }
+  .section-secondary .content .section-news-1 .news .line-2, .section-secondary .content .section-news-1 .news .line-4 {
+    width: 1px;
+    height: 100%;
   }
   .section-secondary .content .section-news-1 .news .news-6 {
     display: none;
@@ -316,9 +403,21 @@
   .section-secondary .content .section-news-1 .btn-more-news .separator-line {
     display: none;
   }
+  .section-secondary .content .colombia-news {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
   .score {
+    width: 100%;
     grid-template-columns: repeat(3, max-content);
-    grid-template-areas: "country-1 hour country-2" "country-1 results country-2" "country-1 options country-2" "details-1 nothing details-2" "chanel chanel chanel";
+    grid-template-areas: "score-text hour icon-tv" "country-1 results country-2" "empty-1 options empty-2" "details-1 empty-3 details-2" "line line line" "chanel chanel chanel";
+  }
+  .score .score-text {
+    display: flex !important;
+  }
+  .score .icon-tv {
+    display: flex !important;
+    justify-content: flex-end;
   }
   .score .country-1, .score .country-2 {
     align-self: center;
@@ -328,13 +427,40 @@
     justify-self: center;
     padding: 0;
   }
-  .score .details-1 img, .score .details-2 img {
-    width: 15px;
-    height: 15px;
+  .score .details-1 .detail, .score .details-2 .detail {
+    flex-direction: row-reverse;
+  }
+  .score .details-1 .detail img, .score .details-2 .detail img {
+    width: 25px;
+    height: 25px;
+  }
+  .score hr {
+    display: block;
+    grid-area: line;
+    color: #104596;
+    opacity: 1;
   }
   .score .chanel {
     display: flex;
     width: 100%;
     justify-content: center;
+  }
+  .score .chanel text-component span {
+    text-decoration: underline;
+  }
+  .date {
+    margin-right: 0 !important;
+    column-gap: 10px;
+    padding: 0;
+    background-color: transparent;
+    align-items: center;
+  }
+  .date .dates-content {
+    background-color: white;
+    padding: 20px 21px;
+    gap: 22px;
+  }
+  .date .dates-content .date-item {
+    font-size: 10px !important;
   }
 }

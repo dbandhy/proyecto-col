@@ -1,6 +1,6 @@
 class ButtonComponent extends HTMLElement {
   static get observedAttributes () {
-    return ['size','text','color','rounded']
+    return ['size','text','color','rounded','variant']
   }
 
   attributeChangedCallback (name, oldValue, newValue) {
@@ -12,6 +12,8 @@ class ButtonComponent extends HTMLElement {
       this.color = newValue
     } else if (name === 'rounded') {
       this.rounded = newValue
+    } else if (name === 'variant') {
+      this.variant = newValue
     }
   }
 
@@ -47,6 +49,14 @@ class ButtonComponent extends HTMLElement {
     return this._rounded
   }
 
+  set variant(val) {
+    this._variant = val
+    this.render()
+  }
+  get variant() {
+    return this._variant
+  }
+
   connectedCallback () {
     this.render()
   }
@@ -62,6 +72,9 @@ class ButtonComponent extends HTMLElement {
     }
     if (this.rounded) {
       classnames += ` rounded-${this.rounded}`
+    }
+    if (this.variant) {
+      classnames += ` ${this.variant}`
     }
     
     return classnames

@@ -72,7 +72,7 @@
   display: flex;
   gap: 13px;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
 }
 .section-main .content .graphics-content .history {
   display: flex;
@@ -195,7 +195,7 @@
   border-radius: 10px;
   width: 100%;
   height: max-content;
-  background-image: url("https://img.freepik.com/vector-gratis/campo-futbol-verde_225004-1137.jpg?semt=ais_hybrid&w=740");
+  background-image: url("../../assets/img/cancha-futbol-background.png");
 }
 .section-main .content .futbol-detail .details .graphics-container .graphic .players {
   display: flex;
@@ -301,13 +301,13 @@
   align-self: center;
   justify-self: center;
 }
-.section-main .content .qualifiers .options {
+.section-main .content .qualifiers > .options {
   display: flex;
   width: 100%;
   align-items: center;
   justify-content: space-between;
 }
-.section-main .content .qualifiers .options img {
+.section-main .content .qualifiers > .options img {
   width: 150px;
   height: 30px;
   object-fit: cover;
@@ -461,6 +461,21 @@
     align-self: flex-start;
     flex-direction: column;
     gap: 5px;
+  }
+  .section-main .content .graphics-content {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+  .section-main .content .graphics-content .score-container .favorite {
+    display: none;
+  }
+  .section-main .content .graphics-content .score-container img {
+    width: 100%;
+  }
+  .section-main .content .graphics-content .history {
+    display: none;
   }
   .section-main .content .social-sidebar {
     display: none;

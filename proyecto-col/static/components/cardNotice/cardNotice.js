@@ -9,7 +9,8 @@ class CardNoticeComponent extends HTMLElement {
       'subtitle',
       'image',
       'video',
-      'classnames'
+      'classnames',
+      "link-show-more"
     ];
   }
   
@@ -48,6 +49,10 @@ class CardNoticeComponent extends HTMLElement {
     }
     if (name === 'video') {
       this.video = newValue;
+      this.render();
+    }
+    if (name === 'link-show-more') {
+      this.linkShowMore = newValue;
       this.render();
     }
   }
@@ -124,6 +129,14 @@ class CardNoticeComponent extends HTMLElement {
     return this._video
   }
 
+  set linkShowMore(val) {
+    this._linkShowMore = val;
+    this.render();
+  }
+  get linkShowMore() {
+    return this._linkShowMore
+  }
+
   connectedCallback () {
     this.render()
   }
@@ -147,6 +160,7 @@ class CardNoticeComponent extends HTMLElement {
 
   render () {
     const classNames = this.generateClassnames()
+
     this.innerHTML = `
       <div class="card-news ${classNames}">
         ${this.image ? `<img src="${this.image}" alt="news"></img>` : ''}
@@ -154,12 +168,16 @@ class CardNoticeComponent extends HTMLElement {
         <div class="news-content">
           ${this.category ? `<span class="category">${this.category}</span>` : ''}
           <span class="title">${this.news}</span>
-          ${!this.subtitle ? `<span class="read-more">Leer más</span>` : ''}
-          <span class="author">
-            <span>Por: </span>
-            <span>${this.author}</span>
-          </span>
-          ${this.subtitle ? `<span class="subtitle-content">
+          ${!this.subtitle && this.linkShowMore ? `<span class="read-more">Leer más</span>` : ''}
+          ${
+            this.author ? `
+              <span class="author">
+                <span>Por: </span>
+                <span>${this.author}</span>
+              </span>
+            ` : ''
+          }
+          ${this.subtitle && this.linkShowMore ? `<span class="subtitle-content">
             <span class="subtitle">${this.subtitle}</span>
             <span class="read-more">Leer más</span>
           </span>` : ''}
