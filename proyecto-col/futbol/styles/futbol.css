@@ -132,7 +132,7 @@
   padding: 20px 0 35px 0;
   width: 100%;
 }
-.section-secondary .content {
+.section-secondary > .content {
   display: grid;
   max-width: var(--max-width-content);
   grid-template-columns: 6fr 4fr;
@@ -144,22 +144,24 @@
   /* SECCIONES DE NOTICIAS */
   /* ---------------------- */
 }
-.section-secondary .content .teams-list {
+.section-secondary > .content .teams-list {
   grid-area: teams;
-  display: grid;
-  grid-template-columns: repeat(6, 60px);
+  display: flex;
   width: 100%;
+  flex-wrap: wrap;
+  gap: 10px;
   row-gap: 10px;
   column-gap: 10px;
+  justify-content: center;
   align-self: flex-start;
   justify-self: flex-start;
 }
-.section-secondary .content .teams-list img {
-  width: 100%;
-  height: 100%;
+.section-secondary > .content .teams-list img {
+  width: 60px;
+  height: 60px;
   cursor: pointer;
 }
-.section-secondary .content .partidos-colombianos {
+.section-secondary > .content .partidos-colombianos {
   grid-area: partidos-colombianos;
   display: flex;
   flex-direction: column;
@@ -168,32 +170,43 @@
   background-color: #F3F8FF;
   gap: 10px;
 }
-.section-secondary .content .partidos-colombianos .title {
+.section-secondary > .content .partidos-colombianos .title {
   font-size: 20px;
 }
-.section-secondary .content .partidos-colombianos > .tornaments {
+.section-secondary > .content .partidos-colombianos > .tornaments {
   display: flex;
-  gap: 25px;
+  gap: 15px;
   flex-direction: column;
 }
-.section-secondary .content .partidos-colombianos > .tornaments .sections {
+.section-secondary > .content .partidos-colombianos > .tornaments .sections {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-.section-secondary .content .partidos-colombianos > .tornaments .sections .groups {
+.section-secondary > .content .partidos-colombianos > .tornaments .sections .groups {
   padding: 15px;
   display: flex;
   flex-direction: column;
   gap: 15px;
   background-color: white;
 }
-.section-secondary .content .partidos-colombianos .footer {
+.section-secondary > .content .partidos-colombianos > .options {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+.section-secondary > .content .partidos-colombianos > .options img {
+  width: 150px;
+  height: 30px;
+  object-fit: cover;
+}
+.section-secondary > .content .partidos-colombianos .footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.section-secondary .content .liga-colombiana {
+.section-secondary > .content .liga-colombiana {
   grid-area: liga-colombiana;
   display: flex;
   flex-direction: column;
@@ -202,20 +215,20 @@
   border-radius: 20px;
   gap: 10px;
 }
-.section-secondary .content .liga-colombiana .title {
+.section-secondary > .content .liga-colombiana .title {
   font-weight: 700;
   font-size: 20px;
   color: #104596;
   margin-bottom: 10px;
   text-align: center;
 }
-.section-secondary .content .liga-colombiana .tabs {
+.section-secondary > .content .liga-colombiana .tabs {
   display: flex;
   border-radius: 20px;
   background-color: white;
   width: 100%;
 }
-.section-secondary .content .liga-colombiana .tabs .tab {
+.section-secondary > .content .liga-colombiana .tabs .tab {
   display: flex;
   flex: 1;
   justify-content: center;
@@ -227,269 +240,324 @@
   cursor: pointer;
   font-size: 14px;
 }
-.section-secondary .content .liga-colombiana .tabs .tab.active {
+.section-secondary > .content .liga-colombiana .tabs .tab.active {
   font-weight: 700;
   color: white;
   background-color: #104596;
 }
-.section-secondary .content .liga-colombiana .tornament {
+.section-secondary > .content .liga-colombiana .tornament {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.section-secondary .content .liga-colombiana .tornament .title {
+.section-secondary > .content .liga-colombiana .tornament .title {
   font-weight: 700;
   font-size: 14px;
   color: #191C36;
 }
-.section-secondary .content .liga-colombiana .tornament .sections {
+.section-secondary > .content .liga-colombiana .tornament .sections {
   display: flex;
   flex-direction: column;
+  gap: 14px;
 }
-.section-secondary .content .liga-colombiana .tornament .sections .section {
+.section-secondary > .content .liga-colombiana .tornament .sections .section {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.section-secondary .content .liga-colombiana .tornament .sections .section .content {
+.section-secondary > .content .liga-colombiana .tornament .sections .section > .content {
   display: flex;
   flex-direction: column;
   gap: 11px;
 }
-.section-secondary .content .liga-colombiana .tornament .sections .section .content .rounds {
+.section-secondary > .content .liga-colombiana .tornament .sections .section > .content .rounds {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  width: 100%;
 }
-.section-secondary .content .liga-colombiana .tornament .sections .section .content .rounds .round {
+.section-secondary > .content .liga-colombiana .tornament .sections .section > .content .rounds .round {
   display: flex;
   flex-direction: column;
   background-color: white;
   border-radius: 10px;
   overflow: hidden;
 }
-.section-secondary .content .liga-colombiana .tornament .sections .section .content .rounds .round .header {
+.section-secondary > .content .liga-colombiana .tornament .sections .section > .content .rounds .round .header {
   padding: 8px 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #104596;
 }
-.section-secondary .content .liga-colombiana .tornament .sections .section .content .rounds .round .header span {
+.section-secondary > .content .liga-colombiana .tornament .sections .section > .content .rounds .round .header span {
   font-size: 14px;
 }
-.section-secondary .content .liga-colombiana .tornament .sections .section .content .rounds .round .groups {
+.section-secondary > .content .liga-colombiana .tornament .sections .section > .content .rounds .round .groups {
   padding: 15px;
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
-.section-secondary .content .liga-colombiana .tornament .sections .section .content .rounds .round .groups .group {
+.section-secondary > .content .liga-colombiana .tornament .sections .section > .content .rounds .round .groups .group {
   display: flex;
   justify-content: space-between;
   gap: 20px;
   padding-bottom: 8px;
   border-bottom: 1px solid #104596;
 }
-.section-secondary .content .liga-colombiana .tornament .sections .section .content .rounds .round .groups .group .results {
+.section-secondary > .content .liga-colombiana .tornament .sections .section > .content .rounds .round .groups .group .results {
   display: flex;
   gap: 10px;
   flex-direction: column;
 }
-.section-secondary .content .liga-colombiana .tornament .sections .section .content .rounds .round .groups .group .results .result {
+.section-secondary > .content .liga-colombiana .tornament .sections .section > .content .rounds .round .groups .group .results .result {
   display: flex;
   align-items: center;
   gap: 6px;
 }
-.section-secondary .content .liga-colombiana .tornament .sections .section .content .rounds .round .groups .group .results .result .team {
+.section-secondary > .content .liga-colombiana .tornament .sections .section > .content .rounds .round .groups .group .results .result .team {
   display: flex;
   gap: 10px;
   align-items: center;
 }
-.section-secondary .content .liga-colombiana .tornament .sections .section .content .rounds .round .groups .group .results .result .team img {
+.section-secondary > .content .liga-colombiana .tornament .sections .section > .content .rounds .round .groups .group .results .result .team img {
   width: 25px;
   height: 25px;
   border-radius: 50%;
 }
-.section-secondary .content .liga-colombiana .tornament .sections .section .content .rounds .round .groups .group .results .result .team span {
+.section-secondary > .content .liga-colombiana .tornament .sections .section > .content .rounds .round .groups .group .results .result .team span {
   font-size: 12px;
 }
-.section-secondary .content .liga-colombiana .tornament .sections .section .content .rounds .round .groups .group .results .result .score {
+.section-secondary > .content .liga-colombiana .tornament .sections .section > .content .rounds .round .groups .group .results .result .score {
   display: flex;
   gap: 5px;
   align-items: center;
 }
-.section-secondary .content .liga-colombiana .tornament .sections .section .content .rounds .round .groups .group .results .result .score span {
+.section-secondary > .content .liga-colombiana .tornament .sections .section > .content .rounds .round .groups .group .results .result .score span {
   font-size: 15px;
 }
-.section-secondary .content .liga-colombiana .tornament .sections .section .content .rounds .round .groups .group .times {
+.section-secondary > .content .liga-colombiana .tornament .sections .section > .content .rounds .round .groups .group .times {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 20px;
 }
-.section-secondary .content .liga-colombiana .tornament .sections .section .content .rounds .round .groups .group .times > div:first-child {
+.section-secondary > .content .liga-colombiana .tornament .sections .section > .content .rounds .round .groups .group .times > div:first-child {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 20px;
 }
-.section-secondary .content .liga-colombiana .tornament .sections .section .content .rounds .round .groups .group .times > div:first-child i {
+.section-secondary > .content .liga-colombiana .tornament .sections .section > .content .rounds .round .groups .group .times > div:first-child i {
   color: #104596;
 }
-.section-secondary .content .liga-colombiana .tornament .sections .section .content .rounds .round .groups .group .times > div:first-child span {
+.section-secondary > .content .liga-colombiana .tornament .sections .section > .content .rounds .round .groups .group .times > div:first-child span {
   font-size: 14px;
 }
-.section-secondary .content .liga-colombiana .tornament .sections .section .content .rounds .round .groups .group .times > .button {
+.section-secondary > .content .liga-colombiana .tornament .sections .section > .content .rounds .round .groups .group .times > .button {
   width: 100%;
 }
-.section-secondary .content .liga-colombiana .tornament .sections .section .content .rounds .round .groups .group:last-child {
+.section-secondary > .content .liga-colombiana .tornament .sections .section > .content .rounds .round .groups .group:last-child {
   padding-bottom: 0;
   border: none;
 }
-.section-secondary .content .liga-colombiana .footer {
+.section-secondary > .content .liga-colombiana > .options {
   display: flex;
-  justify-content: space-between;
+  width: 100%;
   align-items: center;
+  justify-content: space-between;
 }
-.section-secondary .content .image-publicity-one {
+.section-secondary > .content .liga-colombiana > .options img {
+  width: 150px;
+  height: 30px;
+  object-fit: cover;
+}
+.section-secondary > .content .image-publicity-one {
   grid-area: image-publicity-one;
   display: none;
   justify-content: center;
 }
-.section-secondary .content .image-publicity-one img {
+.section-secondary > .content .image-publicity-one img {
   width: max-content;
   height: max-content;
 }
-.section-secondary .content .image-publicity-two {
+.section-secondary > .content .image-publicity-two {
   grid-area: image-publicity-two;
   display: none;
   justify-content: center;
 }
-.section-secondary .content .image-publicity-two img {
+.section-secondary > .content .image-publicity-two img {
   width: max-content;
   height: max-content;
 }
-.section-secondary .content .articulos-relacionados {
+.section-secondary > .content .articulos-relacionados {
   grid-area: articulos-relacionados;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.section-secondary .content .articulos-relacionados .header {
+.section-secondary > .content .articulos-relacionados .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.section-secondary .content .articulos-relacionados .header span {
+.section-secondary > .content .articulos-relacionados .header span {
   font-size: 25px;
 }
-.section-secondary .content .articulos-relacionados .articles {
+.section-secondary > .content .articulos-relacionados .articles {
   display: flex;
   gap: 32px;
   width: 100%;
 }
-.section-secondary .content .articulos-relacionados .articles .title {
+.section-secondary > .content .articulos-relacionados .articles .title {
   font-size: 14px !important;
 }
-.section-secondary .content .multimedia-section {
+.section-secondary > .content .multimedia-section {
   grid-area: multimedia;
   display: flex;
   gap: 20px;
   flex-direction: column;
 }
-.section-secondary .content .multimedia-section .videos {
+.section-secondary > .content .multimedia-section > card-notice-component {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #104596;
+}
+.section-secondary > .content .multimedia-section .videos {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   row-gap: 16px;
+  overflow: auto;
+  height: 400px;
 }
-.section-secondary .content .publicity {
+.section-secondary > .content .multimedia-section .videos::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+.section-secondary > .content .multimedia-section .videos::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.section-secondary > .content .multimedia-section .videos::-webkit-scrollbar:vertical {
+  width: 7px;
+}
+.section-secondary > .content .multimedia-section .videos::-webkit-scrollbar-thumb {
+  background-color: #104596;
+  border-radius: 20px;
+}
+.section-secondary > .content .publicity {
   grid-area: publicity-one;
   display: flex;
   justify-content: center;
 }
-.section-secondary .content .publicity img {
+.section-secondary > .content .publicity img {
   width: max-content;
   height: max-content;
 }
-.section-secondary .content .results-live {
+.section-secondary > .content .results-live {
   grid-area: results-live;
 }
-.section-secondary .content .section-news-1 {
-  grid-area: section-news-1;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: 22px;
-  row-gap: 22px;
-  grid-template-areas: "title title title" "news-one news-one news-one" "news-two news-two news-two" "news-three news-fourth news-fourth" "news-three news-five news-five" "news-three news-six news-six";
+.section-secondary > .content .section-banner-two {
+  grid-area: banner-two;
 }
-.section-secondary .content .section-news-1 > .title {
+.section-secondary > .content .section-news-1 {
+  grid-area: section-news-1;
+  display: flex;
+  gap: 22px;
+  flex-direction: column;
+}
+.section-secondary > .content .section-news-1 > .title {
   grid-area: title;
   display: flex;
   justify-content: space-between;
   width: 100%;
   align-items: center;
 }
-.section-secondary .content .section-news-1 .newsOne {
+.section-secondary > .content .section-news-1 .news {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 22px;
+  row-gap: 22px;
+  grid-template-areas: "news-one news-one news-one" "news-two news-two news-two" "news-three news-fourth news-fourth" "news-three news-five news-five" "news-three news-six news-six";
+}
+.section-secondary > .content .section-news-1 .news .newsOne {
   grid-area: news-one;
 }
-.section-secondary .content .section-news-1 .newsTwo {
+.section-secondary > .content .section-news-1 .news .newsTwo {
   grid-area: news-two;
 }
-.section-secondary .content .section-news-1 .newsThree {
+.section-secondary > .content .section-news-1 .news .newsThree {
   grid-area: news-three;
 }
-.section-secondary .content .section-news-1 .newsFourth {
+.section-secondary > .content .section-news-1 .news .newsFourth {
   grid-area: news-fourth;
 }
-.section-secondary .content .section-news-1 .newsFive {
+.section-secondary > .content .section-news-1 .news .newsFive {
   grid-area: news-five;
 }
-.section-secondary .content .section-news-1 .newsSix {
+.section-secondary > .content .section-news-1 .news .newsSix {
   grid-area: news-six;
 }
-.section-secondary .content .section-news-1 .options {
-  display: none;
-}
-.section-secondary .content .section-more-news-one {
+.section-secondary > .content .section-more-news-one {
   grid-area: more-news;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: 22px;
-  row-gap: 22px;
-  width: 100%;
-  grid-template-areas: "title title title" "news-one news-one news-one" "news-two news-two news-two" "news-three news-fourth news-fourth" "news-three news-five news-five" "news-three news-six news-six";
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
 }
-.section-secondary .content .section-more-news-one > .title {
+.section-secondary > .content .section-more-news-one > .title {
   grid-area: title;
   display: flex;
   justify-content: space-between;
   width: 100%;
   align-items: center;
 }
-.section-secondary .content .section-more-news-one > .title span {
+.section-secondary > .content .section-more-news-one > .title span {
   font-size: 25px;
 }
-.section-secondary .content .section-more-news-one .newsOne {
+.section-secondary > .content .section-more-news-one .news {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 22px;
+  row-gap: 22px;
+  width: 100%;
+  grid-template-areas: "title title title" "news-one news-one news-one" "news-two news-two news-two" "news-three news-fourth news-fourth" "news-three news-five news-five" "news-three news-six news-six";
+}
+.section-secondary > .content .section-more-news-one .news .newsOne {
   grid-area: news-one;
 }
-.section-secondary .content .section-more-news-one .newsTwo {
+.section-secondary > .content .section-more-news-one .news .newsTwo {
   grid-area: news-two;
 }
-.section-secondary .content .section-more-news-one .newsThree {
+.section-secondary > .content .section-more-news-one .news .newsThree {
   grid-area: news-three;
 }
-.section-secondary .content .section-more-news-one .newsFourth {
+.section-secondary > .content .section-more-news-one .news .newsFourth {
   grid-area: news-fourth;
 }
-.section-secondary .content .section-more-news-one .newsFive {
+.section-secondary > .content .section-more-news-one .news .newsFive {
   grid-area: news-five;
 }
-.section-secondary .content .section-more-news-one .newsSix {
+.section-secondary > .content .section-more-news-one .news .newsSix {
   grid-area: news-six;
 }
-.section-secondary .content .section-more-news-two {
+.section-secondary > .content .section-more-news-one .btn-more-news {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.section-secondary > .content .section-more-news-one .btn-more-news .button {
+  position: relative;
+  z-index: 2;
+}
+.section-secondary > .content .section-more-news-one .btn-more-news .separator-line {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #104596;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.section-secondary > .content .section-more-news-two {
   grid-area: section-more-news-two;
   display: grid;
   grid-template-columns: 1fr;
@@ -498,53 +566,53 @@
   width: 100%;
   grid-template-areas: "title" "news-one" "news-two" "news-three" "news-fourth";
 }
-.section-secondary .content .section-more-news-two > .title {
+.section-secondary > .content .section-more-news-two > .title {
   grid-area: title;
   display: flex;
   justify-content: space-between;
   width: 100%;
   align-items: center;
 }
-.section-secondary .content .section-more-news-two > .title span {
+.section-secondary > .content .section-more-news-two > .title span {
   font-size: 25px;
 }
-.section-secondary .content .section-more-news-two .news-one {
+.section-secondary > .content .section-more-news-two .news-one {
   grid-area: news-one;
 }
-.section-secondary .content .section-more-news-two .news-two {
+.section-secondary > .content .section-more-news-two .news-two {
   grid-area: news-two;
 }
-.section-secondary .content .section-more-news-two .news-three {
+.section-secondary > .content .section-more-news-two .news-three {
   grid-area: news-three;
 }
-.section-secondary .content .section-more-news-two .news-fourth {
+.section-secondary > .content .section-more-news-two .news-fourth {
   grid-area: news-fourth;
 }
-.section-secondary .content .section-more-news-two .news-five {
+.section-secondary > .content .section-more-news-two .news-five {
   grid-area: news-five;
   display: none;
 }
-.section-secondary .content .section-more-news-two .options {
+.section-secondary > .content .section-more-news-two .options {
   grid-area: options;
   display: none;
 }
-.section-secondary .content .section-more-news-three {
+.section-secondary > .content .section-more-news-three {
   grid-area: section-more-news-three;
   display: flex;
   flex-direction: column;
   gap: 25px;
 }
-.section-secondary .content .section-more-news-three > .title {
+.section-secondary > .content .section-more-news-three > .title {
   grid-area: title;
   display: flex;
   justify-content: space-between;
   width: 100%;
   align-items: center;
 }
-.section-secondary .content .section-more-news-three > .title span {
+.section-secondary > .content .section-more-news-three > .title span {
   font-size: 25px;
 }
-.section-secondary .content .section-more-news-three .news {
+.section-secondary > .content .section-more-news-three .news {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(5, max-content);
@@ -552,42 +620,42 @@
   row-gap: 22px;
   grid-template-areas: "news-1 news-1 news-1" "news-2 news-2 news-2" "news-3 news-4 news-4" "news-3 news-5 news-5" "news-3 news-6 news-6";
 }
-.section-secondary .content .section-more-news-three .news .news-1 {
+.section-secondary > .content .section-more-news-three .news .news-1 {
   grid-area: news-1;
 }
-.section-secondary .content .section-more-news-three .news .news-2 {
+.section-secondary > .content .section-more-news-three .news .news-2 {
   grid-area: news-2;
 }
-.section-secondary .content .section-more-news-three .news .news-3 {
+.section-secondary > .content .section-more-news-three .news .news-3 {
   grid-area: news-3;
 }
-.section-secondary .content .section-more-news-three .news .news-4 {
+.section-secondary > .content .section-more-news-three .news .news-4 {
   grid-area: news-4;
 }
-.section-secondary .content .section-more-news-three .news .news-5 {
+.section-secondary > .content .section-more-news-three .news .news-5 {
   grid-area: news-5;
 }
-.section-secondary .content .section-more-news-three .news .news-6 {
+.section-secondary > .content .section-more-news-three .news .news-6 {
   grid-area: news-6;
 }
-.section-secondary .content .section-more-news-three .options {
+.section-secondary > .content .section-more-news-three .options {
   display: none;
 }
-.section-secondary .content .section-more-news-fourth {
+.section-secondary > .content .section-more-news-fourth {
   grid-area: section-more-news-fourth;
   display: flex;
   flex-direction: column;
   gap: 25px;
 }
-.section-secondary .content .section-more-news-fourth .title {
+.section-secondary > .content .section-more-news-fourth .title {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.section-secondary .content .section-more-news-fourth .title span {
+.section-secondary > .content .section-more-news-fourth .title span {
   font-size: 25px;
 }
-.section-secondary .content .section-more-news-fourth > .news {
+.section-secondary > .content .section-more-news-fourth > .news {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: max-content;
@@ -595,153 +663,153 @@
   width: 100%;
   grid-template-areas: "news-1" "news-2" "news-3";
 }
-.section-secondary .content .section-more-news-fourth > .news .news-1 {
+.section-secondary > .content .section-more-news-fourth > .news .news-1 {
   grid-area: news-1;
 }
-.section-secondary .content .section-more-news-fourth > .news .news-2 {
+.section-secondary > .content .section-more-news-fourth > .news .news-2 {
   grid-area: news-2;
 }
-.section-secondary .content .section-more-news-fourth > .news .news-3 {
+.section-secondary > .content .section-more-news-fourth > .news .news-3 {
   grid-area: news-3;
 }
-.section-secondary .content .section-more-news-fourth > .news .news-4 {
+.section-secondary > .content .section-more-news-fourth > .news .news-4 {
   grid-area: news-4;
   display: none;
 }
-.section-secondary .content .section-more-news-fourth > .news .news-5 {
+.section-secondary > .content .section-more-news-fourth > .news .news-5 {
   grid-area: news-5;
   display: none;
 }
-.section-secondary .content .section-more-news-fourth > .news .news-6 {
+.section-secondary > .content .section-more-news-fourth > .news .news-6 {
   grid-area: news-6;
   display: none;
 }
-.section-secondary .content .section-more-news-fourth > .news .news-7 {
+.section-secondary > .content .section-more-news-fourth > .news .news-7 {
   grid-area: news-7;
   display: none;
 }
-.section-secondary .content .section-more-news-fourth > .news .news-8 {
+.section-secondary > .content .section-more-news-fourth > .news .news-8 {
   grid-area: news-8;
   display: none;
 }
-.section-secondary .content .section-more-news-fourth > .news .news-9 {
+.section-secondary > .content .section-more-news-fourth > .news .news-9 {
   grid-area: news-9;
   display: none;
 }
-.section-secondary .content .section-more-news-fourth > .news .news-10 {
+.section-secondary > .content .section-more-news-fourth > .news .news-10 {
   grid-area: news-10;
   display: none;
 }
-.section-secondary .content .section-more-news-fourth > .news .news-11 {
+.section-secondary > .content .section-more-news-fourth > .news .news-11 {
   grid-area: news-11;
   display: none;
 }
-.section-secondary .content .section-more-news-fourth > .news .news-12 {
+.section-secondary > .content .section-more-news-fourth > .news .news-12 {
   grid-area: news-12;
   display: none;
 }
-.section-secondary .content .section-more-news-fourth .options {
+.section-secondary > .content .section-more-news-fourth .options {
   display: none;
 }
-.section-secondary .content .section-last-news {
+.section-secondary > .content .section-last-news {
   grid-area: section-last-news;
   display: flex;
   flex-direction: column;
   gap: 25px;
 }
-.section-secondary .content .section-last-news .title {
+.section-secondary > .content .section-last-news .title {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.section-secondary .content .section-last-news .title span {
+.section-secondary > .content .section-last-news .title span {
   font-size: 25px;
 }
-.section-secondary .content .section-last-news > .news {
+.section-secondary > .content .section-last-news > .news {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   column-gap: 30px;
   grid-template-areas: "news-1 news-2 news-3 news-4 news-5";
 }
-.section-secondary .content .section-last-news > .news .news-1 {
+.section-secondary > .content .section-last-news > .news .news-1 {
   grid-area: news-1;
 }
-.section-secondary .content .section-last-news > .news .news-2 {
+.section-secondary > .content .section-last-news > .news .news-2 {
   grid-area: news-2;
 }
-.section-secondary .content .section-last-news > .news .news-3 {
+.section-secondary > .content .section-last-news > .news .news-3 {
   grid-area: news-3;
 }
-.section-secondary .content .section-last-news > .news .news-4 {
+.section-secondary > .content .section-last-news > .news .news-4 {
   grid-area: news-4;
 }
-.section-secondary .content .section-last-news > .news .news-5 {
+.section-secondary > .content .section-last-news > .news .news-5 {
   grid-area: news-5;
 }
-.section-secondary .content .section-last-news > .news .news-6 {
+.section-secondary > .content .section-last-news > .news .news-6 {
   grid-area: news-6;
   display: none;
 }
-.section-secondary .content .section-last-news > .news .news-7 {
+.section-secondary > .content .section-last-news > .news .news-7 {
   grid-area: news-7;
   display: none;
 }
-.section-secondary .content .section-last-news > .news .news-8 {
+.section-secondary > .content .section-last-news > .news .news-8 {
   grid-area: news-8;
   display: none;
 }
-.section-secondary .content .section-last-news > .news .news-9 {
+.section-secondary > .content .section-last-news > .news .news-9 {
   grid-area: news-9;
   display: none;
 }
-.section-secondary .content .section-last-news > .news .news-10 {
+.section-secondary > .content .section-last-news > .news .news-10 {
   grid-area: news-10;
   display: none;
 }
-.section-secondary .content .section-last-news > .news .news-11 {
+.section-secondary > .content .section-last-news > .news .news-11 {
   grid-area: news-11;
   display: none;
 }
-.section-secondary .content .section-last-news > .news .news-12 {
+.section-secondary > .content .section-last-news > .news .news-12 {
   grid-area: news-12;
   display: none;
 }
-.section-secondary .content .section-last-news .options {
+.section-secondary > .content .section-last-news .options {
   display: none;
 }
-.section-secondary .content .colombia-news {
+.section-secondary > .content .colombia-news {
   grid-area: colombia-news;
 }
-.section-secondary .content .section-related-articles-two {
+.section-secondary > .content .section-related-articles-two {
   grid-area: related-articles-two;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-.section-secondary .content .section-related-articles-two .title {
+.section-secondary > .content .section-related-articles-two .title {
   grid-column: span 6;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.section-secondary .content .section-related-articles-two .title span {
+.section-secondary > .content .section-related-articles-two .title span {
   font-size: 25px;
 }
-.section-secondary .content .section-related-articles-two .articles {
+.section-secondary > .content .section-related-articles-two .articles {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   column-gap: 38px;
 }
-.section-secondary .content .section-related-articles-two .articles .title {
+.section-secondary > .content .section-related-articles-two .articles .title {
   font-size: 14px !important;
 }
-.section-secondary .content .banner-three {
+.section-secondary > .content .banner-three {
   grid-area: banner-three;
   display: flex;
   gap: 60px;
   width: 100%;
 }
-.section-secondary .content .section-ligue {
+.section-secondary > .content .section-ligue {
   grid-area: ligue;
   display: flex;
   flex-direction: column;
@@ -750,21 +818,35 @@
   padding: 22px 13px 30px 30px;
   border-radius: 20px;
 }
-.section-secondary .content .section-ligue > .title {
+.section-secondary > .content .section-ligue > .title {
   display: flex;
   justify-content: center;
 }
-.section-secondary .content .section-ligue > .title span {
+.section-secondary > .content .section-ligue > .title span {
   font-size: 18px;
 }
-.section-secondary .content .section-ligue .ligues {
+.section-secondary > .content .section-ligue .ligues {
   display: flex;
   flex-direction: column;
   gap: 14px;
   padding-right: 16px;
   overflow: auto;
+  height: 450px;
 }
-.section-secondary .content .section-ligue .ligues .ligue {
+.section-secondary > .content .section-ligue .ligues::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+.section-secondary > .content .section-ligue .ligues::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.section-secondary > .content .section-ligue .ligues::-webkit-scrollbar:vertical {
+  width: 7px;
+}
+.section-secondary > .content .section-ligue .ligues::-webkit-scrollbar-thumb {
+  background-color: #104596;
+  border-radius: 20px;
+}
+.section-secondary > .content .section-ligue .ligues .ligue {
   display: flex;
   gap: 25px;
   background-color: white;
@@ -772,25 +854,25 @@
   align-items: center;
   padding: 9px 37px;
 }
-.section-secondary .content .section-ligue .ligues .ligue img {
+.section-secondary > .content .section-ligue .ligues .ligue img {
   width: 30px;
   height: 30px;
   border-radius: 50%;
   object-fit: cover;
 }
-.section-secondary .content .section-ligue .ligues .ligue span {
+.section-secondary > .content .section-ligue .ligues .ligue span {
   font-size: 16px;
 }
-.section-secondary .content .section-partido-live {
+.section-secondary > .content .section-partido-live {
   grid-area: partido-live;
 }
-.section-secondary .content .section-banner-one {
+.section-secondary > .content .section-banner-one {
   grid-area: banner-one;
   display: flex;
   gap: 60px;
   width: 100%;
 }
-.section-secondary .content .section-partidos-tv {
+.section-secondary > .content .section-partidos-tv {
   grid-area: partido-live;
   display: flex;
   border-radius: 20px;
@@ -798,7 +880,7 @@
   padding: 20px 26px;
   flex-direction: column;
 }
-.section-secondary .content .section-partidos-tv .header {
+.section-secondary > .content .section-partidos-tv .header {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -806,12 +888,12 @@
   align-items: center;
   margin-bottom: 30px;
 }
-.section-secondary .content .section-partidos-tv .header .information {
+.section-secondary > .content .section-partidos-tv .header .information {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
-.section-secondary .content .section-partidos-tv .header > .date-content {
+.section-secondary > .content .section-partidos-tv .header > .date-content {
   display: flex;
   padding: 8px 15px;
   background-color: white;
@@ -820,35 +902,35 @@
   width: max-content;
   justify-content: space-between;
 }
-.section-secondary .content .section-partidos-tv .header > .date-content .date {
+.section-secondary > .content .section-partidos-tv .header > .date-content .date {
   display: flex;
   gap: 5px;
   align-items: center;
 }
-.section-secondary .content .section-partidos-tv .header > .date-content .date i {
+.section-secondary > .content .section-partidos-tv .header > .date-content .date i {
   color: #104596;
 }
-.section-secondary .content .section-partidos-tv .header > .date-content i {
+.section-secondary > .content .section-partidos-tv .header > .date-content i {
   color: #104596;
 }
-.section-secondary .content .section-partidos-tv > text-component span {
+.section-secondary > .content .section-partidos-tv > text-component span {
   margin-bottom: 20px;
 }
-.section-secondary .content .section-partidos-tv .partidos {
+.section-secondary > .content .section-partidos-tv .partidos {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-.section-secondary .content .section-partidos-tv .partidos .partido-list {
+.section-secondary > .content .section-partidos-tv .partidos .partido-list {
   display: flex;
   flex-direction: column;
   padding: 20px 25px;
   border-radius: 10px;
   background-color: white;
 }
-.section-secondary .content .section-partidos-tv .partidos .partido-list .partido {
+.section-secondary > .content .section-partidos-tv .partidos .partido-list .partido {
   display: grid;
-  grid-template-columns: 1fr max-content 1fr;
+  grid-template-columns: max-content 1fr max-content;
   grid-template-areas: "country-1 logo hour" "country-2 logo options";
   column-gap: 20px;
   row-gap: 15px;
@@ -856,56 +938,56 @@
   border-bottom: 1px solid #104596;
   margin-bottom: 15px;
 }
-.section-secondary .content .section-partidos-tv .partidos .partido-list .partido .country-1 {
+.section-secondary > .content .section-partidos-tv .partidos .partido-list .partido .country-1 {
   grid-area: country-1;
 }
-.section-secondary .content .section-partidos-tv .partidos .partido-list .partido .country-2 {
+.section-secondary > .content .section-partidos-tv .partidos .partido-list .partido .country-2 {
   grid-area: country-2;
 }
-.section-secondary .content .section-partidos-tv .partidos .partido-list .partido .logo {
+.section-secondary > .content .section-partidos-tv .partidos .partido-list .partido .logo {
   grid-area: logo;
   align-self: center;
   justify-self: center;
 }
-.section-secondary .content .section-partidos-tv .partidos .partido-list .partido .logo img {
+.section-secondary > .content .section-partidos-tv .partidos .partido-list .partido .logo img {
   width: 50px;
   height: 50px;
   border-radius: 10px;
 }
-.section-secondary .content .section-partidos-tv .partidos .partido-list .partido .hour {
+.section-secondary > .content .section-partidos-tv .partidos .partido-list .partido .hour {
   grid-area: hour;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.section-secondary .content .section-partidos-tv .partidos .partido-list .partido .options {
+.section-secondary > .content .section-partidos-tv .partidos .partido-list .partido .options {
   grid-area: options;
   justify-content: space-between;
   align-items: center;
 }
-.section-secondary .content .section-partidos-tv .partidos .partido-list .partido .country-1, .section-secondary .content .section-partidos-tv .partidos .partido-list .partido .country-2 {
+.section-secondary > .content .section-partidos-tv .partidos .partido-list .partido .country-1, .section-secondary > .content .section-partidos-tv .partidos .partido-list .partido .country-2 {
   display: flex;
   gap: 6px;
   align-items: center;
 }
-.section-secondary .content .section-partidos-tv .partidos .partido-list .partido .country-1 img, .section-secondary .content .section-partidos-tv .partidos .partido-list .partido .country-2 img {
+.section-secondary > .content .section-partidos-tv .partidos .partido-list .partido .country-1 img, .section-secondary > .content .section-partidos-tv .partidos .partido-list .partido .country-2 img {
   width: 25px;
   height: 25px;
   border-radius: 50%;
 }
-.section-secondary .content .section-partidos-tv .partidos .partido-list .partido:last-child {
+.section-secondary > .content .section-partidos-tv .partidos .partido-list .partido:last-child {
   border: 0;
   padding-bottom: 0;
   margin-bottom: 0;
 }
-.section-secondary .content .section-partidos-tv .options {
+.section-secondary > .content .section-partidos-tv .options {
   display: flex;
   width: 100%;
   align-items: center;
   justify-content: space-between;
   margin-top: 20px;
 }
-.section-secondary .content .section-partidos-tv .options img {
+.section-secondary > .content .section-partidos-tv .options img {
   width: 150px;
   height: 30px;
   object-fit: cover;
@@ -957,6 +1039,9 @@
 }
 .score .options {
   grid-area: options;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 .score .details-1, .score .details-2 {
   display: flex;
@@ -981,6 +1066,25 @@
   width: 25px;
   height: 25px;
   border-radius: 50%;
+}
+
+.btn-more-news {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.btn-more-news .button {
+  position: relative;
+  z-index: 2;
+}
+.btn-more-news .separator-line {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #104596;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 /* COMPONENTS */
@@ -1065,12 +1169,6 @@
     row-gap: 50px;
     grid-template-areas: "publicity-one" "section-news-1" "liga-colombiana" "image-publicity-one" "teams" "partidos-colombianos" "more-news" "colombia-news" "section-more-news-two" "results-live" "section-more-news-three" "section-more-news-fourth" "image-publicity-two" "section-last-news" "ligue" "partido-live" "multimedia";
   }
-  .section-secondary .content .section-news-1 {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: max-content;
-    grid-template-areas: "title" "news-one" "news-two" "news-three" "news-fourth" "news-five" "news-six";
-  }
   .section-secondary .content .section-news-1 .title {
     justify-content: center;
   }
@@ -1079,6 +1177,32 @@
   }
   .section-secondary .content .section-news-1 .title span {
     font-size: 18px;
+  }
+  .section-secondary .content .section-news-1 .news {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: max-content;
+    grid-template-areas: "title" "news-one" "news-two" "news-three" "news-fourth" "news-five" "news-six";
+  }
+  .section-secondary .content .section-news-1 .news card-notice-component:nth-child(1) .card-news .news-content, .section-secondary .content .section-news-1 .news card-notice-component:nth-child(2) .card-news .news-content {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+  .section-secondary .content .section-news-1 .news card-notice-component:nth-child(3) .card-news {
+    padding-top: 18px;
+    border-top: 1px solid #104596;
+  }
+  .section-secondary .content .section-news-1 .news card-notice-component:nth-child(n+3) {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+  .section-secondary .content .section-news-1 .news card-notice-component:nth-child(n+3) .card-news {
+    padding-bottom: 25px;
+    border-bottom: 1px solid #104596;
+  }
+  .section-secondary .content .section-news-1 .news card-notice-component:last-child .card-news {
+    padding-bottom: 0;
+    border-bottom: 0;
   }
   .section-secondary .content .section-news-1 .options {
     display: flex !important;
@@ -1100,7 +1224,6 @@
     margin-right: 25px;
   }
   .section-secondary .content .teams-list {
-    grid-template-columns: repeat(5, 1fr);
     padding-left: 23px;
     padding-right: 23px;
   }
@@ -1307,6 +1430,9 @@
   .score .details-1 img, .score .details-2 img {
     width: 15px;
     height: 15px;
+  }
+  .btn-more-news .separator-line {
+    display: none;
   }
 }
 /***** GENERICS *****/

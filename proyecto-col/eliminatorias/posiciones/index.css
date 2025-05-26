@@ -30,10 +30,10 @@
 .section-main .content {
   display: grid;
   max-width: var(--max-width-content);
-  grid-template-columns: 8fr 4fr;
+  grid-template-columns: 6fr 4fr;
   grid-template-areas: "qualifiers colombia-news";
   grid-auto-rows: max-content;
-  column-gap: 38px;
+  column-gap: 28px;
   row-gap: 40px;
   margin: 0 auto;
 }
@@ -98,12 +98,17 @@
   display: flex;
   width: 100%;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  position: relative;
 }
 .section-main .content .qualifiers .options img {
   width: 150px;
   height: 30px;
   object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
 }
 .section-main .content .colombia-news {
   grid-area: colombia-news;
@@ -125,6 +130,7 @@
   }
   .section-main {
     background-color: white;
+    padding-top: 0;
   }
   .section-main .content {
     grid-template-columns: 1fr;
@@ -140,10 +146,20 @@
     height: max-content;
     object-fit: cover;
   }
+  .section-main .content .qualifiers {
+    padding-top: 0;
+    align-items: flex-start;
+  }
   .section-main .content .qualifiers .stadistics .stadistics-item {
     grid-template-columns: repeat(5, 1fr);
   }
   .section-main .content .qualifiers .stadistics .stadistics-item:nth-child(3), .section-main .content .qualifiers .stadistics .stadistics-item :nth-child(4), .section-main .content .qualifiers .stadistics .stadistics-item :nth-child(5), .section-main .content .qualifiers .stadistics .stadistics-item :nth-child(6), .section-main .content .qualifiers .stadistics .stadistics-item :nth-child(7), .section-main .content .qualifiers .stadistics .stadistics-item :nth-child(8) {
     display: none;
+  }
+  .section-main .content .qualifiers .options {
+    justify-content: flex-end;
+  }
+  .colombiaNews {
+    background-color: rgba(191, 191, 191, 0.1);
   }
 }

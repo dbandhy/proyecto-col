@@ -26,11 +26,8 @@
 .card-news.orientation-vertical.distribution-none {
   grid-template-rows: max-content max-content;
 }
-.card-news.orientation-vertical.distribution-equals img, .card-news.orientation-vertical.distribution-equals iframe {
-  grid-row: 1/4;
-}
-.card-news.orientation-vertical.distribution-equals .news-content {
-  grid-row: 4/7;
+.card-news.orientation-vertical.distribution-equals {
+  grid-template-rows: auto max-content;
 }
 .card-news.orientation-vertical.distribution-large-image img, .card-news.orientation-vertical.distribution-large-image iframe {
   grid-row: 1/5;

@@ -43,6 +43,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  height: max-content;
   background-color: #FFFFFF;
   border-radius: 20px;
   padding: 20px 30px;
@@ -153,6 +154,22 @@
   height: 25px;
   border-radius: 50%;
 }
+.section-main .content .qualifiers .options {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.section-main .content .qualifiers .options img {
+  width: 150px;
+  height: 30px;
+  object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
 .section-main .content .social-sidebar {
   grid-area: social-sidebar;
 }
@@ -245,6 +262,9 @@
   .section-main .content .qualifiers .rounds .scores .score .details-1 img, .section-main .content .qualifiers .rounds .scores .score .details-2 img {
     width: 15px;
     height: 15px;
+  }
+  .section-main .content .qualifiers .options {
+    justify-content: flex-end;
   }
   .section-main .content .publicity-1 {
     display: flex !important;

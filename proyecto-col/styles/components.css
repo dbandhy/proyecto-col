@@ -49,9 +49,25 @@
   flex-direction: column;
   gap: 24px;
 }
-.colombiaNews > .news .new {
+.colombiaNews > .news card-notice-component {
+  padding-bottom: 15px;
   border-bottom: 1px solid #104596;
 }
-.colombiaNews > .news .new:last-child {
+.colombiaNews > .news card-notice-component:last-child {
   border-bottom: none;
+}
+.colombiaNews__footer {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .colombiaNews__footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .colombiaNews__footer button-component {
+    width: 100%;
+  }
 }

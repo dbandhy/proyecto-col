@@ -212,11 +212,19 @@
   width: 100%;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 .qualifiers .options img {
   width: 150px;
   height: 30px;
   object-fit: cover;
+}
+.qualifiers .options .button {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: max-content;
+  transform: translateX(-50%);
 }
 
 .ligues-container {
