@@ -160,83 +160,92 @@
 							rounded="large"
 						></button-component>
 					</div>
-					<card-notice-component
-						image="../assets/img/breaking-news-10.png"
-						news="Donald Trump reconoció a Edmundo González"
-						orientation="horizontal"
-						category="FÚTBOL"
-						author="Juan Carlos Garcia Sierra"
-						distribution="large-image"
-						class="
-							newsOne
-							orientation-vertical-responsive
-							distribution-none-responsive
-							no-category-responsive
-						"
-					></card-notice-component>
-					<card-notice-component
-						image="../assets/img/breaking-news-10.png"
-						news="Donald Trump reconoció a Edmundo González"
-						orientation="horizontal"
-						category="FÚTBOL"
-						author="Juan Carlos Garcia Sierra"
-						distribution="large-image"
-						class="
-							newsTwo
-							orientation-vertical-responsive
-							distribution-none-responsive
-							no-category-responsive	
-						"
-					></card-notice-component>
-					<card-notice-component
-						image="../assets/img/breaking-news-10.png"
-						news="Donald Trump reconoció a Edmundo González"
-						orientation="vertical"
-						category="FÚTBOL"
-						author="Juan Carlos Garcia Sierra"
-						distribution="large-image"
-						class="
-							newsThree
-							orientation-horizontal-responsive
-							distribution-equals-responsive
-							no-category-responsive	
-						"
-					></card-notice-component>
-					<card-notice-component
-						image="../assets/img/breaking-news-10.png"
-						news="Donald Trump reconoció a Edmundo González"
-						orientation="horizontal"
-						category="FÚTBOL"
-						author="Juan Carlos Garcia Sierra"
-						distribution="equals"
-						class="newsFourth no-category-responsive"
-					></card-notice-component>
-					<card-notice-component
-						image="../assets/img/breaking-news-10.png"
-						news="Donald Trump reconoció a Edmundo González"
-						orientation="horizontal"
-						category="FÚTBOL"
-						author="Juan Carlos Garcia Sierra"
-						distribution="equals"
-						class="newsFive no-category-responsive"
-					></card-notice-component>
-					<card-notice-component
-						image="../assets/img/breaking-news-10.png"
-						news="Donald Trump reconoció a Edmundo González"
-						orientation="horizontal"
-						category="FÚTBOL"
-						author="Juan Carlos Garcia Sierra"
-						distribution="equals"
-						class="newsSix no-category-responsive"
-					></card-notice-component>
-					<div class="options">
-						<button-component
-							text="Ver más"
-							color="primary"
-							size="large"
-							rounded="large"
-						></button-component>
+					<div class="news">
+						<card-notice-component
+							link-show-more="#"
+							image="../assets/img/breaking-news-10.png"
+							news="Donald Trump reconoció a Edmundo González"
+							orientation="horizontal"
+							category="FÚTBOL"
+							author="Juan Carlos Garcia Sierra"
+							distribution="large-image"
+							class="
+								newsOne
+								orientation-vertical-responsive
+								distribution-none-responsive
+								no-category-responsive
+							"
+						></card-notice-component>
+						<card-notice-component
+							link-show-more="#"
+							image="../assets/img/breaking-news-10.png"
+							news="Donald Trump reconoció a Edmundo González"
+							orientation="horizontal"
+							category="FÚTBOL"
+							author="Juan Carlos Garcia Sierra"
+							distribution="large-image"
+							class="
+								newsTwo
+								orientation-vertical-responsive
+								distribution-none-responsive
+								no-category-responsive	
+							"
+						></card-notice-component>
+						<card-notice-component
+							link-show-more="#"
+							image="../assets/img/breaking-news-10.png"
+							news="Donald Trump reconoció a Edmundo González"
+							orientation="vertical"
+							category="FÚTBOL"
+							author="Juan Carlos Garcia Sierra"
+							distribution="large-image"
+							class="
+								newsThree
+								orientation-horizontal-responsive
+								distribution-equals-responsive
+								no-category-responsive	
+							"
+						></card-notice-component>
+						<card-notice-component
+							link-show-more="#"
+							image="../assets/img/breaking-news-10.png"
+							news="Donald Trump reconoció a Edmundo González"
+							orientation="horizontal"
+							category="FÚTBOL"
+							author="Juan Carlos Garcia Sierra"
+							distribution="equals"
+							class="newsFourth no-category-responsive"
+						></card-notice-component>
+						<card-notice-component
+							link-show-more="#"
+							image="../assets/img/breaking-news-10.png"
+							news="Donald Trump reconoció a Edmundo González"
+							orientation="horizontal"
+							category="FÚTBOL"
+							author="Juan Carlos Garcia Sierra"
+							distribution="equals"
+							class="newsFive no-category-responsive"
+						></card-notice-component>
+						<card-notice-component
+							link-show-more="#"
+							image="../assets/img/breaking-news-10.png"
+							news="Donald Trump reconoció a Edmundo González"
+							orientation="horizontal"
+							category="FÚTBOL"
+							author="Juan Carlos Garcia Sierra"
+							distribution="equals"
+							class="newsSix no-category-responsive"
+						></card-notice-component>
 					</div>
+					<div class="btn-more-news">
+            <div class="separator-line"></div>
+            <button-component
+              text="Ver más"
+              rounded="medium"
+              color="primary"
+              size="large"
+            ></button-component>
+          </div>
 				</div>
 				<div class="teams-list">
 					<img src="https://crests.football-data.org/65.svg" alt="">
@@ -347,6 +356,15 @@
 											size="small"
 											rounded="small"
 										></button-component>
+										<button-component
+											class="w-full"
+											text="Info"
+											color="primary"
+											ghost="true"
+											size="small"
+											rounded="small"
+											variant="ghost"
+										></button-component>
 									</div>
 								</div>
 							</div>
@@ -437,6 +455,15 @@
 								</div>
 							</div>
 						</div>
+					</div>
+					<div class="options">
+						<img src="../../assets/img/breaking-news-5.png" alt="powered-by score 24">
+						<button-component
+							text="Ver más"
+							size="large"
+							color="primary"
+							rounded="large"
+						></button-component>
 					</div>
 				</div>
 				<div class="liga-colombiana">
@@ -584,7 +611,22 @@
 									</div>
 								</div>
 							</div>
+							<div class="section">
+								<header-desplegable-component class="w-100" text="CUADRANGULAR B" size="medium"></header-desplegable-component>
+							</div>
+							<div class="section">
+								<header-desplegable-component class="w-100" text="FINAL" size="medium"></header-desplegable-component>
+							</div>
 						</div>
+					</div>
+					<div class="options">
+						<img src="../assets/img/powered-by.png" alt="powered-by score 24">
+						<button-component
+							text="Ver más"
+							size="large"
+							color="primary"
+							rounded="large"
+						></button-component>
 					</div>
 				</div>
 				<div class="section-partidos-tv">
@@ -806,7 +848,7 @@
 						</div>
 					</div>
 					<div class="options">
-            <img src="../assets/img/breaking-news-5.png" alt="powered-by score 24">
+            <img src="../assets/img/powered-by.png" alt="powered-by score 24">
             <button-component
               text="Ver más"
               size="large"
@@ -889,91 +931,100 @@
 							rounded="large"
 						></button-component>
 					</div>
-					<card-notice-component
-						image="../assets/img/breaking-news-10.png"
-						news="Donald Trump reconoció a Edmundo González"
-						orientation="horizontal"
-						category="FÚTBOL"
-						author="Juan Carlos Garcia Sierra"
-						distribution="large-image"
-						class="
-							newsOne
-							orientation-vertical-responsive
-							distribution-none-responsive
-							no-category-responsive
-						"
-					></card-notice-component>
-					<card-notice-component
-						image="../assets/img/breaking-news-10.png"
-						news="Donald Trump reconoció a Edmundo González"
-						orientation="horizontal"
-						category="FÚTBOL"
-						author="Juan Carlos Garcia Sierra"
-						distribution="large-image"
-						class="
-							newsTwo
-							orientation-vertical-responsive
-							distribution-equals-responsive
-							no-category-responsive	
-						"
-					></card-notice-component>
-					<card-notice-component
-						image="../assets/img/breaking-news-10.png"
-						news="Donald Trump reconoció a Edmundo González"
-						orientation="vertical"
-						category="FÚTBOL"
-						author="Juan Carlos Garcia Sierra"
-						distribution="large-image"
-						class="
-							newsThree
-							orientation-vertical-responsive
-							distribution-equals-responsive
-							no-category-responsive	
-						"
-					></card-notice-component>
-					<card-notice-component
-						image="../assets/img/breaking-news-10.png"
-						news="Donald Trump reconoció a Edmundo González"
-						orientation="horizontal"
-						category="FÚTBOL"
-						author="Juan Carlos Garcia Sierra"
-						distribution="equals"
-						class="
-							newsFourth
-							orientation-vertical-responsive
-							distribution-equals-responsive
-							no-category-responsive	
-						"
-					></card-notice-component>
-					<card-notice-component
-						image="../assets/img/breaking-news-10.png"
-						news="Donald Trump reconoció a Edmundo González"
-						orientation="horizontal"
-						category="FÚTBOL"
-						author="Juan Carlos Garcia Sierra"
-						distribution="equals"
-						class="
-							newsFive
-							orientation-vertical-responsive
-							distribution-equals-responsive
-							no-category-responsive	
-						"
-					></card-notice-component>
-					<card-notice-component
-						image="../assets/img/breaking-news-10.png"
-						news="Donald Trump reconoció a Edmundo González"
-						orientation="horizontal"
-						category="FÚTBOL"
-						author="Juan Carlos Garcia Sierra"
-						distribution="equals"
-						class="newsSix"
-					></card-notice-component>
-					<div class="options">
+					<div class="news">
+						<card-notice-component
+							link-show-more="#"
+							image="../assets/img/breaking-news-10.png"
+							news="Donald Trump reconoció a Edmundo González"
+							orientation="horizontal"
+							category="FÚTBOL"
+							author="Juan Carlos Garcia Sierra"
+							distribution="large-image"
+							class="
+								newsOne
+								orientation-vertical-responsive
+								distribution-none-responsive
+								no-category-responsive
+							"
+						></card-notice-component>
+						<card-notice-component
+							link-show-more="#"
+							image="../assets/img/breaking-news-10.png"
+							news="Donald Trump reconoció a Edmundo González"
+							orientation="horizontal"
+							category="FÚTBOL"
+							author="Juan Carlos Garcia Sierra"
+							distribution="large-image"
+							class="
+								newsTwo
+								orientation-vertical-responsive
+								distribution-equals-responsive
+								no-category-responsive	
+							"
+						></card-notice-component>
+						<card-notice-component
+							link-show-more="#"
+							image="../assets/img/breaking-news-10.png"
+							news="Donald Trump reconoció a Edmundo González"
+							orientation="vertical"
+							category="FÚTBOL"
+							author="Juan Carlos Garcia Sierra"
+							distribution="large-image"
+							class="
+								newsThree
+								orientation-vertical-responsive
+								distribution-equals-responsive
+								no-category-responsive	
+							"
+						></card-notice-component>
+						<card-notice-component
+							link-show-more="#"
+							image="../assets/img/breaking-news-10.png"
+							news="Donald Trump reconoció a Edmundo González"
+							orientation="horizontal"
+							category="FÚTBOL"
+							author="Juan Carlos Garcia Sierra"
+							distribution="equals"
+							class="
+								newsFourth
+								orientation-vertical-responsive
+								distribution-equals-responsive
+								no-category-responsive	
+							"
+						></card-notice-component>
+						<card-notice-component
+							link-show-more="#"
+							image="../assets/img/breaking-news-10.png"
+							news="Donald Trump reconoció a Edmundo González"
+							orientation="horizontal"
+							category="FÚTBOL"
+							author="Juan Carlos Garcia Sierra"
+							distribution="equals"
+							class="
+								newsFive
+								orientation-vertical-responsive
+								distribution-equals-responsive
+								no-category-responsive	
+							"
+						></card-notice-component>
+						<card-notice-component
+							link-show-more="#"
+							image="../assets/img/breaking-news-10.png"
+							news="Donald Trump reconoció a Edmundo González"
+							orientation="horizontal"
+							category="FÚTBOL"
+							author="Juan Carlos Garcia Sierra"
+							distribution="equals"
+							class="newsSix"
+						></card-notice-component>
+					</div>
+					<div class="btn-more-news">
+						<div class="separator-line"></div>
 						<button-component
 							text="Ver más"
+							rounded="medium"
 							color="primary"
 							size="large"
-							rounded="large"
 						></button-component>
 					</div>
 				</div>
@@ -982,41 +1033,49 @@
 						<text-component text="LO ÚLTIMO EN COLOMBIA" color="primary" weight="bold" size-desktop="25" size-mobile="18"></text-component>
 						<div class="news">
 							<card-notice-component
+								link-show-more="#"
 								id="main-card-one"
 								image="../assets/img/breaking-news-5.png"
 								news="Donald Trump reconoció a Edmundo González"
 								orientation="vertical"
 								author="Juan Carlos Garcia Sierra"
 								distribution="none"
-								classnames="new"
 							></card-notice-component>
 							<card-notice-component
+								link-show-more="#"
 								id="main-card-one"
 								image="../assets/img/breaking-news-5.png"
 								news="Donald Trump reconoció a Edmundo González"
 								orientation="horizontal"
 								author="Juan Carlos Garcia Sierra"
 								distribution="equals"
-								classnames="new"
 							></card-notice-component>
 							<card-notice-component
+								link-show-more="#"
 								id="main-card-one"
 								image="../assets/img/breaking-news-5.png"
 								news="Donald Trump reconoció a Edmundo González"
 								orientation="horizontal"
 								author="Juan Carlos Garcia Sierra"
 								distribution="equals"
-								classnames="new"
 							></card-notice-component>
 							<card-notice-component
+								link-show-more="#"
 								id="main-card-one"
 								image="../assets/img/breaking-news-5.png"
 								news="Donald Trump reconoció a Edmundo González"
 								orientation="horizontal"
 								author="Juan Carlos Garcia Sierra"
 								distribution="equals"
-								classnames="new"
 							></card-notice-component>
+						</div>
+						<div class="colombiaNews__footer">
+							<button-component
+								text="Ver más"
+								color="primary"
+								size="large"
+								rounded="large"
+							></button-component>
 						</div>
 					</div>
 				</div>
@@ -1028,51 +1087,52 @@
             title-text="MULTIMEDIA"
             button-text="Ver todo"
           ></header-news-section>
+					<card-notice-component
+						link-show-more="#"
+						video="https://www.youtube.com/embed/Q7yrRaY488A?si=07MGk24bTobMn2mB"
+						news="Donald Trump reconoció a Edmundo González"
+						category="COLOMBIANOS"
+						orientation="vertical"
+						author="Juan Carlos Garcia Sierra"
+						subtitle="María Corina Machado reaparece en un video y dice que ya está libre"
+						distribution="large-image"
+					></card-notice-component>
           <div class="videos">
             <card-notice-component
-              video="https://www.youtube.com/embed/Q7yrRaY488A?si=07MGk24bTobMn2mB"
-              news="Donald Trump reconoció a Edmundo González"
-              category="COLOMBIANOS"
-              orientation="vertical"
-              author="Juan Carlos Garcia Sierra"
-              distribution="large-image"
-              subtitle="La ayuda a quien lo necesita no solo beneficia a una persona comunidades"
-            ></card-notice-component>
-            <card-notice-component
+							link-show-more="#"
               video="https://www.youtube.com/embed/Q7yrRaY488A?si=07MGk24bTobMn2mB"
               news="Donald Trump reconoció a Edmundo González"
               category="COLOMBIANOS"
               orientation="horizontal"
               author="Juan Carlos Garcia Sierra"
               distribution="large-content"
-              subtitle="La ayuda a quien lo necesita no solo beneficia a una persona comunidades"
             ></card-notice-component>
             <card-notice-component
+							link-show-more="#"
               video="https://www.youtube.com/embed/Q7yrRaY488A?si=07MGk24bTobMn2mB"
               news="Donald Trump reconoció a Edmundo González"
               category="COLOMBIANOS"
               orientation="horizontal"
               author="Juan Carlos Garcia Sierra"
               distribution="large-content"
-              subtitle="La ayuda a quien lo necesita no solo beneficia a una persona comunidades"
             ></card-notice-component>
             <card-notice-component
+							link-show-more="#"
               video="https://www.youtube.com/embed/Q7yrRaY488A?si=07MGk24bTobMn2mB"
               news="Donald Trump reconoció a Edmundo González"
               category="COLOMBIANOS"
               orientation="horizontal"
               author="Juan Carlos Garcia Sierra"
               distribution="large-content"
-              subtitle="La ayuda a quien lo necesita no solo beneficia a una persona comunidades"
             ></card-notice-component>
             <card-notice-component
+							link-show-more="#"
               video="https://www.youtube.com/embed/Q7yrRaY488A?si=07MGk24bTobMn2mB"
               news="Donald Trump reconoció a Edmundo González"
               category="COLOMBIANOS"
               orientation="horizontal"
               author="Juan Carlos Garcia Sierra"
               distribution="large-content"
-              subtitle="La ayuda a quien lo necesita no solo beneficia a una persona comunidades"
             ></card-notice-component>
           </div>
         </div>
@@ -1085,7 +1145,7 @@
 						<div class="title text center color-primary weight-bold">RESULTADOS EN VIVO</div>
 						<div class="tornaments">
 							<div class="sections">
-								<header-desplegable-component class="w-100" text="CUADRANGULAR A" size="medium"></header-desplegable-component>
+								<header-desplegable-component class="w-100" text="Amistosos de clubes" size="medium"></header-desplegable-component>
 								<div class="groups">
 									<div class="score">
 										<text-component
@@ -1128,17 +1188,7 @@
 										<div class="details-1">
 											<div class="detail">
 												<text-component
-													text="46' R. Borré Amaury"
-													color="dark"
-													size-mobile="12"
-													size-desktop="14"
-													weight="regular"
-												></text-component>
-												<img src="../../assets/img/breaking-news-5.png" alt="country">
-											</div>
-											<div class="detail">
-												<text-component
-													text="46' R. Borré Amaury"
+													text="Yaser A."
 													color="dark"
 													size-mobile="12"
 													size-desktop="14"
@@ -1151,7 +1201,7 @@
 											<div class="detail">
 												<img src="../../assets/img/breaking-news-5.png" alt="country">
 												<text-component
-													text="46' R. Borré Amaury"
+													text="Yaser A."
 													color="dark"
 													size-mobile="12"
 													size-desktop="14"
@@ -1166,12 +1216,19 @@
 												size="small"
 												rounded="small"
 											></button-component>
+											<button-component
+												text="Info"
+												color="primary"
+												size="small"
+												rounded="small"
+												variant="ghost"
+											></button-component>
 										</div>
 									</div>
 								</div>
 							</div>
 							<div class="sections">
-								<header-desplegable-component class="w-100" text="CUADRANGULAR A" size="medium"></header-desplegable-component>
+								<header-desplegable-component class="w-100" text="Inglaterra Premier League de Inglaterra" size="medium"></header-desplegable-component>
 								<div class="groups">
 									<div class="score">
 										<text-component
@@ -1214,17 +1271,7 @@
 										<div class="details-1">
 											<div class="detail">
 												<text-component
-													text="46' R. Borré Amaury"
-													color="dark"
-													size-mobile="12"
-													size-desktop="14"
-													weight="regular"
-												></text-component>
-												<img src="../../assets/img/breaking-news-5.png" alt="country">
-											</div>
-											<div class="detail">
-												<text-component
-													text="46' R. Borré Amaury"
+													text="Yaser A."
 													color="dark"
 													size-mobile="12"
 													size-desktop="14"
@@ -1237,7 +1284,7 @@
 											<div class="detail">
 												<img src="../../assets/img/breaking-news-5.png" alt="country">
 												<text-component
-													text="46' R. Borré Amaury"
+													text="Yaser A."
 													color="dark"
 													size-mobile="12"
 													size-desktop="14"
@@ -1251,6 +1298,678 @@
 												color="primary"
 												size="small"
 												rounded="small"
+											></button-component>
+											<button-component
+												text="Info"
+												color="primary"
+												size="small"
+												rounded="small"
+												variant="ghost"
+											></button-component>
+										</div>
+									</div>
+								</div>
+								<div class="groups">
+									<div class="score">
+										<text-component
+											text="6:30 AM"
+											color="dark"
+											size-mobile="14"
+											size-desktop="14"
+											weight="bold"
+											class="hour"
+										></text-component>
+										<div class="country-1">
+											<text-component
+												text="Colombia"
+												color="dark"
+												size-mobile="12"
+												size-desktop="14"
+												weight="bold"
+											></text-component>
+											<img src="../../assets/img/breaking-news-5.png" alt="country">
+										</div>
+										<div class="results">
+											<text-component
+												text="1 - 0"
+												color="primary"
+												size-mobile="15"
+												size-desktop="15"
+												weight="bold"
+											></text-component>
+										</div>
+										<div class="country-2">
+											<img src="../../assets/img/breaking-news-5.png" alt="country">
+											<text-component
+												text="Colombia"
+												color="dark"
+												size-mobile="12"
+												size-desktop="14"
+												weight="bold"
+											></text-component>
+										</div>
+										<div class="details-1">
+											<div class="detail">
+												<text-component
+													text="Yaser A."
+													color="dark"
+													size-mobile="12"
+													size-desktop="14"
+													weight="regular"
+												></text-component>
+												<img src="../../assets/img/breaking-news-5.png" alt="country">
+											</div>
+										</div>
+										<div class="details-2">
+											<div class="detail">
+												<img src="../../assets/img/breaking-news-5.png" alt="country">
+												<text-component
+													text="Yaser A."
+													color="dark"
+													size-mobile="12"
+													size-desktop="14"
+													weight="regular"
+												></text-component>
+											</div>
+										</div>
+										<div class="options">
+											<button-component
+												text="Jugado"
+												color="primary"
+												size="small"
+												rounded="small"
+											></button-component>
+											<button-component
+												text="Info"
+												color="primary"
+												size="small"
+												rounded="small"
+												variant="ghost"
+											></button-component>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="sections">
+								<header-desplegable-component class="w-100" text="Inglaterra - FA Cup De Inglaterra" size="medium"></header-desplegable-component>
+								<div class="groups">
+									<div class="score">
+										<text-component
+											text="6:30 AM"
+											color="dark"
+											size-mobile="14"
+											size-desktop="14"
+											weight="bold"
+											class="hour"
+										></text-component>
+										<div class="country-1">
+											<text-component
+												text="Colombia"
+												color="dark"
+												size-mobile="12"
+												size-desktop="14"
+												weight="bold"
+											></text-component>
+											<img src="../../assets/img/breaking-news-5.png" alt="country">
+										</div>
+										<div class="results">
+											<text-component
+												text="1 - 0"
+												color="primary"
+												size-mobile="15"
+												size-desktop="15"
+												weight="bold"
+											></text-component>
+										</div>
+										<div class="country-2">
+											<img src="../../assets/img/breaking-news-5.png" alt="country">
+											<text-component
+												text="Colombia"
+												color="dark"
+												size-mobile="12"
+												size-desktop="14"
+												weight="bold"
+											></text-component>
+										</div>
+										<div class="details-1">
+											<div class="detail">
+												<text-component
+													text="Yaser A."
+													color="dark"
+													size-mobile="12"
+													size-desktop="14"
+													weight="regular"
+												></text-component>
+												<img src="../../assets/img/breaking-news-5.png" alt="country">
+											</div>
+										</div>
+										<div class="details-2">
+											<div class="detail">
+												<img src="../../assets/img/breaking-news-5.png" alt="country">
+												<text-component
+													text="Yaser A."
+													color="dark"
+													size-mobile="12"
+													size-desktop="14"
+													weight="regular"
+												></text-component>
+											</div>
+										</div>
+										<div class="options">
+											<button-component
+												text="Jugado"
+												color="primary"
+												size="small"
+												rounded="small"
+											></button-component>
+											<button-component
+												text="Info"
+												color="primary"
+												size="small"
+												rounded="small"
+												variant="ghost"
+											></button-component>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="sections">
+								<header-desplegable-component class="w-100" text="Italia - Serie de Italia" size="medium"></header-desplegable-component>
+							</div>
+							<div class="sections">
+								<header-desplegable-component class="w-100" text="Holanda - Copa Holand" size="medium"></header-desplegable-component>
+							</div>
+							<div class="sections">
+								<header-desplegable-component class="w-100" text="Inglaterra - The Championship De Inglaterra" size="medium"></header-desplegable-component>
+								<div class="groups">
+									<div class="score">
+										<text-component
+											text="6:30 AM"
+											color="dark"
+											size-mobile="14"
+											size-desktop="14"
+											weight="bold"
+											class="hour"
+										></text-component>
+										<div class="country-1">
+											<text-component
+												text="Colombia"
+												color="dark"
+												size-mobile="12"
+												size-desktop="14"
+												weight="bold"
+											></text-component>
+											<img src="../../assets/img/breaking-news-5.png" alt="country">
+										</div>
+										<div class="results">
+											<text-component
+												text="1 - 0"
+												color="primary"
+												size-mobile="15"
+												size-desktop="15"
+												weight="bold"
+											></text-component>
+										</div>
+										<div class="country-2">
+											<img src="../../assets/img/breaking-news-5.png" alt="country">
+											<text-component
+												text="Colombia"
+												color="dark"
+												size-mobile="12"
+												size-desktop="14"
+												weight="bold"
+											></text-component>
+										</div>
+										<div class="details-1">
+											<div class="detail">
+												<text-component
+													text="Yaser A."
+													color="dark"
+													size-mobile="12"
+													size-desktop="14"
+													weight="regular"
+												></text-component>
+												<img src="../../assets/img/breaking-news-5.png" alt="country">
+											</div>
+										</div>
+										<div class="details-2">
+											<div class="detail">
+												<img src="../../assets/img/breaking-news-5.png" alt="country">
+												<text-component
+													text="Yaser A."
+													color="dark"
+													size-mobile="12"
+													size-desktop="14"
+													weight="regular"
+												></text-component>
+											</div>
+										</div>
+										<div class="options">
+											<button-component
+												text="Jugado"
+												color="primary"
+												size="small"
+												rounded="small"
+											></button-component>
+											<button-component
+												text="Info"
+												color="primary"
+												size="small"
+												rounded="small"
+												variant="ghost"
+											></button-component>
+										</div>
+									</div>
+								</div>
+								<div class="groups">
+									<div class="score">
+										<text-component
+											text="6:30 AM"
+											color="dark"
+											size-mobile="14"
+											size-desktop="14"
+											weight="bold"
+											class="hour"
+										></text-component>
+										<div class="country-1">
+											<text-component
+												text="Colombia"
+												color="dark"
+												size-mobile="12"
+												size-desktop="14"
+												weight="bold"
+											></text-component>
+											<img src="../../assets/img/breaking-news-5.png" alt="country">
+										</div>
+										<div class="results">
+											<text-component
+												text="1 - 0"
+												color="primary"
+												size-mobile="15"
+												size-desktop="15"
+												weight="bold"
+											></text-component>
+										</div>
+										<div class="country-2">
+											<img src="../../assets/img/breaking-news-5.png" alt="country">
+											<text-component
+												text="Colombia"
+												color="dark"
+												size-mobile="12"
+												size-desktop="14"
+												weight="bold"
+											></text-component>
+										</div>
+										<div class="details-1">
+											<div class="detail">
+												<text-component
+													text="Yaser A."
+													color="dark"
+													size-mobile="12"
+													size-desktop="14"
+													weight="regular"
+												></text-component>
+												<img src="../../assets/img/breaking-news-5.png" alt="country">
+											</div>
+										</div>
+										<div class="details-2">
+											<div class="detail">
+												<img src="../../assets/img/breaking-news-5.png" alt="country">
+												<text-component
+													text="Yaser A."
+													color="dark"
+													size-mobile="12"
+													size-desktop="14"
+													weight="regular"
+												></text-component>
+											</div>
+										</div>
+										<div class="options">
+											<button-component
+												text="Jugado"
+												color="primary"
+												size="small"
+												rounded="small"
+											></button-component>
+											<button-component
+												text="Info"
+												color="primary"
+												size="small"
+												rounded="small"
+												variant="ghost"
+											></button-component>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="sections">
+								<header-desplegable-component class="w-100" text="Inglaterra - The Championship De Inglaterra" size="medium"></header-desplegable-component>
+								<div class="groups">
+									<div class="score">
+										<text-component
+											text="6:30 AM"
+											color="dark"
+											size-mobile="14"
+											size-desktop="14"
+											weight="bold"
+											class="hour"
+										></text-component>
+										<div class="country-1">
+											<text-component
+												text="Colombia"
+												color="dark"
+												size-mobile="12"
+												size-desktop="14"
+												weight="bold"
+											></text-component>
+											<img src="../../assets/img/breaking-news-5.png" alt="country">
+										</div>
+										<div class="results">
+											<text-component
+												text="1 - 0"
+												color="primary"
+												size-mobile="15"
+												size-desktop="15"
+												weight="bold"
+											></text-component>
+										</div>
+										<div class="country-2">
+											<img src="../../assets/img/breaking-news-5.png" alt="country">
+											<text-component
+												text="Colombia"
+												color="dark"
+												size-mobile="12"
+												size-desktop="14"
+												weight="bold"
+											></text-component>
+										</div>
+										<div class="details-1">
+											<div class="detail">
+												<text-component
+													text="Yaser A."
+													color="dark"
+													size-mobile="12"
+													size-desktop="14"
+													weight="regular"
+												></text-component>
+												<img src="../../assets/img/breaking-news-5.png" alt="country">
+											</div>
+										</div>
+										<div class="details-2">
+											<div class="detail">
+												<img src="../../assets/img/breaking-news-5.png" alt="country">
+												<text-component
+													text="Yaser A."
+													color="dark"
+													size-mobile="12"
+													size-desktop="14"
+													weight="regular"
+												></text-component>
+											</div>
+										</div>
+										<div class="options">
+											<button-component
+												text="Jugado"
+												color="primary"
+												size="small"
+												rounded="small"
+											></button-component>
+											<button-component
+												text="Info"
+												color="primary"
+												size="small"
+												rounded="small"
+												variant="ghost"
+											></button-component>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="sections">
+								<header-desplegable-component class="w-100" text="Australia - A - League De Australia" size="medium"></header-desplegable-component>
+							</div>
+							<div class="sections">
+								<header-desplegable-component class="w-100" text="India - Super Liga De India" size="medium"></header-desplegable-component>
+							</div>
+							
+							<div class="sections">
+								<header-desplegable-component class="w-100" text="Alemania - Bundesliga De" size="medium"></header-desplegable-component>
+								<div class="groups">
+									<div class="score">
+										<text-component
+											text="6:30 AM"
+											color="dark"
+											size-mobile="14"
+											size-desktop="14"
+											weight="bold"
+											class="hour"
+										></text-component>
+										<div class="country-1">
+											<text-component
+												text="Colombia"
+												color="dark"
+												size-mobile="12"
+												size-desktop="14"
+												weight="bold"
+											></text-component>
+											<img src="../../assets/img/breaking-news-5.png" alt="country">
+										</div>
+										<div class="results">
+											<text-component
+												text="1 - 0"
+												color="primary"
+												size-mobile="15"
+												size-desktop="15"
+												weight="bold"
+											></text-component>
+										</div>
+										<div class="country-2">
+											<img src="../../assets/img/breaking-news-5.png" alt="country">
+											<text-component
+												text="Colombia"
+												color="dark"
+												size-mobile="12"
+												size-desktop="14"
+												weight="bold"
+											></text-component>
+										</div>
+										<div class="details-1">
+											<div class="detail">
+												<text-component
+													text="Yaser A."
+													color="dark"
+													size-mobile="12"
+													size-desktop="14"
+													weight="regular"
+												></text-component>
+												<img src="../../assets/img/breaking-news-5.png" alt="country">
+											</div>
+										</div>
+										<div class="details-2">
+											<div class="detail">
+												<img src="../../assets/img/breaking-news-5.png" alt="country">
+												<text-component
+													text="Yaser A."
+													color="dark"
+													size-mobile="12"
+													size-desktop="14"
+													weight="regular"
+												></text-component>
+											</div>
+										</div>
+										<div class="options">
+											<button-component
+												text="Jugado"
+												color="primary"
+												size="small"
+												rounded="small"
+											></button-component>
+											<button-component
+												text="Info"
+												color="primary"
+												size="small"
+												rounded="small"
+												variant="ghost"
+											></button-component>
+										</div>
+									</div>
+								</div>
+								<div class="groups">
+									<div class="score">
+										<text-component
+											text="6:30 AM"
+											color="dark"
+											size-mobile="14"
+											size-desktop="14"
+											weight="bold"
+											class="hour"
+										></text-component>
+										<div class="country-1">
+											<text-component
+												text="Colombia"
+												color="dark"
+												size-mobile="12"
+												size-desktop="14"
+												weight="bold"
+											></text-component>
+											<img src="../../assets/img/breaking-news-5.png" alt="country">
+										</div>
+										<div class="results">
+											<text-component
+												text="1 - 0"
+												color="primary"
+												size-mobile="15"
+												size-desktop="15"
+												weight="bold"
+											></text-component>
+										</div>
+										<div class="country-2">
+											<img src="../../assets/img/breaking-news-5.png" alt="country">
+											<text-component
+												text="Colombia"
+												color="dark"
+												size-mobile="12"
+												size-desktop="14"
+												weight="bold"
+											></text-component>
+										</div>
+										<div class="details-1">
+											<div class="detail">
+												<text-component
+													text="Yaser A."
+													color="dark"
+													size-mobile="12"
+													size-desktop="14"
+													weight="regular"
+												></text-component>
+												<img src="../../assets/img/breaking-news-5.png" alt="country">
+											</div>
+										</div>
+										<div class="details-2">
+											<div class="detail">
+												<img src="../../assets/img/breaking-news-5.png" alt="country">
+												<text-component
+													text="Yaser A."
+													color="dark"
+													size-mobile="12"
+													size-desktop="14"
+													weight="regular"
+												></text-component>
+											</div>
+										</div>
+										<div class="options">
+											<button-component
+												text="Jugado"
+												color="primary"
+												size="small"
+												rounded="small"
+											></button-component>
+											<button-component
+												text="Info"
+												color="primary"
+												size="small"
+												rounded="small"
+												variant="ghost"
+											></button-component>
+										</div>
+									</div>
+								</div>
+								<div class="groups">
+									<div class="score">
+										<text-component
+											text="6:30 AM"
+											color="dark"
+											size-mobile="14"
+											size-desktop="14"
+											weight="bold"
+											class="hour"
+										></text-component>
+										<div class="country-1">
+											<text-component
+												text="Colombia"
+												color="dark"
+												size-mobile="12"
+												size-desktop="14"
+												weight="bold"
+											></text-component>
+											<img src="../../assets/img/breaking-news-5.png" alt="country">
+										</div>
+										<div class="results">
+											<text-component
+												text="1 - 0"
+												color="primary"
+												size-mobile="15"
+												size-desktop="15"
+												weight="bold"
+											></text-component>
+										</div>
+										<div class="country-2">
+											<img src="../../assets/img/breaking-news-5.png" alt="country">
+											<text-component
+												text="Colombia"
+												color="dark"
+												size-mobile="12"
+												size-desktop="14"
+												weight="bold"
+											></text-component>
+										</div>
+										<div class="details-1">
+											<div class="detail">
+												<text-component
+													text="Yaser A."
+													color="dark"
+													size-mobile="12"
+													size-desktop="14"
+													weight="regular"
+												></text-component>
+												<img src="../../assets/img/breaking-news-5.png" alt="country">
+											</div>
+										</div>
+										<div class="details-2">
+											<div class="detail">
+												<img src="../../assets/img/breaking-news-5.png" alt="country">
+												<text-component
+													text="Yaser A."
+													color="dark"
+													size-mobile="12"
+													size-desktop="14"
+													weight="regular"
+												></text-component>
+											</div>
+										</div>
+										<div class="options">
+											<button-component
+												text="Jugado"
+												color="primary"
+												size="small"
+												rounded="small"
+											></button-component>
+											<button-component
+												text="Info"
+												color="primary"
+												size="small"
+												rounded="small"
+												variant="ghost"
 											></button-component>
 										</div>
 									</div>
@@ -1325,6 +2044,7 @@
 						></button-component>
 					</div>
 					<card-notice-component
+						link-show-more="#"
 						image="../assets/img/breaking-news-10.png"
 						news="Donald Trump reconoció a Edmundo González"
 						orientation="horizontal"
@@ -1340,6 +2060,7 @@
 							no-category-responsive"
 					></card-notice-component>
 					<card-notice-component
+						link-show-more="#"
 						image="../assets/img/breaking-news-10.png"
 						news="Donald Trump reconoció a Edmundo González"
 						orientation="horizontal"
@@ -1355,6 +2076,7 @@
 						"
 					></card-notice-component>
 					<card-notice-component
+						link-show-more="#"
 						image="../assets/img/breaking-news-10.png"
 						news="Donald Trump reconoció a Edmundo González"
 						orientation="horizontal"
@@ -1371,6 +2093,7 @@
 					></card-notice-component>
 					<div class="news-fourth">
 						<card-notice-component
+							link-show-more="#"
 							image="../assets/img/breaking-news-10.png"
 							news="Donald Trump reconoció a Edmundo González"
 							orientation="horizontal"
@@ -1383,6 +2106,7 @@
 					</div>
 					<div class="news-five">
 						<card-notice-component
+							link-show-more="#"
 							image="../assets/img/breaking-news-10.png"
 							news="Donald Trump reconoció a Edmundo González"
 							orientation="horizontal"
@@ -1393,12 +2117,13 @@
 							class="orientation-vertical-responsive no-subtitle-responsive"
 						></card-notice-component>
 					</div>
-					<div class="options">
+					<div class="btn-more-news">
+						<div class="separator-line"></div>
 						<button-component
 							text="Ver más"
+							rounded="medium"
 							color="primary"
 							size="large"
-							rounded="large"
 						></button-component>
 					</div>
 				</div>
@@ -1414,6 +2139,7 @@
 					</div>
 					<div class="news">
 						<card-notice-component
+							link-show-more="#"
 							image="../assets/img/breaking-news-10.png"
 							news="Donald Trump reconoció a Edmundo González"
 							orientation="horizontal"
@@ -1428,6 +2154,7 @@
 							"
 						></card-notice-component>
 						<card-notice-component
+							link-show-more="#"
 							image="../assets/img/breaking-news-10.png"
 							news="Donald Trump reconoció a Edmundo González"
 							orientation="horizontal"
@@ -1442,6 +2169,7 @@
 							"
 						></card-notice-component>
 						<card-notice-component
+							link-show-more="#"
 							image="../assets/img/breaking-news-10.png"
 							news="Donald Trump reconoció a Edmundo González"
 							orientation="vertical"
@@ -1456,6 +2184,7 @@
 							"
 						></card-notice-component>
 						<card-notice-component
+							link-show-more="#"
 							image="../assets/img/breaking-news-10.png"
 							news="Donald Trump reconoció a Edmundo González"
 							orientation="horizontal"
@@ -1470,6 +2199,7 @@
 							"
 						></card-notice-component>
 						<card-notice-component
+							link-show-more="#"
 							image="../assets/img/breaking-news-10.png"
 							news="Donald Trump reconoció a Edmundo González"
 							orientation="horizontal"
@@ -1484,6 +2214,7 @@
 							"
 						></card-notice-component>
 						<card-notice-component
+							link-show-more="#"
 							image="../assets/img/breaking-news-10.png"
 							news="Donald Trump reconoció a Edmundo González"
 							orientation="horizontal"
@@ -1501,6 +2232,9 @@
 							rounded="large"
 						></button-component>
 					</div>
+				</div>
+				<div class="section-banner-two">
+					<social-sidebar image="../assets/img/breaking-news-banner.png" link=""></social-sidebar>
 				</div>
 				<div class="banner-three">
 					<social-sidebar image="../assets/img/breaking-news-banner.png" link=""></social-sidebar>
@@ -1518,6 +2252,7 @@
 					<div class="news">
 						<div class="news-1">
 							<card-notice-component
+								link-show-more="#"
 								image="../assets/img/breaking-news-10.png"
 								news="Donald Trump reconoció a Edmundo González"
 								orientation="horizontal"
@@ -1535,6 +2270,7 @@
 						</div>
 						<div class="news-2">
 							<card-notice-component
+								link-show-more="#"
 								image="../assets/img/breaking-news-10.png"
 								news="Donald Trump reconoció a Edmundo González"
 								orientation="horizontal"
@@ -1552,6 +2288,7 @@
 						</div>
 						<div class="news-3">
 							<card-notice-component
+								link-show-more="#"
 								image="../assets/img/breaking-news-10.png"
 								news="Donald Trump reconoció a Edmundo González"
 								orientation="horizontal"
@@ -1568,6 +2305,7 @@
 							></card-notice-component>
 						</div>
 						<card-notice-component
+							link-show-more="#"
 							image="../assets/img/breaking-news-10.png"
 							news="Donald Trump reconoció a Edmundo González"
 							orientation="horizontal"
@@ -1584,6 +2322,7 @@
 							"	
 						></card-notice-component>
 						<card-notice-component
+							link-show-more="#"
 							image="../assets/img/breaking-news-10.png"
 							news="Donald Trump reconoció a Edmundo González"
 							orientation="horizontal"
@@ -1592,6 +2331,7 @@
 							class="news-5"
 						></card-notice-component>
 						<card-notice-component
+							link-show-more="#"
 							image="../assets/img/breaking-news-10.png"
 							news="Donald Trump reconoció a Edmundo González"
 							orientation="horizontal"
@@ -1600,6 +2340,7 @@
 							class="news-6"
 						></card-notice-component>
 						<card-notice-component
+							link-show-more="#"
 							image="../assets/img/breaking-news-10.png"
 							news="Donald Trump reconoció a Edmundo González"
 							orientation="horizontal"
@@ -1608,6 +2349,7 @@
 							class="news-7"
 						></card-notice-component>
 						<card-notice-component
+							link-show-more="#"
 							image="../assets/img/breaking-news-10.png"
 							news="Donald Trump reconoció a Edmundo González"
 							orientation="horizontal"
@@ -1616,6 +2358,7 @@
 							class="news-8"
 						></card-notice-component>
 						<card-notice-component
+							link-show-more="#"
 							image="../assets/img/breaking-news-10.png"
 							news="Donald Trump reconoció a Edmundo González"
 							orientation="horizontal"
@@ -1624,6 +2367,7 @@
 							class="news-9"
 						></card-notice-component>
 						<card-notice-component
+							link-show-more="#"
 							image="../assets/img/breaking-news-10.png"
 							news="Donald Trump reconoció a Edmundo González"
 							orientation="horizontal"
@@ -1632,6 +2376,7 @@
 							class="news-10"
 						></card-notice-component>
 						<card-notice-component
+							link-show-more="#"
 							image="../assets/img/breaking-news-10.png"
 							news="Donald Trump reconoció a Edmundo González"
 							orientation="horizontal"
@@ -1640,6 +2385,7 @@
 							class="news-11"	
 						></card-notice-component>
 						<card-notice-component
+							link-show-more="#"
 							image="../assets/img/breaking-news-10.png"
 							news="Donald Trump reconoció a Edmundo González"
 							orientation="horizontal"
@@ -1669,6 +2415,7 @@
 					</div>
 					<div class="news">
 						<card-notice-component
+							link-show-more="#"
 							news="Donald Trump reconoció a Edmundo González"
 							orientation="vertical"
 							category="FÚTBOL"
@@ -1678,6 +2425,7 @@
 							class="news-1"
 						></card-notice-component>
 						<card-notice-component
+							link-show-more="#"
 							image="../assets/img/breaking-news-10.png"
 							news="Donald Trump reconoció a Edmundo González"
 							orientation="vertical"
@@ -1693,6 +2441,7 @@
 							"	
 						></card-notice-component>
 						<card-notice-component
+							link-show-more="#"
 							image="../assets/img/breaking-news-10.png"
 							news="Donald Trump reconoció a Edmundo González"
 							orientation="vertical"
@@ -1708,6 +2457,7 @@
 							"		
 						></card-notice-component>
 						<card-notice-component
+							link-show-more="#"
 							image="../assets/img/breaking-news-10.png"
 							news="Donald Trump reconoció a Edmundo González"
 							orientation="vertical"
@@ -1723,6 +2473,7 @@
 							"		
 						></card-notice-component>
 						<card-notice-component
+							link-show-more="#"
 							image="../assets/img/breaking-news-10.png"
 							news="Donald Trump reconoció a Edmundo González"
 							orientation="vertical"
@@ -1738,6 +2489,7 @@
 							"		
 						></card-notice-component>
 						<card-notice-component
+							link-show-more="#"
 							image="../assets/img/breaking-news-10.png"
 							news="Donald Trump reconoció a Edmundo González"
 							orientation="vertical"
@@ -1746,6 +2498,7 @@
 							class="news-6"		
 						></card-notice-component>
 						<card-notice-component
+							link-show-more="#"
 							image="../assets/img/breaking-news-10.png"
 							news="Donald Trump reconoció a Edmundo González"
 							orientation="vertical"
@@ -1754,6 +2507,7 @@
 							class="news-7"		
 						></card-notice-component>
 						<card-notice-component
+							link-show-more="#"
 							image="../assets/img/breaking-news-10.png"
 							news="Donald Trump reconoció a Edmundo González"
 							orientation="vertical"
@@ -1762,6 +2516,7 @@
 							class="news-8"		
 						></card-notice-component>
 						<card-notice-component
+							link-show-more="#"
 							image="../assets/img/breaking-news-10.png"
 							news="Donald Trump reconoció a Edmundo González"
 							orientation="vertical"
@@ -1770,6 +2525,7 @@
 							class="news-9"		
 						></card-notice-component>
 						<card-notice-component
+							link-show-more="#"
 							image="../assets/img/breaking-news-10.png"
 							news="Donald Trump reconoció a Edmundo González"
 							orientation="vertical"
@@ -1778,6 +2534,7 @@
 							class="news-10"		
 						></card-notice-component>
 						<card-notice-component
+							link-show-more="#"
 							image="../assets/img/breaking-news-10.png"
 							news="Donald Trump reconoció a Edmundo González"
 							orientation="vertical"
@@ -1786,6 +2543,7 @@
 							class="news-11"		
 						></card-notice-component>
 						<card-notice-component
+							link-show-more="#"
 							image="../assets/img/breaking-news-10.png"
 							news="Donald Trump reconoció a Edmundo González"
 							orientation="vertical"
