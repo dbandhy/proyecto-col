@@ -33,7 +33,7 @@
 		<link rel="stylesheet" href="../styles/style.css" />
 		<link rel="stylesheet" href="../styles/text.css">
 		<!-- Estilos componentes -->
-		<link rel="stylesheet" href="../styles/header.css" />
+		<link rel="stylesheet" href="./components/Header/index.css" />
 		<link rel="stylesheet" href="../styles/footer.css" />
 		<link rel="stylesheet" href="../styles/components.css">
 		<link rel="stylesheet" href="../static/components/cardNotice/cardNotice.css">
@@ -45,7 +45,7 @@
 		<link rel="stylesheet" href="../static/components/SocialSidebar/index.css">
 		<!-- COMPONENTES -->
 		<script src="../static/components/footer.js"></script>
-  	<script src="../static/components/header.js"></script>
+  	<script src="./components/Header/index.js"></script>
 		<script src="../static/components/button/index.js"></script>
 		<script src="../static/components/Text/index.js"></script>	
 		<script src="../static/components/cardNotice/cardNotice.js"></script>
@@ -55,7 +55,7 @@
 		<script src="../static/components/SocialSidebar/index.js"></script>
 	</head>
 	<body class="body-container">
-		<header-component></header-component>
+		<actualidad-header></actualidad-header>
 		<menu-desplegable></menu-desplegable>
 
 		<div class="social-bar-desplegable">
@@ -353,52 +353,59 @@
 					</section>
 					<div class="colombia-news ">
 						<div class="colombiaNews">
-							<text-component
-								size-mobile="18"
-								size-desktop="25"
-								text="LO ÚLTIMO EN COLOMBIA"
-								weight="bold"
-								color="primary"
-							></text-component>
-							<div class="news">
-								<card-notice-component
-									link-show-more="#"
-									id="main-card-one"
-									image="../assets/img/breaking-news-5.png"
-									news="Donald Trump reconoció a Edmundo González"
-									orientation="vertical"
-									author="Juan Carlos Garcia Sierra"
-									distribution="none"
-								></card-notice-component>
-								<card-notice-component
-									link-show-more="#"
-									id="main-card-one"
-									image="../assets/img/breaking-news-5.png"
-									news="Costa Rica hizo oficial su apoyo a Edmundo González"
-									orientation="horizontal"
-									author="Juan Carlos Garcia Sierra"
-									distribution="equals"
-								></card-notice-component>
-								<card-notice-component
-									link-show-more="#"
-									id="main-card-one"
-									image="../assets/img/breaking-news-5.png"
-									news="Donald Trump reconoció a Edmundo González"
-									orientation="horizontal"
-									author="Juan Carlos Garcia Sierra"
-									distribution="equals"
-								></card-notice-component>
-								<card-notice-component
-									link-show-more="#"
-									id="main-card-one"
-									image="../assets/img/breaking-news-5.png"
-									news="Donald Trump reconoció a Edmundo González"
-									orientation="horizontal"
-									author="Juan Carlos Garcia Sierra"
-									distribution="equals"
-								></card-notice-component>
-							</div>
-						</div>
+            <text-component
+              size-mobile="18"
+              size-desktop="25"
+              text="Lo último en futbol"
+              weight="bold"
+              color="primary"
+            ></text-component>
+            <div class="news">
+              <card-notice-component
+                id="main-card-one"
+                image="../assets/img/colombia-news-main.png"
+                news="Donald Trump reconoció a Edmundo González"
+                orientation="vertical"
+                author="Juan Carlos Garcia Sierra"
+                distribution="none"
+              ></card-notice-component>
+              <card-notice-component
+                link-show-more="#"
+                id="main-card-one"
+                image="../assets/img/breaking-news-5.png"
+                news="Costa Rica hizo oficial su apoyo a Edmundo González"
+                orientation="horizontal"
+                author="Juan Carlos Garcia Sierra"
+                distribution="equals"
+              ></card-notice-component>
+              <card-notice-component
+                link-show-more="#"
+                id="main-card-one"
+                image="../assets/img/breaking-news-5.png"
+                news="Donald Trump reconoció a Edmundo González"
+                orientation="horizontal"
+                author="Juan Carlos Garcia Sierra"
+                distribution="equals"
+              ></card-notice-component>
+              <card-notice-component
+                link-show-more="#"
+                id="main-card-one"
+                image="../assets/img/breaking-news-5.png"
+                news="Donald Trump reconoció a Edmundo González"
+                orientation="horizontal"
+                author="Juan Carlos Garcia Sierra"
+                distribution="equals"
+              ></card-notice-component>
+            </div>
+            <div class="colombiaNews__footer">
+              <button-component
+                text="Ver más"
+                rounded="medium"
+                color="primary"
+                size="large"
+              ></button-component>
+            </div>
+          </div>
 					</div>
 					
 					<section class="indicators">
@@ -459,31 +466,28 @@
 					</section>
 					<div class="multimedia">
 						<header-news-section
-							title-text="MULTIMEDIA"
-							button-text="Ver todo"
+            title-text="MULTIMEDIA"
+            button-text="Ver todo"
 						></header-news-section>
+						<card-notice-component
+							link-show-more="#"
+							video="https://www.youtube.com/embed/Q7yrRaY488A?si=07MGk24bTobMn2mB"
+							news="Donald Trump reconoció a Edmundo González"
+							category="COLOMBIANOS"
+							orientation="vertical"
+							subtitle="María Corina Machado reaparece en un video y dice que ya está libre"
+							distribution="large-image"
+						></card-notice-component>
 						<div class="videos">
 							<card-notice-component
 								link-show-more="#"
 								video="https://www.youtube.com/embed/Q7yrRaY488A?si=07MGk24bTobMn2mB"
 								news="Donald Trump reconoció a Edmundo González"
 								category="COLOMBIANOS"
-								orientation="vertical"
-								author="Juan Carlos Garcia Sierra"
-								distribution="large-image"
-								subtitle="La ayuda a quien lo necesita no solo beneficia a una persona comunidades"
-								class="no-category-responsive"
-							></card-notice-component>
-							<card-notice-component
-								link-show-more="#"
-								video="https://www.youtube.com/embed/Q7yrRaY488A?si=07MGk24bTobMn2mB"
-								news="Costa Rica hizo oficial su apoyo a Edmundo González"
-								category="COLOMBIANOS"
 								orientation="horizontal"
 								author="Juan Carlos Garcia Sierra"
 								distribution="large-content"
-								subtitle="La ayuda a quien lo necesita no solo beneficia a una persona comunidades"
-								class="distribution-equals-responsive no-category-responsive no-subtitle-responsive"
+								class="distribution-equals-responsive no-category-responsive"
 							></card-notice-component>
 							<card-notice-component
 								link-show-more="#"
@@ -493,8 +497,7 @@
 								orientation="horizontal"
 								author="Juan Carlos Garcia Sierra"
 								distribution="large-content"
-								subtitle="La ayuda a quien lo necesita no solo beneficia a una persona comunidades"
-								class="distribution-equals-responsive no-category-responsive no-subtitle-responsive"
+								class="distribution-equals-responsive no-category-responsive"
 							></card-notice-component>
 							<card-notice-component
 								link-show-more="#"
@@ -504,8 +507,7 @@
 								orientation="horizontal"
 								author="Juan Carlos Garcia Sierra"
 								distribution="large-content"
-								subtitle="La ayuda a quien lo necesita no solo beneficia a una persona comunidades"
-								class="distribution-equals-responsive no-category-responsive no-subtitle-responsive"
+								class="distribution-equals-responsive no-category-responsive"
 							></card-notice-component>
 							<card-notice-component
 								link-show-more="#"
@@ -515,8 +517,7 @@
 								orientation="horizontal"
 								author="Juan Carlos Garcia Sierra"
 								distribution="large-content"
-								subtitle="La ayuda a quien lo necesita no solo beneficia a una persona comunidades"
-								class="distribution-equals-responsive no-category-responsive no-subtitle-responsive"
+								class="distribution-equals-responsive no-category-responsive"
 							></card-notice-component>
 						</div>
 						<div class="btn-more-news">

@@ -71,7 +71,7 @@
   max-width: var(--max-width-content);
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 6fr 4fr;
+  grid-template-columns: 9fr 6fr;
   column-gap: 55px;
   row-gap: 25px;
   grid-template-areas: "header header" "news bannerOne" "moreNews colombia-news" "moreNews indicators" "publicity publicity" "multimedia paperwork";
@@ -127,7 +127,8 @@
   grid-area: moreNews;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 22px;
+  height: max-content;
 }
 .section-secondary .content .moreNews > .title {
   grid-area: title;
@@ -145,7 +146,7 @@
   gap: 20px;
 }
 .section-secondary .content .moreNews .news-list > card-notice-component {
-  padding-bottom: 20px;
+  padding-bottom: 22px;
   border-bottom: 1px solid #104596;
 }
 .section-secondary .content .moreNews .news-list > card-notice-component:last-child {
@@ -177,21 +178,36 @@
 }
 .section-secondary .content .multimedia {
   grid-area: multimedia;
+  padding-right: 30px;
+  border-right: 1px solid #191C36;
   display: flex;
   gap: 20px;
   flex-direction: column;
-  padding-right: 30px;
-  border-right: 1px solid #191C36;
+}
+.section-secondary .content .multimedia > card-notice-component {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #104596;
 }
 .section-secondary .content .multimedia .videos {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   row-gap: 16px;
+  overflow: auto;
+  height: 500px;
 }
-.section-secondary .content .multimedia .videos > card-notice-component:first-child {
-  padding-bottom: 20px;
-  border-bottom: 1px solid #191C36;
+.section-secondary .content .multimedia .videos::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+.section-secondary .content .multimedia .videos::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.section-secondary .content .multimedia .videos::-webkit-scrollbar:vertical {
+  width: 7px;
+}
+.section-secondary .content .multimedia .videos::-webkit-scrollbar-thumb {
+  background-color: #104596;
+  border-radius: 20px;
 }
 .section-secondary .content .multimedia .btn-more-news {
   display: flex;

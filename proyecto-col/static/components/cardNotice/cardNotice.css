@@ -27,7 +27,7 @@
   grid-template-rows: max-content max-content;
 }
 .card-news.orientation-vertical.distribution-equals {
-  grid-template-rows: auto max-content;
+  grid-template-rows: 1fr 1fr;
 }
 .card-news.orientation-vertical.distribution-large-image img, .card-news.orientation-vertical.distribution-large-image iframe {
   grid-row: 1/5;
