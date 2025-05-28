@@ -32,7 +32,7 @@
 	<link rel="stylesheet" href="../styles/style.css" />
 	<link rel="stylesheet" href="../styles/components.css">
 	<!-- Estilos componentes -->
-	<link rel="stylesheet" href="../styles/header.css" />
+	<link rel="stylesheet" href="./components/Header/index.css" />
 	<link rel="stylesheet" href="../styles/footer.css" />
   <link rel="stylesheet" href="../static/components/button/button.css">
   <link rel="stylesheet" href="../static/components/cardNotice/cardNotice.css">
@@ -48,7 +48,7 @@
 	<script src="../static/responsive.js"></script>
 	<!-- Componentes -->
 	<script src="../static/components/footer.js"></script>
-	<script src="../static/components/header.js"></script>
+	<script src="./components/Header/index.js"></script>
   <script src="../static/components/button/index.js"></script>
   <script src="../static/components/cardNotice/cardNotice.js"></script>
   <script src="../static/components/HeaderDesplegable/index.js"></script>
@@ -61,7 +61,7 @@
 	<script src="../static/components/MenuDesplegable/index.js"></script>
 </head>
 <body class="body-container">
-	<header-component></header-component>
+	<futbol-header></futbol-header>
 	<menu-desplegable></menu-desplegable>
 
 	<div class="social-bar-desplegable">
@@ -152,7 +152,13 @@
 			<div class="content">
 				<div class="section-news-1">
 					<div class="title">
-						<span class="text color-primary weight-bold">NOTICIAS</span>
+						<text-component
+							text="NOTICIAS"
+							color="primary"
+							weight="bold"
+							size-desktop="25"
+							size-mobile="18"
+						></text-component>
 						<button-component
 							text="Ver todo"
 							color="primary"
@@ -318,7 +324,7 @@
 									<div class="details-1">
 										<div class="detail">
 											<text-component
-												text="46' R. Borré Amaury"
+												text="Yaser A."
 												color="primary"
 												size-mobile="12"
 												size-desktop="12"
@@ -328,7 +334,7 @@
 										</div>
 										<div class="detail">
 											<text-component
-												text="46' R. Borré Amaury"
+												text="Yaser A."
 												color="primary"
 												size-mobile="12"
 												size-desktop="12"
@@ -341,7 +347,7 @@
 										<div class="detail">
 											<img src="../../assets/img/breaking-news-5.png" alt="country">
 											<text-component
-												text="46' R. Borré Amaury"
+												text="Yaser A."
 												color="dark"
 												size-mobile="12"
 												size-desktop="14"
@@ -367,11 +373,6 @@
 										></button-component>
 									</div>
 								</div>
-							</div>
-						</div>
-						<div class="sections">
-							<header-desplegable-component class="w-100" text="CUADRANGULAR" size="medium"></header-desplegable-component>
-							<div class="groups">
 								<div class="score">
 									<text-component
 										text="6:30 AM"
@@ -413,20 +414,20 @@
 									<div class="details-1">
 										<div class="detail">
 											<text-component
-												text="46' R. Borré Amaury"
-												color="dark"
+												text="Yaser A."
+												color="primary"
 												size-mobile="12"
-												size-desktop="14"
+												size-desktop="12"
 												weight="regular"
 											></text-component>
 											<img src="../../assets/img/breaking-news-5.png" alt="country">
 										</div>
 										<div class="detail">
 											<text-component
-												text="46' R. Borré Amaury"
-												color="dark"
+												text="Yaser A."
+												color="primary"
 												size-mobile="12"
-												size-desktop="14"
+												size-desktop="12"
 												weight="regular"
 											></text-component>
 											<img src="../../assets/img/breaking-news-5.png" alt="country">
@@ -436,7 +437,7 @@
 										<div class="detail">
 											<img src="../../assets/img/breaking-news-5.png" alt="country">
 											<text-component
-												text="46' R. Borré Amaury"
+												text="Yaser A."
 												color="dark"
 												size-mobile="12"
 												size-desktop="14"
@@ -451,13 +452,25 @@
 											size="small"
 											rounded="small"
 										></button-component>
+										<button-component
+											class="w-full"
+											text="Info"
+											color="primary"
+											ghost="true"
+											size="small"
+											rounded="small"
+											variant="ghost"
+										></button-component>
 									</div>
 								</div>
 							</div>
 						</div>
+						<div class="sections">
+							<header-desplegable-component class="w-100" text="Italia - Serie A de Italia" size="medium"></header-desplegable-component>
+						</div>
 					</div>
 					<div class="options">
-						<img src="../../assets/img/breaking-news-5.png" alt="powered-by score 24">
+						<img src="../assets/img/powered-by.png" alt="powered-by score 24">
 						<button-component
 							text="Ver más"
 							size="large"
@@ -616,6 +629,138 @@
 							</div>
 							<div class="section">
 								<header-desplegable-component class="w-100" text="FINAL" size="medium"></header-desplegable-component>
+								<div class="content">
+									<div class="date-content">
+										<div class="small-circle-red"></div>
+										<span>ACTUALIZACIÓN - JUEVES, 7 SEPTIEMBRE 2025. 7:33PM</span>
+									</div>
+									<div class="rounds">
+										<div class="round">
+											<div class="header">
+												<span class="text weight-bold color-dark">Ronda 5</span>
+												<i class="fa-solid fa-angle-down"></i>
+											</div>
+											<div class="groups">
+												<div class="group">
+													<div class="results">
+														<div class="result">
+															<div class="team">
+																<img src="https://crests.football-data.org/65.svg" alt="">
+																<span class="text color-primary weight-regular">Colombia</span>
+															</div>
+															<div class="score">
+																<span class="text color-success weight-bold">2</span>
+																<span class="text color-success weight-bold">(3)</span>
+															</div>
+														</div>
+														<div class="result">
+															<div class="team">
+																<img src="https://crests.football-data.org/65.svg" alt="">
+																<span class="text color-primary weight-regular">Colombia</span>
+															</div>
+															<div class="score">
+																<span class="text color-success weight-bold">2</span>
+																<span class="text color-success weight-bold">(3)</span>
+															</div>
+														</div>
+													</div>
+													<div class="times">
+														<div>
+															<span class="text color-dark weight-bold">6:30AM</span>
+															<i class="fa-solid fa-tv"></i>
+														</div>
+														<button-component
+															text="A tiempo"
+															color="warning"
+															size="small"
+															rounded="small"
+														></button-component>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="round">
+											<div class="header">
+												<span class="text weight-bold color-dark">Ronda 5</span>
+												<i class="fa-solid fa-angle-down"></i>
+											</div>
+											<div class="groups">
+												<div class="group">
+													<div class="results">
+														<div class="result">
+															<div class="team">
+																<img src="https://crests.football-data.org/65.svg" alt="">
+																<span class="text color-primary weight-regular">Colombia</span>
+															</div>
+															<div class="score">
+																<span class="text color-success weight-bold">2</span>
+																<span class="text color-success weight-bold">(3)</span>
+															</div>
+														</div>
+														<div class="result">
+															<div class="team">
+																<img src="https://crests.football-data.org/65.svg" alt="">
+																<span class="text color-primary weight-regular">Colombia</span>
+															</div>
+															<div class="score">
+																<span class="text color-success weight-bold">2</span>
+																<span class="text color-success weight-bold">(3)</span>
+															</div>
+														</div>
+													</div>
+													<div class="times">
+														<div>
+															<span class="text color-dark weight-bold">6:30AM</span>
+															<i class="fa-solid fa-tv"></i>
+														</div>
+														<button-component
+															text="A tiempo"
+															color="warning"
+															size="small"
+															rounded="small"
+														></button-component>
+													</div>
+												</div>
+												<div class="group">
+													<div class="results">
+														<div class="result">
+															<div class="team">
+																<img src="https://crests.football-data.org/65.svg" alt="">
+																<span class="text color-primary weight-regular">Colombia</span>
+															</div>
+															<div class="score">
+																<span class="text color-success weight-bold">2</span>
+																<span class="text color-success weight-bold">(3)</span>
+															</div>
+														</div>
+														<div class="result">
+															<div class="team">
+																<img src="https://crests.football-data.org/65.svg" alt="">
+																<span class="text color-primary weight-regular">Colombia</span>
+															</div>
+															<div class="score">
+																<span class="text color-success weight-bold">2</span>
+																<span class="text color-success weight-bold">(3)</span>
+															</div>
+														</div>
+													</div>
+													<div class="times">
+														<div>
+															<span class="text color-dark weight-bold">6:30AM</span>
+															<i class="fa-solid fa-tv"></i>
+														</div>
+														<button-component
+															text="A tiempo"
+															color="warning"
+															size="small"
+															rounded="small"
+														></button-component>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -692,7 +837,7 @@
 										size-mobile="12"
 									></text-component>
 								</div>
-								<div class="logo">
+								<div class="partido__logo">
 									<img src="../assets/img/banner-copa-america.png" alt="">
 								</div>
 								<div class="hour">
@@ -735,7 +880,7 @@
 										size-mobile="12"
 									></text-component>
 								</div>
-								<div class="logo">
+								<div class="partido__logo">
 									<img src="../assets/img/banner-copa-america.png" alt="">
 								</div>
 								<div class="hour">
@@ -780,7 +925,7 @@
 										size-mobile="12"
 									></text-component>
 								</div>
-								<div class="logo">
+								<div class="partido__logo">
 									<img src="../assets/img/banner-copa-america.png" alt="">
 								</div>
 								<div class="hour">
@@ -823,7 +968,7 @@
 										size-mobile="12"
 									></text-component>
 								</div>
-								<div class="logo">
+								<div class="partido__logo">
 									<img src="../assets/img/banner-copa-america.png" alt="">
 								</div>
 								<div class="hour">
@@ -1030,54 +1175,59 @@
 				</div>
 				<div class="colombia-news">
 					<div class="colombiaNews">
-						<text-component text="LO ÚLTIMO EN COLOMBIA" color="primary" weight="bold" size-desktop="25" size-mobile="18"></text-component>
-						<div class="news">
-							<card-notice-component
-								link-show-more="#"
-								id="main-card-one"
-								image="../assets/img/breaking-news-5.png"
-								news="Donald Trump reconoció a Edmundo González"
-								orientation="vertical"
-								author="Juan Carlos Garcia Sierra"
-								distribution="none"
-							></card-notice-component>
-							<card-notice-component
-								link-show-more="#"
-								id="main-card-one"
-								image="../assets/img/breaking-news-5.png"
-								news="Donald Trump reconoció a Edmundo González"
-								orientation="horizontal"
-								author="Juan Carlos Garcia Sierra"
-								distribution="equals"
-							></card-notice-component>
-							<card-notice-component
-								link-show-more="#"
-								id="main-card-one"
-								image="../assets/img/breaking-news-5.png"
-								news="Donald Trump reconoció a Edmundo González"
-								orientation="horizontal"
-								author="Juan Carlos Garcia Sierra"
-								distribution="equals"
-							></card-notice-component>
-							<card-notice-component
-								link-show-more="#"
-								id="main-card-one"
-								image="../assets/img/breaking-news-5.png"
-								news="Donald Trump reconoció a Edmundo González"
-								orientation="horizontal"
-								author="Juan Carlos Garcia Sierra"
-								distribution="equals"
-							></card-notice-component>
-						</div>
-						<div class="colombiaNews__footer">
-							<button-component
-								text="Ver más"
-								color="primary"
-								size="large"
-								rounded="large"
-							></button-component>
-						</div>
-					</div>
+            <text-component
+              size-mobile="18"
+              size-desktop="25"
+              text="Lo último en futbol"
+              weight="bold"
+              color="primary"
+            ></text-component>
+            <div class="news">
+              <card-notice-component
+                id="main-card-one"
+                image="../assets/img/colombia-news-main.png"
+                news="Donald Trump reconoció a Edmundo González"
+                orientation="vertical"
+                author="Juan Carlos Garcia Sierra"
+                distribution="none"
+              ></card-notice-component>
+              <card-notice-component
+                link-show-more="#"
+                id="main-card-one"
+                image="../assets/img/breaking-news-5.png"
+                news="Donald Trump reconoció a Edmundo González"
+                orientation="horizontal"
+                author="Juan Carlos Garcia Sierra"
+                distribution="equals"
+              ></card-notice-component>
+              <card-notice-component
+                link-show-more="#"
+                id="main-card-one"
+                image="../assets/img/breaking-news-5.png"
+                news="Donald Trump reconoció a Edmundo González"
+                orientation="horizontal"
+                author="Juan Carlos Garcia Sierra"
+                distribution="equals"
+              ></card-notice-component>
+              <card-notice-component
+                link-show-more="#"
+                id="main-card-one"
+                image="../assets/img/breaking-news-5.png"
+                news="Donald Trump reconoció a Edmundo González"
+                orientation="horizontal"
+                author="Juan Carlos Garcia Sierra"
+                distribution="equals"
+              ></card-notice-component>
+            </div>
+            <div class="colombiaNews__footer">
+              <button-component
+                text="Ver más"
+                rounded="medium"
+                color="primary"
+                size="large"
+              ></button-component>
+            </div>
+          </div>
 				</div>
 				<section class="section-banner-one">
 					<social-sidebar image="../assets/img/breaking-news-banner.png" link=""></social-sidebar>
@@ -1106,6 +1256,7 @@
               orientation="horizontal"
               author="Juan Carlos Garcia Sierra"
               distribution="large-content"
+							class="distribution-equals-responsive"
             ></card-notice-component>
             <card-notice-component
 							link-show-more="#"
@@ -1115,6 +1266,7 @@
               orientation="horizontal"
               author="Juan Carlos Garcia Sierra"
               distribution="large-content"
+							class="distribution-equals-responsive"
             ></card-notice-component>
             <card-notice-component
 							link-show-more="#"
@@ -1124,6 +1276,7 @@
               orientation="horizontal"
               author="Juan Carlos Garcia Sierra"
               distribution="large-content"
+							class="distribution-equals-responsive"
             ></card-notice-component>
             <card-notice-component
 							link-show-more="#"
@@ -1133,19 +1286,20 @@
               orientation="horizontal"
               author="Juan Carlos Garcia Sierra"
               distribution="large-content"
+							class="distribution-equals-responsive"
             ></card-notice-component>
           </div>
         </div>
 				<div class="results-live">
 					<div class="partidos-colombianos">
-						<div class="date-content">
-							<div class="small-circle-red"></div>
-							<span>ACTUALIZACIÓN - JUEVES, 7 SEPTIEMBRE 2025. 7:33PM</span>
-						</div>
 						<div class="title text center color-primary weight-bold">RESULTADOS EN VIVO</div>
 						<div class="tornaments">
 							<div class="sections">
 								<header-desplegable-component class="w-100" text="Amistosos de clubes" size="medium"></header-desplegable-component>
+								<div class="date-content">
+									<div class="small-circle-red"></div>
+									<span>ACTUALIZACIÓN - JUEVES, 7 SEPTIEMBRE 2025. 7:33PM</span>
+								</div>
 								<div class="groups">
 									<div class="score">
 										<text-component
@@ -1731,7 +1885,6 @@
 							<div class="sections">
 								<header-desplegable-component class="w-100" text="India - Super Liga De India" size="medium"></header-desplegable-component>
 							</div>
-							
 							<div class="sections">
 								<header-desplegable-component class="w-100" text="Alemania - Bundesliga De" size="medium"></header-desplegable-component>
 								<div class="groups">
@@ -1976,6 +2129,15 @@
 								</div>
 							</div>
 						</div>
+						<div class="options">
+							<img src="../assets/img/powered-by.png" alt="powered-by score 24">
+							<button-component
+								text="Ver más"
+								size="large"
+								color="primary"
+								rounded="large"
+							></button-component>
+						</div>
 					</div>
 				</div>
 				<div class="section-related-articles-two">
@@ -2070,6 +2232,7 @@
 						subtitle="La ayuda a quien lo necesita no solo beneficia a una persona comunidades"
 						class="
 							news-two
+							distribution-equals-responsive
 							orientation-vertical-responsive
 							no-subtitle-responsive
 							no-category-responsive	
@@ -2086,6 +2249,7 @@
 						subtitle="La ayuda a quien lo necesita no solo beneficia a una persona comunidades"
 						class="
 							news-three
+							distribution-equals-responsive
 							orientation-vertical-responsive
 							no-subtitle-responsive
 							no-category-responsive	
@@ -2101,7 +2265,7 @@
 							author="Juan Carlos Garcia Sierra"
 							distribution="large-content"
 							subtitle="La ayuda a quien lo necesita no solo beneficia a una persona comunidades"
-							class="orientation-vertical-responsive no-subtitle-responsive"	
+							class="orientation-vertical-responsive no-subtitle-responsive distribution-equals-responsive"	
 						></card-notice-component>
 					</div>
 					<div class="news-five">
@@ -2114,7 +2278,7 @@
 							author="Juan Carlos Garcia Sierra"
 							distribution="large-content"
 							subtitle="La ayuda a quien lo necesita no solo beneficia a una persona comunidades"
-							class="orientation-vertical-responsive no-subtitle-responsive"
+							class="orientation-vertical-responsive no-subtitle-responsive distribution-equals-responsive"
 						></card-notice-component>
 					</div>
 					<div class="btn-more-news">
@@ -2414,6 +2578,13 @@
 						></button-component>
 					</div>
 					<div class="news">
+						<div class="line-1"></div>
+						<div class="line-2"></div>
+						<div class="line-3"></div>
+						<div class="line-4"></div>
+						<div class="line-5"></div>
+						<div class="line-6"></div>
+						<div class="line-7"></div>
 						<card-notice-component
 							link-show-more="#"
 							news="Donald Trump reconoció a Edmundo González"

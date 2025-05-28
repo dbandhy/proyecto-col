@@ -1,4 +1,4 @@
-class QualifiersHeader extends HTMLElement {
+class ActualidadHeader extends HTMLElement {
   connectedCallback() {
     this.render();
   }
@@ -64,7 +64,7 @@ class QualifiersHeader extends HTMLElement {
           <button class="news-btn">NOTICIAS</button>
           <button class="campain-btn">ESPECIAL</button>
           <div class="deplegable">
-            <span>ELIMINATORIAS</span>
+            <span>ACTUALIDAD</span>
             <i class="fa fa-angle-down"></i>
           </div>
         </div>
@@ -90,16 +90,6 @@ class QualifiersHeader extends HTMLElement {
           <img class="flyer" src="/assets/img/flyer-desk.png" alt="flyer">
         </div>
 
-        <!-- Nav Bar -->
-        <div class="nav-bar">
-          <a href="/futbol" class="item">Inicio</a>
-          <a href="/futbol" class="item">Noticias</a>
-          <a href="/futbol" class="item">Resultados</a>
-          <a href="/futbol" class="item">Posiciones</a>
-          <a href="/futbol" class="item">Goleadores</a>
-          <a href="/futbol" class="item">Selección Colombiana</a>
-        </div>
-
         <!-- Menú desplegable móvil -->
         <nav class="mobile-menu">
           <a href="#">CINE</a>
@@ -116,4 +106,4 @@ class QualifiersHeader extends HTMLElement {
   }
 }
 
-customElements.define('qualifiers-header', QualifiersHeader);
+customElements.define('actualidad-header', ActualidadHeader);
