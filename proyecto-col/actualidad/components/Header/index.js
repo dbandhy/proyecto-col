@@ -49,7 +49,10 @@ class ActualidadHeader extends HTMLElement {
           </h1>
           
           <!-- Botón ESPECIAL para desktop -->
-          <button class="campain-btn d-none d-md-block">ESPECIAL</button>
+          <div class="deplegable desktop">
+            <span>ELIMINATORIAS</span>
+            <i class="fa fa-angle-down"></i>
+          </div>
 
           <!-- Iconos para móvil -->
           <div class="top-links d-flex d-md-none">
@@ -62,9 +65,8 @@ class ActualidadHeader extends HTMLElement {
         <!-- Contenedor de botones (NOTICIAS y ESPECIAL) -->
         <div class="menu-logo d-flex d-md-none">
           <button class="news-btn">NOTICIAS</button>
-          <button class="campain-btn">ESPECIAL</button>
           <div class="deplegable">
-            <span>ACTUALIDAD</span>
+            <span>ELIMINATORIAS</span>
             <i class="fa fa-angle-down"></i>
           </div>
         </div>
@@ -72,12 +74,15 @@ class ActualidadHeader extends HTMLElement {
         <!-- Menú de navegación -->
         <nav class="menu">
           <div class="menu-links">
-            <a itemprop="cine" href="/cine">FÚTBOL</a>
-            <a itemprop="cartelera" href="#">ELIMINATORIAS</a>
-            <a itemprop="proximos" href="#">LIGA BETPLAY</a>
-            <a itemprop="actores" href="#">SELECCIÓN</a>
-            <a itemprop="salas" href="#">COLOMBIANOS</a>
-            <a itemprop="trailes" href="#">PARTIDOS HOY</a>
+            <a itemprop="cine" href="/cine">ACTUALIDAD</a>
+            <a itemprop="cartelera" href="#">FÚTBOL</a>
+            <a itemprop="proximos" href="#">ENTRETENIMIENTO</a>
+            <a itemprop="actores" href="#">CINE</a>
+            <a itemprop="salas" href="#">VIDA</a>
+            <a itemprop="trailes" href="#">GASTRONOMÍA</a>
+            <a itemprop="trailes" href="#">TURISMO</a>
+            <a itemprop="trailes" href="#">DIARIO</a>
+            <a itemprop="trailes" href="#">COLOMBIANOS</a>
           </div>
           <div class="search-bar">
             <input type="text" placeholder="Buscar..." />
