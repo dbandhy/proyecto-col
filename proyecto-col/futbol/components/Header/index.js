@@ -75,6 +75,7 @@ class FutbolHeader extends HTMLElement {
             <a itemprop="cine" href="/cine">FÚTBOL</a>
             <a itemprop="cartelera" href="#">ELIMINATORIAS</a>
             <a itemprop="proximos" href="#">LIGA BETPLAY</a>
+            <a itemprop="proximos" href="#">TORNEO BETPLAY</a>
             <a itemprop="actores" href="#">SELECCIÓN</a>
             <a itemprop="salas" href="#">COLOMBIANOS</a>
             <a itemprop="trailes" href="#">PARTIDOS HOY</a>

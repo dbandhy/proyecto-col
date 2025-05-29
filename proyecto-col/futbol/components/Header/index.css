@@ -157,8 +157,9 @@ nav {
 .menu-links {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Centrar los enlaces */
-  gap: 65px; /* Espacio uniforme entre enlaces */
+  width: 100%;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 /* Estilo de los enlaces */
@@ -456,6 +457,7 @@ nav a:hover {
 .menu {
   display: flex;
   gap: 32px;
+  justify-content: space-between;
 }
 
 .search-btn {
