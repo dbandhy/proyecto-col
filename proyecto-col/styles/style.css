@@ -3543,11 +3543,15 @@ li{
   margin-bottom: 30px;
 }
 
+.generos-slider{
+  gap: 55px !important;
+}
+
 .generos-slider,
 .emisoras-slider {
   display: flex;
   overflow-x: hidden;
-  gap: 50px;
+  gap: 23px;
 }
 
 .carousel-control {
@@ -3637,12 +3641,8 @@ li{
 }
 
 .emisora-logo {
-  max-width: 100px;
-  min-width: 100px;
-  min-height: 100px;
-  max-height: 100px;
   overflow: hidden;
-  border-radius: 8px;
+  border-radius: 20px;
   margin-bottom: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -3680,8 +3680,8 @@ li{
 }
 
 .img-emisora {
-  max-width: 100px;
-  max-height: 100px;
+  max-width: 110px;
+  max-height: 110px;
 }
 
 /* Estilos para versión móvil */
@@ -3883,7 +3883,7 @@ li{
 .radios-search{
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: 11px;
 }
 
 .radios-search .form-control {
