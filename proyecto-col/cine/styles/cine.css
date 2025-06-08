@@ -531,6 +531,10 @@
 	margin-bottom: 0.5rem;
 }
 
+.section-title {
+	font-size: clamp(1.125rem, 0.957rem + 0.673vw, 1.563rem) !important;
+}
+
 .sala-grid {
 	display: flex;
 	flex-direction: column;
