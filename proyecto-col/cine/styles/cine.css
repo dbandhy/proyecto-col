@@ -154,19 +154,29 @@
 	font-family: Verdana;
 	font-weight: 400;
 	color: #104596;
-	font-size: 0.85rem;
+	font-size: 14px;
 }
 
 .card-article-2-title {
-	font-size: 1.1rem;
+	font-size: clamp(1rem, 0.904rem + 0.385vw, 1.25rem);
 	font-weight: bold;
 	margin-bottom: 0.5rem;
 	color: #111;
 }
 
+.card-article-2-leer-mas{
+	font-size: 15px;
+	font-weight: bold;
+	color: #104596;
+}
+
 .card-article-2-autor {
-	font-size: 0.8rem;
-	color: #555;
+	font-size: 9px;
+	color: #191C36;
+}
+
+.card-article-2-autor b {
+	font-weight: bold;
 }
 
 .card-article-2-doble-fila {
